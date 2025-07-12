@@ -88,7 +88,7 @@ function _migrateActor(actor) {
   let updateData = {}
 
   // Migrate Skills
-  const attributes = game.system.model.Actor.character.attributes;
+  const attributes = game.system.template.Actor.character.attributes;
   for ( let attribute_name of Object.keys(actor.system.attributes || {}) ) {
 
     // Insert attribute label
@@ -118,8 +118,8 @@ function _migrateActor(actor) {
     updateData[`system.stress.value`] = actor.system.stress;
     updateData[`system.stress.max`] = 9;
     updateData[`system.stress.max_default`] = 9;
-    updateData[`system.stress.name_default`] = "BITD.Stress";
-    updateData[`system.stress.name`] = "BITD.Stress";
+    updateData[`system.stress.name_default`] = "UTCF.Stress";
+    updateData[`system.stress.name`] = "UTCF.Stress";
   }
 
   // Migrate Trauma to Array
@@ -128,8 +128,8 @@ function _migrateActor(actor) {
     updateData[`system.trauma.value`] = [actor.system.traumas.length];
     updateData[`system.trauma.max`] = 4;
     updateData[`system.trauma.max_default`] = 4;
-    updateData[`system.trauma.name_default`] = "BITD.Trauma";
-    updateData[`system.trauma.name`] = "BITD.Trauma";
+    updateData[`system.trauma.name_default`] = "UTCF.Trauma";
+    updateData[`system.trauma.name`] = "UTCF.Trauma";
   }
 
   return updateData;

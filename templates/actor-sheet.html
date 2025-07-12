@@ -8,14 +8,14 @@
 
     <div class="grow-two">
       <div id="character-{{_id}}-name-box">
-        <label for="character-{{_id}}-name">{{localize "BITD.Name"}}</label>
+        <label for="character-{{_id}}-name">{{localize "UTCF.Name"}}</label>
         <input type="text" id="character-{{_id}}-name" class="name" name="name" value="{{name}}">
       </div>
 
       <div id="character-{{_id}}-traits" class="flex-column">
 
         <div class="item-block flex-horizontal">
-          <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="heritage">{{localize "BITD.Heritage"}}</a></div>
+          <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="heritage">{{localize "UTCF.Heritage"}}</a></div>
           {{#each items as |item id|}}
               {{#if (eq item.type "heritage")}}
               <div class="item flex-horizontal" data-item-id="{{item._id}}">
@@ -23,15 +23,15 @@
                   <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
                   <div class="item-name">{{item.name}}</div>
                 </div>
-                <a class="item-control item-delete" title="{{localize 'BITD.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
-                <a class="item-control item-post" title="{{localize 'BITD.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
+                <a class="item-control item-delete" title="{{localize 'UTCF.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
+                <a class="item-control item-post" title="{{localize 'UTCF.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
               </div>
               {{/if}}
           {{/each}}
         </div>
 
         <div class="item-block flex-horizontal">
-          <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="background">{{localize "BITD.Background"}}</a></div>
+          <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="background">{{localize "UTCF.Background"}}</a></div>
           {{#each items as |item id|}}
             {{#if (eq item.type "background")}}
             <div class="item flex-horizontal" data-item-id="{{item._id}}">
@@ -39,15 +39,15 @@
                 <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
                 <div class="item-name">{{item.name}}</div>
               </div>
-              <a class="item-control item-delete" title="{{localize 'BITD.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
-              <a class="item-control item-post" title="{{localize 'BITD.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
+              <a class="item-control item-delete" title="{{localize 'UTCF.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
+              <a class="item-control item-post" title="{{localize 'UTCF.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
             </div>
             {{/if}}
           {{/each}}
         </div>
 
         <div class="item-block flex-horizontal">
-          <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="vice">{{localize "BITD.Vice"}}</a></div>
+          <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="vice">{{localize "UTCF.Vice"}}</a></div>
           {{#each items as |item id|}}
               {{#if (eq item.type "vice")}}
               <div class="item flex-horizontal" data-item-id="{{item._id}}">
@@ -55,15 +55,15 @@
                   <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
                   <div class="item-name">{{item.name}}</div>
                 </div>
-                <a class="item-control item-delete" title="{{localize 'BITD.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
-                <a class="item-control item-post" title="{{localize 'BITD.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
+                <a class="item-control item-delete" title="{{localize 'UTCF.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
+                <a class="item-control item-post" title="{{localize 'UTCF.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
               </div>
               {{/if}}
           {{/each}}
         </div>
 
         <div class="item-block flex-horizontal">
-          <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="class">{{localize "BITD.Class"}}</a></div>
+          <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="class">{{localize "UTCF.Class"}}</a></div>
             {{#each items as |item id|}}
                 {{#if (eq item.type "class")}}
                 <div class="item flex-horizontal" data-item-id="{{item._id}}">
@@ -71,8 +71,8 @@
                     <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
                     <div class="item-name">{{item.name}}</div>
                   </div>
-                  <a class="item-control item-delete" title="{{localize 'BITD.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
-                  <a class="item-control item-post" title="{{localize 'BITD.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
+                  <a class="item-control item-delete" title="{{localize 'UTCF.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
+                  <a class="item-control item-post" title="{{localize 'UTCF.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
                 </div>
                 {{/if}}
             {{/each}}
@@ -83,11 +83,11 @@
 
     <div class="grow-two">
       <div id="character-{{_id}}-alias-box">
-        <label for="character-{{_id}}-alias">{{localize "BITD.Alias"}}</label>
+        <label for="character-{{_id}}-alias">{{localize "UTCF.Alias"}}</label>
         <input type="text" id="character-{{_id}}-alias" class="alias" name="system.alias" value="{{system.alias}}">
       </div>
 
-      {{> "systems/blades-in-the-dark/templates/parts/coins.html" actor=actor}}
+      {{> "systems/until-the-curtain-falls/templates/parts/coins.html" actor=actor}}
     </div>
 
   </section>
@@ -113,54 +113,23 @@
 
     </div>
     <div id="character-{{_id}}-trauma-container" class="small-teeth-container">
-      {{#traumacounter system.trauma.list}}
+      {{#multiboxes system.trauma.value}}
       <div id="character-{{_id}}-trauma" class="small-teeth-wrap">
         <label class="black-label" for="character-{{_id}}-trauma-counter-0">{{localize system.trauma.name}}</label>
         <div id="character-{{_id}}-trauma-teeth" class="small-teeth">
           <input type="radio" id="character-{{_id}}-trauma-counter-0" name="system.trauma.value" value="0">
 
           {{#times_from_1 system.trauma.max}}
-            <input type="radio" id="character-{{../_id}}-trauma-counter-{{this}}" name="system.trauma.value" value="{{this}}" disabled>
+            <input type="radio" id="character-{{../_id}}-trauma-counter-{{this}}" name="system.trauma.value" value="{{this}}">
             <label for="character-{{../_id}}-trauma-counter-{{this}}"></label>
           {{/times_from_1}}
         </div>
       </div>
-      {{/traumacounter}}
+      {{/multiboxes}}
     </div>
 
-    <div id="character-{{_id}}-trauma-list" class="trauma-list">
-      <label>
-        <input type="checkbox" data-dType="Boolean" name="system.trauma.list.cold" value="cold" {{checked system.trauma.list.cold}}>
-        <span class="checkmark">{{localize "BITD.TraumaCold"}}</span>
-      </label>
-      <label>
-        <input type="checkbox" data-dType="Boolean" name="system.trauma.list.haunted" value="haunted" {{checked system.trauma.list.haunted}}>
-        <span class="checkmark">{{localize "BITD.TraumaHaunted"}}</span>
-      </label>
-      <label>
-        <input type="checkbox" data-dType="Boolean" name="system.trauma.list.obsessed" value="obsessed" {{checked system.trauma.list.obsessed}}>
-        <span class="checkmark">{{localize "BITD.TraumaObsessed"}}</span>
-      </label>
-      <label>
-        <input type="checkbox" data-dType="Boolean" name="system.trauma.list.paranoid" value="paranoid" {{checked system.trauma.list.paranoid}}>
-        <span class="checkmark">{{localize "BITD.TraumaParanoid"}}</span>
-      </label>
-      <label>
-        <input type="checkbox" data-dType="Boolean" name="system.trauma.list.reckless" value="reckless" {{checked system.trauma.list.reckless}}>
-        <span class="checkmark">{{localize "BITD.TraumaReckless"}}</span>
-      </label>
-      <label>
-        <input type="checkbox" data-dType="Boolean" name="system.trauma.list.soft" value="soft" {{checked system.trauma.list.soft}}>
-        <span class="checkmark">{{localize "BITD.TraumaSoft"}}</span>
-      </label>
-      <label>
-        <input type="checkbox" data-dType="Boolean" name="system.trauma.list.unstable" value="unstable" {{checked system.trauma.list.unstable}}>
-        <span class="checkmark">{{localize "BITD.TraumaUnstable"}}</span>
-      </label>
-      <label>
-        <input type="checkbox" data-dType="Boolean" name="system.trauma.list.vicious" value="vicious" {{checked system.trauma.list.vicious}}>
-        <span class="checkmark">{{localize "BITD.TraumaVicious"}}</span>
-      </label>
+    <div id="character-{{_id}}-trauma-list" class="flex trauma-list">
+      {{trauma_descriptions system.trauma.value}}
     </div>
 
   </div>
@@ -170,17 +139,20 @@
     <div id="character-{{_id}}-character-harm" class="character-harm">
       <table>
         <thead>
-          <th class="black-white" colspan="4">{{localize "BITD.Harm"}}</th>
-          <th class="black-white"><label>{{localize "BITD.Healing"}}</label></th>
-          <th class="black-white">{{localize "BITD.Armor"}}</th>
+          <th class="black-white" colspan="4">{{localize "UTCF.Harm.Label"}}</th>
+          <th class="black-white"><label>{{localize "UTCF.Healing"}}</label></th>
+          <th class="black-white">{{localize "UTCF.Armor"}}</th>
         </thead>
         <tbody>
           <tr>
-            <td>3</td>
-            <td colspan="2">
-              <input type="text" id="character-{{_id}}-harm-3-1" name="system.harm.heavy.one" value="{{system.harm.heavy.one}}">
+            <td>{{localize "UTCF.Harm.Deadly.Label"}}</td>
+            <td>
+              <input type="text" id="character-{{_id}}-harm-4-1" name="system.harm.deadly.one" value="{{system.harm.deadly.one}}">
             </td>
-            <td>{{localize "BITD.NeedHelp"}}</td>
+            <td>
+              <input type="text" id="character-{{_id}}-harm-4-2" name="system.harm.deadly.two" value="{{system.harm.deadly.two}}">
+            </td>
+            <td>{{localize "UTCF.Harm.Deadly.Effect"}}</td>
             <td rowspan="3">
               <div id="character-{{_id}}-health-clock" class="character-health-clock">
                 {{{blades-clock "system.healing-clock" 4 system.healing-clock _id}}}
@@ -188,38 +160,45 @@
             </td>
             <td rowspan="3" id="character-{{_id}}-armor-uses" class="character-armor-uses">
               <div>
-                <label for="character-{{_id}}-armor-uses-armor">{{localize "BITD.Armor"}}</label>
+                <label for="character-{{_id}}-armor-uses-armor">{{localize "UTCF.Armor"}}</label>
                 <input id="character-{{_id}}-armor-uses-armor" type="checkbox" name="system.armor-uses.armor" {{checked system.armor-uses.armor}}>
               </div>
               <div>
-                <label for="character-{{_id}}-armor-uses-heavy">{{localize "BITD.Heavy"}}</label>
+                <label for="character-{{_id}}-armor-uses-heavy">{{localize "UTCF.Heavy"}}</label>
                 <input id="character-{{_id}}-armor-uses-heavy" type="checkbox" name="system.armor-uses.heavy" {{checked system.armor-uses.heavy}}>
               </div>
               <div>
-                <label for="character-{{_id}}-armor-uses-special">{{localize "BITD.Special"}}</label>
+                <label for="character-{{_id}}-armor-uses-special">{{localize "UTCF.Special"}}</label>
                 <input id="character-{{_id}}-armor-uses-special" type="checkbox" name="system.armor-uses.special" {{checked system.armor-uses.special}}>
               </div>
             </td>
           </tr>
           <tr>
-            <td>2</td>
+            <td>{{localize "UTCF.Harm.Severe.Label"}}</td>
+            <td colspan="2">
+              <input type="text" id="character-{{_id}}-harm-3-1" name="system.harm.severe.one" value="{{system.harm.severe.one}}">
+            </td>
+            <td>{{localize "UTCF.Harm.Severe.Effect"}}</td>
+          </tr>
+          <tr>
+            <td>{{localize "UTCF.Harm.Moderate.Label"}}</td>
             <td>
               <input type="text" id="character-{{_id}}-harm-2-1" name="system.harm.medium.one" value="{{system.harm.medium.one}}">
             </td>
             <td>
               <input type="text" id="character-{{_id}}-harm-2-2" name="system.harm.medium.two" value="{{system.harm.medium.two}}">
             </td>
-            <td>-1D</td>
+            <td>{{localize "UTCF.Harm.Moderate.Effect"}}</td>
           </tr>
           <tr>
-            <td>1</td>
+            <td>{{localize "UTCF.Harm.Lesser.Label"}}</td>
             <td>
               <input type="text" id="character-{{_id}}-harm-1-1" name="system.harm.light.one" value="{{system.harm.light.one}}">
             </td>
             <td>
               <input type="text" id="character-{{_id}}-harm-1-2" name="system.harm.light.two" value="{{system.harm.light.two}}">
             </td>
-            <td>{{localize "BITD.LessEffect"}}</td>
+            <td>{{localize "UTCF.Harm.Lesser.Effect"}}</td>
           </tr>
         </tbody>
       </table>
@@ -236,18 +215,18 @@
 
       {{!-- Nav menu --}}
       <nav class="tabs flex-horizontal">
-        <a class="item" data-tab="abilities">{{localize "BITD.Abilities"}}</a>
-        <a class="item" data-tab="loadout">{{localize "BITD.Loadout"}}</a>
-        <a class="item" data-tab="character-notes">{{localize "BITD.Notes"}}</a>
+        <a class="item" data-tab="abilities">{{localize "UTCF.Abilities"}}</a>
+        <a class="item" data-tab="loadout">{{localize "UTCF.Loadout"}}</a>
+        <a class="item" data-tab="character-notes">{{localize "UTCF.Notes"}}</a>
         {{#if isGM}}
-          <a class="item" data-tab="effects">{{localize "BITD.Effects"}}</a>
+          <a class="item" data-tab="effects">{{localize "UTCF.Effects"}}</a>
         {{/if}}
-        <a class="item" data-tab="all-character-items">{{localize "BITD.AllItems"}}</a>
+        <a class="item" data-tab="all-character-items">{{localize "UTCF.AllItems"}}</a>
       </nav>
 
       <div id="character-{{_id}}-abilities" class="tab flex-vertical abilities" data-tab="abilities">
         <div class="label-stripe">
-          <p><label for="character-{{_id}}-experience-0">{{localize "BITD.Abilities"}}</label></p>
+          <p><label for="character-{{_id}}-experience-0">{{localize "UTCF.Abilities"}}</label></p>
           <p><a class="item-add-popup" data-item-type="ability"><i class="fas fa-plus-square"></i></a></p>
           <div id="character-{{_id}}-experience" class="teeth-experience">
             <label for="character-{{_id}}-experience-0"><i class="fab fa-creative-commons-zero nullifier"></i></label>
@@ -269,22 +248,22 @@
                 <b><div class="item-name">{{item.name}}</div></b>
                 <div class="item-description">{{{item.system.description}}}</div>
               </div>
-              <a class="item-control item-delete" title="{{localize 'BITD.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
-              <a class="item-control item-post" title="{{localize 'BITD.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
+              <a class="item-control item-delete" title="{{localize 'UTCF.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
+              <a class="item-control item-post" title="{{localize 'UTCF.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
             </div>
           {{/if}}
           {{/each}}
-          <div class="item-class-label"><a class="item-add-popup" data-item-type="ability">{{localize "BITD.AddAbility"}}</a></div>
+          <div class="item-class-label"><a class="item-add-popup" data-item-type="ability">{{localize "UTCF.AddAbility"}}</a></div>
         </div>
       </div>
 
       {{!-- Owned Items Tab --}}
       <div id="character-{{_id}}-loadout" class="tab flex-vertical loadout" data-tab="loadout">
         <div class="label-stripe flex-horizontal">
-           <p>{{localize "BITD.Loadout"}} <a class="item-add-popup" data-item-type="item"><i class="fas fa-plus-square"></i></a></p>
+           <p>{{localize "UTCF.Loadout"}} <a class="item-add-popup" data-item-type="item"><i class="fas fa-plus-square"></i></a></p>
            <p>{{system.loadout}}/{{localize system.load_level}} </p>
            <div class="dropdown">
-             <select name="system.selected_load_level">
+             <select name="system.selected_load_level" class="loadout">
                {{selectOptions system.load_levels selected=system.selected_load_level localize=true}}
              </select>
            </div>
@@ -298,18 +277,18 @@
                 <div class="item-name">{{item.name}}</div>
                 <div class="item-description">{{{item.system.description}}}</div>
               </div>
-              <a class="item-control item-delete" title="{{localize 'BITD.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
-              <a class="item-control item-post" title="{{localize 'BITD.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
+              <a class="item-control item-delete" title="{{localize 'UTCF.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
+              <a class="item-control item-post" title="{{localize 'UTCF.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
             </div>
           {{/if}}
           {{/each}}
-          <div class="item-class-label"><a class="item-add-popup" data-item-type="item">{{localize "BITD.AddItem"}}</a></div>
+          <div class="item-class-label"><a class="item-add-popup" data-item-type="item">{{localize "UTCF.AddItem"}}</a></div>
         </div>
       </div>
 
       <div class="tab flex-vertical" data-tab="character-notes">
         <div class="label-stripe">
-          <p>{{localize "BITD.Notes"}}</p>
+          <p>{{localize "UTCF.Notes"}}</p>
         </div>
         <textarea rows="13" name="system.description">{{{system.description}}}</textarea>
       </div>
@@ -317,15 +296,15 @@
       {{!-- Active Effects --}}
       <div id="character-{{_id}}-effects" class="tab effects flex-vertical" data-tab="effects">
         <div class="label-stripe">
-          <p>{{localize "BITD.Effects"}}</p>
+          <p>{{localize "UTCF.Effects"}}</p>
         </div>
-        {{> "systems/blades-in-the-dark/templates/parts/active-effects.html"}}
+        {{> "systems/until-the-curtain-falls/templates/parts/active-effects.html"}}
       </div>
 
       {{!-- Full Item List --}}
       <div class="tab grow-two flex-vertical" data-tab="all-character-items">
         <div class="label-stripe">
-          <p><label>{{localize "BITD.AllItems"}}</label></p>
+          <p><label>{{localize "UTCF.AllItems"}}</label></p>
         </div>
         {{#each items as |item id|}}
         <div class="item flex-horizontal" data-item-id="{{item._id}}">
@@ -333,15 +312,15 @@
             <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
             <div class="item-name">{{item.name}}</div>
           </div>
-          <a class="item-control item-delete" title="{{localize 'BITD.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
-          <a class="item-control item-post" title="{{localize 'BITD.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
+          <a class="item-control item-delete" title="{{localize 'UTCF.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
+          <a class="item-control item-post" title="{{localize 'UTCF.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
         </div>
         {{/each}}
       </div>
 
     </div>
     {{!-- Attributes --}}
-    {{> "systems/blades-in-the-dark/templates/parts/attributes.html" actor=actor}}
+    {{> "systems/until-the-curtain-falls/templates/parts/attributes.html" actor=actor}}
   </section>
 
 </form>

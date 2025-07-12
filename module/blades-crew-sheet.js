@@ -9,8 +9,8 @@ export class BladesCrewSheet extends BladesSheet {
   /** @override */
 	static get defaultOptions() {
 	  return foundry.utils.mergeObject(super.defaultOptions, {
-  	  classes: ["blades-in-the-dark", "sheet", "actor", "crew"],
-  	  template: "systems/blades-in-the-dark/templates/crew-sheet.html",
+  	  classes: ["until-the-curtain-falls", "sheet", "actor", "crew"],
+  	  template: "systems/until-the-curtain-falls/templates/crew-sheet.html",
       width: 940,
       height: 1020,
       tabs: [{navSelector: ".tabs", contentSelector: ".tab-content", initial: "turfs"}]
@@ -36,7 +36,7 @@ export class BladesCrewSheet extends BladesSheet {
       if (item.type === "crew_type") {
         // Object.entries(item.data.turfs).forEach(turf => {turfs_amount += (turf.value === true) ? 1 : 0});
         Object.entries(item.system.turfs).forEach(([key, turf]) => {
-          if (turf.name === 'BITD.Turf') {
+          if (turf.name === 'UTCF.Turf') {
             turfs_amount += (turf.value === true) ? 1 : 0;
           }
         });

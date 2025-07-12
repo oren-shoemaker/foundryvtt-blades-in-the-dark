@@ -91,7 +91,7 @@ export class BladesHelpers {
    */
   static getAttributeLabel(attribute_name) {
         let attribute_labels = {};
-        const attributes = game.system.model.Actor.character.attributes;
+        const attributes = game.system.template.Actor.character.attributes;
 
         for (const att_name in attributes) {
           attribute_labels[att_name] = attributes[att_name].label;
@@ -112,7 +112,7 @@ export class BladesHelpers {
    */
   static getRollLabel(roll_name) {
     let attribute_labels = {};
-    const attributes = game.system.model.Actor.character.attributes;
+    const attributes = game.system.template.Actor.character.attributes;
 
     for (const att_name in attributes) {
       if (att_name == roll_name) {
@@ -135,7 +135,7 @@ export class BladesHelpers {
    * @returns {Boolean}
    */
   static isAttributeAction(attribute_name) {
-    const attributes = game.system.model.Actor.character.attributes;
+    const attributes = game.system.template.Actor.character.attributes;
 
     for (const att_name in attributes) {
       for (const skill_name in attributes[att_name].skills) {
@@ -155,7 +155,7 @@ export class BladesHelpers {
    * @returns {Boolean}
    */
   static isAttributeAttribute(attribute_name) {
-    const attributes = game.system.model.Actor.character.attributes;
+    const attributes = game.system.template.Actor.character.attributes;
 
     return (attribute_name in attributes);
   }

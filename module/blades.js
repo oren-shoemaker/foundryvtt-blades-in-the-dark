@@ -196,6 +196,35 @@ Hooks.once("init", async function() {
     return accum;
   });
 
+  Handlebars.registerHelper('trauma_descriptions',function(count){
+    var accum = '<table><tbody>';
+    const context = this;
+
+    for(var i = 1; i < Number(count)+1; ++i){
+      var stringified_iter = '';
+      switch(i) {
+        case 1:
+          stringified_iter = 'one';
+          break;
+        case 2:
+          stringified_iter = 'two';
+          break;
+        case 3:
+          stringified_iter = 'three';
+          break;
+        case 4:
+          stringified_iter = 'four';
+          break;
+      }
+      const traumaValue = context.system?.trauma?.traumas?.[stringified_iter] || '';
+      accum += `<tr><td><input type="text" id="character-${context._id}-mental-trauma-${i}" name="system.trauma.traumas.${stringified_iter}" value="${traumaValue}"></td></tr>`
+    }
+    
+    accum +='</tbody></table>'
+
+    return new Handlebars.SafeString(accum);
+  })
+
   // Concat helper
   // https://gist.github.com/adg29/f312d6fab93652944a8a1026142491b1
   // Usage: (concat 'first 'second')
@@ -256,7 +285,7 @@ Hooks.once("init", async function() {
 
     // Label for 0
     html += `<label class="clock-zero-label" for="clock-0-${uniq_id}}"><i class="fab fa-creative-commons-zero nullifier"></i></label>`;
-    html += `<div id="blades-clock-${uniq_id}" class="blades-clock clock-${type} clock-${type}-${current_value}" style="background-image:url('systems/blades-in-the-dark/styles/assets/progressclocks-svg/Progress Clock ${type}-${current_value}.svg');">`;
+    html += `<div id="blades-clock-${uniq_id}" class="blades-clock clock-${type} clock-${type}-${current_value}" style="background-image:url('systems/until-the-curtain-falls/styles/assets/progressclocks-svg/Progress Clock ${type}-${current_value}.svg');">`;
 
     let zero_checked = (parseInt(current_value) === 0) ? 'checked' : '';
     html += `<input type="radio" value="0" id="clock-0-${uniq_id}}" data-dType="String" name="${parameter_name}" ${zero_checked}>`;

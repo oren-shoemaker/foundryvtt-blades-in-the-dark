@@ -2,25 +2,25 @@
   <header class="sheet-header">
       <img src="{{img}}" data-edit="img" title="{{name}}"/>
       <div class="header-fields">
-          <h1 class="charname"><input name="name" type="text" value="{{name}}" placeholder="{{localize 'BITD.Name'}}"/></h1>
+          <h1 class="charname"><input name="name" type="text" value="{{name}}" placeholder="{{localize 'UTCF.Name'}}"/></h1>
       </div>
   </header>
 
   <section class="flex-vertical">
-    <label class="label-stripe">{{localize "BITD.Description"}}</label>
+    <label class="label-stripe">{{localize "UTCF.Description"}}</label>
     {{editor system.description target="system.description" button=true editable=editable}}
-    <label class="label-stripe">{{localize "BITD.ExpClues"}}</label>
-    <div><i>- {{localize "BITD.ClassExpClue1"}}</i></div>
-    <div>{{localize "BITD.ClassExpClueDescription"}}</div>
-    <div><i>- {{localize "BITD.ClassExpClue2"}}</i></div>
-    <div><i>- {{localize "BITD.ClassExpClue3"}}</i></div>
+    <label class="label-stripe">{{localize "UTCF.ExpClues"}}</label>
+    <div><i>- {{localize "UTCF.ClassExpClue1"}}</i></div>
+    <div>{{localize "UTCF.ClassExpClueDescription"}}</div>
+    <div><i>- {{localize "UTCF.ClassExpClue2"}}</i></div>
+    <div><i>- {{localize "UTCF.ClassExpClue3"}}</i></div>
     {{editor system.experience_clues target="system.experience_clues" button=true editable=editable}}
 
     {{#if isGM}}
-      <div class="label-stripe">{{localize "BITD.Logic"}}</div>
+      <div class="label-stripe">{{localize "UTCF.Logic"}}</div>
       <textarea name="system.logic">{{{system.logic}}}</textarea>
-      <div class="label-stripe">{{localize "BITD.Effects"}}</div>
-      <div id="effects">{{> "systems/blades-in-the-dark/templates/parts/active-effects.html"}}</div>
+      <div class="label-stripe">{{localize "UTCF.Effects"}}</div>
+      <div id="effects">{{> "systems/until-the-curtain-falls/templates/parts/active-effects.html"}}</div>
     {{/if}}
   </section>
 

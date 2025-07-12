@@ -10,8 +10,8 @@ export class BladesClockSheet extends BladesSheet {
   /** @override */
 	static get defaultOptions() {
 	  return foundry.utils.mergeObject(super.defaultOptions, {
-  	  classes: ["blades-in-the-dark", "sheet", "actor", "clock"],
-  	  template: "systems/blades-in-the-dark/templates/actors/clock-sheet.html",
+  	  classes: ["until-the-curtain-falls", "sheet", "actor", "clock"],
+  	  template: "systems/until-the-curtain-falls/templates/actors/clock-sheet.html",
       width: 420,
       height: 400,
     });
@@ -34,7 +34,7 @@ export class BladesClockSheet extends BladesSheet {
 
   /** @override */
   async _updateObject(event, formData) {
-    let image_path = `systems/blades-in-the-dark/styles/assets/progressclocks-svg/Progress Clock ${formData['system.type']}-${formData['system.value']}.svg`;
+    let image_path = `systems/until-the-curtain-falls/styles/assets/progressclocks-svg/Progress Clock ${formData['system.type']}-${formData['system.value']}.svg`;
     formData['img'] = image_path;
     formData['prototypeToken.texture.src'] = image_path;
     let data = [];

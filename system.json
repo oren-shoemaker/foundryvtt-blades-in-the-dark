@@ -1,21 +1,21 @@
 {
-  "id": "blades-in-the-dark",
-  "title": "Blades in the Dark",
-  "description": "Blades in the dark game system.",
-  "version": "4.8",
+  "id": "until-the-curtain-falls",
+  "title": "Until the Curtain Falls",
+  "description": "Until the Curtina Falls game system. Forged in the Dark.",
+  "version": "0.0.0",
   "compatibility": {
     "minimum": 10,
     "verified": "10.284"
   },
-  "name": "blades-in-the-dark",
-  "minimumCoreVersion": "10",
-  "url": "https://github.com/megastruktur/foundryvtt-blades-in-the-dark/",
-  "manifest": "https://raw.githubusercontent.com/megastruktur/foundryvtt-blades-in-the-dark/master/system.json",
-  "download": "https://github.com/megastruktur/foundryvtt-blades-in-the-dark/releases/download/4.8/blades-in-the-dark-4.8.zip",
+  "name": "until-the-curtain-falls",
+  "url": "https://github.com/oren-shoemaker/foundryvtt-until-the-curtain-falls",
+  "manifest": "",
+  "download": "",
   "authors": [
     { "name": "megastruktur" },
     { "name": "drewg13" },
-    { "name": "justinross" }
+    { "name": "justinross" },
+    { "name": "oren-shoemaker" }
   ],
   "esmodules": [
     "module/blades.js"
@@ -28,136 +28,111 @@
       "lang": "en",
       "name": "English",
       "path": "lang/en.json"
-    },
-    {
-      "lang": "ru",
-      "name": "Russian",
-      "path": "lang/ru.json"
-    },
-    {
-      "lang": "es",
-      "name": "Spanish",
-      "path": "lang/es.json"
-    },
-    {
-      "lang": "pl",
-      "name": "Polish",
-      "path": "lang/pl.json"
-    },
-    {
-      "lang": "de",
-      "name": "Deutsch",
-      "path": "lang/de.json"
-    },
-    {
-      "lang": "pt",
-      "name": "Portuguese",
-      "path": "lang/pt.json"
     }
   ],
   "packs": [
     {
       "name": "class",
       "label": "Classes",
-      "system": "blades-in-the-dark",
+      "system": "until-the-curtain-falls",
       "path": "./packs/classes.db",
       "type": "Item"
     },
     {
       "name": "heritage",
       "label": "Heritages",
-      "system": "blades-in-the-dark",
+      "system": "until-the-curtain-falls",
       "path": "./packs/heritages.db",
       "type": "Item"
     },
     {
       "name": "vice",
       "label": "Vices",
-      "system": "blades-in-the-dark",
+      "system": "until-the-curtain-falls",
       "path": "./packs/vices.db",
       "type": "Item"
     },
     {
       "name": "background",
       "label": "Backgrounds",
-      "system": "blades-in-the-dark",
+      "system": "until-the-curtain-falls",
       "path": "./packs/backgrounds.db",
       "type": "Item"
     },
     {
       "name": "item",
       "label": "Items",
-      "system": "blades-in-the-dark",
+      "system": "until-the-curtain-falls",
       "path": "./packs/items.db",
       "type": "Item"
     },
     {
       "name": "ability",
       "label": "Abilities",
-      "system": "blades-in-the-dark",
+      "system": "until-the-curtain-falls",
       "path": "./packs/abilities.db",
       "type": "Item"
     },
     {
       "name": "crew_reputation",
       "label": "Crew Reputation",
-      "system": "blades-in-the-dark",
+      "system": "until-the-curtain-falls",
       "path": "./packs/crew_reputation.db",
       "type": "Item"
     },
     {
       "name": "crew_type",
       "label": "Crew Types",
-      "system": "blades-in-the-dark",
+      "system": "until-the-curtain-falls",
       "path": "./packs/crew_types.db",
       "type": "Item"
     },
     {
       "name": "crew_upgrade",
       "label": "Crew Upgrades",
-      "system": "blades-in-the-dark",
+      "system": "until-the-curtain-falls",
       "path": "./packs/crew_upgrades.db",
       "type": "Item"
     },
     {
       "name": "crew_ability",
       "label": "Crew Abilities",
-      "system": "blades-in-the-dark",
+      "system": "until-the-curtain-falls",
       "path": "./packs/crew_abilities.db",
       "type": "Item"
     },
 	{
       "name": "faction",
       "label": "Factions",
-      "system": "blades-in-the-dark",
+      "system": "until-the-curtain-falls",
       "path": "./packs/factions.db",
       "type": "Item"
     },
     {
       "name": "npc",
       "label": "NPCs",
-      "system": "blades-in-the-dark",
+      "system": "until-the-curtain-falls",
       "path": "./packs/npcs.db",
       "type": "Actor"
     },
 	{
       "name": "entanglements",
       "label": "Entanglements",
-      "system": "blades-in-the-dark",
+      "system": "until-the-curtain-falls",
       "path": "./packs/entanglements.db",
       "type": "RollTable"
     },
 	{
       "name": "entanglements-journals",
       "label": "Entanglements Journals",
-      "system": "blades-in-the-dark",
+      "system": "until-the-curtain-falls",
       "path": "./packs/entanglements-journals.db",
       "type": "JournalEntry"
     },
 	{
       "name": "entanglements-macro",
       "label": "Entanglements Macro",
-      "system": "blades-in-the-dark",
+      "system": "until-the-curtain-falls",
       "path": "./packs/entanglements-macro.db",
       "type": "Macro"
     }

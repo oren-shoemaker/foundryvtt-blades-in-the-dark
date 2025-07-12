@@ -11,7 +11,7 @@ export class BladesItemSheet extends ItemSheet {
 	static get defaultOptions() {
 
 	  return foundry.utils.mergeObject(super.defaultOptions, {
-			classes: ["blades-in-the-dark", "sheet", "item"],
+			classes: ["until-the-curtain-falls", "sheet", "item"],
 			width: 560,
 			height: 'auto',
       tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description"}]
@@ -22,7 +22,7 @@ export class BladesItemSheet extends ItemSheet {
 
   /** @override */
   get template() {
-    const path = "systems/blades-in-the-dark/templates/items";
+    const path = "systems/until-the-curtain-falls/templates/items";
     let simple_item_types = ["background", "heritage", "vice", "crew_reputation"];
     let template_name = `${this.item.type}`;
 
@@ -43,7 +43,7 @@ export class BladesItemSheet extends ItemSheet {
     if (!this.options.editable) return;
 
     html.find(".effect-control").click(ev => {
-      if ( this.item.isOwned ) return ui.notifications.warn(game.i18n.localize("BITD.EffectWarning"))
+      if ( this.item.isOwned ) return ui.notifications.warn(game.i18n.localize("UTCF.EffectWarning"))
       BladesActiveEffect.onManageActiveEffect(ev, this.item)
     });
   }

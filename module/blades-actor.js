@@ -41,7 +41,7 @@ export class BladesActor extends Actor {
 
     // Calculate Dice to throw.
     let dice_amount = {};
-    dice_amount['BITD.Vice'] = 4;
+    dice_amount['UTCF.Vice'] = 4;
 
     for (var attribute_name in this.system.attributes) {
       dice_amount[attribute_name] = 0;
@@ -54,8 +54,8 @@ export class BladesActor extends Actor {
         }
       }
       // Vice dice roll uses lowest attribute dice amount
-      if (dice_amount[attribute_name] < dice_amount['BITD.Vice'] ) {
-        dice_amount['BITD.Vice'] = dice_amount[attribute_name];
+      if (dice_amount[attribute_name] < dice_amount['UTCF.Vice'] ) {
+        dice_amount['UTCF.Vice'] = dice_amount[attribute_name];
       }
     }
 
@@ -70,10 +70,10 @@ export class BladesActor extends Actor {
     let attribute_label = BladesHelpers.getRollLabel(attribute_name);
 
     let content = `
-        <h2>${game.i18n.localize('BITD.Roll')} ${game.i18n.localize(attribute_label)}</h2>
+        <h2>${game.i18n.localize('UTCF.Roll')} ${game.i18n.localize(attribute_label)}</h2>
         <form>
           <div class="form-group">
-            <label>${game.i18n.localize('BITD.Modifier')}:</label>
+            <label>${game.i18n.localize('UTCF.Modifier')}:</label>
             <select id="mod" name="mod">
               ${this.createListOfDiceMods(-3,+3,0)}
             </select>
@@ -81,19 +81,19 @@ export class BladesActor extends Actor {
     if (BladesHelpers.isAttributeAction(attribute_name)) {
       content += `
             <div class="form-group">
-              <label>${game.i18n.localize('BITD.Position')}:</label>
+              <label>${game.i18n.localize('UTCF.Position')}:</label>
               <select id="pos" name="pos">
-                <option value="controlled">${game.i18n.localize('BITD.PositionControlled')}</option>
-                <option value="risky" selected>${game.i18n.localize('BITD.PositionRisky')}</option>
-                <option value="desperate">${game.i18n.localize('BITD.PositionDesperate')}</option>
+                <option value="controlled">${game.i18n.localize('UTCF.PositionControlled')}</option>
+                <option value="risky" selected>${game.i18n.localize('UTCF.PositionRisky')}</option>
+                <option value="desperate">${game.i18n.localize('UTCF.PositionDesperate')}</option>
               </select>
             </div>
             <div class="form-group">
-              <label>${game.i18n.localize('BITD.Effect')}:</label>
+              <label>${game.i18n.localize('UTCF.Effect')}:</label>
               <select id="fx" name="fx">
-                <option value="limited">${game.i18n.localize('BITD.EffectLimited')}</option>
-                <option value="standard" selected>${game.i18n.localize('BITD.EffectStandard')}</option>
-                <option value="great">${game.i18n.localize('BITD.EffectGreat')}</option>
+                <option value="limited">${game.i18n.localize('UTCF.EffectLimited')}</option>
+                <option value="standard" selected>${game.i18n.localize('UTCF.EffectStandard')}</option>
+                <option value="great">${game.i18n.localize('UTCF.EffectGreat')}</option>
               </select>
             </div>`;
     } else {
@@ -103,19 +103,19 @@ export class BladesActor extends Actor {
     }
     content += `
         <div className="form-group">
-          <label>${game.i18n.localize('BITD.Notes')}:</label>
+          <label>${game.i18n.localize('UTCF.Notes')}:</label>
           <input id="note" name="note" type="text" value="">
         </div><br/>
         </form>
       `;
 
     new Dialog({
-      title: `${game.i18n.localize('BITD.Roll')} ${game.i18n.localize(attribute_label)}`,
+      title: `${game.i18n.localize('UTCF.Roll')} ${game.i18n.localize(attribute_label)}`,
       content: content,
       buttons: {
         yes: {
           icon: "<i class='fas fa-check'></i>",
-          label: game.i18n.localize('BITD.Roll'),
+          label: game.i18n.localize('UTCF.Roll'),
           callback: async (html) => {
             let modifier = parseInt(html.find('[name="mod"]')[0].value);
             let position = html.find('[name="pos"]')[0].value;

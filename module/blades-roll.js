@@ -43,39 +43,39 @@ async function showChatRollMessage(r, zeromode, attribute_name = "", position = 
     let position_localize = '';
     switch (position) {
       case 'controlled':
-        position_localize = 'BITD.PositionControlled'
+        position_localize = 'UTCF.PositionControlled'
         break;
       case 'desperate':
-        position_localize = 'BITD.PositionDesperate'
+        position_localize = 'UTCF.PositionDesperate'
         break;
       case 'risky':
       default:
-        position_localize = 'BITD.PositionRisky'
+        position_localize = 'UTCF.PositionRisky'
     }
 
     let effect_localize = '';
     switch (effect) {
       case 'limited':
-        effect_localize = 'BITD.EffectLimited'
+        effect_localize = 'UTCF.EffectLimited'
         break;
       case 'great':
-        effect_localize = 'BITD.EffectGreat'
+        effect_localize = 'UTCF.EffectGreat'
         break;
       case 'standard':
       default:
-        effect_localize = 'BITD.EffectStandard'
+        effect_localize = 'UTCF.EffectStandard'
     }
 
-    result = await renderTemplate("systems/blades-in-the-dark/templates/chat/action-roll.html", {rolls: rolls, roll_status: roll_status, attribute_label: attribute_label, position: position, position_localize: position_localize, effect: effect, effect_localize: effect_localize, note: note});
+    result = await renderTemplate("systems/until-the-curtain-falls/templates/chat/action-roll.html", {rolls: rolls, roll_status: roll_status, attribute_label: attribute_label, position: position, position_localize: position_localize, effect: effect, effect_localize: effect_localize, note: note});
   }
   // Check for Resistance roll
   else if (BladesHelpers.isAttributeAttribute(attribute_name)) {
     let stress = getBladesRollStress(rolls, zeromode);
 
-    result = await renderTemplate("systems/blades-in-the-dark/templates/chat/resistance-roll.html", {rolls: rolls, roll_status: roll_status, attribute_label: attribute_label, stress: stress, note: note});
+    result = await renderTemplate("systems/until-the-curtain-falls/templates/chat/resistance-roll.html", {rolls: rolls, roll_status: roll_status, attribute_label: attribute_label, stress: stress, note: note});
   }
   // Check for Indugle Vice roll
-  else if (attribute_name == 'BITD.Vice') {
+  else if (attribute_name == 'UTCF.Vice') {
     let clear_stress = getBladesRollVice(rolls, zeromode);
 
     if (current_stress - clear_stress >= 0) {
@@ -85,18 +85,18 @@ async function showChatRollMessage(r, zeromode, attribute_name = "", position = 
       clear_stress = current_stress;
     }
 
-    result = await renderTemplate("systems/blades-in-the-dark/templates/chat/vice-roll.html", {rolls: rolls, roll_status: roll_status, attribute_label: attribute_label, clear_stress: clear_stress, note: note});
+    result = await renderTemplate("systems/until-the-curtain-falls/templates/chat/vice-roll.html", {rolls: rolls, roll_status: roll_status, attribute_label: attribute_label, clear_stress: clear_stress, note: note});
   }
   // Check for Gather Information roll
-  else if (attribute_name == 'BITD.GatherInformation') {
-    result = await renderTemplate("systems/blades-in-the-dark/templates/chat/gather-info-roll.html", {rolls: rolls, roll_status: roll_status, attribute_label: attribute_label, note: note});
+  else if (attribute_name == 'UTCF.GatherInformation') {
+    result = await renderTemplate("systems/until-the-curtain-falls/templates/chat/gather-info-roll.html", {rolls: rolls, roll_status: roll_status, attribute_label: attribute_label, note: note});
   }
   // Check for Engagement roll
-  else if (attribute_name == 'BITD.Engagement') {
-    result = await renderTemplate("systems/blades-in-the-dark/templates/chat/engagement-roll.html", {rolls: rolls, roll_status: roll_status, attribute_label: attribute_label, note: note});
+  else if (attribute_name == 'UTCF.Engagement') {
+    result = await renderTemplate("systems/until-the-curtain-falls/templates/chat/engagement-roll.html", {rolls: rolls, roll_status: roll_status, attribute_label: attribute_label, note: note});
   }
   // Check for Asset roll
-  else if (attribute_name == 'BITD.AcquireAsset') {
+  else if (attribute_name == 'UTCF.AcquireAsset') {
     let tier_quality = Number(current_crew_tier);
     let status = String(roll_status);
     switch (status) {
@@ -115,11 +115,11 @@ async function showChatRollMessage(r, zeromode, attribute_name = "", position = 
         break;
     }
 
-    result = await renderTemplate("systems/blades-in-the-dark/templates/chat/asset-roll.html", {rolls: rolls, roll_status: roll_status, attribute_label: attribute_label, tier_quality: tier_quality, note: note});
+    result = await renderTemplate("systems/until-the-curtain-falls/templates/chat/asset-roll.html", {rolls: rolls, roll_status: roll_status, attribute_label: attribute_label, tier_quality: tier_quality, note: note});
   }
   // Fortune roll if not specified
   else {
-    result = await renderTemplate("systems/blades-in-the-dark/templates/chat/fortune-roll.html", {rolls: rolls, roll_status: roll_status, attribute_label: "BITD.Fortune", note: note});
+    result = await renderTemplate("systems/until-the-curtain-falls/templates/chat/fortune-roll.html", {rolls: rolls, roll_status: roll_status, attribute_label: "UTCF.Fortune", note: note});
   }
 
   let messageData = {
@@ -265,11 +265,11 @@ export async function simpleRollPopup() {
   new Dialog({
     title: `Simple Roll`,
     content: `
-      <h2>${game.i18n.localize("BITD.RollSomeDice")}</h2>
-      <p>${game.i18n.localize("BITD.RollTokenDescription")}</p>
+      <h2>${game.i18n.localize("UTCF.RollSomeDice")}</h2>
+      <p>${game.i18n.localize("UTCF.RollTokenDescription")}</p>
       <form>
         <div class="form-group">
-          <label>${game.i18n.localize("BITD.RollNumberOfDice")}:</label>
+          <label>${game.i18n.localize("UTCF.RollNumberOfDice")}:</label>
           <select id="qty" name="qty">
             ${Array(11).fill().map((item, i) => `<option value="${i}">${i}d</option>`).join('')}
           </select>
@@ -278,32 +278,32 @@ export async function simpleRollPopup() {
           <legend>Roll Types</legend>
           <div class="radio-group" >
             <label>
-              <input type="radio" id="fortune" name="rollSelection" checked=true> ${game.i18n.localize("BITD.Fortune")}
+              <input type="radio" id="fortune" name="rollSelection" checked=true> ${game.i18n.localize("UTCF.Fortune")}
             </label>
           </div>
           <div class="radio-group">
             <label>
-              <input type="radio" id="gatherInfo" name="rollSelection"> ${game.i18n.localize("BITD.GatherInformation")}
+              <input type="radio" id="gatherInfo" name="rollSelection"> ${game.i18n.localize("UTCF.GatherInformation")}
             </label>
           </div>
           <div class="radio-group">
             <label>
-              <input type="radio" id="engagement" name="rollSelection"> ${game.i18n.localize("BITD.Engagement")}
+              <input type="radio" id="engagement" name="rollSelection"> ${game.i18n.localize("UTCF.Engagement")}
             </label>
           </div>
           <div class="radio-group" style="display:flex;flex-direction:row;justify-content:space-between;">
-            <label><input type="radio" id="indulgeVice" name="rollSelection"> ${game.i18n.localize("BITD.IndulgeVice")}</label>
+            <label><input type="radio" id="indulgeVice" name="rollSelection"> ${game.i18n.localize("UTCF.IndulgeVice")}</label>
             <span style="width:200px">
-              <label>${game.i18n.localize('BITD.Stress')}:</label>
+              <label>${game.i18n.localize('UTCF.Stress')}:</label>
               <select style="width:100px;float:right" id="stress" name="stress">
                 ${Array(11).fill().map((item, i) => `<option value="${i}">${i}</option>`).join('')}
               </select>
             </span>
           </div>
           <div class="radio-group" style="display:flex;flex-direction:row;justify-content:space-between;">
-            <label><input type="radio" id="acqurieAsset" name="rollSelection"> ${game.i18n.localize("BITD.AcquireAsset")}</label>
+            <label><input type="radio" id="acqurieAsset" name="rollSelection"> ${game.i18n.localize("UTCF.AcquireAsset")}</label>
             <span style="width:200px">
-              <label>${game.i18n.localize('BITD.CrewTier')}:</label>
+              <label>${game.i18n.localize('UTCF.CrewTier')}:</label>
               <select style="width:100px;float:right" id="tier" name="tier">
                 ${Array(5).fill().map((item, i) => `<option value="${i}">${i}</option>`).join('')}
               </select>
@@ -311,7 +311,7 @@ export async function simpleRollPopup() {
           </div>
         </fieldset>
         <div className="form-group">
-          <label>${game.i18n.localize('BITD.Notes')}:</label>
+          <label>${game.i18n.localize('UTCF.Notes')}:</label>
           <input id="note" name="note" type="text" value="">
         </div><br/>
       </form>
@@ -331,16 +331,16 @@ export async function simpleRollPopup() {
             if (input[i].checked) {
               switch (input[i].id) {
                 case 'gatherInfo':
-                  await bladesRoll(diceQty,"BITD.GatherInformation","","",note,"");
+                  await bladesRoll(diceQty,"UTCF.GatherInformation","","",note,"");
                   break;
                 case 'engagement':
-                  await bladesRoll(diceQty,"BITD.Engagement","","",note,"");
+                  await bladesRoll(diceQty,"UTCF.Engagement","","",note,"");
                   break;
                 case 'indulgeVice':
-                  await bladesRoll(diceQty,"BITD.Vice","","",note,stress);
+                  await bladesRoll(diceQty,"UTCF.Vice","","",note,stress);
                   break;
                 case 'acqurieAsset':
-                  await bladesRoll(diceQty,"BITD.AcquireAsset","","",note,"",tier);
+                  await bladesRoll(diceQty,"UTCF.AcquireAsset","","",note,"",tier);
                   break;
 
                 default:

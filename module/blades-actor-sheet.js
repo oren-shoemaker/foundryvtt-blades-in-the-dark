@@ -11,8 +11,8 @@ export class BladesActorSheet extends BladesSheet {
   /** @override */
 	static get defaultOptions() {
 	  return foundry.utils.mergeObject(super.defaultOptions, {
-  	  classes: ["blades-in-the-dark", "sheet", "actor", "pc"],
-  	  template: "systems/blades-in-the-dark/templates/actor-sheet.html",
+  	  classes: ["until-the-curtain-falls", "sheet", "actor", "pc"],
+  	  template: "systems/until-the-curtain-falls/templates/actor-sheet.html",
       width: 700,
       height: 970,
       tabs: [{navSelector: ".tabs", contentSelector: ".tab-content", initial: "abilities"}]
@@ -47,10 +47,10 @@ export class BladesActorSheet extends BladesSheet {
     sheetData.system.loadout = loadout;
 
     // Encumbrance Levels
-    let load_level=["BITD.Light","BITD.Light","BITD.Light","BITD.Light","BITD.Normal","BITD.Normal","BITD.Heavy","BITD.Encumbered",
-			"BITD.Encumbered","BITD.Encumbered","BITD.OverMax"];
-    let mule_level=["BITD.Light","BITD.Light","BITD.Light","BITD.Light","BITD.Light","BITD.Light","BITD.Normal","BITD.Normal",
-			"BITD.Heavy","BITD.Encumbered","BITD.OverMax"];
+    let load_level=["UTCF.Light","UTCF.Light","UTCF.Light","UTCF.Light","UTCF.Normal","UTCF.Normal","UTCF.Heavy","UTCF.Encumbered",
+			"UTCF.Encumbered","UTCF.Encumbered","UTCF.OverMax"];
+    let mule_level=["UTCF.Light","UTCF.Light","UTCF.Light","UTCF.Light","UTCF.Light","UTCF.Light","UTCF.Normal","UTCF.Normal",
+			"UTCF.Heavy","UTCF.Encumbered","UTCF.OverMax"];
     let mule_present=0;
 
 
@@ -69,7 +69,7 @@ export class BladesActorSheet extends BladesSheet {
       sheetData.system.load_level=load_level[loadout];
     }
 
-    sheetData.system.load_levels = {"BITD.Light":"BITD.Light", "BITD.Normal":"BITD.Normal", "BITD.Heavy":"BITD.Heavy"};
+    sheetData.system.load_levels = {"UTCF.Light":"UTCF.Light", "UTCF.Normal":"UTCF.Normal", "UTCF.Heavy":"UTCF.Heavy"};
 
     sheetData.system.description = await TextEditor.enrichHTML(sheetData.system.description, {secrets: sheetData.owner, async: true});
 

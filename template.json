@@ -11,27 +11,31 @@
     "vice-purveyor": "",
     "playbook": "",
     "acquaintances": [],
-    "acquaintances_label": "BITD.Acquaintances",
+    "acquaintances_label": "UTCF.Acquaintances",
     "stress": {
       "value": [0],
       "max": 9,
       "max_default": 9,
-      "name_default": "BITD.Stress",
-      "name": "BITD.Stress"
+      "name_default": "UTCF.Stress",
+      "name": "UTCF.Stress"
     },
     "trauma": {
       "max": 4,
       "max_default": 4,
       "value": [0],
-      "name": "BITD.Trauma",
-      "name_default": "BITD.Trauma",
-      "options": ["cold", "haunted", "obsessed", "paranoid", "reckless", "soft", "unstable", "vicious"],
-      "list": []
+      "name": "UTCF.MentalTrauma",
+      "name_default": "UTCF.TrMentalTrauma",
+      "traumas": {
+        "one": "",
+        "two": "",
+        "three": "",
+        "four": ""
+      }
     },
     "healing-clock": [0],
     "experience": [0],
     "experience_max": 8,
-    "experience_clues": ["BITD.ClassExpClue3", "BITD.ClassExpClue2"],
+    "experience_clues": ["UTCF.ClassExpClue3", "UTCF.ClassExpClue2"],
     "coins": [0],
     "coins_stashed": [0],
     "special_abilities": [],
@@ -52,7 +56,8 @@
           "one": ""
         },
         "deadly": {
-          "one": ""
+          "one": "",
+          "two": ""
         }
     },
     "armor-uses": {
@@ -64,25 +69,23 @@
         "insight": {
           "exp": 0,
           "exp_max": 6,
-          "label": "BITD.SkillsInsight",
+          "label": "UTCF.SkillsMind",
           "skills": {
-            "hunt": {
-              "label": "BITD.SkillsHunt",
+            "forge": {
+              "label": "UTCF.SkillsForge",
+              "tooltip": "UTCF.SkillsForgeTooltip",
+              "value": 0,
+              "max": 4
+            },
+            "seek": {
+              "label": "UTCF.SkillsSeek",
+              "tooltip": "UTCF.SkillsSeekTooltip",
               "value": 0,
               "max": 4
             },
             "study": {
-              "label": "BITD.SkillsStudy",
-              "value": 0,
-              "max": 4
-            },
-            "survey": {
-              "label": "BITD.SkillsSurvey",
-              "value": 0,
-              "max": 4
-            },
-            "tinker": {
-              "label": "BITD.SkillsTinker",
+              "label": "UTCF.SkillsStudy",
+              "tooltip": "UTCF.SkillsStudyTooltip",
               "value": 0,
               "max": 4
             }
@@ -91,25 +94,23 @@
         "prowess": {
           "exp": 0,
           "exp_max": 6,
-          "label": "BITD.SkillsProwess",
+          "label": "UTCF.SkillsBody",
           "skills": {
             "finesse": {
-              "label": "BITD.SkillsFinesse",
+              "label": "UTCF.SkillsFinesse",
+              "tooltip": "UTCF.SkillsFinesseTooltip",
               "value": 0,
               "max": 4
             },
-            "prowl": {
-              "label": "BITD.SkillsProwl",
+            "force": {
+              "label": "UTCF.SkillsForce",
+              "tooltip": "UTCF.SkillsForceTooltip",
               "value": 0,
               "max": 4
             },
-            "skirmish": {
-              "label": "BITD.SkillsSkirmish",
-              "value": 0,
-              "max": 4
-            },
-            "wreck": {
-              "label": "BITD.SkillsWreck",
+            "traverse": {
+              "label": "UTCF.SkillsTraverse",
+              "tooltip": "UTCF.SkillsTraverseTooltip",
               "value": 0,
               "max": 4
             }
@@ -118,25 +119,23 @@
         "resolve": {
           "exp": 0,
           "exp_max": 6,
-          "label": "BITD.SkillsResolve",
+          "label": "UTCF.SkillsWill",
           "skills": {
             "attune": {
-              "label": "BITD.SkillsAttune",
+              "label": "UTCF.SkillsAttune",
+              "tooltip": "UTCF.SkillsAttuneTooltip",
               "value": 0,
               "max": 4
             },
             "command": {
-              "label": "BITD.SkillsCommand",
+              "label": "UTCF.SkillsCommand",
+              "tooltip": "UTCF.SkillsCommandTooltip",
               "value": 0,
               "max": 4
             },
             "consort": {
-              "label": "BITD.SkillsConsort",
-              "value": 0,
-              "max": 4
-            },
-            "sway": {
-              "label": "BITD.SkillsSway",
+              "label": "UTCF.SkillsConsort",
+              "tooltip": "UTCF.SkillsConsortTooltip",
               "value": 0,
               "max": 4
             }
@@ -255,15 +254,15 @@
         "value": [1],
         "max": 2,
         "max_default": 2,
-        "name_default": "BITD.Hold",
-        "name": "BITD.Hold"
+        "name_default": "UTCF.Hold",
+        "name": "UTCF.Hold"
       },
       "status": {
         "value": [4],
         "max": 7,
         "max_default": 7,
-        "name_default": "BITD.Status",
-        "name": "BITD.Status"
+        "name_default": "UTCF.Status",
+        "name": "UTCF.Status"
       }
     },
     "item": {
@@ -312,34 +311,34 @@
     "quality": 0,
     "cohort_list": {
       "Gang": {
-        "label": "BITD.Gang"
+        "label": "UTCF.Gang"
       },
       "Expert": {
-        "label": "BITD.Expert"
+        "label": "UTCF.Expert"
       }
     },
     "gang_type": ["Adepts"],
     "gang_type_list": {
 
       "Adepts": {
-        "label": "BITD.GangTypeAdepts",
-        "description": "BITD.GangTypeAdeptsDescription"
+        "label": "UTCF.GangTypeAdepts",
+        "description": "UTCF.GangTypeAdeptsDescription"
       },
       "Rooks": {
-        "label": "BITD.GangTypeRooks",
-        "description": "BITD.GangTypeRooksDescription"
+        "label": "UTCF.GangTypeRooks",
+        "description": "UTCF.GangTypeRooksDescription"
       },
       "Rovers": {
-        "label": "BITD.GangTypeRovers",
-        "description": "BITD.GangTypeRoversDescription"
+        "label": "UTCF.GangTypeRovers",
+        "description": "UTCF.GangTypeRoversDescription"
       },
       "Skulks": {
-        "label": "BITD.GangTypeSkulks",
-        "description": "BITD.GangTypeSkulksDescription"
+        "label": "UTCF.GangTypeSkulks",
+        "description": "UTCF.GangTypeSkulksDescription"
       },
       "Thugs": {
-        "label": "BITD.GangTypeThugs",
-        "description": "BITD.GangTypeThugsDescription"
+        "label": "UTCF.GangTypeThugs",
+        "description": "UTCF.GangTypeThugsDescription"
       }
     },
     "expert_type": "",
@@ -348,74 +347,74 @@
     "edges": [],
     "edges_list": {
       "Fearsome": {
-        "label": "BITD.EdgesFearsome",
-        "description": "BITD.EdgesFearsomeDescription",
+        "label": "UTCF.EdgesFearsome",
+        "description": "UTCF.EdgesFearsomeDescription",
         "selected": false
       },
       "Independent": {
-        "label": "BITD.EdgesIndependent",
-        "description": "BITD.EdgesIndependentDescription",
+        "label": "UTCF.EdgesIndependent",
+        "description": "UTCF.EdgesIndependentDescription",
         "selected": false
       },
       "Loyal": {
-        "label": "BITD.EdgesLoyal",
-        "description": "BITD.EdgesLoyalDescription",
+        "label": "UTCF.EdgesLoyal",
+        "description": "UTCF.EdgesLoyalDescription",
         "selected": false
       },
       "Tenacious": {
-        "label": "BITD.EdgesTenacious",
-        "description": "BITD.EdgesTenaciousDescription",
+        "label": "UTCF.EdgesTenacious",
+        "description": "UTCF.EdgesTenaciousDescription",
         "selected": false
       }
     },
     "flaws": [],
     "flaws_list": {
       "Principled": {
-        "label": "BITD.FlawsPrincipled",
-        "description": "BITD.FlawsPrincipledDescription",
+        "label": "UTCF.FlawsPrincipled",
+        "description": "UTCF.FlawsPrincipledDescription",
         "selected": false
       },
       "Savage": {
-        "label": "BITD.FlawsSavage",
-        "description": "BITD.FlawsSavageDescription",
+        "label": "UTCF.FlawsSavage",
+        "description": "UTCF.FlawsSavageDescription",
         "selected": false
       },
       "Unreliable": {
-        "label": "BITD.FlawsUnreliable",
-        "description": "BITD.FlawsUnreliableDescription",
+        "label": "UTCF.FlawsUnreliable",
+        "description": "UTCF.FlawsUnreliableDescription",
         "selected": false
       },
       "Wild": {
-        "label": "BITD.FlawsWild",
-        "description": "BITD.FlawsWildDescription",
+        "label": "UTCF.FlawsWild",
+        "description": "UTCF.FlawsWildDescription",
         "selected": false
       }
     },
     "harm": ["No"],
     "harm_list": {
       "No": {
-        "label": "BITD.HarmNoHarm",
-        "description": "BITD.HarmNoHarmDescription",
+        "label": "UTCF.HarmNoHarm",
+        "description": "UTCF.HarmNoHarmDescription",
         "value": 0
       },
       "Weakened": {
-        "label": "BITD.HarmWeakened",
-        "description": "BITD.HarmWeakenedDescription",
+        "label": "UTCF.HarmWeakened",
+        "description": "UTCF.HarmWeakenedDescription",
         "value": 1
       },
       "Impaired": {
-        "label": "BITD.HarmImpaired",
-        "description": "BITD.HarmImpairedDescription",
+        "label": "UTCF.HarmImpaired",
+        "description": "UTCF.HarmImpairedDescription",
         "value": 2
       },
       "Broken": {
-        "label": "BITD.HarmBroken",
-        "description": "BITD.HarmBrokenDescription",
+        "label": "UTCF.HarmBroken",
+        "description": "UTCF.HarmBrokenDescription",
         "value": 3
       },
       "Dead": {
-        "label": "BITD.HarmDead",
-        "description": "BITD.HarmDeadDescription",
+        "label": "UTCF.HarmDead",
+        "description": "UTCF.HarmDeadDescription",
         "value": 4
       }
     },
@@ -478,7 +477,7 @@
         "connects": []
       },
       "8": {
-        "name": "BITD.Lair",
+        "name": "UTCF.Lair",
         "value": 1,
         "description": "",
         "connects": []

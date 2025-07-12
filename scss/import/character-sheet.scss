@@ -104,7 +104,7 @@ $hover-brightness: 0.8;
     }
   }
 
-  //Abilitiers and loadout
+  //Abilities and loadout
   .abilities, .loadout {
     .item-name {
       width: 100px;
@@ -224,7 +224,31 @@ $hover-brightness: 0.8;
         margin-right: 5px;
       }
     }
+
+    //Tooltip.
+    .attributes-tooltip {
+
+      .attributes-tooltiptext {
+        visibility: hidden;
+        width: 200px;
+        background-color: $almost_black;
+        color: $almost_white;
+        text-align: center;
+        padding: 5px;
+        border-radius: 6px;
+
+        // Position
+        position: absolute;
+        z-index: 9999;
+      }
+
+      &:hover .attributes-tooltiptext {
+        visibility: visible;
+      }
+    }
   }
+
+  
 
   // ITEM
   .item {
