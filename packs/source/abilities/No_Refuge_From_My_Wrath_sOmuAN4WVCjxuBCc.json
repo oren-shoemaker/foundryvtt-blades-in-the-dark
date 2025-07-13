@@ -1,0 +1,36 @@
+{
+  "name": "No Refuge From My Wrath",
+  "type": "ability",
+  "_id": "sOmuAN4WVCjxuBCc",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-e4707d0f-7fff-742a-70bb-079de2e53a31\">You may take a downtime action to track a target, making an action roll as appropriate. If it succeeds, you gain unerring knowledge of your target&rsquo;s current location, habits, strengths, weaknesses, and bonds (if any). Any actions that or your company take that leverage that knowledge gain +1d. Even if the tracking action fails, it has standard effect (although you still suffer any appropriate harms or consequences).</span></p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["HUN"],
+    "shortname": "NRFW"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752371191562,
+    "modifiedTime": 1752371198967,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!sOmuAN4WVCjxuBCc"
+}

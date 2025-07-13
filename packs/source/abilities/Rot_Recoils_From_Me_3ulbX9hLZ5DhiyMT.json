@@ -1,0 +1,36 @@
+{
+  "name": "Rot Recoils From Me",
+  "type": "ability",
+  "_id": "3ulbX9hLZ5DhiyMT",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-8aadc040-7fff-7426-6cd4-02ef1b73583d\">You are immune to poisons and diseases caused by Hateful Things, and you gain an additional stress box.</span></p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["HUN"],
+    "shortname": "RRFM"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752371123470,
+    "modifiedTime": 1752371132617,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!3ulbX9hLZ5DhiyMT"
+}

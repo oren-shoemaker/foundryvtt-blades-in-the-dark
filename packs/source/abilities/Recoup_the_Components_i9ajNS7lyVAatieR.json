@@ -1,0 +1,36 @@
+{
+  "name": "Recoup the Components",
+  "type": "ability",
+  "_id": "i9ajNS7lyVAatieR",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-60c56a40-7fff-8228-234a-df2e333f00ce\">When you use a consumable item for which you know the schematic or formula, you may spend 1 stress to recover some of the components. You gain +1 to quality the next time you attempt to craft that item. This does not stack, but you can recover the components of more than one type of item per quest.</span></p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["ENG"],
+    "shortname": "RCTC"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752371846926,
+    "modifiedTime": 1752371857710,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!i9ajNS7lyVAatieR"
+}

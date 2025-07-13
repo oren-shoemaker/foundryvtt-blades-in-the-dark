@@ -5,7 +5,24 @@
   "UTCF.TitleDeleteItem": "Delete item",
   "UTCF.TitlePostItem": "Post item",
   "UTCF.Vice": "Vice",
-  "UTCF.Class": "Class",
+  "UTCF.Class": {
+    "Label": "Class",
+    "SEN": {
+      "Name": "Sentinel of the Curtain"
+    },
+    "HUN": {
+      "Name": "Hunter of Corruption"
+    },
+    "SCH": {
+      "Name": "Scholar of Horizons"
+    },
+    "ENG": {
+      "Name": "Engineer of Marvels"
+    },
+    "SPK": {
+      "Name": "Speaker of the Stars"
+    }
+  },
   "UTCF.Stress": "Stress",
   "UTCF.Alias": "Alias",
   "UTCF.Designation": "Designation",
@@ -76,8 +93,16 @@
   "UTCF.Price": "Price",
   "UTCF.Logic": "Logic",
   "UTCF.ExpClues": "Exp Clues",
+
   "UTCF.AbilityPrice": "Ability Price",
   "UTCF.AbilityClass": "Ability Class",
+
+  "UTCF.Ability": {
+    "Label": "Ability",
+    "LabelPlural": "Abilities",
+    "ClassesLabel": "Classes"
+  },
+
   "UTCF.Information": "Information",
   "UTCF.CohortType": "Cohort Type",
   "UTCF.GangType": "Gang Type",

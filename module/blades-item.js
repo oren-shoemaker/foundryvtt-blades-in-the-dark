@@ -74,7 +74,7 @@ export class BladesItem extends Item {
 
     this.system.scale = scale;
     this.system.quality = quality;
-}
+  }
 
   async sendToChat() {
     const itemData = this.data.toObject();

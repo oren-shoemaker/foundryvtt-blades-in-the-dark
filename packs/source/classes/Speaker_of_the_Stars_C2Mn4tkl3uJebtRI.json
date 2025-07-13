@@ -1,0 +1,71 @@
+{
+  "name": "Speaker of the Stars",
+  "type": "class",
+  "_id": "C2Mn4tkl3uJebtRI",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "name": "UTCF.Class.SPK.Name",
+    "shortname": "SPK",
+    "description": "<p><span id=\"docs-internal-guid-04591758-7fff-034b-f623-361a6661d806\">The Speaker of the Stars believes that words can inspire faith, conjure fellowship, and steel hearts against the darkness. Play a Speaker if you want to win over hearts and minds with word and deed, carry the light of the Stars into the world, and build bonds that can withstand harrowing evil.</span></p>",
+    "logic": "",
+    "experience_clues": [],
+    "base_skills": {
+      "hunt": [
+        0
+      ],
+      "study": [
+        0
+      ],
+      "survey": [
+        0
+      ],
+      "tinker": [
+        0
+      ],
+      "finesse": [
+        0
+      ],
+      "prowl": [
+        0
+      ],
+      "skirmish": [
+        0
+      ],
+      "wreck": [
+        0
+      ],
+      "attune": [
+        0
+      ],
+      "command": [
+        0
+      ],
+      "consort": [
+        0
+      ],
+      "sway": [
+        0
+      ]
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752367493541,
+    "modifiedTime": 1752367498982,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!C2Mn4tkl3uJebtRI"
+}

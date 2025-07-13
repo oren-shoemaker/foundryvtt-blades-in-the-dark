@@ -1,0 +1,36 @@
+{
+  "name": "I Am the Flame",
+  "type": "ability",
+  "_id": "KBUjgAIIhgYgtPo4",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-d00bd797-7fff-52ca-24a2-4155b5c4cbd6\">If you wish it, your touch causes enemies to recoil in pain as if burned, or allies to feel a gentle warmth. Gain +1 effect when you attempt to inflict harm or give comfort with a touch. If you would take harm from heat, fire, or cold, reduce it by one level.</span></p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["SPK"],
+    "shortname": "IMFL"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752371898064,
+    "modifiedTime": 1752371911628,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!KBUjgAIIhgYgtPo4"
+}

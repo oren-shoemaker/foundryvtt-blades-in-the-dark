@@ -1,0 +1,36 @@
+{
+  "name": "Swift As Arrow’s Flight",
+  "type": "ability",
+  "_id": "36TLUncnXZCSfYcE",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>(option for The Wilds Are My Fangs)</p>\n<p><span id=\"docs-internal-guid-ca5f50af-7fff-7bd2-e90d-f5dbf9f732e3\">Your animal companion moves faster than any ordinary creature; it can only be outpaced by supernatural force</span></p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["HUN"],
+    "shortname": "SAAF"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752371373430,
+    "modifiedTime": 1752371414761,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!36TLUncnXZCSfYcE"
+}

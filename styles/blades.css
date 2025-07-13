@@ -259,6 +259,8 @@
   position: relative;
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   display: flex;
   font-weight: bold;
 }
@@ -269,6 +271,8 @@
   position: relative;
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   display: flex;
   font-weight: bold;
 }
@@ -324,6 +328,23 @@
 }
 .until-the-curtain-falls td {
   padding: 5px;
+}
+.until-the-curtain-falls .list-no-bullets {
+  list-style-type: none;
+}
+.until-the-curtain-falls .item-shortname {
+  flex-grow: 0;
+  flex-shrink: 0;
+  text-align: right;
+}
+.until-the-curtain-falls .item-list-padded-bounded {
+  list-style-type: none;
+}
+.until-the-curtain-falls .item-list-padded-bounded .item-list-item {
+  border: 2px solid black;
+}
+.until-the-curtain-falls .item-list-padded-bounded .item-list-item + .item-list-item {
+  margin-top: 5px;
 }
 .until-the-curtain-falls {
   min-width: 420px;

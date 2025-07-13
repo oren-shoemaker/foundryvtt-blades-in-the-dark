@@ -1,0 +1,36 @@
+{
+  "name": "As Starlight",
+  "type": "ability",
+  "_id": "Xsmdoc1JcFQTjlkB",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>(option for The Wilds Are My Fangs)</p>\n<p><span id=\"docs-internal-guid-543e7992-7fff-fb35-56eb-ca7600b782a1\">Your animal companion can become intangible, and gains +1d when attempting to remain undetected</span></p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["HUN"],
+    "shortname": "ASTA"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752371419450,
+    "modifiedTime": 1752371433275,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!Xsmdoc1JcFQTjlkB"
+}

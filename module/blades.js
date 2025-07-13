@@ -26,7 +26,7 @@ window.BladesHelpers = BladesHelpers;
 /*  Foundry VTT Initialization                  */
 /* -------------------------------------------- */
 Hooks.once("init", async function() {
-  console.log(`Initializing Blades In the Dark System`);
+  console.log(`Initializing Until the Curtain Falls system`);
 
   game.blades = {
     dice: bladesRoll
@@ -300,6 +300,19 @@ Hooks.once("init", async function() {
 
     html += `</div>`;
     return html;
+  });
+
+  Handlebars.registerHelper('list-class-abilities', function() {
+    const context = this;
+    let html = '<ul class="item-list-padded-bounded">'
+    context.system.abilities.forEach(ability => {
+      html += `<li class="item-list-item" data-item-id=${ability._id}>`;
+      html += `<b class="label-stripe-gray">${ability.name}</b>`;
+      html += `${ability.system.description}`;
+      html += '</li>';
+    });
+    html += '</ul>';
+    return new Handlebars.SafeString(html);
   });
 
 });

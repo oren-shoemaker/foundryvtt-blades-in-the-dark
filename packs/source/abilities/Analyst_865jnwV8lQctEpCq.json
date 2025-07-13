@@ -1,0 +1,36 @@
+{
+  "name": "Analyst",
+  "type": "ability",
+  "_id": "865jnwV8lQctEpCq",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-b11c61ba-7fff-d6b6-4d81-692fe4469f6c\">During downtime, you gain two ticks to distribute among any long-term project clocks that involve learning new schematics or formulas, or crafting complex creations</span></p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["ENG"],
+    "shortname": "ANLT"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752371802952,
+    "modifiedTime": 1752371812853,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!865jnwV8lQctEpCq"
+}

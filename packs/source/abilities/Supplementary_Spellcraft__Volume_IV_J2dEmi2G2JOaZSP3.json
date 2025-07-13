@@ -1,0 +1,36 @@
+{
+  "name": "Supplementary Spellcraft, Volume IV",
+  "type": "ability",
+  "_id": "J2dEmi2G2JOaZSP3",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-69320684-7fff-eeae-5acb-af78b24cf18b\">You learn or may develop two additional spells. If you develop spells when taking this ability, they cost no downtime actions. If you would tick a progress clock to learn or develop a spell, tick twice as many segments.</span></p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["SCH"],
+    "shortname": "SSV4"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752371479924,
+    "modifiedTime": 1752371491743,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!J2dEmi2G2JOaZSP3"
+}

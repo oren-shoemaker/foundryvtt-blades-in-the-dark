@@ -1,0 +1,36 @@
+{
+  "name": "My Feats Be Storied",
+  "type": "ability",
+  "_id": "JW8a5UHPzloyvmXb",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p dir=\"ltr\" role=\"presentation\">When you push yourself, you may also do one of the following (if appropriate)</p>\n<ul>\n<li style=\"list-style-type: none;\">\n<ul>\n<li dir=\"ltr\" aria-level=\"3\">\n<p dir=\"ltr\" role=\"presentation\">A feat of defiance&nbsp; - you face down a greater number of foes than ordinarily possible (reduce effective scale of enemies by 1-2 levels as appropriate)</p>\n</li>\n<li dir=\"ltr\" aria-level=\"3\">\n<p dir=\"ltr\" role=\"presentation\">A feat of might - you perform a feat of strength beyond what is possible for an ordinary human (reduce effective scale of obstacle by 1-2 levels as appropriate)</p>\n</li>\n</ul>\n</li>\n</ul>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["SEN"],
+    "shortname": "MFBS"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752370900874,
+    "modifiedTime": 1752371089112,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!JW8a5UHPzloyvmXb"
+}

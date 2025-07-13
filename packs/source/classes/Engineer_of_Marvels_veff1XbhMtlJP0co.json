@@ -1,0 +1,72 @@
+{
+  "name": "Engineer of Marvels",
+  "type": "class",
+  "_id": "veff1XbhMtlJP0co",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "name": "UTCF.Class.ENG.Name",
+    "shortname": "ENG",
+    "description": "<p><span id=\"docs-internal-guid-4d6c2949-7fff-c107-ab0d-3fb0eee9eea5\">The Engineer of Marvels designs devices, tinkers with alchemy, and has a use for every tool. Play an Engineer if you want to create contraptions to protect or to destroy, bring long-dead relics back to life, and turn the tools of the enemy back upon them.</span></p>",
+    "logic": "",
+    "experience_clues": [],
+    "base_skills": {
+      "hunt": [
+        0
+      ],
+      "study": [
+        0
+      ],
+      "survey": [
+        0
+      ],
+      "tinker": [
+        0
+      ],
+      "finesse": [
+        0
+      ],
+      "prowl": [
+        0
+      ],
+      "skirmish": [
+        0
+      ],
+      "wreck": [
+        0
+      ],
+      "attune": [
+        0
+      ],
+      "command": [
+        0
+      ],
+      "consort": [
+        0
+      ],
+      "sway": [
+        0
+      ]
+    },
+    "abilities": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752367476437,
+    "modifiedTime": 1752367482629,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!veff1XbhMtlJP0co"
+}

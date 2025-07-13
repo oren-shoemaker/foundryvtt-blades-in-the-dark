@@ -1,0 +1,36 @@
+{
+  "name": "Ingenious Applications",
+  "type": "ability",
+  "_id": "jXaiYEnJMp0YeO0H",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-f2f37fb1-7fff-fd53-ff8b-36f334c7dbf4\">You may take two stress to use your best action rating when rolling any other action</span></p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["ENG"],
+    "shortname": "INGA"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752371879137,
+    "modifiedTime": 1752371889691,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!jXaiYEnJMp0YeO0H"
+}

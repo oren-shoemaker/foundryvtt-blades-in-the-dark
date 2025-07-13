@@ -1,0 +1,36 @@
+{
+  "name": "My Flesh Renewed",
+  "type": "ability",
+  "_id": "MD5UaGJD8Nvm1FXP",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-65198cce-7fff-5f01-714b-a6f838a6bfac\">You automatically reduce all harms by one level during downtime, even if you do not take the healing downtime activity. If you do take the healing downtime activity, improve any healing received by one level.</span></p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["SEN"],
+    "shortname": "MFRN"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752370855503,
+    "modifiedTime": 1752370866462,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!MD5UaGJD8Nvm1FXP"
+}

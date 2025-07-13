@@ -1,0 +1,36 @@
+{
+  "name": "Meditations on the Fortress of the Mind",
+  "type": "ability",
+  "_id": "CRk5SA5fvcK1eA1j",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-8c20029a-7fff-69ae-af10-ee72825a830a\">You are unbothered by supernatural entities or events that would frighten most people. Gain +1d when resisting with The Will.</span></p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["SCH"],
+    "shortname": "MDFR"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752371648575,
+    "modifiedTime": 1752371658653,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!CRk5SA5fvcK1eA1j"
+}

@@ -63,7 +63,7 @@
         </div>
 
         <div class="item-block flex-horizontal">
-          <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="class">{{localize "UTCF.Class"}}</a></div>
+          <div class="item-class-label"><a class="item-add-popup" data-distinct="true" data-item-type="class">{{localize "UTCF.Class.Label"}}</a></div>
             {{#each items as |item id|}}
                 {{#if (eq item.type "class")}}
                 <div class="item flex-horizontal" data-item-id="{{item._id}}">
@@ -140,7 +140,6 @@
       <table>
         <thead>
           <th class="black-white" colspan="4">{{localize "UTCF.Harm.Label"}}</th>
-          <th class="black-white"><label>{{localize "UTCF.Healing"}}</label></th>
           <th class="black-white">{{localize "UTCF.Armor"}}</th>
         </thead>
         <tbody>
@@ -153,11 +152,6 @@
               <input type="text" id="character-{{_id}}-harm-4-2" name="system.harm.deadly.two" value="{{system.harm.deadly.two}}">
             </td>
             <td>{{localize "UTCF.Harm.Deadly.Effect"}}</td>
-            <td rowspan="3">
-              <div id="character-{{_id}}-health-clock" class="character-health-clock">
-                {{{blades-clock "system.healing-clock" 4 system.healing-clock _id}}}
-              </div>
-            </td>
             <td rowspan="3" id="character-{{_id}}-armor-uses" class="character-armor-uses">
               <div>
                 <label for="character-{{_id}}-armor-uses-armor">{{localize "UTCF.Armor"}}</label>

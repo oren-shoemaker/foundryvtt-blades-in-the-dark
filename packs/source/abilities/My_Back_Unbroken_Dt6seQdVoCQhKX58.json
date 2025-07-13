@@ -1,0 +1,36 @@
+{
+  "name": "My Back Unbroken",
+  "type": "ability",
+  "_id": "Dt6seQdVoCQhKX58",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-c36ed759-7fff-031c-4ced-402dc0c60509\">Your load limits increase to 5 (light), 7 (normal), 8 (heavy). You are still encumbered at 9 or more.</span></p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["SEN"],
+    "shortname": "MBUB"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752370633749,
+    "modifiedTime": 1752370821756,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!Dt6seQdVoCQhKX58"
+}

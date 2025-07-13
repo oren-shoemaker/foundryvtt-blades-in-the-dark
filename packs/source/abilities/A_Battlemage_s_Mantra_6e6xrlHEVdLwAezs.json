@@ -1,0 +1,36 @@
+{
+  "name": "A Battlemage’s Mantra",
+  "type": "ability",
+  "_id": "6e6xrlHEVdLwAezs",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-0b020b3c-7fff-688e-7583-c9363d4d8388\">Reduce the stress cost of casting spells by 2. This cannot reduce the cost to less than 1 stress.</span></p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["SCH"],
+    "shortname": "ABMM"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752371513354,
+    "modifiedTime": 1752371523918,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!6e6xrlHEVdLwAezs"
+}

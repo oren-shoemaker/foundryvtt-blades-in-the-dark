@@ -1,0 +1,71 @@
+{
+  "name": "Hunter of Corruption",
+  "type": "class",
+  "_id": "9FnIU1v1puEP86r5",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "name": "UTCF.Class.HUN.Name",
+    "shortname": "HUN",
+    "description": "<p><span id=\"docs-internal-guid-fcf5ef92-7fff-06c8-41d6-f9713971607f\">The Hunter of Corruption excels in stealth, in precise action, and in pursuit of the foe. Play a Hunter if you want to harry the hateful things spewed forth by the darkness, track them to the place from whence they spring, and slay them before they even know you&rsquo;re there.</span></p>",
+    "logic": "",
+    "experience_clues": [],
+    "base_skills": {
+      "hunt": [
+        0
+      ],
+      "study": [
+        0
+      ],
+      "survey": [
+        0
+      ],
+      "tinker": [
+        0
+      ],
+      "finesse": [
+        0
+      ],
+      "prowl": [
+        0
+      ],
+      "skirmish": [
+        0
+      ],
+      "wreck": [
+        0
+      ],
+      "attune": [
+        0
+      ],
+      "command": [
+        0
+      ],
+      "consort": [
+        0
+      ],
+      "sway": [
+        0
+      ]
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752367428998,
+    "modifiedTime": 1752367435104,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!9FnIU1v1puEP86r5"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Shadow Cloaks Me",
+  "type": "ability",
+  "_id": "CTqaLfvCgiZ4TxUC",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-d718da4a-7fff-d4db-aa8f-7bf05de6b6da\">When you hide in a prepared location or attack from hiding, gain +1d. While hiding, you may pass up on the chance to act. If you have done so one or more times, attacks made from hiding also gain +1 effect.</span></p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["HUN"],
+    "shortname": "SHCM"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752371151766,
+    "modifiedTime": 1752371158438,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!CTqaLfvCgiZ4TxUC"
+}

@@ -94,6 +94,8 @@ section {
   position: relative;
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   display: flex;
   font-weight: bold;
 }
@@ -105,6 +107,8 @@ section {
   position: relative;
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   display: flex;
   font-weight: bold;
 }
@@ -168,4 +172,26 @@ i {
 
 td {
   padding: 5px;
+}
+
+.list-no-bullets {
+  list-style-type: none;
+}
+
+.item-shortname {
+  flex-grow: 0;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.item-list-padded-bounded {
+  list-style-type: none;
+
+  .item-list-item {
+    border: 2px solid black;
+  }
+  
+  .item-list-item + .item-list-item {
+    margin-top: 5px;
+  }
 }

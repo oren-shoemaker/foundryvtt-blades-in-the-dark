@@ -1,0 +1,36 @@
+{
+  "name": "Chosen Spell",
+  "type": "ability",
+  "_id": "wxuS3ESaWEkMXV9R",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p>(spell option for Honing the Blade of Starlight)</p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["SCH"],
+    "shortname": "SPEL"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752372236481,
+    "modifiedTime": 1752372271030,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!wxuS3ESaWEkMXV9R"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Curtain-Scale Plating",
+  "type": "ability",
+  "_id": "gtW4hWECe7MuSHEx",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p dir=\"ltr\" role=\"presentation\">You have access to special armor. Track it as a 0-load item. You may expend it to:</p>\n<ul>\n<li style=\"list-style-type: none;\">\n<ul>\n<li dir=\"ltr\" aria-level=\"3\">\n<p dir=\"ltr\" role=\"presentation\">Avoid the consequences of fatigue or weakness, or of alchemical or mechanical creations</p>\n</li>\n<li dir=\"ltr\" aria-level=\"3\">\n<p dir=\"ltr\" role=\"presentation\">Push yourself to work with technical skill, or handle alchemical or mechanical creations at no stress cost</p>\n</li>\n</ul>\n</li>\n</ul>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["ENG"],
+    "shortname": "CSPL"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752371760839,
+    "modifiedTime": 1752371773725,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!gtW4hWECe7MuSHEx"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "The Wilds Are My Fangs",
+  "type": "ability",
+  "_id": "1HCVOlPrhiHvVUaP",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p dir=\"ltr\" role=\"presentation\">You gain a trained animal companion. It anticipates and obeys your commands, and is a Cohort (Expert: Hunter). It has +1 effect against the supernatural. If it dies, you may spend a downtime action to train another companion. Choose one of the following, and you may take this ability again to choose another:</p>\n<ul>\n<li style=\"list-style-type: none;\">\n<ul>\n<li dir=\"ltr\" aria-level=\"3\">\n<p dir=\"ltr\" role=\"presentation\">Our Minds As One - you and your companion may share thoughts and senses telepathically</p>\n</li>\n<li dir=\"ltr\" aria-level=\"3\">\n<p dir=\"ltr\" role=\"presentation\">Swift As Arrow&rsquo;s Flight - your animal companion moves faster than any ordinary creature; it can only be outpaced by supernatural force</p>\n</li>\n<li dir=\"ltr\" aria-level=\"3\">\n<p dir=\"ltr\" role=\"presentation\">As Starlight - your animal companion can become intangible, and gains +1d when attempting to remain undetected</p>\n</li>\n</ul>\n</li>\n</ul>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["HUN"],
+    "shortname": "TWAF"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752371217069,
+    "modifiedTime": 1752371285203,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!1HCVOlPrhiHvVUaP"
+}

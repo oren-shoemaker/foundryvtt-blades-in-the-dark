@@ -1,0 +1,36 @@
+{
+  "name": "I Am Their Eyes",
+  "type": "ability",
+  "_id": "T0miQkVNcfOeNuPf",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-479f189d-7fff-2a0a-088f-727e6f2d2377\">You always know when you are being lied to or mislead, whether directly or by omission, so long as there is intent to deceive.</span></p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["SPK"],
+    "shortname": "IMTE"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752372098179,
+    "modifiedTime": 1752372104466,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!T0miQkVNcfOeNuPf"
+}

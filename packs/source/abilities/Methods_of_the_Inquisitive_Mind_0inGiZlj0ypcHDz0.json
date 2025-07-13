@@ -1,0 +1,36 @@
+{
+  "name": "Methods of the Inquisitive Mind",
+  "type": "ability",
+  "_id": "0inGiZlj0ypcHDz0",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-ab1e2b40-7fff-30fc-f3eb-68704c99187d\">As a downtime action, you may closely Study a supernatural event, location, entity, or artifact. Depending on the subject, this may require close proximity. If the action succeeds, it has great effect and you gain +1d when you take any further actions to apply your knowledge. Even if the action would otherwise fail, it has standard effect (although you still suffer any appropriate harms or consequences).</span></p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["SCH"],
+    "shortname": "MEIQ"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752371630683,
+    "modifiedTime": 1752371639678,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!0inGiZlj0ypcHDz0"
+}

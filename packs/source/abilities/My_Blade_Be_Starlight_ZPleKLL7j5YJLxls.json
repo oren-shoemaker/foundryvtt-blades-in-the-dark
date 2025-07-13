@@ -1,0 +1,36 @@
+{
+  "name": "My Blade Be Starlight",
+  "type": "ability",
+  "_id": "ZPleKLL7j5YJLxls",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-f3d6f8be-7fff-19e0-dfd9-4bb912c24e0a\">You have +1 effect when fighting supernatural foes with melee weapons (including your fists). You may grapple or restrain incorporeal entities as though they had a physical form, so long as you can perceive them.</span></p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["SEN"],
+    "shortname": "MBBS"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752370564636,
+    "modifiedTime": 1752370591213,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!ZPleKLL7j5YJLxls"
+}

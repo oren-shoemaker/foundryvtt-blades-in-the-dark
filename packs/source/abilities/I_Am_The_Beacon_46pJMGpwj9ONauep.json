@@ -1,0 +1,36 @@
+{
+  "name": "I Am The Beacon",
+  "type": "ability",
+  "_id": "46pJMGpwj9ONauep",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-abaf020f-7fff-eede-1660-71506462db48\">When you use the setup teamwork maneuver, allies that follow through gain both +1 position and +1 effect, if possible. When you assist an ally, they also gain +1 effect.</span></p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["SPK"],
+    "shortname": "IMBC"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752371945137,
+    "modifiedTime": 1752371952629,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!46pJMGpwj9ONauep"
+}

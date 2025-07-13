@@ -1,0 +1,36 @@
+{
+  "name": "Combat Engineering",
+  "type": "ability",
+  "_id": "HoH5TpCUZlWB6Hd3",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-82023f97-7fff-bc25-d8a6-1a982aac9b79\">Once per quest, you may take an action to quickly craft an item that takes up no more than one load. Mark two load when you do so; this covers the materials and equipment to craft the item, as well as the result.</span></p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["ENG"],
+    "shortname": "CMBE"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752371860593,
+    "modifiedTime": 1752371874623,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!HoH5TpCUZlWB6Hd3"
+}

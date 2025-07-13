@@ -1,0 +1,36 @@
+{
+  "name": "Our Minds As One",
+  "type": "ability",
+  "_id": "Ufv6uMseSe8mInLj",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p dir=\"ltr\" role=\"presentation\">(option for The Wilds Are My Fangs)</p>\n<p dir=\"ltr\" role=\"presentation\">You and your companion may share thoughts and senses telepathically</p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["HUN"],
+    "shortname": "OMAW"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752371289532,
+    "modifiedTime": 1752371358867,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!Ufv6uMseSe8mInLj"
+}

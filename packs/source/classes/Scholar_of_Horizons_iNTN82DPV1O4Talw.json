@@ -1,0 +1,71 @@
+{
+  "name": "Scholar of Horizons",
+  "type": "class",
+  "_id": "iNTN82DPV1O4Talw",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "name": "UTCF.Class.SCH.Name",
+    "shortname": "SCH",
+    "description": "<p><span id=\"docs-internal-guid-25c20ef4-7fff-44a2-cd1b-22d5a0e57462\">The Scholar of Horizons has spent long years learning the secrets of history, unraveling the mysteries of the arcane, and honing the mind against corruption. Play a Scholar if you want to work wonders with magic, delve into the mysteries of the Curtain, and contest the wills of the putrid intelligences that threaten humankind.</span></p>",
+    "logic": "",
+    "experience_clues": [],
+    "base_skills": {
+      "hunt": [
+        0
+      ],
+      "study": [
+        0
+      ],
+      "survey": [
+        0
+      ],
+      "tinker": [
+        0
+      ],
+      "finesse": [
+        0
+      ],
+      "prowl": [
+        0
+      ],
+      "skirmish": [
+        0
+      ],
+      "wreck": [
+        0
+      ],
+      "attune": [
+        0
+      ],
+      "command": [
+        0
+      ],
+      "consort": [
+        0
+      ],
+      "sway": [
+        0
+      ]
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752367445367,
+    "modifiedTime": 1752367450556,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!iNTN82DPV1O4Talw"
+}

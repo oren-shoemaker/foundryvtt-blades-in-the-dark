@@ -1,9 +1,10 @@
 <form class="{{cssClass}}" autocomplete="off">
-    <header class="sheet-header">
+    <header class="sheet-header flexrow">
         <img src="{{img}}" data-edit="img" title="{{name}}"/>
-        <div class="header-fields">
-            <h1 class="charname"><input name="name" type="text" value="{{name}}" placeholder="{{localize 'UTCF.Name'}}"/></h1>
-        </div>
+        <h1 class="charname">
+          <input name="name" type="text" value="{{name}}" placeholder="{{localize 'UTCF.Name'}}"/>
+        </h1>
+        <strong class="item-shortname">{{system.shortname}}</strong>
     </header>
 
     {{!-- Sheet Body --}}
@@ -11,10 +12,14 @@
       {{editor system.description target="system.description" button=true editable=editable}}
     </section>
     <div class="flex-vertical">
-      <label class="label-stripe">{{localize "UTCF.AbilityPrice"}}</label>
-      <input id="ability-price" type="text" name="system.price" value="{{system.price}}" placeholder="{{localize 'UTCF.AbilityPrice'}}">
-      <label class="label-stripe">{{localize "UTCF.AbilityClass"}}</label>
-      <input id="ability-class" type="text" name="system.class" value="{{system.class}}" placeholder="{{localize 'UTCF.AbilityClass'}}">
+      <label class="label-stripe">{{localize "UTCF.Ability.ClassesLabel"}}</label>
+      {{#if system.classes}}
+        <ul class="list-no-bullets">
+          {{#each system.classes}}
+            <li><strong>{{this}}</strong></li>
+          {{/each}}
+        </ul>
+      {{/if}}
       {{#if isGM}}
         <div class="label-stripe">{{localize "UTCF.Logic"}}</div>
         <textarea name="system.logic">{{{system.logic}}}</textarea>

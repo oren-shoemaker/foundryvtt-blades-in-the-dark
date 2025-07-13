@@ -1,0 +1,36 @@
+{
+  "name": "My Comrades Unflinching",
+  "type": "ability",
+  "_id": "tc0L0hnDJW1ahztm",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-f3fb2076-7fff-033b-91da-617b8adf97ae\">When you Command a cohort in battle, they will not break until they perish. They gain +1 effect and 1 armor. Additionally, you and your allies have a strong resistance to fear so long as you&rsquo;re within a pace or two of each other.</span></p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["SEN"],
+    "shortname": "MCUN"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752370826740,
+    "modifiedTime": 1752370850598,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!tc0L0hnDJW1ahztm"
+}

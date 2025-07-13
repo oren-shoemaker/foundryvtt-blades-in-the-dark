@@ -1,0 +1,36 @@
+{
+  "name": "Surge of Genius",
+  "type": "ability",
+  "_id": "wdehfIGqvOzBh5Iu",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p dir=\"ltr\" role=\"presentation\">When you use an alchemical or mechanical creation, you may push yourself to do one of the following (you also gain the the benefits of pushing yourself)</p>\n<ul>\n<li style=\"list-style-type: none;\">\n<ul>\n<li dir=\"ltr\" aria-level=\"3\">\n<p dir=\"ltr\" role=\"presentation\">Supernatural entanglement - the item or the area in which it was used, as appropriate, either attract or repel Hateful Things (your choice). The outcome of the action roll determines how well you can control the duration, but it can last for no longer than one hour.</p>\n</li>\n<li dir=\"ltr\" aria-level=\"3\">\n<p dir=\"ltr\" role=\"presentation\">Marvelous tinkering - improve the item&rsquo;s tier by 1. If the action roll is a critical success, improve its tier by 2 instead. This lasts no longer than the duration of the quest.</p>\n</li>\n</ul>\n</li>\n</ul>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["ENG"],
+    "shortname": "SURG"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752371829884,
+    "modifiedTime": 1752371844564,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!wdehfIGqvOzBh5Iu"
+}

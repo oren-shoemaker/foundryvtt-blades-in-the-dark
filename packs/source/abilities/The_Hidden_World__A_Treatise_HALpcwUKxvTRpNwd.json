@@ -1,0 +1,36 @@
+{
+  "name": "The Hidden World: A Treatise",
+  "type": "ability",
+  "_id": "HALpcwUKxvTRpNwd",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-ce8259f7-7fff-c468-079d-3dbd7478036b\">Gain +1d when you gather information about the supernatural</span></p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["SCH"],
+    "shortname": "THWT"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752371534012,
+    "modifiedTime": 1752371546677,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!HALpcwUKxvTRpNwd"
+}

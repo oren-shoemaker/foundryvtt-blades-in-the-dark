@@ -1,0 +1,71 @@
+{
+  "name": "Sentinel of the Curtain",
+  "type": "class",
+  "_id": "Q2gtECCbPuZ6rAec",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "name": "UTCF.Class.SEN.Name",
+    "shortname": "SEN",
+    "description": "<p><span id=\"docs-internal-guid-232baaf5-7fff-d359-f597-3c579a56931d\">The Sentinel of the Curtain is trained to take part in direct combat, to lead a squad or militia against a foe, and to endure great hardships. Play a Sentinel if you want to spit in the eye of corruption as you fight a horde of vile monstrosities from dawn to dusk with your comrades at your back.</span></p>",
+    "logic": "",
+    "experience_clues": "",
+    "base_skills": {
+      "hunt": [
+        0
+      ],
+      "study": [
+        0
+      ],
+      "survey": [
+        0
+      ],
+      "tinker": [
+        0
+      ],
+      "finesse": [
+        0
+      ],
+      "prowl": [
+        0
+      ],
+      "skirmish": [
+        0
+      ],
+      "wreck": [
+        0
+      ],
+      "attune": [
+        0
+      ],
+      "command": [
+        0
+      ],
+      "consort": [
+        0
+      ],
+      "sway": [
+        0
+      ]
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752367338586,
+    "modifiedTime": 1752367372650,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!Q2gtECCbPuZ6rAec"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "I Am Their Voice",
+  "type": "ability",
+  "_id": "jwa4RbFG4cK0ubOG",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<ul id=\"docs-internal-guid-7fb85562-7fff-2adb-53da-274afbbf37ca\">\n<li dir=\"ltr\" aria-level=\"2\">\n<p dir=\"ltr\" role=\"presentation\">When you take an action to call upon or improve a positive bond, gain +1 effect. When you take an action to improve or avert the consequences of a negative bond, gain +1d.</p>\n</li>\n<li dir=\"ltr\" aria-level=\"2\">\n<p dir=\"ltr\" role=\"presentation\">If you take a downtime action involving any bond (positive or negative), gain +1d to the engagement roll for the next quest which involves that bond.</p>\n</li>\n</ul>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["SPK"],
+    "shortname": "IMTV"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752371955085,
+    "modifiedTime": 1752371968757,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!jwa4RbFG4cK0ubOG"
+}

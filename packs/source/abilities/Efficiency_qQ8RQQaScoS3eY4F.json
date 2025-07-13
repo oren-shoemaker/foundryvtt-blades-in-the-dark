@@ -1,0 +1,36 @@
+{
+  "name": "Efficiency",
+  "type": "ability",
+  "_id": "qQ8RQQaScoS3eY4F",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-cc084fac-7fff-a134-2722-4585ac25fd4b\">You may give yourself or another member of your Company one additional downtime action at no cost</span></p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["ENG"],
+    "shortname": "EFFI"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752371792791,
+    "modifiedTime": 1752371800250,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!qQ8RQQaScoS3eY4F"
+}

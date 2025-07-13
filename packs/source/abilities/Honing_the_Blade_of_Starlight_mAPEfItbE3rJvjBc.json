@@ -1,0 +1,36 @@
+{
+  "name": "Honing the Blade of Starlight",
+  "type": "ability",
+  "_id": "mAPEfItbE3rJvjBc",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-e3900c2f-7fff-f526-8198-847af66d941d\">Choose a spell that you know. You gain +1d when casting it, and it has increased effect. You may take this ability any number of times, choosing a different spell each time.</span></p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["SCH"],
+    "shortname": "HBST"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752371549318,
+    "modifiedTime": 1752371572390,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!mAPEfItbE3rJvjBc"
+}

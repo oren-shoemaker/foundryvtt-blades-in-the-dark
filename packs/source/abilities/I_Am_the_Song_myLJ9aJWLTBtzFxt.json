@@ -1,0 +1,36 @@
+{
+  "name": "I Am the Song",
+  "type": "ability",
+  "_id": "myLJ9aJWLTBtzFxt",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-3e8071e3-7fff-e0ab-51a1-043c7141ab34\">Gain +1d when you take an action to perform, persuade, or inspire</span></p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["SPK"],
+    "shortname": "IMSO"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752372002152,
+    "modifiedTime": 1752372012082,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!myLJ9aJWLTBtzFxt"
+}

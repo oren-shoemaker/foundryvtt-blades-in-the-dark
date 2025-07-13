@@ -24,7 +24,7 @@
       "max_default": 4,
       "value": [0],
       "name": "UTCF.MentalTrauma",
-      "name_default": "UTCF.TrMentalTrauma",
+      "name_default": "UTCF.MentalTrauma",
       "traumas": {
         "one": "",
         "two": "",
@@ -275,6 +275,8 @@
     "num_available": 1
   },
   "class": {
+    "name": "",
+    "shortname": "",
     "templates": ["default", "logic", "activatedEffect"],
     "experience_clues": [],
     "base_skills": {
@@ -290,10 +292,13 @@
       "command": [0],
       "consort": [0],
       "sway": [0]
-    }
+    },
+    "abilities": []
   },
   "ability": {
-    "templates": ["ability", "logic", "activatedEffect"]
+    "templates": ["ability", "logic", "activatedEffect"],
+    "classes": [],
+    "shortname": ""
   },
   "heritage": {
     "templates": ["default", "activatedEffect"]

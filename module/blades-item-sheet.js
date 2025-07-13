@@ -13,7 +13,7 @@ export class BladesItemSheet extends ItemSheet {
 	  return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["until-the-curtain-falls", "sheet", "item"],
 			width: 560,
-			height: 'auto',
+			height: 560,
       tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description"}]
 		});
   }
@@ -46,6 +46,23 @@ export class BladesItemSheet extends ItemSheet {
       if ( this.item.isOwned ) return ui.notifications.warn(game.i18n.localize("UTCF.EffectWarning"))
       BladesActiveEffect.onManageActiveEffect(ev, this.item)
     });
+
+    html.find('.item-list-item').click(async ev => {
+      const id = $(ev.currentTarget).data("itemId");
+      const items = await Promise.all(game.packs
+        .filter(p => p.documentName === "Item")
+        .map(async p => p.getDocuments()))
+        .then(arr => arr
+          .flat()
+          .filter(doc => doc._id === id));
+      
+      if(items.length === 1) {
+        items[0].sheet.render(true);
+      } else {
+        console.log(items);
+        throw new Error(`item ID ${id} is non-unique!`)
+      }
+    });
   }
 
   /* -------------------------------------------- */
@@ -63,6 +80,12 @@ export class BladesItemSheet extends ItemSheet {
     sheetData.effects = prepareActiveEffectCategories(this.document.effects);
 
     sheetData.system.description = await TextEditor.enrichHTML(sheetData.system.description, {secrets: sheetData.owner, async: true});
+
+    if(sheetData.type === "class") {
+      const abilities = await game.packs.filter(p => p.title === "Abilities")[0].getDocuments();
+      const class_abilities = abilities.filter(a => a.system.classes.includes(sheetData.system.shortname));
+      sheetData.system.abilities = class_abilities.map(a => a.toObject());
+    }
 
     return sheetData;
   }

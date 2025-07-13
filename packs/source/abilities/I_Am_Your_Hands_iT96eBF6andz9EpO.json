@@ -1,0 +1,36 @@
+{
+  "name": "I Am Your Hands",
+  "type": "ability",
+  "_id": "iT96eBF6andz9EpO",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-638c30a7-7fff-855b-a355-f3968949a73f\">You may push yourself to use an ally&rsquo;s ability, so long as that ally is in your presence. If the ability would ordinarily have permanent effects, they last only until the end of the current quest (or next quest, if used during downtime). You still gain the benefits of pushing yourself if appropriate.</span></p>",
+    "class": "",
+    "price": "1",
+    "purchased": false,
+    "class_default": false,
+    "logic": "",
+    "classes": ["SPK"],
+    "shortname": "IMYH"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752371914592,
+    "modifiedTime": 1752371925506,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!iT96eBF6andz9EpO"
+}
