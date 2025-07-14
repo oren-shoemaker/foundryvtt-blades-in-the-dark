@@ -84,8 +84,28 @@ export class BladesItemSheet extends ItemSheet {
     if(sheetData.type === "class") {
       const abilities = await game.packs.filter(p => p.title === "Abilities")[0].getDocuments();
       const class_abilities = abilities.filter(a => a.system.classes.includes(sheetData.system.shortname));
-      sheetData.system.abilities = class_abilities.map(a => a.toObject());
+      sheetData.system.abilities = class_abilities.map(a => {
+        let ability = a.toObject();
+        // clean out ability -> class refs to avoid a reference loop
+        ability.system.classes = [];
+        return ability;
+      });
     }
+
+    if(sheetData.type === "ability"){
+      const classes = await game.packs.filter(p => p.title === "Classes")[0].getDocuments();
+      const ability_classes = classes.filter(c => sheetData.system.classes.includes(c.system.shortname));
+      console.log(ability_classes);
+      sheetData.system.classes = ability_classes.map(c => {
+        let cls = c.toObject();
+        // clean out class -> ability refs to avoid a reference loop
+        cls.system.abilities = [];
+        return cls;
+      });
+
+    }
+
+    console.log(sheetData);
 
     return sheetData;
   }

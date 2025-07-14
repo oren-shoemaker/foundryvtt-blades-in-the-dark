@@ -315,6 +315,18 @@ Hooks.once("init", async function() {
     return new Handlebars.SafeString(html);
   });
 
+  Handlebars.registerHelper('list-ability-classes', function() {
+    const context = this;
+    let html = '<ul class="item-list-padded-bounded">'
+    context.system.classes.forEach(c => {
+      html += `<li class="item-list-item" data-item-id=${c._id}>`;
+      html += `<b class="label-stripe-gray">${c.name}</b>`;
+      html += '</li>';
+    });
+    html += '</ul>';
+    return new Handlebars.SafeString(html);
+  });
+
 });
 
 /**

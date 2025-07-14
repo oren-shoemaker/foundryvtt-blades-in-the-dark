@@ -17,12 +17,6 @@ $hover-brightness: 0.8;
 // Imports
 @import 'mixin.scss';
 
-/*
- * General Styles
- * Cleaned out things that don't appear to apply to the character sheet, and exist in other, separated SCSS files.
- * Some things *might* be missing, but at a glance, everything looks to be in order.
- */
-
 & * {
   .name-alias{
 
@@ -43,6 +37,7 @@ $hover-brightness: 0.8;
 
   form {
     &.actor-sheet {
+      background-color: white;
       padding: 20px;
     }
   }
@@ -78,7 +73,7 @@ $hover-brightness: 0.8;
     .small-teeth-container {
 
       .small-teeth-wrap {
-        @include toothradio(17px, 50px, "assets/teeth/shorttooth-grey.png", "assets/teeth/shorttooth-red.png", false);
+        @include toothradio(17px, 50px, "assets/teeth/shorttooth-grey.png", "assets/teeth/shorttooth-red.png");
         flex-direction: column;
 
         .small-teeth {
@@ -104,8 +99,7 @@ $hover-brightness: 0.8;
     }
   }
 
-  //Abilities and loadout
-  .abilities, .loadout {
+  .loadout {
     .item-name {
       width: 100px;
     }
@@ -114,15 +108,6 @@ $hover-brightness: 0.8;
     }
     .item-description {
       width: 260px;
-    }
-  }
-
-  // Abilities
-  .abilities {
-    .label-stripe {
-      p:first-child {
-        margin-right: 10px;
-      }
     }
   }
 
@@ -248,41 +233,106 @@ $hover-brightness: 0.8;
     }
   }
 
-  
+  // representation of Item on a character sheet
+  .item-block {
+    .item-openable {
+      cursor: pointer;
+    }
+    
+    // item header generally consists of name + controls
+    .item-header {
+      width: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .item-name {
+        width: auto;
+        margin-right: auto;
+        flex-grow: 10;
+      }
+
+      .item-control {
+        cursor: pointer;
+        flex-grow: 1;
+      }
+    }
+
+    .item-description {
+      display: inline-block;
+      width: auto;
+      height: auto;
+      background-color: $lightgray;
+      font-style: italic;
+      font-weight: bold;
+      text-align: justify;
+      padding-top: 5px;
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+  }
+
+  // generic bounding box for character sheet elements
+  .bounding-box {
+    border: 2px black solid;
+  }
+
+
 
   // ITEM
-  .item {
+  // .item {
+  //   background-color: $lightgray;
 
-    justify-content: space-between;
+  //   .item-openable {
+  //     cursor: pointer;
+  //   }
 
-    .item-body {
+  //   .item-header {
+  //     .item-name {
+  //       width: auto;
+  //       margin-right: auto;
+  //       flex-grow: 10;
+  //     }
 
-      margin-bottom: 10px;
-      * {
-        margin-right: 10px;
-      }
+  //     .item-control {
+  //       cursor: pointer;
+  //       flex-grow: 1;
+  //       margin-left: 5;
+  //       margin-right: 5;
+  //     }
+  //   }
 
-      .item-description {
-        font-style: italic;
-        text-align: justify;
-      }
-    }
+  //   .item-body {
+  //     justify-content: space-between;
 
-    div {
-      flex-grow: 2;
-    }
-    .item-control {
-      flex-grow: 1;
-    }
-    .item-body,
-    .item-class-label {
-      width: 100px;
-    }
-  }
+  //     margin-bottom: 10px;
+  //     * {
+  //       margin-right: 10px;
+  //     }
 
-  .item-class-label {
-    margin-bottom: 10px;
-  }
+  //     .item-description {
+  //       font-style: italic;
+  //       font-weight: bold;
+  //       text-align: justify;
+  //     }
+  //   }
+
+  //   div {
+  //     flex-grow: 2;
+  //   }
+  //   .item-body,
+  //   .item-class-label {
+  //     width: auto;
+  //   }
+  // }
+
+  // .item-border {
+  //   border: 2px black solid;
+  // }
+
+  // .item-class-label {
+  //   width: auto;
+  // }
 
   .name,
   .lair,

@@ -14,11 +14,7 @@
     <div class="flex-vertical">
       <label class="label-stripe">{{localize "UTCF.Ability.ClassesLabel"}}</label>
       {{#if system.classes}}
-        <ul class="list-no-bullets">
-          {{#each system.classes}}
-            <li><strong>{{this}}</strong></li>
-          {{/each}}
-        </ul>
+        {{list-ability-classes}}
       {{/if}}
       {{#if isGM}}
         <div class="label-stripe">{{localize "UTCF.Logic"}}</div>

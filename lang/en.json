@@ -7,6 +7,7 @@
   "UTCF.Vice": "Vice",
   "UTCF.Class": {
     "Label": "Class",
+    "AddLabel": "Add Class",
     "SEN": {
       "Name": "Sentinel of the Curtain"
     },

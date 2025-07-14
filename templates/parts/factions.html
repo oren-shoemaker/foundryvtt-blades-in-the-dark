@@ -8,8 +8,8 @@
         <div>
           {{#each items as |faction id|}}
           {{#if (eq faction.type "faction")}}
-            <div class="item flex-horizontal" data-item-id="{{faction._id}}">
-              <div class="item-body flex-horizontal">
+            <div class="item flex-horizontal-spaced" data-item-id="{{faction._id}}">
+              <div class="item-body flex-horizontal-spaced">
                 <img src="{{faction.img}}" title="{{faction.name}}" width="24" height="24"/>
                 <div class="item-name">{{faction.name}}</div>
                 <div class="item-description">{{faction.system.description}}</div>

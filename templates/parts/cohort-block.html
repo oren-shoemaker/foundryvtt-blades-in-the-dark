@@ -15,9 +15,9 @@
       <a class="item-control item-post" title="{{localize 'UTCF.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
     </div>
     <div class="cohort-body">
-      <div class="flex-horizontal">
+      <div class="flex-horizontal-spaced">
         <img src="{{img}}"/>
-        <div class="cohort-block-harm flex-horizontal">
+        <div class="cohort-block-harm flex-horizontal-spaced">
           {{#each system.harm_list as |harm harm_key|}}
             {{#multiboxes ../system.harm}}
             <input id="harm-{{harm_key}}-{{../_id}}" type="radio" name="harm.{{../_id}}" data-item="{{../_id}}" value="{{harm_key}}">

@@ -32,7 +32,7 @@
     {{#if (eq system.cohort "Gang")}}
 
       <div class="label-stripe">{{localize "UTCF.GangType"}}</div>
-      <div id="gang-type-boxes" class="flex-horizontal">
+      <div id="gang-type-boxes" class="flex-horizontal-spaced">
 
         <select name="system.gang_type" multiple>
           {{selectOptionsWithLabel system.gang_type_list selected=system.gang_type localize=true}}
@@ -71,12 +71,12 @@
 
     <div class="label-stripe">{{localize "UTCF.ChooseOneOrTwoEdges"}}</div>
 
-    <div class="flex-horizontal">
+    <div class="flex-horizontal-spaced">
 
       <div class="edgeflaw-container flex-vertical">
         <div class="label-stripe">{{localize "UTCF.Edges"}}</div>
         {{#each system.edges_list as |edge key|}}
-          <div class="edgeflaw flex-horizontal">
+          <div class="edgeflaw flex-horizontal-spaced">
             <input id="cohort-{{_id}}-edge-{{key}}" type="checkbox" data-dType="Boolean" name="system.edges_list.{{key}}.selected"
                    {{checked edge.selected}}>
             <label for="cohort-{{_id}}-edge-{{key}}">{{localize edge.label}}</label>
@@ -87,7 +87,7 @@
       <div class="edgeflaw-container flex-vertical">
         <div class="label-stripe">{{localize "UTCF.Flaws"}}</div>
         {{#each system.flaws_list as |flaw key|}}
-          <div class="edgeflaw flex-horizontal">
+          <div class="edgeflaw flex-horizontal-spaced">
             <input id="cohort-{{_id}}-flaw-{{key}}" type="checkbox" data-dType="Boolean" name="system.flaws_list.{{key}}.selected"
                    {{checked flaw.selected}}>
             <label for="cohort-{{_id}}-flaw-{{key}}">{{localize flaw.label}}</label>
@@ -102,7 +102,7 @@
 
   <section id="cohort-harm" class="flex-vertical">
     <div class="label-stripe">{{localize "UTCF.Harm"}}</div>
-    <div id="harm-list" class="flex-horizontal">
+    <div id="harm-list" class="flex-horizontal-spaced">
       {{#multiboxes system.harm}}
       {{#each system.harm_list as |harm harm_key|}}
         <input id="{{harm_key}}-harm" type="radio" name="system.harm" value="{{harm_key}}">
@@ -112,7 +112,7 @@
     </div>
   </section>
 
-  <section class="flex-horizontal" style="justify-content: unset;">
+  <section class="flex-horizontal-spaced" style="justify-content: unset;">
     <input id="cohort-armor" type="checkbox" data-dType="Boolean" name="system.armor" value="{{system.armor}}" {{checked system.armor}}>
     <label for="cohort-armor">{{localize "UTCF.Armor"}}</label>
   </section>

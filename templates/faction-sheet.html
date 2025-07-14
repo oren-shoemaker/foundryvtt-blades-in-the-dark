@@ -1,5 +1,5 @@
 <form class="{{cssClass}} actor-sheet" autocomplete="off">
-  <section id="factions" class="flex-horizontal">
+  <section id="factions" class="flex-horizontal-spaced">
 	<div id="factions-section" class="flex-vertical grow-two">
 	  <div class="tab flex-vertical">
 		<div class="label-stripe">
@@ -11,8 +11,8 @@
           {{#each items as |faction id|}}
           {{#if (eq faction.type "faction")}}
 
-			<div id="faction-{{faction._id}}-items" class="faction-items label-stripe-gray item flex-horizontal" data-item-id="{{faction._id}}">
-              <a class="item-body flex-horizontal">
+			<div id="faction-{{faction._id}}-items" class="faction-items label-stripe-gray item flex-horizontal-spaced" data-item-id="{{faction._id}}">
+              <a class="item-body flex-horizontal-spaced">
                 <img src="{{faction.img}}" title="{{faction.name}}" width="24" height="24"/>
 				<div class="item-name">{{faction.name}}<br>{{localize "UTCF.Tier"}}: {{faction.system.tier}}</div>
 			  </a>
@@ -46,15 +46,15 @@
 				</div>
 			  </div>
 
-			  <div id="crew-hold" class="flex-horizontal">
+			  <div id="crew-hold" class="flex-horizontal-spaced">
 				<div class="black-label">{{localize "UTCF.Hold"}}</div>
 				{{#multiboxes faction.system.hold.value}}
-				<div class="flex-horizontal">
+				<div class="flex-horizontal-spaced">
 				  <div class="gray-label">{{localize "UTCF.Weak"}}</div>
 				  <input class="update-box" data-utype="hold" data-item="{{faction._id}}" data-value="1" type="radio" id="faction-{{id}}-hold-1" value="1" dtype="Radio">
 				  <label for="faction-{{id}}-hold-1"></label>
 				</div>
-				<div class="flex-horizontal">
+				<div class="flex-horizontal-spaced">
 				  <div class="gray-label">{{localize "UTCF.Strong"}}</div>
 				  <input class="update-box" data-utype="hold" data-item="{{faction._id}}" data-value="2" type="radio" id="faction-{{id}}-hold-2" value="2" dtype="Radio">
 				  <label for="faction-{{id}}-hold-2"></label>

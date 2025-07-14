@@ -1,6 +1,6 @@
 <form class="{{cssClass}} actor-sheet" autocomplete="off">
 
-  <section class="flex-horizontal">
+  <section class="flex-horizontal-spaced">
 
     <img src="{{img}}" data-edit="img" title="{{name}}" height="100" width="100"/>
 
@@ -16,8 +16,8 @@
         </div>
         {{#each items as |item id|}}
         {{#if (eq item.type "crew_reputation")}}
-          <div class="item flex-horizontal" data-item-id="{{item._id}}">
-            <div class="item-body item-sheet-open flex-horizontal">
+          <div class="item flex-horizontal-spaced" data-item-id="{{item._id}}">
+            <div class="item-body item-sheet-open flex-horizontal-spaced">
               <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
               <div class="item-name">{{item.name}}</div>
             </div>
@@ -36,16 +36,16 @@
       </div>
 
 
-      <div class="flex-horizontal">
-        <div id="crew-{{_id}}-hold-box" class="flex-horizontal crew-hold">
+      <div class="flex-horizontal-spaced">
+        <div id="crew-{{_id}}-hold-box" class="flex-horizontal-spaced crew-hold">
           <div class="black-label">{{localize "UTCF.Hold"}}</div>
           {{#multiboxes system.hold}}
-          <div class="flex-horizontal">
+          <div class="flex-horizontal-spaced">
             <div class="gray-label">{{localize "UTCF.Weak"}}</div>
             <input id="crew-{{_id}}-hold-weak" type="radio" name="system.hold" value="weak">
             <label for="crew-{{_id}}-hold-weak"></label>
           </div>
-          <div class="flex-horizontal">
+          <div class="flex-horizontal-spaced">
             <div class="gray-label">{{localize "UTCF.Strong"}}</div>
             <input id="crew-{{_id}}-hold-strong" type="radio" name="system.hold" value="strong">
             <label for="crew-{{_id}}-hold-strong"></label>
@@ -73,7 +73,7 @@
   </section>
 
 
-  <section class="flex-horizontal">
+  <section class="flex-horizontal-spaced">
     <div id="crew-{{_id}}-reputation" class="crew-reputation">
       {{#multiboxes system.reputation}}
       {{#repturf system.turfs_amount}}
@@ -149,7 +149,7 @@
     </div>
 
     {{!-- Heat/Wanted --}}
-    <div id="crew-{{_id}}-heat-wanted" class="flex-horizontal big-teeth-section crew-heat-wanted">
+    <div id="crew-{{_id}}-heat-wanted" class="flex-horizontal-spaced big-teeth-section crew-heat-wanted">
 
       <div id="crew-{{_id}}-heat" class="big-teeth">
         {{#multiboxes system.heat}}
@@ -198,7 +198,7 @@
     </div>
   </section>
 
-  <section class="flex-horizontal">
+  <section class="flex-horizontal-spaced">
 
     <div class="flex-vertical">
 
@@ -210,7 +210,7 @@
         {{/if}}
         {{/each}}
       </div>
-      <nav class="tabs flex-horizontal">
+      <nav class="tabs flex-horizontal-spaced">
         <a class="item" data-tab="turfs">{{localize "UTCF.Turfs"}}</a>
         <a class="item" data-tab="upgrades">{{localize "UTCF.Upgrades"}}</a>
         <a class="item" data-tab="abilities">{{localize "UTCF.Abilities"}}</a>
@@ -266,14 +266,14 @@
 
     {{!-- Crew Upgrades --}}
     <div id="crew-{{_id}}-upgrades" class="crew-upgrades tab grow-two flex-vertical" data-tab="upgrades">
-      <div class="label-stripe flex-horizontal">
+      <div class="label-stripe flex-horizontal-spaced">
         <p>{{localize "UTCF.CrewUpgrades"}}</p>
         <p><a class="item-add-popup" data-item-type="crew_upgrade"><i class="fas fa-plus-square"></i></a></p>
       </div>
       {{#each items as |item id|}}
       {{#if (eq item.type "crew_upgrade")}}
-        <div class="item flex-horizontal" data-item-id="{{item._id}}">
-          <div class="item-body item-sheet-open flex-horizontal">
+        <div class="item flex-horizontal-spaced" data-item-id="{{item._id}}">
+          <div class="item-body item-sheet-open flex-horizontal-spaced">
             <b><div class="item-name">{{item.name}}</div></b>
             <div class="item-description">{{{item.system.description}}}</div>
           </div>
@@ -286,14 +286,14 @@
 
     {{!-- Crew Abilities --}}
     <div id="crew-{{_id}}-abilities" class="crew-abilities tab grow-two flex-vertical" data-tab="abilities">
-      <div class="label-stripe flex-horizontal">
+      <div class="label-stripe flex-horizontal-spaced">
         <p>{{localize "UTCF.SpecialAbilities"}}</p>
         <p><a class="item-add-popup" data-item-type="crew_ability"><i class="fas fa-plus-square"></i></a></p>
       </div>
       {{#each items as |item id|}}
       {{#if (eq item.type "crew_ability")}}
-        <div class="item flex-horizontal" data-item-id="{{item._id}}">
-          <div class="item-body item-sheet-open flex-horizontal">
+        <div class="item flex-horizontal-spaced" data-item-id="{{item._id}}">
+          <div class="item-body item-sheet-open flex-horizontal-spaced">
             <b><div class="item-name">{{item.name}}</div></b>
             <div class="item-description">{{{item.system.description}}}</div>
           </div>
@@ -306,11 +306,11 @@
 
     {{!-- Cohorts --}}
     <div id="crew-{{_id}}-cohorts" class="crew-cohorts tab grow-two flex-vertical" data-tab="cohorts">
-      <div class="label-stripe flex-horizontal">
+      <div class="label-stripe flex-horizontal-spaced">
         <p>{{localize "UTCF.Cohorts"}}</p>
         <p><a class="add-item" data-item-type="cohort"><i class="fas fa-plus-square"></i></a></p>
       </div>
-      <div class="cohorts flex-horizontal">
+      <div class="cohorts flex-horizontal-spaced">
         {{#each items as |item id|}}
           {{#if (eq item.type "cohort")}}
 
@@ -335,8 +335,8 @@
         <p><label>{{localize "UTCF.AllItems"}}</label></p>
       </div>
       {{#each items as |item id|}}
-      <div class="item flex-horizontal" data-item-id="{{item._id}}">
-        <div class="item-body item-sheet-open flex-horizontal">
+      <div class="item flex-horizontal-spaced" data-item-id="{{item._id}}">
+        <div class="item-body item-sheet-open flex-horizontal-spaced">
           <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
           <div class="item-name">{{item.name}}</div>
         </div>

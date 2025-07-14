@@ -216,10 +216,14 @@
   margin-bottom: 0px;
   justify-content: center;
 }
-.until-the-curtain-falls .flex-horizontal {
+.until-the-curtain-falls .flex-horizontal-spaced {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.until-the-curtain-falls .flex-horizontal {
+  display: flex;
+  flex-direction: row;
 }
 .until-the-curtain-falls .flex-vertical {
   display: flex;
@@ -255,7 +259,6 @@
   text-transform: uppercase;
   background-color: #191813;
   color: #EEEFFF;
-  margin-bottom: 10px;
   position: relative;
   padding-left: 10px;
   padding-right: 10px;
@@ -267,7 +270,6 @@
 .until-the-curtain-falls .label-stripe-gray {
   text-transform: uppercase;
   background-color: #999;
-  margin-bottom: 10px;
   position: relative;
   padding-left: 10px;
   padding-right: 10px;
@@ -339,9 +341,11 @@
 }
 .until-the-curtain-falls .item-list-padded-bounded {
   list-style-type: none;
+  cursor: pointer;
 }
 .until-the-curtain-falls .item-list-padded-bounded .item-list-item {
   border: 2px solid black;
+  background-color: #CCC;
 }
 .until-the-curtain-falls .item-list-padded-bounded .item-list-item + .item-list-item {
   margin-top: 5px;
@@ -1062,6 +1066,9 @@
 .until-the-curtain-falls.crew.sheet .big-teeth-section .big-teeth input:checked + label {
   background-image: url("assets/teeth/stresstooth-red.png");
 }
+.until-the-curtain-falls.crew.sheet .big-teeth-section .small-teeth-container {
+  cursor: default;
+}
 .until-the-curtain-falls.crew.sheet .big-teeth-section .small-teeth-container .small-teeth-wrap {
   display: flex;
   /* Hide the browser's default checkbox */
@@ -1164,11 +1171,6 @@
   /*
    * Custom Radio Round
    */
-  /*
-   * General Styles
-   * Cleaned out things that don't appear to apply to the character sheet, and exist in other, separated SCSS files.
-   * Some things *might* be missing, but at a glance, everything looks to be in order.
-   */
 }
 .until-the-curtain-falls.actor.pc * .name-alias img.portrait {
   max-width: 200px;
@@ -1183,6 +1185,7 @@
   display: block;
 }
 .until-the-curtain-falls.actor.pc * form.actor-sheet {
+  background-color: white;
   padding: 20px;
 }
 .until-the-curtain-falls.actor.pc * .big-teeth-section {
@@ -1253,7 +1256,8 @@
   background-repeat: no-repeat;
   background-size: contain;
   margin-right: 5px;
-  cursor: not-allowed;
+  transition: filter 0.1s;
+  cursor: pointer;
 }
 .until-the-curtain-falls.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap label:last-of-type {
   margin-right: 0px;
@@ -1266,6 +1270,10 @@
 }
 .until-the-curtain-falls.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap label[for$="-0"] i {
   margin-top: 4px;
+}
+.until-the-curtain-falls.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap label:hover {
+  filter: brightness(0.8);
+  opacity: 0.9;
 }
 .until-the-curtain-falls.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap input {
   display: none;
@@ -1315,17 +1323,14 @@
 .until-the-curtain-falls.actor.pc * .character-stress label[for$="-0"] {
   margin-right: 0px;
 }
-.until-the-curtain-falls.actor.pc * .abilities .item-name, .until-the-curtain-falls.actor.pc * .loadout .item-name {
+.until-the-curtain-falls.actor.pc * .loadout .item-name {
   width: 100px;
 }
-.until-the-curtain-falls.actor.pc * .abilities .item-body, .until-the-curtain-falls.actor.pc * .loadout .item-body {
+.until-the-curtain-falls.actor.pc * .loadout .item-body {
   width: auto;
 }
-.until-the-curtain-falls.actor.pc * .abilities .item-description, .until-the-curtain-falls.actor.pc * .loadout .item-description {
+.until-the-curtain-falls.actor.pc * .loadout .item-description {
   width: 260px;
-}
-.until-the-curtain-falls.actor.pc * .abilities .label-stripe p:first-child {
-  margin-right: 10px;
 }
 .until-the-curtain-falls.actor.pc * .loadout .item-add-popup {
   margin-left: 10px;
@@ -1566,31 +1571,38 @@
 .until-the-curtain-falls.actor.pc * .attributes .attributes-tooltip:hover .attributes-tooltiptext {
   visibility: visible;
 }
-.until-the-curtain-falls.actor.pc * .item {
+.until-the-curtain-falls.actor.pc * .item-block .item-openable {
+  cursor: pointer;
+}
+.until-the-curtain-falls.actor.pc * .item-block .item-header {
+  width: auto;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
-.until-the-curtain-falls.actor.pc * .item .item-body {
-  margin-bottom: 10px;
+.until-the-curtain-falls.actor.pc * .item-block .item-header .item-name {
+  width: auto;
+  margin-right: auto;
+  flex-grow: 10;
 }
-.until-the-curtain-falls.actor.pc * .item .item-body * {
-  margin-right: 10px;
-}
-.until-the-curtain-falls.actor.pc * .item .item-body .item-description {
-  font-style: italic;
-  text-align: justify;
-}
-.until-the-curtain-falls.actor.pc * .item div {
-  flex-grow: 2;
-}
-.until-the-curtain-falls.actor.pc * .item .item-control {
+.until-the-curtain-falls.actor.pc * .item-block .item-header .item-control {
+  cursor: pointer;
   flex-grow: 1;
 }
-.until-the-curtain-falls.actor.pc * .item .item-body,
-.until-the-curtain-falls.actor.pc * .item .item-class-label {
-  width: 100px;
+.until-the-curtain-falls.actor.pc * .item-block .item-description {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  background-color: #CCC;
+  font-style: italic;
+  font-weight: bold;
+  text-align: justify;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
-.until-the-curtain-falls.actor.pc * .item-class-label {
-  margin-bottom: 10px;
+.until-the-curtain-falls.actor.pc * .bounding-box {
+  border: 2px black solid;
 }
 .until-the-curtain-falls.actor.pc * .name,
 .until-the-curtain-falls.actor.pc * .lair,

@@ -29,18 +29,21 @@ export class BladesSheet extends ActorSheet {
   }
 
   /* -------------------------------------------- */
-
   async _onItemAddClick(event) {
     event.preventDefault();
-    const item_type = $(event.currentTarget).data("itemType")
+    const item_type = $(event.currentTarget).data("itemType");
+    let items = await BladesHelpers.getAllItemsByType(item_type, game);
+    this._onItemAddClickRender(event,items, item_type);
+  }
+
+  async _onItemAddClickRender(event, items, item_type) {
+    event.preventDefault();
     const distinct = $(event.currentTarget).data("distinct")
     let input_type = "checkbox";
 
     if (typeof distinct !== "undefined") {
       input_type = "radio";
     }
-
-    let items = await BladesHelpers.getAllItemsByType(item_type, game);
 
     let html = `<div class="items-to-add">`;
 
@@ -54,8 +57,8 @@ export class BladesSheet extends ActorSheet {
       }
 
       html += `<input id="select-item-${e._id}" type="${input_type}" name="select_items" value="${e._id}">`;
-      html += `<label class="flex-horizontal" for="select-item-${e._id}">`;
-      html += `${game.i18n.localize(e.name)} ${addition_price_load} <i class="tooltip fas fa-question-circle"><span class="tooltiptext">${game.i18n.localize(e.system.description)}</span></i>`;
+      html += `<label class="flex-horizontal-spaced" for="select-item-${e._id}">`;
+      html += `${game.i18n.localize(e.name)} <i class="tooltip fas fa-question-circle"><span class="tooltiptext">${game.i18n.localize(e.system.description)}</span></i>`;
       html += `</label>`;
     });
 
@@ -96,6 +99,12 @@ export class BladesSheet extends ActorSheet {
     el.find("input:checked").each(function() {
       items_to_add.push(items.find(e => e._id === $(this).val()));
     });
+    console.log(this);
+    if(item_type === "class" && items_to_add) {
+      let c = items_to_add[0];
+      this.object.update({"system.playbook": c.system.shortname});
+      console.log(this);
+    }
 
     await Item.create(items_to_add, {parent: this.document});
   }

@@ -94,24 +94,36 @@ export class BladesActorSheet extends BladesSheet {
     // Everything below here is only needed if the sheet is editable
     if (!this.options.editable) return;
 
-    // Update Inventory Item
-    html.find('.item-body').click(ev => {
-      const element = $(ev.currentTarget).parents(".item");
+    // Open Actor Sheet Item
+    html.find('.item-openable').click(ev => {
+      const element = $(ev.currentTarget).parents(".item-block");
       const item = this.actor.items.get(element.data("itemId"));
       item.sheet.render(true);
     });
 
-    // Delete Inventory Item
+    // Delete Actor Sheet Item
     html.find('.item-delete').click( async ev => {
-      const element = $(ev.currentTarget).parents(".item");
+      const element = $(ev.currentTarget).parents(".item-block");
+      if(element.data("itemType") === "class") {
+        this.object.update({"system.playbook": ""});
+        console.log(this.object);
+      }
       await this.actor.deleteEmbeddedDocuments("Item", [element.data("itemId")]);
       element.slideUp(200, () => this.render(false));
     });
 
     // manage active effects
     html.find(".effect-control").click(ev => BladesActiveEffect.onManageActiveEffect(ev, this.actor));
+    html.find(".ability-add-popup").click(this._onAbilityAddClick.bind(this));
   }
 
   /* -------------------------------------------- */
+  
+  async _onAbilityAddClick(event) {
+    event.preventDefault();
+    const class_shortname = $(event.currentTarget).data("classShortname");
+    let items = await BladesHelpers.getAllAbilitiesByClass(class_shortname, game);
+    this._onItemAddClickRender(event, items,"ability");
+  }
 
 }
