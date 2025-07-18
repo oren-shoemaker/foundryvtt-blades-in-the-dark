@@ -1,0 +1,30 @@
+{
+  "name": "The Valley Verdant",
+  "type": "homeland",
+  "_id": "mCIdjv8DvBfFDB4Q",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-ee81bb4b-7fff-0e53-92f5-ce1b361828b8\">Spreads west from Yrdalun, green and flowering, the breadbasket of the lands beneath the Curtain. Vast terraces hold fields of wheat and corn, barley and oats. The great river Findalos runs down its center, from the roots of the Stone Claws, past the Auric Arbor, and through Yrdalun itself.</span></p>",
+    "logic": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752547394680,
+    "modifiedTime": 1752547399351,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!mCIdjv8DvBfFDB4Q"
+}

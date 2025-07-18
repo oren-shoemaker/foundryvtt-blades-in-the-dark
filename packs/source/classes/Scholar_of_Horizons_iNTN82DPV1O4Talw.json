@@ -10,42 +10,51 @@
     "logic": "",
     "experience_clues": [],
     "base_skills": {
-      "hunt": [
-        0
-      ],
-      "study": [
-        0
-      ],
-      "survey": [
-        0
-      ],
-      "tinker": [
-        0
-      ],
-      "finesse": [
-        0
-      ],
-      "prowl": [
-        0
-      ],
-      "skirmish": [
-        0
-      ],
-      "wreck": [
-        0
-      ],
-      "attune": [
-        0
-      ],
-      "command": [
-        0
-      ],
-      "consort": [
-        0
-      ],
-      "sway": [
-        0
-      ]
+      "forge": {
+        "label": "UTCF.Skills.Forge.Label",
+        "tooltip": "UTCF.Skills.Forge.Tooltip",
+        "value": 0
+      },
+      "study": {
+        "label": "UTCF.Skills.Study.Label",
+        "tooltip": "UTCF.Skills.Study.Tooltip",
+        "value": 1
+      },
+      "seek": {
+        "label": "UTCF.Skills.Seek.Label",
+        "tooltip": "UTCF.Skills.Seek.Tooltip",
+        "value": 0
+      },
+      "force": {
+        "label": "UTCF.Skills.Force.Label",
+        "tooltip": "UTCF.Skills.Force.Tooltip",
+        "value": 0
+      },
+      "finesse": {
+        "label": "UTCF.Skills.Finesse.Label",
+        "tooltip": "UTCF.Skills.Finesse.Tooltip",
+        "value": 0
+      },
+      "traverse": {
+        "label": "UTCF.Skills.Traverse.Label",
+        "tooltip": "UTCF.Skills.Traverse.Tooltip",
+        "value": 0
+      },
+      "attune": {
+        "label": "UTCF.Skills.Attune.Label",
+        "tooltip": "UTCF.Skills.Attune.Tooltip",
+        "value": 2
+      },
+      "command": {
+        "label": "UTCF.Skills.Command.Label",
+        "tooltip": "UTCF.Skills.Command.Tooltip",
+        "value": 0
+      },
+      "consort": {
+        "label": "UTCF.Skills.Consort.Label",
+        "tooltip": "UTCF.Skills.Consort.Tooltip",
+        "value": 0
+      }
     }
   },
   "effects": [],

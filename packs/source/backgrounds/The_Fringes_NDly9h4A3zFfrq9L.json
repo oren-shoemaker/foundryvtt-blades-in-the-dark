@@ -1,0 +1,30 @@
+{
+  "name": "The Fringes",
+  "type": "background",
+  "_id": "NDly9h4A3zFfrq9L",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-3f9d9331-7fff-86c9-577a-d1080b6dc49a\">A vagabond, a young orphan, a gang member, an outcast, a refugee etc.</span></p>",
+    "logic": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752585894479,
+    "modifiedTime": 1752585908741,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!NDly9h4A3zFfrq9L"
+}

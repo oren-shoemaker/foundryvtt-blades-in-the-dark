@@ -1,0 +1,30 @@
+{
+  "name": "Yrdalun, the Last City",
+  "type": "homeland",
+  "_id": "kWuGLpUXmHHt25Dq",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-d2e4cc3a-7fff-b6bc-8dd0-c05b9194a486\">A vast monument to the tenacity of humankind, Yrdalun will stand beneath the apex of the Curtain. Naori&rsquo;s Pillar, the anchor of the Curtain, is its beating heart, with the Observatory at its side. Art and commerce flourish in Yrdalun&rsquo;s center, while shadows stalk the weathered stones of its crumbling outskirts.</span></p>",
+    "logic": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752547372006,
+    "modifiedTime": 1752547377858,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!kWuGLpUXmHHt25Dq"
+}

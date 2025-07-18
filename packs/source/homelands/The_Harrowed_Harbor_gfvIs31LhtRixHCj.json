@@ -1,0 +1,30 @@
+{
+  "name": "The Harrowed Harbor",
+  "type": "homeland",
+  "_id": "gfvIs31LhtRixHCj",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-1afcf62a-7fff-1fee-58f9-59eef23befad\">A narrow stretch of sea lies beneath the Curtain to Yrdalun&rsquo;s east. A bay drinks in the river Findalos, and a harbor clings to the shore where the river meets the sea. It yet bears the scars of Vaith&rsquo;s great failure, its marble buildings stained and its cobblestones cracked. Brave souls venture out to fish in the waters, though the catch is not always wholesome.</span></p>",
+    "logic": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752547461432,
+    "modifiedTime": 1752547469682,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!gfvIs31LhtRixHCj"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Trade",
+  "type": "background",
+  "_id": "sOCGkeCmgJb9gRTV",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-5adf5961-7fff-5826-0121-f527317419a7\">A shopkeeper, a merchant, a skilled artisan, a logistician, an itinerant peddler, etc.</span></p>",
+    "logic": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752585882421,
+    "modifiedTime": 1752585887070,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!sOCGkeCmgJb9gRTV"
+}

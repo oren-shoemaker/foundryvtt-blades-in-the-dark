@@ -23,7 +23,7 @@ export class BladesItemSheet extends ItemSheet {
   /** @override */
   get template() {
     const path = "systems/until-the-curtain-falls/templates/items";
-    let simple_item_types = ["background", "heritage", "vice", "crew_reputation"];
+    let simple_item_types = ["background", "homeland", "vice", "crew_reputation", "lifestyle"];
     let template_name = `${this.item.type}`;
 
     if (simple_item_types.indexOf(this.item.type) >= 0) {
@@ -59,10 +59,22 @@ export class BladesItemSheet extends ItemSheet {
       if(items.length === 1) {
         items[0].sheet.render(true);
       } else {
-        console.log(items);
         throw new Error(`item ID ${id} is non-unique!`)
       }
     });
+
+    html.find('.gear-property').change(ev => {
+      const checked = $(ev.currentTarget)[0].checked;
+      let properties = this.object.system.properties;
+      const prop = $(ev.currentTarget).data("property");
+        if(checked) {
+          if(!properties.includes(prop))
+          properties.push(prop);
+        } else {
+          properties = properties.filter(p => p !== prop);
+        }
+      this.object.update({"system.properties": properties});
+    })
   }
 
   /* -------------------------------------------- */
@@ -102,10 +114,14 @@ export class BladesItemSheet extends ItemSheet {
         cls.system.abilities = [];
         return cls;
       });
-
     }
 
-    console.log(sheetData);
+    // need to localize rarity options
+    if(sheetData.type === "gear"){
+      for(const opt in sheetData.system.rarity_options) {
+        sheetData.system.rarity_options[opt] = game.i18n.localize(sheetData.system.rarity_options[opt]);
+      }
+    }
 
     return sheetData;
   }

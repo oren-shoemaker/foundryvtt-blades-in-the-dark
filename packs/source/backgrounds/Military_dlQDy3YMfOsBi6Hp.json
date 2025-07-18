@@ -1,0 +1,30 @@
+{
+  "name": "Military",
+  "type": "background",
+  "_id": "dlQDy3YMfOsBi6Hp",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-f8ef5eda-7fff-f099-01df-9c29e2e9271b\">A common soldier, an intelligence operative, a strategist, a training instructor, etc.</span></p>",
+    "logic": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752585850882,
+    "modifiedTime": 1752585861847,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!dlQDy3YMfOsBi6Hp"
+}

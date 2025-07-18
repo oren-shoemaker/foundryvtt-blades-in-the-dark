@@ -11,8 +11,16 @@
     }
 
     .item-description {
+      display: inline-block;
+      width: auto;
+      height: auto;
+      background-color: $lightgray;
       font-style: italic;
+      font-weight: bold;
       text-align: justify;
+      padding-top: 5px;
+      padding-right: 5px;
+      padding-left: 5px;
     }
   }
 
@@ -31,3 +39,44 @@
 .item-class-label {
   margin-bottom: 10px;
 }
+
+.item-editor-padded {
+  padding-right: 10px;
+}
+
+.tooltip {
+
+  .tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: $almost_black;
+    color: $almost_white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+
+    // Position
+    position: absolute;
+    z-index: 9999;
+  }
+
+  &:hover .tooltip-text {
+    visibility: visible;
+  }
+}
+
+.class-skill {
+  table-layout: auto;
+  width: fit-content;
+  border-top: 0px;
+  border-bottom: 0px;
+  overflow: visible;
+
+  .class-skill-label {
+    display: flex;
+    gap: 5px;
+    vertical-align: center;
+  }
+}
+
+

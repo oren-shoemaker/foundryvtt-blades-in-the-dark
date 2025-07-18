@@ -1,0 +1,30 @@
+{
+  "name": "The Northern Steppes",
+  "type": "homeland",
+  "_id": "knZ7KGEkq7z0Ll9l",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-3e36ed69-7fff-c78f-7ead-844c2fbf5175\">An arid highland, excellent for grazing, dips and rises to Yrdalun&rsquo;s north. Hardy herders dwell here, congregating in little villages that shelter between the hills. To the far north, Hateful Things endlessly besiege the Curtain; an uncomfortable number manage to slip through.</span></p>",
+    "logic": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752547440771,
+    "modifiedTime": 1752547446382,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!knZ7KGEkq7z0Ll9l"
+}

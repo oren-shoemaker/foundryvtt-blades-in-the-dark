@@ -1,0 +1,30 @@
+{
+  "name": "Comfortable",
+  "type": "lifestyle",
+  "_id": "0eiv4EHhhAd7pk8K",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-bddd8510-7fff-dedd-cd2c-58834b30e5be\">A simple, stable existence; some concession made to appearance, but function is foremost. Clothes, weapons, and armor are well-kept if well-used, and handed down. Buildings are actively maintained. Food and drink are simple but plentiful. Uniforms and equipment are simple, functional, and standardized.</span></p>",
+    "logic": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752594240231,
+    "modifiedTime": 1752594245202,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!0eiv4EHhhAd7pk8K"
+}

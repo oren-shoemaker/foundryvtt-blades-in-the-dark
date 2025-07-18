@@ -33,6 +33,32 @@ export class BladesActor extends Actor {
     return rollData;
   }
 
+  //** @override */
+  async prepareData(){
+    console.log("Preparing actor data...")
+
+    // set total attribute values
+    let actor_attributes = this.system.attributes;
+    const classes = await BladesHelpers.getAllItemsByType("class", game);
+    const class_base_attributes = classes.find(cls => cls.system.shortname === this.system.playbook)?.system?.base_skills;
+
+    // have to do this a gross way at least for now...
+    if(actor_attributes) {
+      for(const a in actor_attributes) {
+        for(const s in actor_attributes[a].skills) {
+          let base_value = 0;
+          if(class_base_attributes) {
+            base_value = class_base_attributes[s]?.value;
+          }
+          actor_attributes[a].skills[s].base_value = base_value;
+          actor_attributes[a].skills[s].value = Math.min(actor_attributes[a].skills[s].max, base_value + actor_attributes[a].skills[s].assigned_value);
+        }
+      }
+    }
+
+    this.update({"system.attributes": actor_attributes});
+  }
+
   /* -------------------------------------------- */
   /**
    * Calculate Attribute Dice to throw.

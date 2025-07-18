@@ -1,0 +1,30 @@
+{
+  "name": "Fancy",
+  "type": "lifestyle",
+  "_id": "IUretZ8YDd5gzFb5",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-259127c6-7fff-e7ea-9d6f-530f7ba32344\">A lifestyle that most would envy; plenty of room for decoration and embellishment. Clothes are kept in excellent condition; lace and embroidery are often on display. Weapons and armor are selected for aesthetic, not just function. Buildings feature elaborate carvings and decoration. Food and drink of nearly any variety is available. Uniforms and equipment are standardized and customized.</span></p>",
+    "logic": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752594316203,
+    "modifiedTime": 1752594318439,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!IUretZ8YDd5gzFb5"
+}

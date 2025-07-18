@@ -5,9 +5,29 @@
       <strong class="item-shortname">{{system.shortname}}</strong>
   </header>
 
-  <section class="flex-vertical">
+  <section class="flex-vertical-spaced">
     <label class="label-stripe">{{localize "UTCF.Description"}}</label>
-    {{editor system.description target="system.description" button=true editable=editable}}
+    <div class="item-editor-padded">{{editor system.description target="system.description" button=true editable=editable}}</div>
+    
+
+    <label class="label-stripe">{{localize "UTCF.Attibute.LabelPlural"}}</label>
+    <table class="class-skill">
+      {{#each system.base_skills}}
+        {{#if this.value}}
+        <tr>
+          <td class="class-skill-label label-stripe-gray">
+            {{localize this.label}}
+            <i class="tooltip fas fa-question-circle"><span class="tooltip-text">{{localize this.tooltip}}</span></i>
+          </td>
+          <td>
+            {{#times_from_1 this.value}}
+              <i class="fas fa-circle">
+            {{/times_from_1}}
+          </td>
+        </tr>
+        {{/if}}
+      {{/each}}
+    </table>
 
     <label class="label-stripe">{{localize "UTCF.Ability.LabelPlural"}}</label>
     {{list-class-abilities}}

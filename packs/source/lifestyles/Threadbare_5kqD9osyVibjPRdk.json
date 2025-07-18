@@ -1,0 +1,30 @@
+{
+  "name": "Threadbare",
+  "type": "lifestyle",
+  "_id": "5kqD9osyVibjPRdk",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-646c560d-7fff-a58a-036a-9687dce618a9\">A life lived just this side of poverty; any aesthetic considerations are hard-won. Clothes are patched and ragged around the edges, weapons and armor are well-tended but worn, walls have cracks and roofs leak, bellies are full but only just. Uniforms and equipment are mismatched.</span></p>",
+    "logic": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752594098503,
+    "modifiedTime": 1752594229889,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!5kqD9osyVibjPRdk"
+}

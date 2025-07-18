@@ -178,6 +178,10 @@
 .until-the-curtain-falls {
   font-family: "Crimson Text", serif;
 }
+.until-the-curtain-falls form {
+  background-color: white;
+  padding: 20px;
+}
 .until-the-curtain-falls textarea {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -522,10 +526,20 @@
 .until-the-curtain-falls .blades-clock-name-type .blades-clock {
   margin: 10px auto;
 }
+.until-the-curtain-falls.crew.sheet .coins-wrapper {
+  height: auto;
+  display: flex;
+  align-content: center;
+}
+.until-the-curtain-falls.crew.sheet .coins-label {
+  height: auto;
+}
 .until-the-curtain-falls.crew.sheet .coins {
   display: flex;
   /* Hide the browser's default checkbox */
   flex-wrap: wrap;
+  margin-left: 3px;
+  margin-top: 3px;
 }
 .until-the-curtain-falls.crew.sheet .coins label {
   height: 15px;
@@ -1184,9 +1198,13 @@
 .until-the-curtain-falls.actor.pc * .tab[data-tab].active {
   display: block;
 }
-.until-the-curtain-falls.actor.pc * form.actor-sheet {
-  background-color: white;
-  padding: 20px;
+.until-the-curtain-falls.actor.pc * input[type=text] {
+  border: 1px solid black;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #191813;
+  background-color: #EEEFFF;
 }
 .until-the-curtain-falls.actor.pc * .big-teeth-section {
   border-top: 3px solid #191813;
@@ -1385,61 +1403,38 @@
 }
 .until-the-curtain-falls.actor.pc * .harm-armor .character-harm table {
   width: 100%;
+  background-color: transparent;
 }
 .until-the-curtain-falls.actor.pc * .harm-armor .character-harm table th {
+  text-transform: uppercase;
   background-color: #191813;
   color: #EEEFFF;
 }
+.until-the-curtain-falls.actor.pc * .harm-armor .character-harm table th:first-child {
+  text-align: left;
+  padding-left: 10px;
+}
+.until-the-curtain-falls.actor.pc * .harm-armor .character-harm table th:last-child {
+  text-align: right;
+  padding-right: 10px;
+}
+.until-the-curtain-falls.actor.pc * .harm-armor .character-harm table .harm-text-td {
+  vertical-align: center;
+  padding-top: 2px;
+}
+.until-the-curtain-falls.actor.pc * .harm-armor .character-harm table .harm-text {
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #999;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  position: relative;
+  vertical-align: center;
+}
 .until-the-curtain-falls.actor.pc * .harm-armor .character-harm table input[type=text] {
   width: 100%;
-}
-.until-the-curtain-falls.actor.pc * .harm-armor .character-health-clock {
-  margin: 0 auto;
-  position: relative;
-}
-.until-the-curtain-falls.actor.pc * .harm-armor .character-health-clock .blades-clock {
-  position: relative;
-  padding: 0;
-  width: 88px;
-  height: 88px;
-  border-radius: 50%;
-  list-style: none;
-  overflow: hidden;
-  background-size: cover;
-}
-.until-the-curtain-falls.actor.pc * .harm-armor .character-health-clock .blades-clock label {
-  overflow: hidden;
-  position: absolute;
-  top: -50%;
-  right: -50%;
-  width: 100%;
-  height: 100%;
-  transform-origin: 0% 100%;
-  transition: filter 0.1s;
-  cursor: pointer;
-}
-.until-the-curtain-falls.actor.pc * .harm-armor .character-health-clock .blades-clock label:hover {
-  filter: brightness(0.8);
-  opacity: 0.9;
-}
-.until-the-curtain-falls.actor.pc * .harm-armor .character-health-clock .blades-clock input {
-  position: absolute;
-  display: none;
-}
-.until-the-curtain-falls.actor.pc * .harm-armor .character-health-clock .blades-clock input[value="0"] {
-  display: none;
-}
-.until-the-curtain-falls.actor.pc * .harm-armor .character-health-clock .blades-clock *:nth-child(3) {
-  transform: rotate(0deg) skewY(180deg);
-}
-.until-the-curtain-falls.actor.pc * .harm-armor .character-health-clock .blades-clock *:nth-child(5) {
-  transform: rotate(90deg) skewY(180deg);
-}
-.until-the-curtain-falls.actor.pc * .harm-armor .character-health-clock .blades-clock *:nth-child(7) {
-  transform: rotate(180deg) skewY(180deg);
-}
-.until-the-curtain-falls.actor.pc * .harm-armor .character-health-clock .blades-clock *:nth-child(9) {
-  transform: rotate(270deg) skewY(180deg);
 }
 .until-the-curtain-falls.actor.pc * .harm-armor .character-armor-uses div {
   display: flex;
@@ -1461,8 +1456,6 @@
 .until-the-curtain-falls.actor.pc * .attributes .attribute-skill-label {
   font-weight: bold;
   text-transform: uppercase;
-}
-.until-the-curtain-falls.actor.pc * .attributes .attribute-skill-label {
   letter-spacing: 1px;
 }
 .until-the-curtain-falls.actor.pc * .attributes .attributes-exp {
@@ -1557,6 +1550,10 @@
 .until-the-curtain-falls.actor.pc * .attributes .attributes-container * {
   margin-right: 5px;
 }
+.until-the-curtain-falls.actor.pc * .attributes .attributes-container .fa-circle {
+  font-size: 15px;
+  color: #444;
+}
 .until-the-curtain-falls.actor.pc * .attributes .attributes-tooltip .attributes-tooltiptext {
   visibility: hidden;
   width: 200px;
@@ -1601,18 +1598,39 @@
   padding-right: 5px;
   padding-left: 5px;
 }
+.until-the-curtain-falls.actor.pc * .trait-block {
+  width: auto;
+  display: flex;
+  flex-direction: horizontal;
+}
+.until-the-curtain-falls.actor.pc * .trait-block .trait-label {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .until-the-curtain-falls.actor.pc * .bounding-box {
   border: 2px black solid;
 }
 .until-the-curtain-falls.actor.pc * .name,
 .until-the-curtain-falls.actor.pc * .lair,
-.until-the-curtain-falls.actor.pc * .alias {
+.until-the-curtain-falls.actor.pc * .epithet {
   margin-bottom: 10px;
+}
+.until-the-curtain-falls.actor.pc * .coins-wrapper {
+  height: auto;
+  display: flex;
+  align-content: center;
+}
+.until-the-curtain-falls.actor.pc * .coins-label {
+  height: auto;
 }
 .until-the-curtain-falls.actor.pc * .coins {
   display: flex;
   /* Hide the browser's default checkbox */
   flex-wrap: wrap;
+  margin-left: 3px;
+  margin-top: 3px;
 }
 .until-the-curtain-falls.actor.pc * .coins label {
   height: 15px;
@@ -1668,8 +1686,16 @@
   margin-right: 10px;
 }
 .until-the-curtain-falls.item.sheet .item .item-body .item-description {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  background-color: #CCC;
   font-style: italic;
+  font-weight: bold;
   text-align: justify;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 .until-the-curtain-falls.item.sheet .item div {
   flex-grow: 2;
@@ -1683,6 +1709,35 @@
 }
 .until-the-curtain-falls.item.sheet .item-class-label {
   margin-bottom: 10px;
+}
+.until-the-curtain-falls.item.sheet .item-editor-padded {
+  padding-right: 10px;
+}
+.until-the-curtain-falls.item.sheet .tooltip .tooltip-text {
+  visibility: hidden;
+  width: 200px;
+  background-color: #191813;
+  color: #EEEFFF;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 9999;
+}
+.until-the-curtain-falls.item.sheet .tooltip:hover .tooltip-text {
+  visibility: visible;
+}
+.until-the-curtain-falls.item.sheet .class-skill {
+  table-layout: auto;
+  width: fit-content;
+  border-top: 0px;
+  border-bottom: 0px;
+  overflow: visible;
+}
+.until-the-curtain-falls.item.sheet .class-skill .class-skill-label {
+  display: flex;
+  gap: 5px;
+  vertical-align: center;
 }
 
 /*# sourceMappingURL=blades.css.map */

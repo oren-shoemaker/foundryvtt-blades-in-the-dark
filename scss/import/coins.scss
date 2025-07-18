@@ -1,9 +1,21 @@
 $coin_size: 15px;
 $coin_margin: 3px;
 
+.coins-wrapper {
+  height: auto;
+  display: flex;
+  align-content: center;
+}
+
+.coins-label {
+  height: auto;
+}
+
 .coins {
   @include custom_radio_square($coin_size);
   flex-wrap: wrap;
+  margin-left: $coin_margin;
+  margin-top: $coin_margin;
 
   input ~ label {
     margin-right: $coin_margin;

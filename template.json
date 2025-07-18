@@ -1,178 +1,193 @@
 {
   "Actor": {
-  "types": ["character", "npc", "crew", "\uD83D\uDD5B clock", "factions"],
-  "character": {
-    "alias": "",
-    "look": "",
-    "heritage": "",
-    "background": "",
-    "background-details": "",
-    "vice": "",
-    "vice-purveyor": "",
-    "playbook": "",
-    "acquaintances": [],
-    "acquaintances_label": "UTCF.Acquaintances",
-    "stress": {
-      "value": [0],
-      "max": 9,
-      "max_default": 9,
-      "name_default": "UTCF.Stress",
-      "name": "UTCF.Stress"
-    },
-    "trauma": {
-      "max": 4,
-      "max_default": 4,
-      "value": [0],
-      "name": "UTCF.MentalTrauma",
-      "name_default": "UTCF.MentalTrauma",
-      "traumas": {
-        "one": "",
-        "two": "",
-        "three": "",
-        "four": ""
+    "types": ["character", "npc", "crew", "\uD83D\uDD5B clock", "factions"],
+    "character": {
+      "epithet": "",
+      "look": "",
+      "homeland": "",
+      "background": "",
+      "background-details": "",
+      "vice": "",
+      "vice-purveyor": "",
+      "playbook": "",
+      "acquaintances": [],
+      "acquaintances_label": "UTCF.Acquaintances",
+      "stress": {
+        "value": [0],
+        "max": 9,
+        "max_default": 9,
+        "name_default": "UTCF.Stress",
+        "name": "UTCF.Stress"
+      },
+      "trauma": {
+        "max": 4,
+        "max_default": 4,
+        "value": [0],
+        "name": "UTCF.MentalTrauma",
+        "name_default": "UTCF.MentalTrauma",
+        "traumas": {
+          "one": "",
+          "two": "",
+          "three": "",
+          "four": ""
+        }
+      },
+      "healing-clock": [0],
+      "experience": [0],
+      "experience_max": 8,
+      "experience_clues": ["UTCF.ClassExpClue3", "UTCF.ClassExpClue2"],
+      "coins": [0],
+      "coins_stashed": [0],
+      "special_abilities": [],
+      "loadout": 0,
+      "load_level": "",
+      "selected_load_level": "",
+      "base_max_load": 0,
+      "harm": {
+          "light": {
+            "one": "",
+            "two": ""
+          },
+          "medium": {
+            "one": "",
+            "two": ""
+          },
+          "heavy": {
+            "one": ""
+          },
+          "deadly": {
+            "one": "",
+            "two": ""
+          }
+      },
+      "armor-uses": {
+        "armor": 0,
+        "heavy": 0,
+        "special": 0
+      },
+      "attributes": {
+          "mind": {
+            "exp": 0,
+            "exp_max": 6,
+            "label": "UTCF.Attribute.Mind.Short",
+            "skills": {
+              "forge": {
+                "label": "UTCF.Skills.Forge.Label",
+                "tooltip": "UTCF.Skills.Forge.Tooltip",
+                "base_value": 0,
+                "assigned_value": 0,
+                "value": 0,
+                "max": 4
+              },
+              "seek": {
+                "label": "UTCF.Skills.Seek.Label",
+                "tooltip": "UTCF.Skills.Seek.Tooltip",
+                "base_value": 0,
+                "assigned_value": 0,
+                "value": 0,
+                "max": 4
+              },
+              "study": {
+                "label": "UTCF.Skills.Study.Label",
+                "tooltip": "UTCF.Skills.Study.Tooltip",
+                "base_value": 0,
+                "assigned_value": 0,
+                "value": 0,
+                "max": 4
+              }
+            }
+          },
+          "body": {
+            "exp": 0,
+            "exp_max": 6,
+            "label": "UTCF.Attribute.Body.Short",
+            "skills": {
+              "finesse": {
+                "label": "UTCF.Skills.Finesse.Label",
+                "tooltip": "UTCF.Skills.Finesse.Tooltip",
+                "base_value": 0,
+                "assigned_value": 0,
+                "value": 0,
+                "max": 4
+              },
+              "force": {
+                "label": "UTCF.Skills.Force.Label",
+                "tooltip": "UTCF.Skills.Force.Tooltip",
+                "base_value": 0,
+                "assigned_value": 0,
+                "value": 0,
+                "max": 4
+              },
+              "traverse": {
+                "label": "UTCF.Skills.Traverse.Label",
+                "tooltip": "UTCF.Skills.Traverse.Tooltip",
+                "base_value": 0,
+                "assigned_value": 0,
+                "value": 0,
+                "max": 4
+              }
+            }
+          },
+          "will": {
+            "exp": 0,
+            "exp_max": 6,
+            "label": "UTCF.Attribute.Will.Short",
+            "skills": {
+              "attune": {
+                "label": "UTCF.Skills.Attune.Label",
+                "tooltip": "UTCF.Skills.Attune.Tooltip",
+                "base_value": 0,
+                "value": 0,
+                "max": 4
+              },
+              "command": {
+                "label": "UTCF.Skills.Command.Label",
+                "tooltip": "UTCF.Skills.Command.Tooltip",
+                "base_value": 0,
+                "value": 0,
+                "max": 4
+              },
+              "consort": {
+                "label": "UTCF.Skills.Consort.Label",
+                "tooltip": "UTCF.Skills.Consort.Tooltip",
+                "base_value": 0,
+                "value": 0,
+                "max": 4
+              }
+            }
+          }
       }
     },
-    "healing-clock": [0],
-    "experience": [0],
-    "experience_max": 8,
-    "experience_clues": ["UTCF.ClassExpClue3", "UTCF.ClassExpClue2"],
-    "coins": [0],
-    "coins_stashed": [0],
-    "special_abilities": [],
-    "loadout": 0,
-    "load_level": "",
-    "selected_load_level": "",
-    "base_max_load": 0,
-    "harm": {
-        "light": {
-          "one": "",
-          "two": ""
-        },
-        "medium": {
-          "one": "",
-          "two": ""
-        },
-        "heavy": {
-          "one": ""
-        },
-        "deadly": {
-          "one": "",
-          "two": ""
-        }
+    "crew": {
+      "name": "",
+      "reputation": [0],
+      "lair": "",
+      "tier": "",
+      "deity": "",
+      "hold": ["strong"],
+      "experience": [0],
+      "hold_types": ["weak", "strong"],
+      "coins": {
+        "max": 4,
+        "value": [0]
+      },
+      "vault": {
+        "value": [0],
+        "max": 0
+      },
+      "turfs": [8],
+      "features": [],
+      "heat": [0],
+      "wanted": [0]
     },
-    "armor-uses": {
-      "armor": 0,
-      "heavy": 0,
-      "special": 0
+    "\uD83D\uDD5B clock": {
+      "name": "",
+      "type": 4,
+      "value": "0",
+      "owner": ""
     },
-    "attributes": {
-        "insight": {
-          "exp": 0,
-          "exp_max": 6,
-          "label": "UTCF.SkillsMind",
-          "skills": {
-            "forge": {
-              "label": "UTCF.SkillsForge",
-              "tooltip": "UTCF.SkillsForgeTooltip",
-              "value": 0,
-              "max": 4
-            },
-            "seek": {
-              "label": "UTCF.SkillsSeek",
-              "tooltip": "UTCF.SkillsSeekTooltip",
-              "value": 0,
-              "max": 4
-            },
-            "study": {
-              "label": "UTCF.SkillsStudy",
-              "tooltip": "UTCF.SkillsStudyTooltip",
-              "value": 0,
-              "max": 4
-            }
-          }
-        },
-        "prowess": {
-          "exp": 0,
-          "exp_max": 6,
-          "label": "UTCF.SkillsBody",
-          "skills": {
-            "finesse": {
-              "label": "UTCF.SkillsFinesse",
-              "tooltip": "UTCF.SkillsFinesseTooltip",
-              "value": 0,
-              "max": 4
-            },
-            "force": {
-              "label": "UTCF.SkillsForce",
-              "tooltip": "UTCF.SkillsForceTooltip",
-              "value": 0,
-              "max": 4
-            },
-            "traverse": {
-              "label": "UTCF.SkillsTraverse",
-              "tooltip": "UTCF.SkillsTraverseTooltip",
-              "value": 0,
-              "max": 4
-            }
-          }
-        },
-        "resolve": {
-          "exp": 0,
-          "exp_max": 6,
-          "label": "UTCF.SkillsWill",
-          "skills": {
-            "attune": {
-              "label": "UTCF.SkillsAttune",
-              "tooltip": "UTCF.SkillsAttuneTooltip",
-              "value": 0,
-              "max": 4
-            },
-            "command": {
-              "label": "UTCF.SkillsCommand",
-              "tooltip": "UTCF.SkillsCommandTooltip",
-              "value": 0,
-              "max": 4
-            },
-            "consort": {
-              "label": "UTCF.SkillsConsort",
-              "tooltip": "UTCF.SkillsConsortTooltip",
-              "value": 0,
-              "max": 4
-            }
-          }
-        }
-    }
-  },
-  "crew": {
-    "name": "",
-    "reputation": [0],
-    "lair": "",
-    "tier": "",
-    "deity": "",
-    "hold": ["strong"],
-    "experience": [0],
-    "hold_types": ["weak", "strong"],
-    "coins": {
-      "max": 4,
-      "value": [0]
-    },
-    "vault": {
-      "value": [0],
-      "max": 0
-    },
-    "turfs": [8],
-    "features": [],
-    "heat": [0],
-    "wanted": [0]
-  },
-  "\uD83D\uDD5B clock": {
-    "name": "",
-    "type": 4,
-    "value": "0",
-    "owner": ""
-  },
     "factions": {
-	"name": ""
+      "name": ""
     },
     "npc": {
       "name": "",
@@ -185,7 +200,7 @@
     }
   },
   "Item": {
-    "types": ["faction", "item", "class", "ability", "heritage", "background", "vice", "crew_upgrade", "cohort", "crew_type", "crew_reputation", "crew_upgrade", "crew_ability"],
+    "types": ["faction", "item", "class", "ability", "background", "homeland", "vice", "crew_upgrade", "cohort", "crew_type", "crew_reputation", "crew_upgrade", "crew_ability", "lifestyle", "gear"],
     "templates": {
       "default": {
         "description": ""
@@ -265,7 +280,7 @@
         "name": "UTCF.Status"
       }
     },
-    "item": {
+  "item": {
     "templates": ["default", "logic", "activatedEffect"],
     "class": "",
     "load": 0,
@@ -274,24 +289,75 @@
     "equipped" : false,
     "num_available": 1
   },
+  "gear": {
+    "templates": ["default", "logic", "activatedEffect"],
+    "class": "",
+    "load": 0,
+    "uses": 0,
+    "max_uses": 0,
+    "additional_info": "",
+    "equipped" : false,
+    "rarity": "common",
+    "rarity_options": {
+      "common": "UTCF.Gear.Rarity.Common",
+      "uncommon": "UTCF.Gear.Rarity.Uncommon",
+      "rare": "UTCF.Gear.Rarity.Rare",
+      "legendary": "UTCF.Gear.Rarity.Legendary"
+    },
+    "quality": 0,
+    "properties": []
+  },
   "class": {
     "name": "",
     "shortname": "",
     "templates": ["default", "logic", "activatedEffect"],
     "experience_clues": [],
     "base_skills": {
-      "hunt": [0],
-      "study": [0],
-      "survey": [0],
-      "tinker": [0],
-      "finesse": [0],
-      "prowl": [0],
-      "skirmish": [0],
-      "wreck": [0],
-      "attune": [0],
-      "command": [0],
-      "consort": [0],
-      "sway": [0]
+      "forge": {
+        "label": "UTCF.Skills.Forge.Label",
+        "tooltip": "UTCF.Skills.Forge.Tooltip",
+        "value": 0
+      },
+      "study": {
+        "label": "UTCF.Skills.Study.Label",
+        "tooltip": "UTCF.Skills.Study.Tooltip",
+        "value": 0
+      },
+      "seek": {
+        "label": "UTCF.Skills.Seek.Label",
+        "tooltip": "UTCF.Skills.Seek.Tooltip",
+        "value": 0
+      },
+      "force": {
+        "label": "UTCF.Skills.Force.Label",
+        "tooltip": "UTCF.Skills.Force.Tooltip",
+        "value": 0
+      },
+      "finesse": {
+        "label": "UTCF.Skills.Finesse.Label",
+        "tooltip": "UTCF.Skills.Finesse.Tooltip",
+        "value": 0
+      },
+      "traverse": {
+        "label": "UTCF.Skills.Traverse.Label",
+        "tooltip": "UTCF.Skills.Traverse.Tooltip",
+        "value": 0
+      },
+      "attune": {
+        "label": "UTCF.Skills.Attune.Label",
+        "tooltip": "UTCF.Skills.Attune.Tooltip",
+        "value": 0
+      },
+      "command": {
+        "label": "UTCF.Skills.Command.Label",
+        "tooltip": "UTCF.Skills.Command.Tooltip",
+        "value": 0
+      },
+      "consort": {
+        "label": "UTCF.Skills.Consort.Label",
+        "tooltip": "UTCF.Skills.Consort.Tooltip",
+        "value": 0
+      }
     },
     "abilities": []
   },
@@ -299,9 +365,6 @@
     "templates": ["ability", "logic", "activatedEffect"],
     "classes": [],
     "shortname": ""
-  },
-  "heritage": {
-    "templates": ["default", "activatedEffect"]
   },
   "background": {
     "templates": ["default", "activatedEffect"]
@@ -434,6 +497,10 @@
   },
   "crew_ability": {
     "templates": ["ability", "activatedEffect"]
+  },
+  "lifestyle": {
+    "templates": ["default"],
+    "description": ""
   },
   "crew_type": {
     "description": "",

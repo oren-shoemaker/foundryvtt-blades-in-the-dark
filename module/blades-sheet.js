@@ -99,11 +99,22 @@ export class BladesSheet extends ActorSheet {
     el.find("input:checked").each(function() {
       items_to_add.push(items.find(e => e._id === $(this).val()));
     });
-    console.log(this);
-    if(item_type === "class" && items_to_add) {
-      let c = items_to_add[0];
-      this.object.update({"system.playbook": c.system.shortname});
-      console.log(this);
+
+    if (items_to_add) {
+      switch(item_type) {
+        case "class":
+          let c = items_to_add[0];
+          this.object.update({"system.playbook": c.system.shortname});
+          break;
+        case "homeland":
+          let h = items_to_add[0];
+          this.object.update({"system.homeland": h.name});
+          break;
+        case "background": 
+          let bg = items_to_add[0];
+          this.object.update({"system.background": bg.name});
+          break;
+      }
     }
 
     await Item.create(items_to_add, {parent: this.document});

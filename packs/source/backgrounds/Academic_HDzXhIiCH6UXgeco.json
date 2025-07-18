@@ -1,0 +1,30 @@
+{
+  "name": "Academic",
+  "type": "background",
+  "_id": "HDzXhIiCH6UXgeco",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-18191fa0-7fff-c543-ea2e-83b107190f5a\">A scholar, a teacher or student at the Yrdalun Academy, a scribe or poet, an arcane savant, etc.</span></p>",
+    "logic": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752585582414,
+    "modifiedTime": 1752585587765,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!HDzXhIiCH6UXgeco"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Upper Crust",
+  "type": "background",
+  "_id": "rOoyoyA4q8TriGZB",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-c7a4970f-7fff-25b0-a489-671f521db137\">The scion of a distinguished family, a member of an ancient house, a survivor of a fall from grace, etc.</span></p>",
+    "logic": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752585869461,
+    "modifiedTime": 1752585874733,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!rOoyoyA4q8TriGZB"
+}

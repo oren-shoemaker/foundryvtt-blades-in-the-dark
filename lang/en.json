@@ -1,13 +1,20 @@
 {
   "UTCF.HelloThere": "General Kenobi",
   "UTCF.Heritage": "Heritage",
-  "UTCF.Background": "Background",
+  "UTCF.Homeland": {
+    "Label": "Homeland",
+    "AddLabel": "Choose a Homeland"
+  },
+  "UTCF.Background": {
+    "Label": "Background",
+    "AddLabel": "Choose a Background"
+  },
   "UTCF.TitleDeleteItem": "Delete item",
   "UTCF.TitlePostItem": "Post item",
   "UTCF.Vice": "Vice",
   "UTCF.Class": {
     "Label": "Class",
-    "AddLabel": "Add Class",
+    "AddLabel": "Choose a Class",
     "SEN": {
       "Name": "Sentinel of the Curtain"
     },
@@ -26,6 +33,7 @@
   },
   "UTCF.Stress": "Stress",
   "UTCF.Alias": "Alias",
+  "UTCF.Epithet": "Epithet",
   "UTCF.Designation": "Designation",
   "UTCF.Look": "Colors/Look",
   "UTCF.System": "System",
@@ -101,7 +109,25 @@
   "UTCF.Ability": {
     "Label": "Ability",
     "LabelPlural": "Abilities",
-    "ClassesLabel": "Classes"
+    "ClassesLabel": "Classes",
+    "Add": "Add Ability"
+  },
+
+  "UTCF.Attribute": {
+    "LabelPlural": "Attributes",
+    "LabelStarting": "Starting Attributes",
+    "Mind": {
+      "Label": "The Mind",
+      "Short": "Mind"
+    },
+    "Body": {
+      "Label": "The Body",
+      "Short": "Body"
+    },
+    "Will": {
+      "Label": "The Will",
+      "Short": "Will"
+    }
   },
 
   "UTCF.Information": "Information",
@@ -211,35 +237,83 @@
   "UTCF.EffectLimited": "Limited",
   "UTCF.EffectStandard": "Standard",
   "UTCF.EffectGreat": "Great",
+  "UTCF.Skills": {
+    "Forge": {
+      "Label": "Forge",
+      "Tooltip": "Create, enhance, or use objects or structures"
+    },
+    "Study": {
+      "Label": "Study",
+      "Tooltip": "Examine, research, and draw conclusions and connections"
+    },
+    "Seek": {
+      "Label": "Seek",
+      "Tooltip": "Search for a person, place, or object"
+    },
+    "Finesse": {
+      "Label": "Finesse",
+      "Tooltip": "Manipulate the physical world with dexterity, accuracy, and precision"
+    },
+    "Traverse": {
+      "Label": "Traverse",
+      "Tooltip": "Move through the world with speed, stealth, or stamina"
+    },
+    "Force": {
+      "Label": "Force",
+      "Tooltip": "Use raw, physical strength to accomplish a goal"
+    },
+    "Attune": {
+      "Label": "Attune",
+      "Tooltip": "Control the magical currents that flow through the world"
+    },
+    "Command": {
+      "Label": "Command",
+      "Tooltip": "Lead a group, take control of a situation, or compel another"
+    },
+    "Consort": {
+      "Label": "Consort",
+      "Tooltip": "Convince, beguile, or parlay with another intelligent creature"
+    }
+  },
 
-  "UTCF.SkillsMind": "The Mind",
-  "UTCF.SkillsMindShort": "Mind",
-  "UTCF.SkillsForge": "Forge",
-  "UTCF.SkillsForgeTooltip": "Create, enhance, or use objects or structures",
-  "UTCF.SkillsStudy": "Study",
-  "UTCF.SkillsStudyTooltip": "Examine, research, and draw conclusions and connections",
-  "UTCF.SkillsSeek": "Seek",
-  "UTCF.SkillsSeekTooltip": "Search for a person, place, or object",
+  "UTCF.Gear": {
+    "Class": "Class",
+    "Load": "Load",
+    "Uses": "Uses",
+    "MaxUses": "Maximum Uses",
+    "Rarity": {
+      "Label": "Rarity",
+      "Common": "Common",
+      "Uncommon": "Uncommon",
+      "Rare": "Rare",
+      "Legendary": "Legendary"
+    },
+    "Quality": "Quality Bonus",
+    "Properties": {
+      "Label": "Properties",
+      "Alchemical": {
+        "Label": "Alchemical",
+        "Tooltip": "Gear created from strange materials through an alchemical process"
+      },
+      "Consumable" :{
+        "Label": "Consumable",
+        "Tooltip": "Can only be used a limited number of times"
+      },
+      "Corrupted": {
+        "Label": "Corrupted",
+        "Tooltip": "Touched by Hateful Things; use increases the Company's corruption"
+      },
+      "Magical": {
+        "Label": "Magical",
+        "Tooltip": "Gear created through a ritual or other arcane process"
+      },
+      "Mechanical": {
+        "Label": "Mechanical",
+        "Tooltip": "Gear created by forging, tinkering, and fine-tuning"
+      }
+    }
+  },
 
-  "UTCF.SkillsBody": "The Body",
-  "UTCF.SkillsBodyShort": "Body",
-  "UTCF.SkillsFinesse": "Finesse",
-  "UTCF.SkillsFinesseTooltip": "Manipulate the physical world with dexterity, accuracy, and precision",
-  "UTCF.SkillsTraverse": "Traverse",
-  "UTCF.SkillsTraverseTooltip": "Move through the world with speed, stealth, or stamina",
-  "UTCF.SkillsForce": "Force",
-  "UTCF.SkillsForceTooltip": "Use raw, physical strength to accomplish a goal",
-
-  "UTCF.SkillsWill": "The Will",
-  "UTCF.SkillsWillShort": "Will",
-  "UTCF.SkillsAttune": "Attune",
-  "UTCF.SkillsAttuneTooltip": "Control the magical currents that flow through the world",
-  "UTCF.SkillsCommand": "Command",
-  "UTCF.SkillsCommandTooltip": "Lead a group, take control of a situation, or compel another",
-  "UTCF.SkillsConsort": "Consort",
-  "UTCF.SkillsConsortTooltip": "Convince, beguile, or parlay with another intelligent creature",
-
-  "UTCF.AddAbility": "Add Ability",
   "UTCF.AddItem": "Add Item",
   "UTCF.Uses": "No. of Uses",
   "UTCF.NumberAvailable": "Number Available",

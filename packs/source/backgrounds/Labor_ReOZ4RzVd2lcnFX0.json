@@ -1,0 +1,30 @@
+{
+  "name": "Labor",
+  "type": "background",
+  "_id": "ReOZ4RzVd2lcnFX0",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-13bafd41-7fff-fbc0-54f2-e1ceefe8d9a7\">A miner, a farmer, a servant, a cart-driver, etc.</span></p>",
+    "logic": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752585593981,
+    "modifiedTime": 1752585601910,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!ReOZ4RzVd2lcnFX0"
+}

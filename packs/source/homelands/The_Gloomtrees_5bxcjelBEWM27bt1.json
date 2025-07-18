@@ -1,0 +1,30 @@
+{
+  "name": "The Gloomtrees",
+  "type": "homeland",
+  "_id": "5bxcjelBEWM27bt1",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-a1511745-7fff-3d72-49a2-5b1336881e91\">The last great forest beneath the Curtain smothers the southern lands with a green and misty shroud. In places, the trees climb hundreds of feet into the air. The folk that dwell in the Gloomtrees prefer the canopy to the roots - for it is known that Hateful Things dwell, buried, in the earth.</span></p>",
+    "logic": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752547416026,
+    "modifiedTime": 1752547418715,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!5bxcjelBEWM27bt1"
+}

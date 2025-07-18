@@ -19,6 +19,7 @@ import { BladesClockSheet } from "./blades-clock-sheet.js";
 import { BladesNPCSheet } from "./blades-npc-sheet.js";
 import { BladesFactionSheet } from "./blades-faction-sheet.js";
 import * as migrations from "./migration.js";
+import { GEAR_PROPERTIES } from "./base-system-data.js";
 
 window.BladesHelpers = BladesHelpers;
 
@@ -90,9 +91,10 @@ Hooks.once("init", async function() {
         }
       });
     }
+
     return html;
   });
-
+  
   // Trauma Counter
   Handlebars.registerHelper('traumacounter', function(selected, options) {
 
@@ -238,6 +240,10 @@ Hooks.once("init", async function() {
     return outStr;
   });
 
+  Handlebars.registerHelper('subtract', function(x, y) {
+    return x - y;
+  });
+
 
   /**
    * @inheritDoc
@@ -324,6 +330,38 @@ Hooks.once("init", async function() {
       html += '</li>';
     });
     html += '</ul>';
+    return new Handlebars.SafeString(html);
+  });
+
+  Handlebars.registerHelper('ifItemsContainsItemWithType', function(type, options) {
+    const items = this.items;
+    if (items && items.length > 0) {
+      const item = items.find(i => i.type === type);
+      if(item) {
+        return options.fn(item);
+      }
+    }
+
+    return options.inverse(this);
+  });
+
+  Handlebars.registerHelper('contains', function(list, value) {
+    if (list && typeof list.includes === 'function') {
+      return list.includes(value);
+    }
+  });
+
+  Handlebars.registerHelper('gear-property-checkboxes', function(gear_properties) {
+    let html = '';
+    for(const [propname, prop] of Object.entries(GEAR_PROPERTIES)) {
+      html+=`<label><input class="gear-property" name="${propname}" type="checkbox" data-property="${propname}"`
+      if(gear_properties.includes(propname)) {
+        html+=' checked';
+      }
+      html+=`>${game.i18n.localize(prop.label)}</label>`;
+    }
+    console.log(html)
+
     return new Handlebars.SafeString(html);
   });
 

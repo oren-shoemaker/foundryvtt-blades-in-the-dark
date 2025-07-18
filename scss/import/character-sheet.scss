@@ -1,6 +1,7 @@
 // Colors
 $lightgray: #CCC;
 $gray: #999;
+$darkgray: #444;
 $red: red;
 $almost_black: #191813;
 $almost_white: #EEEFFF;
@@ -35,11 +36,13 @@ $hover-brightness: 0.8;
     }
   }
 
-  form {
-    &.actor-sheet {
-      background-color: white;
-      padding: 20px;
-    }
+  input[type="text"]{
+    border: 1px solid black;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $almost_black;
+    background-color: $almost_white;
   }
 
   // Stress and Trauma
@@ -137,22 +140,45 @@ $hover-brightness: 0.8;
 
       table {
         width: 100%;
+        background-color: transparent;
 
         th {
+          text-transform: uppercase;
           background-color: $almost_black;
           color: $almost_white;
+        }
+
+        th:first-child {
+          text-align: left;
+          padding-left: 10px;
+        }
+
+        th:last-child {
+          text-align: right;
+          padding-right: 10px;
+        }
+
+        .harm-text-td {
+          vertical-align: center;
+          padding-top: 2px;
+        }
+
+        .harm-text {
+          text-transform: uppercase;
+          font-weight: bold;
+          background-color: $gray;
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-top: 4px;
+          padding-bottom: 4px;
+          position: relative;
+          vertical-align: center;
         }
 
         input[type="text"] {
           width: 100%;
         }
       }
-    }
-
-    // Clock
-    .character-health-clock {
-      margin: 0 auto;
-      @include clock(4, 88);
     }
 
     .character-armor-uses {
@@ -183,8 +209,6 @@ $hover-brightness: 0.8;
     .attribute-skill-label {
       font-weight: bold;
       text-transform: uppercase;
-    }
-    .attribute-skill-label {
       letter-spacing: 1px;
     }
     .attributes-exp {
@@ -207,6 +231,12 @@ $hover-brightness: 0.8;
 
       * {
         margin-right: 5px;
+      }
+
+      // want to color generic fa-circle gray and resize for class attributes
+      .fa-circle {
+        font-size: 15px;
+        color: $darkgray;
       }
     }
 
@@ -272,79 +302,29 @@ $hover-brightness: 0.8;
     }
   }
 
+  .trait-block {
+    width: auto;
+    display: flex;
+    flex-direction: horizontal;
+
+    .trait-label {
+      width: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
   // generic bounding box for character sheet elements
   .bounding-box {
     border: 2px black solid;
   }
 
-
-
-  // ITEM
-  // .item {
-  //   background-color: $lightgray;
-
-  //   .item-openable {
-  //     cursor: pointer;
-  //   }
-
-  //   .item-header {
-  //     .item-name {
-  //       width: auto;
-  //       margin-right: auto;
-  //       flex-grow: 10;
-  //     }
-
-  //     .item-control {
-  //       cursor: pointer;
-  //       flex-grow: 1;
-  //       margin-left: 5;
-  //       margin-right: 5;
-  //     }
-  //   }
-
-  //   .item-body {
-  //     justify-content: space-between;
-
-  //     margin-bottom: 10px;
-  //     * {
-  //       margin-right: 10px;
-  //     }
-
-  //     .item-description {
-  //       font-style: italic;
-  //       font-weight: bold;
-  //       text-align: justify;
-  //     }
-  //   }
-
-  //   div {
-  //     flex-grow: 2;
-  //   }
-  //   .item-body,
-  //   .item-class-label {
-  //     width: auto;
-  //   }
-  // }
-
-  // .item-border {
-  //   border: 2px black solid;
-  // }
-
-  // .item-class-label {
-  //   width: auto;
-  // }
-
   .name,
   .lair,
-  .alias {
+  .epithet {
     margin-bottom: 10px;
   }
 
   @import "coins.scss";
-
-
-
-
-
-
 }

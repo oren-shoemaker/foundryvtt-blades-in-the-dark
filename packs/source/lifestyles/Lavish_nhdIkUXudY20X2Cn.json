@@ -1,0 +1,30 @@
+{
+  "name": "Lavish",
+  "type": "lifestyle",
+  "_id": "nhdIkUXudY20X2Cn",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-9ac23ff2-7fff-1faa-f4e9-549170efabfa\">An extravagant lifestyle led by only a few; aesthetic is the foremost consideration, function is assumed. Clothes are custom, new, pristine, and feature costly decorations. Weapons and armor are gilded or filigreed. Buildings are designed to display wealth to the Company&rsquo;s taste. Food and drink are the best of the best. Uniforms and equipment are yet another venue to showcase wealth and power.</span></p>",
+    "logic": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752594256368,
+    "modifiedTime": 1752594261980,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!nhdIkUXudY20X2Cn"
+}

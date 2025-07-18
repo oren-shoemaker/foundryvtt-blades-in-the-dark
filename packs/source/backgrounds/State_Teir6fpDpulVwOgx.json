@@ -1,0 +1,30 @@
+{
+  "name": "State",
+  "type": "background",
+  "_id": "Teir6fpDpulVwOgx",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-3d5f5f94-7fff-a5d6-8f4d-86fe0ab27778\">A lawyer, a Yrdalun guard, a bureaucrat, a clerk, an inquisitor, etc.</span></p>",
+    "logic": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752585609334,
+    "modifiedTime": 1752585844329,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!Teir6fpDpulVwOgx"
+}

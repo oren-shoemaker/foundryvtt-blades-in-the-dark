@@ -1,0 +1,30 @@
+{
+  "name": "The Stone Claws",
+  "type": "homeland",
+  "_id": "vxShYTZE9HIJq2ck",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-c95a21f8-7fff-9026-72db-a821aa98ea97\">Jagged mountains that scar the sky, marching in a line across the northwest of the lands beneath the Curtain. Barren and inhospitable though they are, some folk dwell there - and more labor in mines below the peaks, daring to dig for iron and copper, gold and gems.</span></p>",
+    "logic": ""
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752547428172,
+    "modifiedTime": 1752547432137,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!vxShYTZE9HIJq2ck"
+}

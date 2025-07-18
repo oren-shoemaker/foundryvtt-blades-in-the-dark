@@ -73,7 +73,16 @@ export class BladesActorSheet extends BladesSheet {
 
     sheetData.system.description = await TextEditor.enrichHTML(sheetData.system.description, {secrets: sheetData.owner, async: true});
 
-    // catch unmigrated actor data
+    // need to re-sync skill data from underlying object as some fields are not directly represented on the sheet
+    // maybe a better way to hold "hidden" variable values?
+    const actorSystemData = this.actor.system;
+    for(const attr in actorSystemData.attributes) {
+      for(const sk in actorSystemData.attributes[attr].skills) {
+        sheetData.system.attributes[attr].skills[sk].base_value = actorSystemData.attributes[attr].skills[sk].base_value;
+      }
+    }
+
+    // catch unmigrated actor data and sync hidden skill data from underlying object
     for( const a in sheetData.system.attributes ) {
       for( const s in sheetData.system.attributes[a].skills ) {
         if( sheetData.system.attributes[a].skills[s].max === undefined ){
@@ -104,10 +113,19 @@ export class BladesActorSheet extends BladesSheet {
     // Delete Actor Sheet Item
     html.find('.item-delete').click( async ev => {
       const element = $(ev.currentTarget).parents(".item-block");
-      if(element.data("itemType") === "class") {
-        this.object.update({"system.playbook": ""});
-        console.log(this.object);
+
+      switch(element.data("itemType")) {
+        case "class":
+          this.object.update({"system.playbook": ""});
+          break;
+        case "homeland":
+          this.object.update({"system.homeland": ""});
+          break;
+        case "background":
+          this.object.update({"system.background": ""});
+          break;
       }
+
       await this.actor.deleteEmbeddedDocuments("Item", [element.data("itemId")]);
       element.slideUp(200, () => this.render(false));
     });
@@ -123,7 +141,12 @@ export class BladesActorSheet extends BladesSheet {
     event.preventDefault();
     const class_shortname = $(event.currentTarget).data("classShortname");
     let items = await BladesHelpers.getAllAbilitiesByClass(class_shortname, game);
-    this._onItemAddClickRender(event, items,"ability");
+    this._onItemAddClickRender(event, items, "ability");
+  }
+
+  async _onSkillBoxClick(event) {
+    event.preventDefault();
+    console.log("clicky");
   }
 
 }
