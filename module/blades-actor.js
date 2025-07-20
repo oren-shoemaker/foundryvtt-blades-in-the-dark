@@ -35,14 +35,12 @@ export class BladesActor extends Actor {
 
   //** @override */
   async prepareData(){
-    console.log("Preparing actor data...")
 
     // set total attribute values
     let actor_attributes = this.system.attributes;
     const classes = await BladesHelpers.getAllItemsByType("class", game);
     const class_base_attributes = classes.find(cls => cls.system.shortname === this.system.playbook)?.system?.base_skills;
 
-    // have to do this a gross way at least for now...
     if(actor_attributes) {
       for(const a in actor_attributes) {
         for(const s in actor_attributes[a].skills) {
@@ -57,6 +55,13 @@ export class BladesActor extends Actor {
     }
 
     this.update({"system.attributes": actor_attributes});
+
+    // update overencumbrance threshold for My Back Unbroken
+    this.items.forEach(i => {
+      if (i.type === "ability" && i.system.shortname === "MBUB") {
+        this.update({"system.encumbered_threshold": 9})
+      }
+    });
   }
 
   /* -------------------------------------------- */

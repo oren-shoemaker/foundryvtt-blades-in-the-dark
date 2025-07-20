@@ -88,14 +88,19 @@
   "UTCF.Healing": "Healing",
   "UTCF.Armor": "Armor",
   "UTCF.NeedHelp": "Need Help",
-  "UTCF.Light": "Light",
-  "UTCF.Normal": "Normal",
-  "UTCF.Heavy": "Heavy",
+  "UTCF.Load": {
+    "Label": "Load",
+    "Light": "Light",
+    "Normal": "Normal",
+    "Heavy": "Heavy",
+    "Encumbered": {
+      "Tooltip": "Why did you try to carry this much?! Require help when attempting to move at more than a snail's pace or take any nontrivial action."
+    }
+  },
   "UTCF.Special": "Special",
   "UTCF.LessEffect": "Less Effect",
   "UTCF.Description": "Description",
   "UTCF.Loadout": "Loadout",
-  "UTCF.Load": "Load",
   "UTCF.CrewType": "Crew Type",
   "UTCF.CrewTypeBox": "Click to choose a Crew Type",
   "UTCF.FactionType": "Faction Type",
@@ -281,6 +286,7 @@
     "Load": "Load",
     "Uses": "Uses",
     "MaxUses": "Maximum Uses",
+    "LinkedAbility": "Linked Ability (for special armor)",
     "Rarity": {
       "Label": "Rarity",
       "Common": "Common",
@@ -310,6 +316,10 @@
       "Mechanical": {
         "Label": "Mechanical",
         "Tooltip": "Gear created by forging, tinkering, and fine-tuning"
+      },
+      "SpecialArmor": {
+        "Label": "Special Armor",
+        "Tooltip": "Indicates that this is special armor granted by an ability"
       }
     }
   },
@@ -322,9 +332,6 @@
   "UTCF.Position": "Position",
   "UTCF.Effect": "Effect",
   "UTCF.Modifier": "Modifier",
-
-  "UTCF.Encumbered": "encumbered",
-  "UTCF.OverMax": "over max",
 
   "UTCF.Drain": "Drain",
   "UTCF.Wear": "Wear",

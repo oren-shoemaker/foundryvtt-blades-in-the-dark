@@ -1353,6 +1353,42 @@
 .until-the-curtain-falls.actor.pc * .loadout .item-add-popup {
   margin-left: 10px;
 }
+.until-the-curtain-falls.actor.pc * .loadout .overmax {
+  color: red;
+}
+.until-the-curtain-falls.actor.pc * .loadout .encumbered {
+  color: red;
+  width: 15px;
+  height: 15px;
+}
+.until-the-curtain-falls.actor.pc * .loadout .loadout-tooltip .loadout-tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #191813;
+  color: #EEEFFF;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 9999;
+}
+.until-the-curtain-falls.actor.pc * .loadout .loadout-tooltip:hover .loadout-tooltiptext {
+  visibility: visible;
+}
+.until-the-curtain-falls.actor.pc * .loadout .gear-equip {
+  color: #191813;
+  cursor: pointer;
+}
+.until-the-curtain-falls.actor.pc * .loadout .gear-equip-disabled {
+  color: #191813;
+}
+.until-the-curtain-falls.actor.pc * .loadout .gear-equipped {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
 .until-the-curtain-falls.actor.pc * .teeth-experience {
   display: flex;
   /* Hide the browser's default checkbox */

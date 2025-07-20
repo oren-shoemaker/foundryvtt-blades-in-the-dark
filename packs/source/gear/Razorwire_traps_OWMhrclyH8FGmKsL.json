@@ -1,0 +1,53 @@
+{
+    "name":  "Razorwire traps",
+    "type":  "gear",
+    "_id":  "OWMhrclyH8FGmKsL",
+    "img":  "icons/svg/item-bag.svg",
+    "system":  {
+                   "logic":  "",
+                   "class":  "",
+                   "load":  1,
+                   "uses":  2,
+                   "max_uses":  2,
+                   "equipped":  false,
+                   "rarity":  "uncommon",
+                   "rarity_options":  {
+                                          "common":  "UTCF.Gear.Rarity.Common",
+                                          "uncommon":  "UTCF.Gear.Rarity.Uncommon",
+                                          "rare":  "UTCF.Gear.Rarity.Rare",
+                                          "legendary":  "UTCF.Gear.Rarity.Legendary"
+                                      },
+                   "quality":  0,
+                   "properties":  [
+                                      "mechanical",
+                                      "consumable"
+                                  ],
+                   "description":  "\u003cp\u003eSpring-loaded traps filled with razor wire that slices through flesh when triggered\u003c/p\u003e",
+                   "add_list_ignore":  false,
+                   "linked_ability":  ""
+               },
+    "effects":  [
+
+                ],
+    "folder":  null,
+    "sort":  0,
+    "ownership":  {
+                      "default":  0,
+                      "nRGCPtyorF07NYQP":  3
+                  },
+    "flags":  {
+
+              },
+    "_stats":  {
+                   "compendiumSource":  null,
+                   "duplicateSource":  null,
+                   "exportSource":  null,
+                   "coreVersion":  "13.346",
+                   "systemId":  "until-the-curtain-falls",
+                   "systemVersion":  "0.0.0",
+                   "createdTime":  1752950217940,
+                   "modifiedTime":  1752950340466,
+                   "lastModifiedBy":  "nRGCPtyorF07NYQP"
+               },
+    "_key":  "!items!OWMhrclyH8FGmKsL"
+}

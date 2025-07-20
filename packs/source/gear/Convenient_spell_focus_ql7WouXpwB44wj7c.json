@@ -1,0 +1,52 @@
+{
+    "name":  "Convenient spell focus",
+    "type":  "gear",
+    "_id":  "ql7WouXpwB44wj7c",
+    "img":  "icons/svg/item-bag.svg",
+    "system":  {
+                   "logic":  "",
+                   "class":  "SCH",
+                   "load":  0,
+                   "uses":  0,
+                   "max_uses":  0,
+                   "equipped":  false,
+                   "rarity":  "uncommon",
+                   "rarity_options":  {
+                                          "common":  "UTCF.Gear.Rarity.Common",
+                                          "uncommon":  "UTCF.Gear.Rarity.Uncommon",
+                                          "rare":  "UTCF.Gear.Rarity.Rare",
+                                          "legendary":  "UTCF.Gear.Rarity.Legendary"
+                                      },
+                   "quality":  0,
+                   "properties":  [
+                                      "magical"
+                                  ],
+                   "description":  "\u003cp\u003e\u003cspan id=\"docs-internal-guid-1214c853-7fff-9cef-876b-5dc4147c1281\"\u003eAn object used to aid spellcasting, often of personal significance to the carrier. This one is always on your person, and is difficult to remove.\u003c/span\u003e\u003c/p\u003e",
+                   "add_list_ignore":  false,
+                   "linked_ability":  ""
+               },
+    "effects":  [
+
+                ],
+    "folder":  null,
+    "sort":  0,
+    "ownership":  {
+                      "default":  0,
+                      "nRGCPtyorF07NYQP":  3
+                  },
+    "flags":  {
+
+              },
+    "_stats":  {
+                   "compendiumSource":  null,
+                   "duplicateSource":  null,
+                   "exportSource":  null,
+                   "coreVersion":  "13.346",
+                   "systemId":  "until-the-curtain-falls",
+                   "systemVersion":  "0.0.0",
+                   "createdTime":  1752854064316,
+                   "modifiedTime":  1752854094219,
+                   "lastModifiedBy":  "nRGCPtyorF07NYQP"
+               },
+    "_key":  "!items!ql7WouXpwB44wj7c"
+}

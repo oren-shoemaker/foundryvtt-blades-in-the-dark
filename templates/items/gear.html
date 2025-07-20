@@ -8,8 +8,12 @@
 
     <section class="sheet-body flex-vertical-padded">
         <!-- load, rarity, quality, uses/max uses (if consumable in properties) -->
+        <label class="label-stripe">{{localize "UTCF.Description"}}</label>
+        <div>
+            {{editor system.description target="system.description" button=true editable=editable}}
+        </div>
+
         <label class="label-stripe">{{localize "UTCF.Gear.Properties.Label"}}</label>
-        
         <div class="flex-horizontal-padded">
             {{gear-property-checkboxes system.properties}}
         </div>
@@ -37,6 +41,13 @@
                 <div class="flex-vertical">
                     <label class="label-stripe-gray">{{localize "UTCF.Gear.MaxUses"}}</label>
                     <input type="number" name="system.max_uses" value="{{system.max_uses}}">
+                </div>
+            {{/if}}
+            {{log this.system}}
+            {{#if (contains system.properties "special_armor")}}
+                <div class="flex-vertical">
+                    <label class="label-stripe-gray">{{localize "UTCF.Gear.LinkedAbility"}}</label>
+                    <input type="textbox" name="system.linked_ability" value="{{system.linked_ability}}">
                 </div>
             {{/if}}
         </div>

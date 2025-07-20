@@ -1,6 +1,7 @@
 
 import { BladesSheet } from "./blades-sheet.js";
 import { BladesActiveEffect } from "./blades-active-effect.js";
+import { LOAD_LEVELS } from "./base-system-data.js";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -34,7 +35,7 @@ export class BladesActorSheet extends BladesSheet {
 
     // Calculate Load
     let loadout = 0;
-    sheetData.items.forEach(i => {loadout += (i.type === "item") ? parseInt(i.system.load) : 0});
+    sheetData.items.forEach(i => {loadout += (i.type === "gear") && (i.system.equipped) ? parseInt(i.system.load) : 0});
 
     //Sanity Check
     if (loadout < 0) {
@@ -46,32 +47,35 @@ export class BladesActorSheet extends BladesSheet {
 
     sheetData.system.loadout = loadout;
 
-    // Encumbrance Levels
-    let load_level=["UTCF.Light","UTCF.Light","UTCF.Light","UTCF.Light","UTCF.Normal","UTCF.Normal","UTCF.Heavy","UTCF.Encumbered",
-			"UTCF.Encumbered","UTCF.Encumbered","UTCF.OverMax"];
-    let mule_level=["UTCF.Light","UTCF.Light","UTCF.Light","UTCF.Light","UTCF.Light","UTCF.Light","UTCF.Normal","UTCF.Normal",
-			"UTCF.Heavy","UTCF.Encumbered","UTCF.OverMax"];
-    let mule_present=0;
+    let max_load = 0;
+    switch(sheetData.system.selected_load_level) {
+      case "UTCF.Load.Light":
+        max_load = 3;
+        break;
+      case "UTCF.Load.Normal":
+        max_load = 5;
+        break;
+      case "UTCF.Load.Heavy":
+        max_load = 6;
+        break;
+      default:
+        max_load = 0;
+        break;
+    }
 
 
-    //look for Mule ability
-    // @todo - fix translation.
+    //look for My Back Unbroken ability
     sheetData.items.forEach(i => {
-      if (i.type === "ability" && i.name === "(C) Mule") {
-        mule_present = 1;
+      if (i.type === "ability" && i.system.shortname === "MBUB") {
+        max_load += 2;
       }
     });
 
-    //set encumbrance level
-    if (mule_present) {
-      sheetData.system.load_level=mule_level[loadout];
-    } else {
-      sheetData.system.load_level=load_level[loadout];
-    }
+    sheetData.system.max_load = max_load;
 
-    sheetData.system.load_levels = {"UTCF.Light":"UTCF.Light", "UTCF.Normal":"UTCF.Normal", "UTCF.Heavy":"UTCF.Heavy"};
+    sheetData.system.load_levels = LOAD_LEVELS;
 
-    sheetData.system.description = await TextEditor.enrichHTML(sheetData.system.description, {secrets: sheetData.owner, async: true});
+    sheetData.system.description = await foundry.applications.ux.TextEditor.implementation.enrichHTML(sheetData.system.description, {secrets: sheetData.owner, async: true});
 
     // need to re-sync skill data from underlying object as some fields are not directly represented on the sheet
     // maybe a better way to hold "hidden" variable values?
@@ -133,6 +137,34 @@ export class BladesActorSheet extends BladesSheet {
     // manage active effects
     html.find(".effect-control").click(ev => BladesActiveEffect.onManageActiveEffect(ev, this.actor));
     html.find(".ability-add-popup").click(this._onAbilityAddClick.bind(this));
+
+    html.find('.gear-equipped').change(ev => {
+      const item_id = $(ev.currentTarget).parents(".item-block").data("itemId");
+      const item = this.actor.items.get(item_id);
+      const checked = $(ev.currentTarget)[0].checked;
+
+      if(checked) {
+        item.update({"system.equipped": true});
+      } else {
+        item.update({"system.equipped": false});
+      }
+    });
+
+    html.find('.use-armor').change(async ev => {
+      const item_name = $(ev.currentTarget).data("itemName");
+      const checked = $(ev.currentTarget)[0].checked;
+      const gear = await game.packs.filter(p => p.title === "Gear")[0].getDocuments();
+      const base_item = gear.find(i => i.name === item_name);
+
+      if(checked) {
+        await Item.create([base_item], {parent: this.document});
+        this.actor.items.find(i => i.name === item_name).update({"system.equipped": true});
+      } else {
+        const actor_item = this.actor.items.find(i => i.name === item_name);
+        if(actor_item)
+          await this.actor.deleteEmbeddedDocuments("Item", [actor_item._id]);
+      }
+    });
   }
 
   /* -------------------------------------------- */
@@ -142,11 +174,6 @@ export class BladesActorSheet extends BladesSheet {
     const class_shortname = $(event.currentTarget).data("classShortname");
     let items = await BladesHelpers.getAllAbilitiesByClass(class_shortname, game);
     this._onItemAddClickRender(event, items, "ability");
-  }
-
-  async _onSkillBoxClick(event) {
-    event.preventDefault();
-    console.log("clicky");
   }
 
 }

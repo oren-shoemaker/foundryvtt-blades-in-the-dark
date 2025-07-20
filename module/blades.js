@@ -360,9 +360,45 @@ Hooks.once("init", async function() {
       }
       html+=`>${game.i18n.localize(prop.label)}</label>`;
     }
-    console.log(html)
 
     return new Handlebars.SafeString(html);
+  });
+
+  Handlebars.registerHelper('gear-equipped-box', function(item){
+    const checked_style = item.system.equipped ? "fa-solid" : "fa-regular";
+
+    let html = '<label><input class="gear-equipped" type="checkbox" ';
+    if(item.system.equipped) {
+      html+=' checked';
+    }
+    html+='><div class="gear-equip">'
+    // 0-load items should still render a box
+    if(item.system.load === 0) {
+      html+=`<i class="fa-square ${checked_style}"></i>`
+    } else {
+      for(let i = 0; i < item.system.load; i++) {
+        html+=`<i class="fa-square ${checked_style}"></i>`
+        if(i < item.system.load - 1) {
+          html+=`<i class="fa-solid fa-minus"></i>`
+        }
+      }
+    }
+
+    html+='</div></label>'
+    
+    return new Handlebars.SafeString(html);
+  })
+
+  Handlebars.registerHelper('gt',function(x, y) {
+    return x > y;
+  });
+
+  Handlebars.registerHelper('gte',function(x,y){
+    return x >= y;
+  })
+
+  Handlebars.registerHelper('lt',function(x, y) {
+    return x < y;
   });
 
 });

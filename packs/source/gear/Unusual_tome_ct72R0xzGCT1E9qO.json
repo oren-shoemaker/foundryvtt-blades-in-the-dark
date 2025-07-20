@@ -1,0 +1,52 @@
+{
+    "name":  "Unusual tome",
+    "type":  "gear",
+    "_id":  "ct72R0xzGCT1E9qO",
+    "img":  "icons/svg/item-bag.svg",
+    "system":  {
+                   "logic":  "",
+                   "class":  "SCH",
+                   "load":  1,
+                   "uses":  0,
+                   "max_uses":  0,
+                   "equipped":  false,
+                   "rarity":  "uncommon",
+                   "rarity_options":  {
+                                          "common":  "UTCF.Gear.Rarity.Common",
+                                          "uncommon":  "UTCF.Gear.Rarity.Uncommon",
+                                          "rare":  "UTCF.Gear.Rarity.Rare",
+                                          "legendary":  "UTCF.Gear.Rarity.Legendary"
+                                      },
+                   "quality":  0,
+                   "properties":  [
+
+                                  ],
+                   "description":  "\u003cp\u003e\u003cspan id=\"docs-internal-guid-d6a8c5d0-7fff-ca2f-3ef0-82c2244be527\"\u003eA hard-to-come-by book or other writing, containing useful information on a specific subject\u003c/span\u003e\u003c/p\u003e",
+                   "add_list_ignore":  false,
+                   "linked_ability":  ""
+               },
+    "effects":  [
+
+                ],
+    "folder":  null,
+    "sort":  0,
+    "ownership":  {
+                      "default":  0,
+                      "nRGCPtyorF07NYQP":  3
+                  },
+    "flags":  {
+
+              },
+    "_stats":  {
+                   "compendiumSource":  null,
+                   "duplicateSource":  null,
+                   "exportSource":  null,
+                   "coreVersion":  "13.346",
+                   "systemId":  "until-the-curtain-falls",
+                   "systemVersion":  "0.0.0",
+                   "createdTime":  1752854145962,
+                   "modifiedTime":  1752854170295,
+                   "lastModifiedBy":  "nRGCPtyorF07NYQP"
+               },
+    "_key":  "!items!ct72R0xzGCT1E9qO"
+}

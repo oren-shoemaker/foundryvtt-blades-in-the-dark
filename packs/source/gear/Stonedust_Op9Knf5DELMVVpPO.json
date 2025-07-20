@@ -1,0 +1,53 @@
+{
+    "name":  "Stonedust",
+    "type":  "gear",
+    "_id":  "Op9Knf5DELMVVpPO",
+    "img":  "icons/svg/item-bag.svg",
+    "system":  {
+                   "logic":  "",
+                   "class":  "",
+                   "load":  1,
+                   "uses":  1,
+                   "max_uses":  1,
+                   "equipped":  false,
+                   "rarity":  "uncommon",
+                   "rarity_options":  {
+                                          "common":  "UTCF.Gear.Rarity.Common",
+                                          "uncommon":  "UTCF.Gear.Rarity.Uncommon",
+                                          "rare":  "UTCF.Gear.Rarity.Rare",
+                                          "legendary":  "UTCF.Gear.Rarity.Legendary"
+                                      },
+                   "quality":  0,
+                   "properties":  [
+                                      "alchemical",
+                                      "consumable"
+                                  ],
+                   "description":  "\u003cp\u003eA contact poison that causes rapid-onset temporary paralysis in flesh. Can be used in powdered or liquid form.\u003c/p\u003e",
+                   "add_list_ignore":  false,
+                   "linked_ability":  ""
+               },
+    "effects":  [
+
+                ],
+    "folder":  null,
+    "sort":  0,
+    "ownership":  {
+                      "default":  0,
+                      "nRGCPtyorF07NYQP":  3
+                  },
+    "flags":  {
+
+              },
+    "_stats":  {
+                   "compendiumSource":  null,
+                   "duplicateSource":  null,
+                   "exportSource":  null,
+                   "coreVersion":  "13.346",
+                   "systemId":  "until-the-curtain-falls",
+                   "systemVersion":  "0.0.0",
+                   "createdTime":  1752947644241,
+                   "modifiedTime":  1752947717254,
+                   "lastModifiedBy":  "nRGCPtyorF07NYQP"
+               },
+    "_key":  "!items!Op9Knf5DELMVVpPO"
+}

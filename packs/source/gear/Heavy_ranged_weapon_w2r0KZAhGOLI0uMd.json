@@ -1,0 +1,52 @@
+{
+    "name":  "Heavy ranged weapon",
+    "type":  "gear",
+    "_id":  "w2r0KZAhGOLI0uMd",
+    "img":  "icons/svg/item-bag.svg",
+    "system":  {
+                   "logic":  "",
+                   "class":  "",
+                   "load":  2,
+                   "uses":  0,
+                   "max_uses":  0,
+                   "equipped":  false,
+                   "rarity":  "common",
+                   "rarity_options":  {
+                                          "common":  "UTCF.Gear.Rarity.Common",
+                                          "uncommon":  "UTCF.Gear.Rarity.Uncommon",
+                                          "rare":  "UTCF.Gear.Rarity.Rare",
+                                          "legendary":  "UTCF.Gear.Rarity.Legendary"
+                                      },
+                   "quality":  0,
+                   "properties":  [
+
+                                  ],
+                   "description":  "\u003cp\u003eA large ranged weapon (a longbow, a crossbow)\u003c/p\u003e",
+                   "add_list_ignore":  false,
+                   "linked_ability":  ""
+               },
+    "effects":  [
+
+                ],
+    "folder":  null,
+    "sort":  0,
+    "ownership":  {
+                      "default":  0,
+                      "nRGCPtyorF07NYQP":  3
+                  },
+    "flags":  {
+
+              },
+    "_stats":  {
+                   "compendiumSource":  null,
+                   "duplicateSource":  null,
+                   "exportSource":  null,
+                   "coreVersion":  "13.346",
+                   "systemId":  "until-the-curtain-falls",
+                   "systemVersion":  "0.0.0",
+                   "createdTime":  1752931837702,
+                   "modifiedTime":  1752931869642,
+                   "lastModifiedBy":  "nRGCPtyorF07NYQP"
+               },
+    "_key":  "!items!w2r0KZAhGOLI0uMd"
+}

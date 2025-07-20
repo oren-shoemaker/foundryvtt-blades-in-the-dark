@@ -46,6 +46,11 @@ export class BladesItem extends Item {
       this.system.size_list_2 = BladesHelpers.createListOfClockSizes( game.system.bladesClocks.sizes, this.system.goal_2_clock_max, parseInt( this.system.goal_2_clock_max ) );
     }
 
+    // set up special armor so that it doesn't render in add-lists
+    if (this.type === "gear") {
+      this.system.add_list_ignore = item_data.properties.includes('special_armor');
+    }
+
   }
 
   /**

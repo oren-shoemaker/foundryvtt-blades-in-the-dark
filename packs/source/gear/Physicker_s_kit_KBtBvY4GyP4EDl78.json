@@ -1,0 +1,52 @@
+{
+    "name":  "Physicker\u0027s kit",
+    "type":  "gear",
+    "_id":  "KBtBvY4GyP4EDl78",
+    "img":  "icons/svg/item-bag.svg",
+    "system":  {
+                   "logic":  "",
+                   "class":  "SPK",
+                   "load":  2,
+                   "uses":  0,
+                   "max_uses":  0,
+                   "equipped":  false,
+                   "rarity":  "uncommon",
+                   "rarity_options":  {
+                                          "common":  "UTCF.Gear.Rarity.Common",
+                                          "uncommon":  "UTCF.Gear.Rarity.Uncommon",
+                                          "rare":  "UTCF.Gear.Rarity.Rare",
+                                          "legendary":  "UTCF.Gear.Rarity.Legendary"
+                                      },
+                   "quality":  0,
+                   "properties":  [
+
+                                  ],
+                   "description":  "\u003cp\u003e\u003cspan id=\"docs-internal-guid-093eb1e6-7fff-d57f-1798-0d6b79e56712\"\u003eA toolkit containing supplies and devices suitable for field medicine\u003c/span\u003e\u003c/p\u003e",
+                   "add_list_ignore":  false,
+                   "linked_ability":  ""
+               },
+    "effects":  [
+
+                ],
+    "folder":  null,
+    "sort":  0,
+    "ownership":  {
+                      "default":  0,
+                      "nRGCPtyorF07NYQP":  3
+                  },
+    "flags":  {
+
+              },
+    "_stats":  {
+                   "compendiumSource":  null,
+                   "duplicateSource":  null,
+                   "exportSource":  null,
+                   "coreVersion":  "13.346",
+                   "systemId":  "until-the-curtain-falls",
+                   "systemVersion":  "0.0.0",
+                   "createdTime":  1752854407771,
+                   "modifiedTime":  1752854429787,
+                   "lastModifiedBy":  "nRGCPtyorF07NYQP"
+               },
+    "_key":  "!items!KBtBvY4GyP4EDl78"
+}

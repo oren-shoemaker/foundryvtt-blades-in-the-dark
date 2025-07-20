@@ -1,0 +1,52 @@
+{
+    "name":  "Armor",
+    "type":  "gear",
+    "_id":  "tSzoiAPg9Bdp9qt8",
+    "img":  "icons/svg/item-bag.svg",
+    "system":  {
+                   "logic":  "",
+                   "class":  "",
+                   "load":  2,
+                   "uses":  1,
+                   "max_uses":  1,
+                   "equipped":  false,
+                   "rarity":  "common",
+                   "rarity_options":  {
+                                          "common":  "UTCF.Gear.Rarity.Common",
+                                          "uncommon":  "UTCF.Gear.Rarity.Uncommon",
+                                          "rare":  "UTCF.Gear.Rarity.Rare",
+                                          "legendary":  "UTCF.Gear.Rarity.Legendary"
+                                      },
+                   "quality":  0,
+                   "properties":  [
+                                      "consumable"
+                                  ],
+                   "description":  "\u003cul id=\"docs-internal-guid-63ebf7f7-7fff-819d-bd4d-53659ad7e5dd\"\u003e\n\u003cli dir=\"ltr\" aria-level=\"2\"\u003e\n\u003cp dir=\"ltr\" role=\"presentation\"\u003eReinforced leather armor, including gloves and boots\u003c/p\u003e\n\u003c/li\u003e\n\u003cli dir=\"ltr\" aria-level=\"2\"\u003e\n\u003cp dir=\"ltr\" role=\"presentation\"\u003eMay use once to reduce harm by a level\u003c/p\u003e\n\u003c/li\u003e\n\u003cli dir=\"ltr\" aria-level=\"2\"\u003e\n\u003cp dir=\"ltr\" role=\"presentation\"\u003eMay improve to heavy armor for a second use, at the cost of 3 additional load\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e",
+                   "add_list_ignore":  true,
+                   "linked_ability":  ""
+               },
+    "effects":  [
+
+                ],
+    "folder":  null,
+    "sort":  0,
+    "ownership":  {
+                      "default":  0,
+                      "nRGCPtyorF07NYQP":  3
+                  },
+    "flags":  {
+
+              },
+    "_stats":  {
+                   "compendiumSource":  null,
+                   "duplicateSource":  null,
+                   "exportSource":  null,
+                   "coreVersion":  "13.346",
+                   "systemId":  "until-the-curtain-falls",
+                   "systemVersion":  "0.0.0",
+                   "createdTime":  1752854454523,
+                   "modifiedTime":  1752854651889,
+                   "lastModifiedBy":  "nRGCPtyorF07NYQP"
+               },
+    "_key":  "!items!tSzoiAPg9Bdp9qt8"
+}

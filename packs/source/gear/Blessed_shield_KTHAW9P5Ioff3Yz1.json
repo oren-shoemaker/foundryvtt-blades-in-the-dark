@@ -1,0 +1,52 @@
+{
+    "name":  "Blessed shield",
+    "type":  "gear",
+    "_id":  "KTHAW9P5Ioff3Yz1",
+    "img":  "icons/svg/item-bag.svg",
+    "system":  {
+                   "logic":  "",
+                   "class":  "SEN",
+                   "load":  1,
+                   "uses":  0,
+                   "max_uses":  0,
+                   "equipped":  false,
+                   "rarity":  "uncommon",
+                   "rarity_options":  {
+                                          "common":  "UTCF.Gear.Rarity.Common",
+                                          "uncommon":  "UTCF.Gear.Rarity.Uncommon",
+                                          "rare":  "UTCF.Gear.Rarity.Rare",
+                                          "legendary":  "UTCF.Gear.Rarity.Legendary"
+                                      },
+                   "quality":  0,
+                   "properties":  [
+                                      "magical"
+                                  ],
+                   "description":  "\u003cp\u003e\u003cspan id=\"docs-internal-guid-e343e499-7fff-e2b1-7ad0-415745d0b829\"\u003ePrecious metal plating fends off supernatural blows as well as physical ones\u003c/span\u003e\u003c/p\u003e",
+                   "add_list_ignore":  false,
+                   "linked_ability":  ""
+               },
+    "effects":  [
+
+                ],
+    "folder":  null,
+    "sort":  0,
+    "ownership":  {
+                      "default":  0,
+                      "nRGCPtyorF07NYQP":  3
+                  },
+    "flags":  {
+
+              },
+    "_stats":  {
+                   "compendiumSource":  null,
+                   "duplicateSource":  null,
+                   "exportSource":  null,
+                   "coreVersion":  "13.346",
+                   "systemId":  "until-the-curtain-falls",
+                   "systemVersion":  "0.0.0",
+                   "createdTime":  1752853561441,
+                   "modifiedTime":  1752853788899,
+                   "lastModifiedBy":  "nRGCPtyorF07NYQP"
+               },
+    "_key":  "!items!KTHAW9P5Ioff3Yz1"
+}

@@ -46,6 +46,13 @@
       "type": "Item"
     },
     {
+      "name": "gear",
+      "label": "Gear",
+      "system": "until-the-curtain-falls",
+      "path": "./packs/gear",
+      "type": "Item"
+    },
+    {
       "name": "vice",
       "label": "Vices",
       "system": "until-the-curtain-falls",

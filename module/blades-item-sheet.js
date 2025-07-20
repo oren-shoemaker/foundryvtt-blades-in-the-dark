@@ -91,7 +91,7 @@ export class BladesItemSheet extends ItemSheet {
     // Prepare Active Effects
     sheetData.effects = prepareActiveEffectCategories(this.document.effects);
 
-    sheetData.system.description = await TextEditor.enrichHTML(sheetData.system.description, {secrets: sheetData.owner, async: true});
+    sheetData.system.description = await foundry.applications.ux.TextEditor.implementation.enrichHTML(sheetData.system.description, {secrets: sheetData.owner, async: true});
 
     if(sheetData.type === "class") {
       const abilities = await game.packs.filter(p => p.title === "Abilities")[0].getDocuments();
@@ -107,7 +107,6 @@ export class BladesItemSheet extends ItemSheet {
     if(sheetData.type === "ability"){
       const classes = await game.packs.filter(p => p.title === "Classes")[0].getDocuments();
       const ability_classes = classes.filter(c => sheetData.system.classes.includes(c.system.shortname));
-      console.log(ability_classes);
       sheetData.system.classes = ability_classes.map(c => {
         let cls = c.toObject();
         // clean out class -> ability refs to avoid a reference loop

@@ -1,0 +1,53 @@
+{
+    "name":  "Liff\u0027s step",
+    "type":  "gear",
+    "_id":  "g7zmHj3zN1gGH2Fn",
+    "img":  "icons/svg/item-bag.svg",
+    "system":  {
+                   "logic":  "",
+                   "class":  "",
+                   "load":  1,
+                   "uses":  1,
+                   "max_uses":  1,
+                   "equipped":  false,
+                   "rarity":  "rare",
+                   "rarity_options":  {
+                                          "common":  "UTCF.Gear.Rarity.Common",
+                                          "uncommon":  "UTCF.Gear.Rarity.Uncommon",
+                                          "rare":  "UTCF.Gear.Rarity.Rare",
+                                          "legendary":  "UTCF.Gear.Rarity.Legendary"
+                                      },
+                   "quality":  0,
+                   "properties":  [
+                                      "alchemical",
+                                      "consumable"
+                                  ],
+                   "description":  "\u003cp\u003eA vial of gray liquid that produces an aura of silence when shattered\u003c/p\u003e",
+                   "add_list_ignore":  false,
+                   "linked_ability":  ""
+               },
+    "effects":  [
+
+                ],
+    "folder":  null,
+    "sort":  0,
+    "ownership":  {
+                      "default":  0,
+                      "nRGCPtyorF07NYQP":  3
+                  },
+    "flags":  {
+
+              },
+    "_stats":  {
+                   "compendiumSource":  null,
+                   "duplicateSource":  null,
+                   "exportSource":  null,
+                   "coreVersion":  "13.346",
+                   "systemId":  "until-the-curtain-falls",
+                   "systemVersion":  "0.0.0",
+                   "createdTime":  1752947842588,
+                   "modifiedTime":  1752947910989,
+                   "lastModifiedBy":  "nRGCPtyorF07NYQP"
+               },
+    "_key":  "!items!g7zmHj3zN1gGH2Fn"
+}

@@ -1,0 +1,52 @@
+{
+    "name":  "Quality heavy melee weapon",
+    "type":  "gear",
+    "_id":  "QwyGkGfXRHLKxup9",
+    "img":  "icons/svg/item-bag.svg",
+    "system":  {
+                   "logic":  "",
+                   "class":  "SEN",
+                   "load":  2,
+                   "uses":  0,
+                   "max_uses":  0,
+                   "equipped":  false,
+                   "rarity":  "uncommon",
+                   "rarity_options":  {
+                                          "common":  "UTCF.Gear.Rarity.Common",
+                                          "uncommon":  "UTCF.Gear.Rarity.Uncommon",
+                                          "rare":  "UTCF.Gear.Rarity.Rare",
+                                          "legendary":  "UTCF.Gear.Rarity.Legendary"
+                                      },
+                   "quality":  1,
+                   "properties":  [
+
+                                  ],
+                   "description":  "\u003cp\u003e\u003cspan id=\"docs-internal-guid-28ab1e5a-7fff-8b78-27a7-23110bf336f0\"\u003eA finely-crafted two-handed melee weapon\u003c/span\u003e\u003c/p\u003e",
+                   "add_list_ignore":  false,
+                   "linked_ability":  ""
+               },
+    "effects":  [
+
+                ],
+    "folder":  null,
+    "sort":  0,
+    "ownership":  {
+                      "default":  0,
+                      "nRGCPtyorF07NYQP":  3
+                  },
+    "flags":  {
+
+              },
+    "_stats":  {
+                   "compendiumSource":  null,
+                   "duplicateSource":  null,
+                   "exportSource":  null,
+                   "coreVersion":  "13.346",
+                   "systemId":  "until-the-curtain-falls",
+                   "systemVersion":  "0.0.0",
+                   "createdTime":  1752853466369,
+                   "modifiedTime":  1752853845763,
+                   "lastModifiedBy":  "nRGCPtyorF07NYQP"
+               },
+    "_key":  "!items!QwyGkGfXRHLKxup9"
+}

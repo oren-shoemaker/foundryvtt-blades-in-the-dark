@@ -48,18 +48,12 @@ export class BladesSheet extends ActorSheet {
     let html = `<div class="items-to-add">`;
 
     items.forEach(e => {
-      let addition_price_load = ``;
-
-      if (typeof e.system.load !== "undefined") {
-        addition_price_load += `(${e.system.load})`
-      } else if (typeof e.system.price !== "undefined") {
-        addition_price_load += `(${e.system.price})`
+      if(!e.system.add_list_ignore) {
+        html += `<input id="select-item-${e._id}" type="${input_type}" name="select_items" value="${e._id}">`;
+        html += `<label class="flex-horizontal-spaced" for="select-item-${e._id}">`;
+        html += `${game.i18n.localize(e.name)} <i class="tooltip fas fa-question-circle"><span class="tooltiptext">${game.i18n.localize(e.system.description)}</span></i>`;
+        html += `</label>`;
       }
-
-      html += `<input id="select-item-${e._id}" type="${input_type}" name="select_items" value="${e._id}">`;
-      html += `<label class="flex-horizontal-spaced" for="select-item-${e._id}">`;
-      html += `${game.i18n.localize(e.name)} <i class="tooltip fas fa-question-circle"><span class="tooltiptext">${game.i18n.localize(e.system.description)}</span></i>`;
-      html += `</label>`;
     });
 
     html += `</div>`;

@@ -29,7 +29,8 @@
           "one": "",
           "two": "",
           "three": "",
-          "four": ""
+          "four": "",
+          "five": ""
         }
       },
       "healing-clock": [0],
@@ -39,10 +40,11 @@
       "coins": [0],
       "coins_stashed": [0],
       "special_abilities": [],
+      "special_armor_ids": [],
       "loadout": 0,
-      "load_level": "",
+      "max_load": 0,
+      "encumbered_threshold": 7,
       "selected_load_level": "",
-      "base_max_load": 0,
       "harm": {
           "light": {
             "one": "",
@@ -295,8 +297,8 @@
     "load": 0,
     "uses": 0,
     "max_uses": 0,
-    "additional_info": "",
     "equipped" : false,
+    "add_list_ignore": false,
     "rarity": "common",
     "rarity_options": {
       "common": "UTCF.Gear.Rarity.Common",
@@ -305,7 +307,8 @@
       "legendary": "UTCF.Gear.Rarity.Legendary"
     },
     "quality": 0,
-    "properties": []
+    "properties": [],
+    "linked_ability": ""
   },
   "class": {
     "name": "",
