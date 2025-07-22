@@ -2,7 +2,8 @@ $lightgray: #CCC;
 
 form {
   background-color: white;
-  padding: 20px;
+  padding: 0px;
+  border: solid 5px $almost_black;
 }
 
 textarea {
@@ -30,6 +31,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: none;
 
   > *:not(.label-stripe) {
     margin-right: 10px;
@@ -199,7 +201,7 @@ td {
   cursor: pointer;
 
   .item-list-item {
-    border: 2px solid black;
+    border: 2px solid $almost_black;
     background-color: $lightgray;
   }
   

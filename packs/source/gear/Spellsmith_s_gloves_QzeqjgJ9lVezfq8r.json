@@ -23,7 +23,8 @@
                                   ],
                    "description":  "\u003cp\u003e\u003cspan id=\"docs-internal-guid-7edcd5c8-7fff-6624-e387-b87d979676ee\"\u003eGloves that allow the wearer to touch the supernatural as though it were physical. Provide a measure of protection from magical energies. Delicate crystals, inks, or runes make them unsuitable for extended physical combat.\u003c/span\u003e\u003c/p\u003e",
                    "add_list_ignore":  false,
-                   "linked_ability":  ""
+                   "linked_ability":  "",
+                   "special_armor":  false
                },
     "effects":  [
 

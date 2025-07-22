@@ -24,7 +24,8 @@
                                   ],
                    "description":  "\u003cp\u003eA vial of liquid starlight. Drinking it prevents death for a short time, but attracts the attention of any nearby Hateful Things\u003c/p\u003e",
                    "add_list_ignore":  false,
-                   "linked_ability":  ""
+                   "linked_ability":  "",
+                   "special_armor":  false
                },
     "effects":  [
 

@@ -32,7 +32,9 @@ export class BladesSheet extends ActorSheet {
   async _onItemAddClick(event) {
     event.preventDefault();
     const item_type = $(event.currentTarget).data("itemType");
+    console.log(item_type);
     let items = await BladesHelpers.getAllItemsByType(item_type, game);
+    console.log(items);
     this._onItemAddClickRender(event,items, item_type);
   }
 

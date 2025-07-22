@@ -1,0 +1,30 @@
+{
+  "name": "Dawn's Clarion Call",
+  "type": "spell",
+  "_id": "FvwvC29T3EDdRrZd",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<ul id=\"docs-internal-guid-09795bd4-7fff-ace5-0b47-fdb74b172184\">\n<li dir=\"ltr\" aria-level=\"2\">\n<p dir=\"ltr\" role=\"presentation\">This action alerts allies within a mile and/or enemies that can see and/or hear it. You may cause them to become aware of any combination of&nbsp;</p>\n</li>\n<ul>\n<li dir=\"ltr\" aria-level=\"3\">\n<p dir=\"ltr\" role=\"presentation\">Your exact location</p>\n</li>\n<li dir=\"ltr\" aria-level=\"3\">\n<p dir=\"ltr\" role=\"presentation\">The outcome of your action</p>\n</li>\n<li dir=\"ltr\" aria-level=\"3\">\n<p dir=\"ltr\" role=\"presentation\">A message of five words or less (can be conveyed in a way of your choosing, such as a whisper in the ear or a strong feeling or impression)</p>\n</li>\n</ul>\n</ul>",
+    "stress": 2
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753023028732,
+    "modifiedTime": 1753023036009,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!FvwvC29T3EDdRrZd"
+}

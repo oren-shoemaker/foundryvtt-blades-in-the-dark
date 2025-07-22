@@ -4,7 +4,7 @@
 sass /g/Code/blades/scss/style.scss /g/Code/blades/styles/blades.css
 
 # build packs
-for name in abilities classes homelands backgrounds lifestyles gear; do
+for name in abilities classes homelands backgrounds lifestyles gear spells; do
     fvtt package pack --in /g/Code/blades/packs/source/$name --out /g/Code/blades/packs -n $name
 done
 

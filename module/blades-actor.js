@@ -62,6 +62,29 @@ export class BladesActor extends Actor {
         this.update({"system.encumbered_threshold": 9})
       }
     });
+
+    // sync gear linked to abilities
+    const actor_ability_shortnames = this.items.filter(i => i.type === "ability").map(i => i.system.shortname);
+    const linked_actor_gear = this.items.filter(i => i.type === "gear" && i.system.linked_ability);
+    const linked_actor_gear_names = linked_actor_gear.map(i => i.name);
+
+    const linked_gear_to_add = (await BladesHelpers.getAllItemsByType("gear", game)).filter(g => 
+      g.system.linked_ability && 
+      actor_ability_shortnames && 
+      actor_ability_shortnames.includes(g.system.linked_ability) &&
+      !linked_actor_gear_names.includes(g.name)
+    );
+
+
+    const linked_gear_to_remove = linked_actor_gear.filter(g => !actor_ability_shortnames.includes(g.system.linked_ability)).map(g => g._id);
+
+    if(linked_gear_to_add) {
+      await Item.create(linked_gear_to_add, {parent: this})
+    }
+
+    if(linked_gear_to_remove) {
+      await this.deleteEmbeddedDocuments("Item", linked_gear_to_remove);
+    }
   }
 
   /* -------------------------------------------- */

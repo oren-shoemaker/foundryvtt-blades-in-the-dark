@@ -24,7 +24,8 @@
                                   ],
                    "description":  "\u003cp\u003eA sticky oil that hardens quickly once exposed to air. Fuses two surfaces together until dissolved with alkahest or magic\u003c/p\u003e",
                    "add_list_ignore":  false,
-                   "linked_ability":  ""
+                   "linked_ability":  "",
+                   "special_armor":  false
                },
     "effects":  [
 

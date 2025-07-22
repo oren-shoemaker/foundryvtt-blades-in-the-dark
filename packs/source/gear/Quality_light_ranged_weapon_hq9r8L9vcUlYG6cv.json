@@ -23,7 +23,8 @@
                                   ],
                    "description":  "\u003cp\u003e\u003cspan id=\"docs-internal-guid-6d57fa74-7fff-7b1c-774f-d43339894317\"\u003eA high-quality ranged weapon that can be easily concealed or pulled from hiding (a sling, a hand crossbow)\u003c/span\u003e\u003c/p\u003e",
                    "add_list_ignore":  false,
-                   "linked_ability":  ""
+                   "linked_ability":  "",
+                   "special_armor":  false
                },
     "effects":  [
 

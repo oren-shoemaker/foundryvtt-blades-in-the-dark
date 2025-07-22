@@ -24,7 +24,8 @@
                                   ],
                    "description":  "\u003cp\u003e\u003cspan id=\"docs-internal-guid-e63c912f-7fff-9e23-c5d7-d74b4fb27bc5\"\u003eBolts, arrows, etc. made from precious metals and blessed by a priest of the Stars. Burns and panics Hateful Things.\u003c/span\u003e\u003c/p\u003e",
                    "add_list_ignore":  false,
-                   "linked_ability":  ""
+                   "linked_ability":  "",
+                   "special_armor":  false
                },
     "effects":  [
 

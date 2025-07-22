@@ -1,0 +1,30 @@
+{
+  "name": "Unseemly Passage",
+  "type": "spell",
+  "_id": "9eDdWS3YQuKrFXC3",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-39d702bf-7fff-e73b-0009-6400388851c5\">You create a stable passage through solid, nonliving matter. It can be up to fifty feet long and ten feet wide. It is stable for an hour or so, after which it may collapse under its own weight (depending on the material).</span></p>",
+    "stress": 4
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753023043919,
+    "modifiedTime": 1753023050573,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!9eDdWS3YQuKrFXC3"
+}

@@ -199,10 +199,11 @@ Hooks.once("init", async function() {
   });
 
   Handlebars.registerHelper('trauma_descriptions',function(count){
-    var accum = '<table><tbody>';
+    var accum = '<tbody>';
     const context = this;
 
-    for(var i = 1; i < Number(count)+1; ++i){
+    // this is vile. refactor later, or not.
+    for(var i = 1; i <= 6; ++i){
       var stringified_iter = '';
       switch(i) {
         case 1:
@@ -217,12 +218,34 @@ Hooks.once("init", async function() {
         case 4:
           stringified_iter = 'four';
           break;
+        case 5:
+          stringified_iter = 'five';
+          break;
       }
       const traumaValue = context.system?.trauma?.traumas?.[stringified_iter] || '';
-      accum += `<tr><td><input type="text" id="character-${context._id}-mental-trauma-${i}" name="system.trauma.traumas.${stringified_iter}" value="${traumaValue}"></td></tr>`
+      if(i % 2 === 1) {
+        accum += '<tr>'
+      }
+      accum += '<td>'
+      if(i < Number(count)+1) {
+        accum += `<input type="text" id="character-${context._id}-mental-trauma-${i}" name="system.trauma.traumas.${stringified_iter}" value="${traumaValue}">`
+      }
+      accum += '</td>'
+      // add the box for physical trauma
+      if(i === 2) {
+        accum += '<td>'
+        if(Number(context.system?.physical_trauma?.value) > 0) {
+          const physical_trauma = context.system?.physical_trauma?.traumas?.one;
+          accum += `<input type="text" id="character-${context._id}-physical-trauma" name="system.physical_trauma.traumas.one" value="${physical_trauma}">`
+        }
+        accum += '</td>'
+      }
+      if(i % 2 === 0) {
+        accum +='</tr>'
+      }
     }
     
-    accum +='</tbody></table>'
+    accum +='</tbody>'
 
     return new Handlebars.SafeString(accum);
   })
@@ -390,14 +413,23 @@ Hooks.once("init", async function() {
   })
 
   Handlebars.registerHelper('gt',function(x, y) {
+    if(Number(x) && Number(y)) {
+      return Number(x) > Number(y);
+    }
     return x > y;
   });
 
   Handlebars.registerHelper('gte',function(x,y){
+    if(Number(x) && Number(y)) {
+      return Number(x) >= Number(y);
+    }
     return x >= y;
   })
 
   Handlebars.registerHelper('lt',function(x, y) {
+    if(Number(x) && Number(y)) {
+      return Number(x) < Number(y);
+    }
     return x < y;
   });
 

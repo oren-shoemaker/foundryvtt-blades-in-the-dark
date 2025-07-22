@@ -23,7 +23,8 @@
                                   ],
                    "description":  "\u003cul id=\"docs-internal-guid-63ebf7f7-7fff-819d-bd4d-53659ad7e5dd\"\u003e\n\u003cli dir=\"ltr\" aria-level=\"2\"\u003e\n\u003cp dir=\"ltr\" role=\"presentation\"\u003eReinforced leather armor, including gloves and boots\u003c/p\u003e\n\u003c/li\u003e\n\u003cli dir=\"ltr\" aria-level=\"2\"\u003e\n\u003cp dir=\"ltr\" role=\"presentation\"\u003eMay use once to reduce harm by a level\u003c/p\u003e\n\u003c/li\u003e\n\u003cli dir=\"ltr\" aria-level=\"2\"\u003e\n\u003cp dir=\"ltr\" role=\"presentation\"\u003eMay improve to heavy armor for a second use, at the cost of 3 additional load\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e",
                    "add_list_ignore":  true,
-                   "linked_ability":  ""
+                   "linked_ability":  "",
+                   "special_armor":  false
                },
     "effects":  [
 

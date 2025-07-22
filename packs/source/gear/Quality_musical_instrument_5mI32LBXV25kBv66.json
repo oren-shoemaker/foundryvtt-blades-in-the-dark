@@ -23,7 +23,8 @@
                                   ],
                    "description":  "\u003cp\u003e\u003cspan id=\"docs-internal-guid-bd69b10f-7fff-0dd9-62c6-1d55f131ec68\"\u003eA finely-made musical instrument, suitable for raising spirits or sending a warning\u003c/span\u003e\u003c/p\u003e",
                    "add_list_ignore":  false,
-                   "linked_ability":  ""
+                   "linked_ability":  "",
+                   "special_armor":  false
                },
     "effects":  [
 

@@ -23,7 +23,8 @@
                                   ],
                    "description":  "\u003cp\u003e\u003cspan id=\"docs-internal-guid-59be32dd-7fff-7d2d-77d3-af0b84a0b095\"\u003eA holy relic that repels Hateful Things\u003c/span\u003e\u003c/p\u003e",
                    "add_list_ignore":  false,
-                   "linked_ability":  ""
+                   "linked_ability":  "",
+                   "special_armor":  false
                },
     "effects":  [
 

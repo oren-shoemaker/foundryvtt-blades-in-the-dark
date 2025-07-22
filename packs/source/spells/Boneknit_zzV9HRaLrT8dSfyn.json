@@ -1,0 +1,30 @@
+{
+  "name": "Boneknit",
+  "type": "spell",
+  "_id": "zzV9HRaLrT8dSfyn",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-f1f2bdb0-7fff-1601-648e-59a6c74c7c1e\">At a touch, remove a harm from an ally.</span></p>",
+    "stress": 4
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753022923786,
+    "modifiedTime": 1753022931220,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!zzV9HRaLrT8dSfyn"
+}

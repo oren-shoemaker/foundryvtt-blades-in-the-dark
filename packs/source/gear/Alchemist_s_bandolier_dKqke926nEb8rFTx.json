@@ -23,7 +23,8 @@
                                   ],
                    "description":  "\u003cp\u003e\u003cspan id=\"docs-internal-guid-24f55dfe-7fff-f5d1-6c9b-435dadd88783\"\u003eA strap worn across the body, customized for the wearer and to protect its contents. Holds up to three bottles of alchemicals.\u003c/span\u003e\u003c/p\u003e\n\u003cp\u003eYou may refill uncommon alchemicals automatically during downtime as long as you have access to a supplier or workshop.\u003c/p\u003e",
                    "add_list_ignore":  false,
-                   "linked_ability":  ""
+                   "linked_ability":  "",
+                   "special_armor":  false
                },
     "effects":  [
 

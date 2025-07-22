@@ -24,7 +24,8 @@
                                   ],
                    "description":  "\u003cp\u003eA flask of universal solvent, reverses the effects of other alchemicals\u003c/p\u003e",
                    "add_list_ignore":  false,
-                   "linked_ability":  ""
+                   "linked_ability":  "",
+                   "special_armor":  false
                },
     "effects":  [
 

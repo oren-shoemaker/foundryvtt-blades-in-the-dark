@@ -23,7 +23,8 @@
                                   ],
                    "description":  "\u003cp\u003eRope, a grappling hook, pitons, etc. Useful for scaling heights\u003c/p\u003e",
                    "add_list_ignore":  false,
-                   "linked_ability":  ""
+                   "linked_ability":  "",
+                   "special_armor":  false
                },
     "effects":  [
 

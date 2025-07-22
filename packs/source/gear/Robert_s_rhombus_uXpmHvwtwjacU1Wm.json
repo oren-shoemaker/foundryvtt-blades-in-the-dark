@@ -24,7 +24,8 @@
                                   ],
                    "description":  "\u003cul id=\"docs-internal-guid-e01fdd6c-7fff-c314-8c8f-66bcd737de20\"\u003e\n\u003cli dir=\"ltr\" aria-level=\"2\"\u003e\n\u003cp dir=\"ltr\" role=\"presentation\"\u003eA crystalline rhomboid prism, fist-sized and unbreakable by ordinary means\u003c/p\u003e\n\u003c/li\u003e\n\u003cli dir=\"ltr\" aria-level=\"2\"\u003e\n\u003cp dir=\"ltr\" role=\"presentation\"\u003eMay use when attempting to harm another being or object, before the action roll is made. It grants +1d and +1 effect. You cannot resist any harms that result from the roll.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e",
                    "add_list_ignore":  false,
-                   "linked_ability":  ""
+                   "linked_ability":  "",
+                   "special_armor":  false
                },
     "effects":  [
 

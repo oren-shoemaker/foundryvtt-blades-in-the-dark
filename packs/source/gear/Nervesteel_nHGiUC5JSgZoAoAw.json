@@ -24,7 +24,8 @@
                                   ],
                    "description":  "\u003cp\u003eA vial of blue-gray liquid that grants a burst of strength, durability, and nerve. Gain +1d to an appropriate physical action when used; afterwards take a moderate harm \"Bone-tired\"\u003c/p\u003e",
                    "add_list_ignore":  false,
-                   "linked_ability":  ""
+                   "linked_ability":  "",
+                   "special_armor":  false
                },
     "effects":  [
 

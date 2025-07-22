@@ -23,7 +23,8 @@
                                   ],
                    "description":  "\u003cp\u003eAssorted notes or tomes, containing commonly-known useful information to the task at hand\u003c/p\u003e",
                    "add_list_ignore":  false,
-                   "linked_ability":  ""
+                   "linked_ability":  "",
+                   "special_armor":  false
                },
     "effects":  [
 

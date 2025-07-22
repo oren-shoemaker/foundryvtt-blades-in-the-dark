@@ -24,7 +24,8 @@
                                   ],
                    "description":  "\u003cp\u003eA vial of yellow liquid that enhances eyesight. User can see in total darkness for an hour or so, but is near-blinded by light\u003c/p\u003e",
                    "add_list_ignore":  false,
-                   "linked_ability":  ""
+                   "linked_ability":  "",
+                   "special_armor":  false
                },
     "effects":  [
 

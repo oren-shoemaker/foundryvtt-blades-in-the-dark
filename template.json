@@ -13,7 +13,7 @@
       "acquaintances": [],
       "acquaintances_label": "UTCF.Acquaintances",
       "stress": {
-        "value": [0],
+        "value": 0,
         "max": 9,
         "max_default": 9,
         "name_default": "UTCF.Stress",
@@ -33,6 +33,14 @@
           "five": ""
         }
       },
+      "physical_trauma": {
+        "max": 1,
+        "max_default": 1,
+        "value": 0,
+        "traumas": {
+          "one": ""
+        }
+      },
       "healing-clock": [0],
       "experience": [0],
       "experience_max": 8,
@@ -40,7 +48,6 @@
       "coins": [0],
       "coins_stashed": [0],
       "special_abilities": [],
-      "special_armor_ids": [],
       "loadout": 0,
       "max_load": 0,
       "encumbered_threshold": 7,
@@ -202,7 +209,7 @@
     }
   },
   "Item": {
-    "types": ["faction", "item", "class", "ability", "background", "homeland", "vice", "crew_upgrade", "cohort", "crew_type", "crew_reputation", "crew_upgrade", "crew_ability", "lifestyle", "gear"],
+    "types": ["faction", "item", "class", "ability", "background", "homeland", "vice", "crew_upgrade", "cohort", "crew_type", "crew_reputation", "crew_upgrade", "crew_ability", "lifestyle", "gear", "spell"],
     "templates": {
       "default": {
         "description": ""
@@ -308,7 +315,12 @@
     },
     "quality": 0,
     "properties": [],
-    "linked_ability": ""
+    "linked_ability": "",
+    "special_armor": false
+  },
+  "spell": {
+    "templates": ["default"],
+    "stress": 0
   },
   "class": {
     "name": "",

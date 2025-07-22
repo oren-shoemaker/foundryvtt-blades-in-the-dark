@@ -53,6 +53,13 @@
       "type": "Item"
     },
     {
+      "name": "spell",
+      "label": "Spells",
+      "system": "until-the-curtain-falls",
+      "path": "./packs/spells",
+      "type": "Item"
+    },
+    {
       "name": "vice",
       "label": "Vices",
       "system": "until-the-curtain-falls",

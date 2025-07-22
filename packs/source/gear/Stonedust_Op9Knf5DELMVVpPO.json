@@ -24,7 +24,8 @@
                                   ],
                    "description":  "\u003cp\u003eA contact poison that causes rapid-onset temporary paralysis in flesh. Can be used in powdered or liquid form.\u003c/p\u003e",
                    "add_list_ignore":  false,
-                   "linked_ability":  ""
+                   "linked_ability":  "",
+                   "special_armor":  false
                },
     "effects":  [
 

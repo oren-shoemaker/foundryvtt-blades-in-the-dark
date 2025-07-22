@@ -1,0 +1,30 @@
+{
+  "name": "Visions of a Phantom Realm",
+  "type": "spell",
+  "_id": "4bpgbvx3seaugsXz",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-3d50400c-7fff-d341-9995-44360ff06785\">Bring forth a visual and/or auditory illusion that can occupy a space up to twenty feet in any dimension, centered on a location that you can see within two hundred feet. It stands up to close inspection, but not to physical touch. It disappears after ten minutes, or if you dismiss it.</span></p>",
+    "stress": 4
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753022907638,
+    "modifiedTime": 1753022914730,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!4bpgbvx3seaugsXz"
+}

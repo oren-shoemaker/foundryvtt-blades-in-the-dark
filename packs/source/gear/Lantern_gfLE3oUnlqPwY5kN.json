@@ -23,7 +23,8 @@
                                   ],
                    "description":  "\u003cp\u003eA simple lantern or other light source\u003c/p\u003e",
                    "add_list_ignore":  false,
-                   "linked_ability":  ""
+                   "linked_ability":  "",
+                   "special_armor":  false
                },
     "effects":  [
 

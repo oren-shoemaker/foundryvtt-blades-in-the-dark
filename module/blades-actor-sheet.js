@@ -145,8 +145,14 @@ export class BladesActorSheet extends BladesSheet {
 
       if(checked) {
         item.update({"system.equipped": true});
+        if(item.system.special_armor) {
+          this.object.update({"system.armor-uses.special": 1})
+        }
       } else {
         item.update({"system.equipped": false});
+        if(item.system.special_armor) {
+          this.object.update({"system.armor-uses.special": 0})
+        }
       }
     });
 
@@ -164,6 +170,14 @@ export class BladesActorSheet extends BladesSheet {
         if(actor_item)
           await this.actor.deleteEmbeddedDocuments("Item", [actor_item._id]);
       }
+    });
+
+    html.find('.spell-stress-cost').click(ev => {
+      const spell_id = $(ev.currentTarget).parents(".item-block").data("itemId");
+      const stress_cost = this.actor.items.get(spell_id).system.stress;
+      const new_stress = Number(this.object.system.stress.value) + stress_cost;
+      const stress_to_set = new_stress < this.object.system.stress.max ? new_stress : this.object.system.stress.max;
+      this.object.update({"system.stress.value": [stress_to_set]})
     });
   }
 

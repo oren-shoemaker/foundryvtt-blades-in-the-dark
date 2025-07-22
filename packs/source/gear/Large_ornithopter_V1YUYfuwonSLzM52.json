@@ -23,7 +23,8 @@
                                   ],
                    "description":  "\u003cp\u003eLarge collapsible flying machine, pedal-powered. Can carry a single person.\u003c/p\u003e",
                    "add_list_ignore":  false,
-                   "linked_ability":  ""
+                   "linked_ability":  "",
+                   "special_armor":  false
                },
     "effects":  [
 

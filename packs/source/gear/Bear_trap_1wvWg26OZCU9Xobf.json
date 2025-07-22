@@ -24,7 +24,8 @@
                                   ],
                    "description":  "\u003cp\u003eA heavy mechanical trap with a pressure plate and sharp teeth, designed to immobilize large game or monsters. Prevents movement as long as it\u0027s clamped on and chained to a solid object.\u003c/p\u003e",
                    "add_list_ignore":  false,
-                   "linked_ability":  ""
+                   "linked_ability":  "",
+                   "special_armor":  false
                },
     "effects":  [
 

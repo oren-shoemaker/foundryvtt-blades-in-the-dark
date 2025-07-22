@@ -1,0 +1,30 @@
+{
+  "name": "On the Wings of the Winds",
+  "type": "spell",
+  "_id": "06pZOADFZK53ca3a",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-5ef4b73a-7fff-6732-ccb2-b3c41bb0a085\">You temporarily gain the power of flight for this action, or grant the power of flight to an ally. This does not allow you to carry more or less than you ordinarily could. If this spell is used to hover above the ground, the subject descends safely after the action is complete.</span></p>",
+    "stress": 2
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753022945853,
+    "modifiedTime": 1753022955739,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!06pZOADFZK53ca3a"
+}

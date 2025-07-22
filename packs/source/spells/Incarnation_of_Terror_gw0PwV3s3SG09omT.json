@@ -1,0 +1,30 @@
+{
+  "name": "Incarnation of Terror",
+  "type": "spell",
+  "_id": "gw0PwV3s3SG09omT",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-3975160e-7fff-73e1-aec1-7234690af969\">This action becomes terrifying, even to creatures ordinarily incapable of feeling fear. Nearby enemies of your choice that see or otherwise perceive you perform this action will attempt to flee if possible. Enemies cornered this way may cower or fight back, as appropriate to their nature. This effect does not linger long after the end of your action.</span></p>",
+    "stress": 3
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753023014929,
+    "modifiedTime": 1753023020267,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!gw0PwV3s3SG09omT"
+}

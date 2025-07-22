@@ -64,6 +64,7 @@
   "UTCF.AtWar": "At War!",
   "UTCF.Trauma": "Trauma",
   "UTCF.MentalTrauma": "Mental Trauma",
+  "UTCF.PhysicalTrauma": "Physical Trauma",
 
   "UTCF.Harm": {
     "Label": "Harm",
@@ -81,7 +82,8 @@
     },
     "Deadly": {
       "Label": "Deadly",
-      "Effect": "Physical trauma"
+      "EffectTrauma": "Physical trauma",
+      "EffectDeath": "Death"
     }
   },
 
@@ -322,6 +324,12 @@
         "Tooltip": "Indicates that this is special armor granted by an ability"
       }
     }
+  },
+
+  "UTCF.Spell": {
+    "LabelPlural": "Spells",
+    "Cost": "Stress Cost",
+    "Add": "Add spell"
   },
 
   "UTCF.AddItem": "Add Item",

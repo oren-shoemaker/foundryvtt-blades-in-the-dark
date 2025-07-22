@@ -1,0 +1,30 @@
+{
+  "name": "The Light of Vanished Stars",
+  "type": "spell",
+  "_id": "Ti4iLNnXyh7WW1zT",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-35a088ae-7fff-88fd-1ff8-921c96046cb7\">Summon a bright point of light of a color of your choice. It illuminates your surroundings as though it were a powerful lantern, and attracts similar attention. You may direct it to follow you, or to move to a point you can see. It moves no faster than you can run. It disappears after an hour, if it moves more than one hundred feet from your location, or if you dismiss it.</span></p>",
+    "stress": 2
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753022889466,
+    "modifiedTime": 1753022896563,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!Ti4iLNnXyh7WW1zT"
+}

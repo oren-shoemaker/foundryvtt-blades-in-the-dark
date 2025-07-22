@@ -23,7 +23,8 @@
                                   ],
                    "description":  "\u003cp\u003e\u003cspan id=\"docs-internal-guid-89b54dae-7fff-280a-99d1-275c71ee9140\"\u003eA toolkit containing chalk, precious metals, and charms suitable for conducting impromptu rituals. Uncommonly well-made and organized.\u003c/span\u003e\u003c/p\u003e",
                    "add_list_ignore":  false,
-                   "linked_ability":  ""
+                   "linked_ability":  "",
+                   "special_armor":  false
                },
     "effects":  [
 

@@ -180,7 +180,8 @@
 }
 .until-the-curtain-falls form {
   background-color: white;
-  padding: 20px;
+  padding: 0px;
+  border: solid 5px #191813;
 }
 .until-the-curtain-falls textarea {
   margin-top: 10px;
@@ -203,6 +204,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: none;
 }
 .until-the-curtain-falls section > *:not(.label-stripe) {
   margin-right: 10px;
@@ -348,7 +350,7 @@
   cursor: pointer;
 }
 .until-the-curtain-falls .item-list-padded-bounded .item-list-item {
-  border: 2px solid black;
+  border: 2px solid #191813;
   background-color: #CCC;
 }
 .until-the-curtain-falls .item-list-padded-bounded .item-list-item + .item-list-item {
@@ -1199,7 +1201,7 @@
   display: block;
 }
 .until-the-curtain-falls.actor.pc * input[type=text] {
-  border: 1px solid black;
+  border: 1px solid #191813;
   border-radius: 0;
   text-transform: uppercase;
   font-weight: bold;
@@ -1207,11 +1209,6 @@
   background-color: #EEEFFF;
 }
 .until-the-curtain-falls.actor.pc * .big-teeth-section {
-  border-top: 3px solid #191813;
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 0px;
-  margin-top: 10px;
   /* Trauma */
 }
 .until-the-curtain-falls.actor.pc * .big-teeth-section > * {
@@ -1223,11 +1220,12 @@
 .until-the-curtain-falls.actor.pc * .big-teeth-section:last-child {
   margin-right: 0px;
 }
-.until-the-curtain-falls.actor.pc * .big-teeth-section .big-teeth {
+.until-the-curtain-falls.actor.pc * .big-teeth-section .big-teeth-container .big-teeth-wrap {
   display: flex;
   /* Hide the browser's default checkbox */
+  flex-direction: column;
 }
-.until-the-curtain-falls.actor.pc * .big-teeth-section .big-teeth label {
+.until-the-curtain-falls.actor.pc * .big-teeth-section .big-teeth-container .big-teeth-wrap label {
   height: 50px;
   width: 17px;
   background-image: url("assets/teeth/stresstooth-red.png");
@@ -1237,30 +1235,34 @@
   transition: filter 0.1s;
   cursor: pointer;
 }
-.until-the-curtain-falls.actor.pc * .big-teeth-section .big-teeth label:last-of-type {
+.until-the-curtain-falls.actor.pc * .big-teeth-section .big-teeth-container .big-teeth-wrap label:last-of-type {
   margin-right: 0px;
 }
-.until-the-curtain-falls.actor.pc * .big-teeth-section .big-teeth label[for$="-0"] {
+.until-the-curtain-falls.actor.pc * .big-teeth-section .big-teeth-container .big-teeth-wrap label[for$="-0"] {
   width: auto;
   height: auto;
   background-image: none !important;
   color: #EEEFFF;
 }
-.until-the-curtain-falls.actor.pc * .big-teeth-section .big-teeth label[for$="-0"] i {
+.until-the-curtain-falls.actor.pc * .big-teeth-section .big-teeth-container .big-teeth-wrap label[for$="-0"] i {
   margin-top: 4px;
 }
-.until-the-curtain-falls.actor.pc * .big-teeth-section .big-teeth label:hover {
+.until-the-curtain-falls.actor.pc * .big-teeth-section .big-teeth-container .big-teeth-wrap label:hover {
   filter: brightness(0.8);
   opacity: 0.9;
 }
-.until-the-curtain-falls.actor.pc * .big-teeth-section .big-teeth input {
+.until-the-curtain-falls.actor.pc * .big-teeth-section .big-teeth-container .big-teeth-wrap input {
   display: none;
 }
-.until-the-curtain-falls.actor.pc * .big-teeth-section .big-teeth input:checked ~ label {
+.until-the-curtain-falls.actor.pc * .big-teeth-section .big-teeth-container .big-teeth-wrap input:checked ~ label {
   background-image: url("assets/teeth/stresstooth-halfgrey.png");
 }
-.until-the-curtain-falls.actor.pc * .big-teeth-section .big-teeth input:checked + label {
+.until-the-curtain-falls.actor.pc * .big-teeth-section .big-teeth-container .big-teeth-wrap input:checked + label {
   background-image: url("assets/teeth/stresstooth-red.png");
+}
+.until-the-curtain-falls.actor.pc * .big-teeth-section .big-teeth-container .big-teeth-wrap .big-teeth {
+  display: flex;
+  flex-direction: row;
 }
 .until-the-curtain-falls.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap {
   display: flex;
@@ -1306,37 +1308,21 @@
   display: flex;
   flex-direction: row;
 }
-.until-the-curtain-falls.actor.pc * .big-teeth-section .trauma-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
+.until-the-curtain-falls.actor.pc * .stress-trauma-table {
+  background-color: transparent;
+  table-layout: fixed;
+  margin-top: 0;
+  border: none;
 }
-.until-the-curtain-falls.actor.pc * .big-teeth-section .trauma-list label {
-  cursor: pointer;
-  font-size: 19px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  margin-right: 10px;
-  transition: filter 0.1s;
-  cursor: pointer;
-  /* Hide the browser's default checkbox */
+.until-the-curtain-falls.actor.pc * .stress-trauma-table thead {
+  background-color: transparent;
+  padding-top: 0;
+  border: none;
 }
-.until-the-curtain-falls.actor.pc * .big-teeth-section .trauma-list label:hover {
-  filter: brightness(0.8);
-  opacity: 0.9;
-}
-.until-the-curtain-falls.actor.pc * .big-teeth-section .trauma-list label input {
-  display: none;
-}
-.until-the-curtain-falls.actor.pc * .big-teeth-section .trauma-list label input:checked ~ .checkmark {
-  color: red;
-}
-.until-the-curtain-falls.actor.pc * .big-teeth-section .trauma-list label .checkmark {
-  text-decoration: none;
-  font-weight: bold;
+.until-the-curtain-falls.actor.pc * .stress-trauma-table thead th {
+  background-color: transparent;
+  padding-top: 0;
+  margin-top: 0;
 }
 .until-the-curtain-falls.actor.pc * .character-stress label[for$="-0"] {
   margin-right: 0px;
@@ -1440,19 +1426,21 @@
 .until-the-curtain-falls.actor.pc * .harm-armor .character-harm table {
   width: 100%;
   background-color: transparent;
+  table-layout: fixed;
+  border: none;
+}
+.until-the-curtain-falls.actor.pc * .harm-armor .character-harm table thead {
+  border: none;
 }
 .until-the-curtain-falls.actor.pc * .harm-armor .character-harm table th {
   text-transform: uppercase;
   background-color: #191813;
   color: #EEEFFF;
+  text-align: left;
+  border: none;
 }
 .until-the-curtain-falls.actor.pc * .harm-armor .character-harm table th:first-child {
-  text-align: left;
   padding-left: 10px;
-}
-.until-the-curtain-falls.actor.pc * .harm-armor .character-harm table th:last-child {
-  text-align: right;
-  padding-right: 10px;
 }
 .until-the-curtain-falls.actor.pc * .harm-armor .character-harm table .harm-text-td {
   vertical-align: center;
@@ -1471,6 +1459,11 @@
 }
 .until-the-curtain-falls.actor.pc * .harm-armor .character-harm table input[type=text] {
   width: 100%;
+}
+.until-the-curtain-falls.actor.pc * .harm-armor .character-harm table .td-fill {
+  background-color: #191813;
+  padding: none;
+  margin: none;
 }
 .until-the-curtain-falls.actor.pc * .harm-armor .character-armor-uses div {
   display: flex;
@@ -1608,7 +1601,7 @@
   cursor: pointer;
 }
 .until-the-curtain-falls.actor.pc * .item-block .item-header {
-  width: auto;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1622,6 +1615,43 @@
   cursor: pointer;
   flex-grow: 1;
 }
+.until-the-curtain-falls.actor.pc * .item-block .item-header .spell-stress-cost {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+}
+.until-the-curtain-falls.actor.pc * .item-block .item-header .spell-stress-cost > * {
+  margin-right: 2px;
+}
+.until-the-curtain-falls.actor.pc * .item-block .item-header .spell-stress-cost > *:last-child {
+  margin-right: 0px;
+}
+.until-the-curtain-falls.actor.pc * .item-block .item-header .spell-stress-cost:last-child {
+  margin-right: 0px;
+}
+.until-the-curtain-falls.actor.pc * .item-block .item-header .spell-stress-cost label {
+  cursor: pointer;
+}
+.until-the-curtain-falls.actor.pc * .item-block .item-header .spell-stress-cost label {
+  height: 15px;
+  width: 5px;
+  background-image: url("assets/teeth/stresstooth-red.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 5px;
+}
+.until-the-curtain-falls.actor.pc * .item-block .item-header .spell-stress-cost label:last-of-type {
+  margin-right: 0px;
+}
+.until-the-curtain-falls.actor.pc * .item-block .item-header .spell-stress-cost label[for$="-0"] {
+  width: auto;
+  height: auto;
+  background-image: none !important;
+  color: #EEEFFF;
+}
+.until-the-curtain-falls.actor.pc * .item-block .item-header .spell-stress-cost label[for$="-0"] i {
+  margin-top: 4px;
+}
 .until-the-curtain-falls.actor.pc * .item-block .item-description {
   display: inline-block;
   width: auto;
@@ -1634,19 +1664,26 @@
   padding-right: 5px;
   padding-left: 5px;
 }
-.until-the-curtain-falls.actor.pc * .trait-block {
-  width: auto;
-  display: flex;
-  flex-direction: horizontal;
+.until-the-curtain-falls.actor.pc * .trait-section {
+  flex-grow: 4;
 }
-.until-the-curtain-falls.actor.pc * .trait-block .trait-label {
-  width: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.until-the-curtain-falls.actor.pc * .trait-section input[type=text] {
+  width: 100%;
+}
+.until-the-curtain-falls.actor.pc * .trait-section table {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  table-layout: fixed;
+}
+.until-the-curtain-falls.actor.pc * .trait-section .trait-block {
+  width: 100%;
+}
+.until-the-curtain-falls.actor.pc * nav .tabs {
+  color: #EEEFFF;
 }
 .until-the-curtain-falls.actor.pc * .bounding-box {
-  border: 2px black solid;
+  border: 2px #191813;
 }
 .until-the-curtain-falls.actor.pc * .name,
 .until-the-curtain-falls.actor.pc * .lair,

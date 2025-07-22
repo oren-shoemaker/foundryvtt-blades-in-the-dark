@@ -1,0 +1,30 @@
+{
+  "name": "Command the Rotting Legions",
+  "type": "spell",
+  "_id": "njKHbq8Qhr6AJuUJ",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-6c061519-7fff-2d52-0321-02e610eb26d4\">You take control of a small group of Hateful Things (or a single larger entity). You may treat it as a cohort for this action, either Commanding it or leading it in a group action. If you roll for this cohort, use its tier. This spell has reduced effect when controlling intelligent creatures.</span></p>",
+    "stress": 4
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753022995864,
+    "modifiedTime": 1753023003336,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!njKHbq8Qhr6AJuUJ"
+}

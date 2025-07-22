@@ -23,7 +23,8 @@
                                   ],
                    "description":  "\u003cp\u003eA small clockwork flying machine; when wound up and deployed, will fly in an arc for a set distance or duration\u003c/p\u003e\n\u003cp\u003eCan carry ~ 1 load worth of items, but this reduces its range by half\u003c/p\u003e",
                    "add_list_ignore":  false,
-                   "linked_ability":  ""
+                   "linked_ability":  "",
+                   "special_armor":  false
                },
     "effects":  [
 

@@ -1,0 +1,30 @@
+{
+  "name": "Beckoning Flame",
+  "type": "spell",
+  "_id": "LoUZGHo0OEwD7KLy",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-1f1416c5-7fff-42ad-e15d-1c12513f923c\">Conjure a flash of fire in a sphere, cone, or cylinder whose dimensions are no less than ten feet and no more than fifty. A cone conjured this way emanates from your body. A sphere or cylinder conjured this way may emanate from any point that you can see within one hundred feet of your location. Flammable objects in the area are ignited and flesh is badly burned.</span></p>",
+    "stress": 4
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753022843279,
+    "modifiedTime": 1753022880186,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!LoUZGHo0OEwD7KLy"
+}

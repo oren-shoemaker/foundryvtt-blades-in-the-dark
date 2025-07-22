@@ -1,0 +1,30 @@
+{
+  "name": "Yeet",
+  "type": "spell",
+  "_id": "hdw2vhcvEwn5pWtA",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "<p><span id=\"docs-internal-guid-dca02e6e-7fff-1d5e-ecd3-f9af5b33f796\">You move an object that you can see from anywhere within fifty feet of yourself to any other point within that area, or fling an object within fifty feet of yourself in a direction of your choosing (it travels at a distance and speed appropriate to its mass). You can move or fling objects one scale above what you could ordinarily move or throw by hand. Has reduced effect against entities that are capable of physically resisting (e.g. by grabbing onto a handhold).</span></p>",
+    "stress": 3
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753023058731,
+    "modifiedTime": 1753023063579,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!hdw2vhcvEwn5pWtA"
+}

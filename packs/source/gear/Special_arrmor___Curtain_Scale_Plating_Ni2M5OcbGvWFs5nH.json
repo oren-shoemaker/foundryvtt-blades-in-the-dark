@@ -1,0 +1,53 @@
+{
+    "name":  "Special arrmor - Curtain-Scale Plating",
+    "type":  "gear",
+    "_id":  "Ni2M5OcbGvWFs5nH",
+    "img":  "icons/svg/item-bag.svg",
+    "system":  {
+                   "description":  "\u003cp dir=\"ltr\" role=\"presentation\"\u003eYou may expend this to:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cul\u003e\n\u003cli dir=\"ltr\" aria-level=\"3\"\u003e\n\u003cp dir=\"ltr\" role=\"presentation\"\u003eAvoid the consequences of fatigue or weakness, or of alchemical or mechanical creations\u003c/p\u003e\n\u003c/li\u003e\n\u003cli dir=\"ltr\" aria-level=\"3\"\u003e\n\u003cp dir=\"ltr\" role=\"presentation\"\u003ePush yourself to work with technical skill, or handle alchemical or mechanical creations at no stress cost\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e",
+                   "logic":  "",
+                   "class":  "",
+                   "load":  0,
+                   "uses":  0,
+                   "max_uses":  0,
+                   "equipped":  false,
+                   "add_list_ignore":  false,
+                   "rarity":  "common",
+                   "rarity_options":  {
+                                          "common":  "UTCF.Gear.Rarity.Common",
+                                          "uncommon":  "UTCF.Gear.Rarity.Uncommon",
+                                          "rare":  "UTCF.Gear.Rarity.Rare",
+                                          "legendary":  "UTCF.Gear.Rarity.Legendary"
+                                      },
+                   "quality":  0,
+                   "properties":  [
+                                      "special_armor"
+                                  ],
+                   "linked_ability":  "CSPL",
+                   "special_armor":  true
+               },
+    "effects":  [
+
+                ],
+    "folder":  null,
+    "sort":  0,
+    "ownership":  {
+                      "default":  0,
+                      "nRGCPtyorF07NYQP":  3
+                  },
+    "flags":  {
+
+              },
+    "_stats":  {
+                   "compendiumSource":  null,
+                   "duplicateSource":  null,
+                   "exportSource":  null,
+                   "coreVersion":  "13.346",
+                   "systemId":  "until-the-curtain-falls",
+                   "systemVersion":  "0.0.0",
+                   "createdTime":  1753016506930,
+                   "modifiedTime":  1753016596461,
+                   "lastModifiedBy":  "nRGCPtyorF07NYQP"
+               },
+    "_key":  "!items!Ni2M5OcbGvWFs5nH"
+}

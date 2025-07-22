@@ -24,7 +24,8 @@
                                   ],
                    "description":  "\u003cp\u003eA fine white powder; objects coated in it float in the air for an hour\u003c/p\u003e",
                    "add_list_ignore":  false,
-                   "linked_ability":  ""
+                   "linked_ability":  "",
+                   "special_armor":  false
                },
     "effects":  [
 

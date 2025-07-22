@@ -23,7 +23,8 @@
                                   ],
                    "description":  "\u003cp\u003eHeavy plate or scale armor. May be added to grant a second armor use.\u003c/p\u003e",
                    "add_list_ignore":  true,
-                   "linked_ability":  ""
+                   "linked_ability":  "",
+                   "special_armor":  false
                },
     "effects":  [
 

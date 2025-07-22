@@ -24,7 +24,8 @@
                                   ],
                    "description":  "\u003cp\u003eA vial of silvery liquid that, when ingested, opens the mind and soul to the energies of the Curtain. Grants +1d to the next Attune roll; afterwards, the user suffers a moderate harm \"Mind overwhelmed\"\u003c/p\u003e",
                    "add_list_ignore":  false,
-                   "linked_ability":  ""
+                   "linked_ability":  "",
+                   "special_armor":  false
                },
     "effects":  [
 
