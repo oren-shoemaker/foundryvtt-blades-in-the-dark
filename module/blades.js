@@ -226,14 +226,14 @@ Hooks.once("init", async function() {
       if(i % 2 === 1) {
         accum += '<tr>'
       }
-      accum += '<td>'
+      accum += '<td colspan="10">'
       if(i < Number(count)+1) {
         accum += `<input type="text" id="character-${context._id}-mental-trauma-${i}" name="system.trauma.traumas.${stringified_iter}" value="${traumaValue}">`
       }
       accum += '</td>'
       // add the box for physical trauma
       if(i === 2) {
-        accum += '<td>'
+        accum += '<td rowspan="3" class="td-fill"></td><td colspan="10">'
         if(Number(context.system?.physical_trauma?.value) > 0) {
           const physical_trauma = context.system?.physical_trauma?.traumas?.one;
           accum += `<input type="text" id="character-${context._id}-physical-trauma" name="system.physical_trauma.traumas.one" value="${physical_trauma}">`

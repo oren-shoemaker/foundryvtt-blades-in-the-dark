@@ -1263,6 +1263,7 @@
 .until-the-curtain-falls.actor.pc * .big-teeth-section .big-teeth-container .big-teeth-wrap .big-teeth {
   display: flex;
   flex-direction: row;
+  margin-left: 10px;
 }
 .until-the-curtain-falls.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap {
   display: flex;
@@ -1307,6 +1308,7 @@
 .until-the-curtain-falls.actor.pc * .big-teeth-section .small-teeth-container .small-teeth-wrap .small-teeth {
   display: flex;
   flex-direction: row;
+  margin-left: 10px;
 }
 .until-the-curtain-falls.actor.pc * .stress-trauma-table {
   background-color: transparent;
@@ -1360,6 +1362,9 @@
 }
 .until-the-curtain-falls.actor.pc * .loadout .loadout-tooltip:hover .loadout-tooltiptext {
   visibility: visible;
+}
+.until-the-curtain-falls.actor.pc * .loadout option {
+  color: #191813;
 }
 .until-the-curtain-falls.actor.pc * .loadout .gear-equip {
   color: #191813;
@@ -1460,15 +1465,15 @@
 .until-the-curtain-falls.actor.pc * .harm-armor .character-harm table input[type=text] {
   width: 100%;
 }
-.until-the-curtain-falls.actor.pc * .harm-armor .character-harm table .td-fill {
-  background-color: #191813;
-  padding: none;
-  margin: none;
-}
 .until-the-curtain-falls.actor.pc * .harm-armor .character-armor-uses div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.until-the-curtain-falls.actor.pc * .td-fill {
+  background-color: #191813;
+  padding: none;
+  margin: none;
 }
 .until-the-curtain-falls.actor.pc * .attributes {
   display: flex;
@@ -1679,8 +1684,8 @@
 .until-the-curtain-falls.actor.pc * .trait-section .trait-block {
   width: 100%;
 }
-.until-the-curtain-falls.actor.pc * nav .tabs {
-  color: #EEEFFF;
+.until-the-curtain-falls.actor.pc * .tabs {
+  background-color: #191813;
 }
 .until-the-curtain-falls.actor.pc * .bounding-box {
   border: 2px #191813;

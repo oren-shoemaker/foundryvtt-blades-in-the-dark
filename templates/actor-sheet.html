@@ -76,7 +76,7 @@
   {{!-- Stress and Trauma --}}
   <table class="stress-trauma-table">
     <thead id="character-{{_id}}-stress-trauma" class="section big-teeth-section">
-      <th id="character-{{_id}}-stress-container" class="big-teeth-container character-stress">
+      <th colspan="10" id="character-{{_id}}-stress-container" class="big-teeth-container character-stress">
         {{#multiboxes system.stress.value}}
         <div id="character-{{_id}}-stress" class="big-teeth-wrap">
           <label class="black-label" for="character-{{_id}}-stress-0">{{localize system.stress.name}}</label>
@@ -91,7 +91,7 @@
         {{/multiboxes}}
       </th>
 
-      <th id="character-{{_id}}-trauma-container" class="small-teeth-container">
+      <th colspan="10" id="character-{{_id}}-trauma-container" class="small-teeth-container">
         {{#multiboxes system.trauma.value}}
         <div id="character-{{_id}}-trauma" class="small-teeth-wrap">
           <label class="black-label" for="character-{{_id}}-trauma-counter-0">{{localize system.trauma.name}}</label>
@@ -107,7 +107,9 @@
         {{/multiboxes}}
       </th>
 
-      <th id="character-{{_id}}-physical-trauma-container" class="small-teeth-container">
+      <td class="td-fill"></th>
+
+      <th colspan="10" id="character-{{_id}}-physical-trauma-container" class="small-teeth-container">
         {{#multiboxes system.physical_trauma.value}}
         <div id="character-{{_id}}-physical-trauma" class="small-teeth-wrap">
           <label class="black-label" for="character-{{_id}}-physical-trauma-counter-0">{{localize "UTCF.PhysicalTrauma"}}</label>
@@ -210,23 +212,23 @@
 
       {{!-- Nav menu --}}
       <nav class="tabs flex-horizontal-spaced">
-        <label class="label-stripe"><a class="item" data-tab="abilities">{{localize "UTCF.Abilities"}}</a></label>
-        <a class="item" data-tab="spells">{{localize "UTCF.Spell.LabelPlural"}}</a>
-        <a class="item" data-tab="loadout">{{localize "UTCF.Loadout"}}</a>
-        <a class="item" data-tab="character-notes">{{localize "UTCF.Notes"}}</a>
+        <a class="item label-stripe" data-tab="abilities">{{localize "UTCF.Abilities"}}</a>
+        <a class="item label-stripe" data-tab="spells">{{localize "UTCF.Spell.LabelPlural"}}</a>
+        <a class="item label-stripe" data-tab="loadout">{{localize "UTCF.Loadout"}}</a>
+        <a class="item label-stripe" data-tab="character-notes">{{localize "UTCF.Notes"}}</a>
         {{#if isGM}}
-          <a class="item" data-tab="effects">{{localize "UTCF.Effects"}}</a>
+          <a class="item label-stripe" data-tab="effects">{{localize "UTCF.Effects"}}</a>
         {{/if}}
-        {{#if isGM}}
-          <a class="item" data-tab="all-character-items">{{localize "UTCF.AllItems"}}</a>
+        {{!-- this is broken, don't show it --}}
+        {{#if false}}
+          <a class="item label-stripe" data-tab="all-character-items">{{localize "UTCF.AllItems"}}</a>
         {{/if}}
       </nav>
 
       {{!-- Abilities --}}
       <div id="character-{{_id}}-abilities" class="tab flex-vertical abilities" data-tab="abilities">
         <div class="label-stripe">
-          <p><label for="character-{{_id}}-experience-0">{{localize "UTCF.Abilities"}}</label></p>
-          <p><a class="ability-add-popup" data-class-shortname="{{system.playbook}}"><i class="fas fa-plus-square"></i></a></p>
+          <a class="ability-add-popup" data-class-shortname="{{system.playbook}}">{{localize "UTCF.Ability.Add"}}  <i class="fas fa-plus-square"></i></a>
         </div>
 
         <div id="character-{{_id}}-abilities-list">
@@ -242,15 +244,13 @@
               </div>
             {{/if}}
           {{/each}}
-          <div class="item-class-label"><a class="ability-add-popup" data-class-shortname="{{system.playbook}}">{{localize "UTCF.Ability.Add"}}</a></div>
         </div>
       </div>
 
       {{!-- Spells --}}
       <div id="character-{{_id}}-spells" class="tab flex-vertical spells" data-tab="spells">
         <div class="label-stripe">
-          <p><label for="character-{{_id}}-experience-0">{{localize "UTCF.Spell.LabelPlural"}}</label></p>
-          <p><a class="item-add-popup" data-item-type="spell"><i class="fas fa-plus-square"></i></a></p>
+          <a class="item-add-popup" data-item-type="spell">{{localize "UTCF.Spell.Add"}}  <i class="fas fa-plus-square"></i></a>
         </div>
 
         <div id="character-{{_id}}-spells-list">
@@ -273,14 +273,13 @@
               </div>
             {{/if}}
           {{/each}}
-          <div class="item-class-label"><a class="item-add-popup" data-item-type="spell">{{localize "UTCF.Spell.Add"}}</a></div>
         </div>
       </div>
 
       {{!-- Owned Items Tab --}}
       <div id="character-{{_id}}-loadout" class="tab flex-vertical loadout" data-tab="loadout">
         <div class="label-stripe flex-horizontal-spaced">
-           <p>{{localize "UTCF.Loadout"}} <a class="item-add-popup" data-item-type="gear"><i class="fas fa-plus-square"></i></a></p>
+           <a class="item-add-popup" data-item-type="gear">{{localize "UTCF.AddItem"}}  <i class="fas fa-plus-square"></i></a>
            <p class="{{ifThen (gt system.loadout system.max_load) 'overmax' '' }}">
             {{system.loadout}}/{{system.max_load}}
             {{#if (gte system.loadout system.encumbered_threshold)}}
@@ -325,7 +324,6 @@
             {{/unless}}
           {{/if}}
           {{/each}}
-          <div class="item-class-label"><a class="item-add-popup" data-item-type="gear">{{localize "UTCF.AddItem"}}</a></div>
         </div>
       </div>
 
