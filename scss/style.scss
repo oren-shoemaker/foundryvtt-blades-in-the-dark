@@ -29,22 +29,29 @@ $hover-brightness: 0.8;
 //namespacing to avoid conflicts with other modules
 .until-the-curtain-falls{
   font-family: "Crimson Text", serif;
+  
+  @import 'import/general-styles-2.scss';
+  @import 'import/item-card.scss';
 
-  @import 'import/general-styles.scss';
-  @import 'import/clocks.scss';
-
-  &.crew.sheet{
-    @import 'import/crew-sheet.scss';
+  &.actor.pc {
+    @import 'import/character-sheet-2.scss';
   }
 
-  &.actor.pc{
-    @import 'import/character-sheet.scss';
-  }
+  // @import 'import/general-styles.scss';
+  // @import 'import/clocks.scss';
 
-  &.actor.clock{
-  }
+  // &.crew.sheet{
+  //   @import 'import/crew-sheet.scss';
+  // }
 
-  &.item.sheet{
-    @import 'import/item-sheet.scss';
-  }
+  // &.actor.pc{
+  //   @import 'import/character-sheet.scss';
+  // }
+
+  // &.actor.clock{
+  // }
+
+  // &.item.sheet{
+  //   @import 'import/item-sheet.scss';
+  // }
 }

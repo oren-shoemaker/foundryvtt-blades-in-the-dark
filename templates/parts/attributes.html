@@ -5,39 +5,40 @@
     <div id="character-{{../_id}}-attributes-{{attribute_name}}" class="attribute">
       <div id="character-{{../_id}}-attributes-{{attribute_name}}-title" class="attributes-exp">
         <div class="stripe">
-          <a class="attribute-label roll-die-attribute rollable-text" data-roll-attribute="{{attribute_name}}">{{localize attribute.label}}</a>
+          <a class="black-label-large-left roll-die-attribute rollable-text" data-roll-attribute="{{attribute_name}}">{{localize attribute.label}}</a>
         </div>
       </div>
 
       {{!-- Skills --}}
 
-      {{#each attribute.skills as |skill skill_name|}}
+      <div class="skills-container">
+        {{#each attribute.skills as |skill skill_name|}}
 
-      <div class="flex-horizontal-spaced">
-        <div class="attributes-container">
-          {{#multiboxes skill.assigned_value}}
-            <input type="radio" id="attributes-{{../../../_id}}-{{skill_name}}-0"
-                name="system.attributes.{{attribute_name}}.skills.{{skill_name}}.assigned_value" value="0">
-            <label for="attributes-{{../../../_id}}-{{skill_name}}-0"></label>
-            {{#times_from_1 skill.base_value}}
-              <i class="fas fa-circle"></i>
-            {{/times_from_1}}
-            {{#times_from_1 (subtract skill.max skill.base_value)}}
-              <input type="radio" id="attributes-{{../../../_id}}-{{skill_name}}-{{this}}"
-                    name="system.attributes.{{attribute_name}}.skills.{{skill_name}}.assigned_value" value="{{this}}">
-              <label for="attributes-{{../../../_id}}-{{skill_name}}-{{this}}"></label>
-            {{/times_from_1}}
+        <div class="flex-horizontal-spaced">
+          <div class="skill-container">
+            {{#multiboxes skill.assigned_value}}
+              <input type="radio" id="attributes-{{../../../_id}}-{{skill_name}}-0"
+                  name="system.attributes.{{attribute_name}}.skills.{{skill_name}}.assigned_value" value="0">
+              <label for="attributes-{{../../../_id}}-{{skill_name}}-0"></label>
+              {{#times_from_1 skill.base_value}}
+                <i class="fas fa-circle"></i>
+              {{/times_from_1}}
+              {{#times_from_1 (subtract skill.max skill.base_value)}}
+                <input type="radio" id="attributes-{{../../../_id}}-{{skill_name}}-{{this}}"
+                      name="system.attributes.{{attribute_name}}.skills.{{skill_name}}.assigned_value" value="{{this}}">
+                <label for="attributes-{{../../../_id}}-{{skill_name}}-{{this}}"></label>
+              {{/times_from_1}}
 
-            <div class="attribute-skill-label roll-die-attribute rollable-text" data-roll-attribute="{{skill_name}}">{{localize skill.label}}</div>
-            <i class="attributes-tooltip fas fa-question-circle"><span class="attributes-tooltiptext">{{localize skill.tooltip}}</span></i>
-          {{/multiboxes}}
+              <div class="skill-label roll-die-attribute rollable-text" data-roll-attribute="{{skill_name}}">{{localize skill.label}}</div>
+              <i class="tooltip fas fa-question-circle"><span class="tooltip-text">{{localize skill.tooltip}}</span></i>
+            {{/multiboxes}}
+          </div>
         </div>
+        {{/each}}
+
       </div>
-      {{/each}}
 
     </div>
   {{/each}}
-
-
 </div>
 

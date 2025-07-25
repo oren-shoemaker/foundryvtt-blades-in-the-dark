@@ -19,14 +19,6 @@ textarea {
   }
 }
 
-.rollable-text {
-  transition: color $transition-period;
-}
-.rollable-text:hover {
-  cursor: pointer;
-  color: $red;
-}
-
 section {
   display: flex;
   flex-direction: column;
@@ -77,6 +69,7 @@ section {
     display: block;
   }
 }
+
 .black-label {
   background-color: $almost_black;
   color: $almost_white;

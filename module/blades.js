@@ -233,7 +233,7 @@ Hooks.once("init", async function() {
       accum += '</td>'
       // add the box for physical trauma
       if(i === 2) {
-        accum += '<td rowspan="3" class="td-fill"></td><td colspan="10">'
+        accum += '<td rowspan="3" class="td-fill-black"></td><td colspan="10">'
         if(Number(context.system?.physical_trauma?.value) > 0) {
           const physical_trauma = context.system?.physical_trauma?.traumas?.one;
           accum += `<input type="text" id="character-${context._id}-physical-trauma" name="system.physical_trauma.traumas.one" value="${physical_trauma}">`
@@ -411,6 +411,82 @@ Hooks.once("init", async function() {
     
     return new Handlebars.SafeString(html);
   })
+
+  // helper to render an item "card"
+  // left widget is type-specific (i.e. load/equip checkbox for gear, stress cost for spells)
+  Handlebars.registerHelper('item-card',function(item, options) {
+    const opt_hash = options.hash;
+    const opt_keys = Object.keys(opt_hash);
+
+    const show_left_widget = opt_keys.includes("show_left_widget") ? opt_hash.show_left_widget : true;
+    const show_delete_widget = opt_keys.includes("show_delete_widget") ? opt_hash.show_delete_widget : true;
+    const show_post_widget = opt_keys.includes("show_post_widget") ? opt_hash.show_post_widget : true;
+    const show_description = opt_keys.includes("show_description") ? opt_hash.show_description : true;
+
+    
+
+    // outer container
+    let html = `<div class="item-card flex-vertical" data-item-id="${item._id}" data-item-type="${item.type}">`;
+
+    // header
+    html += '<div class="item-header gray-label-small-left">';
+    if(show_left_widget) {
+      switch(item.type) {
+        case 'gear':
+          const checked_style = item.system.equipped ? "fa-solid" : "fa-regular";
+
+          html += '<label class="gear-equip-widget"><input class="gear-equipped" type="checkbox" ';
+          
+          if(item.system.equipped) {
+            html+=' checked';
+          }
+
+          html+='><div class="gear-equip item-control">'
+
+          // 0-load items should still render a box for tracking purposes
+          if(item.system.load === 0) {
+            html+=`<i class="fa-square ${checked_style} fa-xs"></i>`
+          } else {
+            for(let i = 0; i < item.system.load; i++) {
+              html+=`<i class="fa-square ${checked_style} fa-xs"></i>`
+              if(i < item.system.load - 1) {
+                html+=`<i class="fa-solid fa-minus fa-xs"></i>`
+              }
+            }
+          }
+
+          html+='</div></label>'
+          break;
+        case 'spell': 
+          html += '<div class="spell-stress-widget"><a class="item-control spell-stress-cost">';
+          
+          for(let i=0; i<Number(item.system.stress); i++) {
+            html+='<label class="item-control"></label>'; // no content, just need an empty label to render the icon correctly
+          }
+
+          html +='</a></div>';
+          break;
+      }
+    }
+    html+=`<label class="item-name item-openable">${item.name}</label>`
+    if(show_delete_widget) {
+      html += `<a class="item-control item-delete" title="${game.i18n.localize("UTCF.TitleDeleteItem")}"><i class="fas fa-trash"></i></a>`;
+    }
+    if(show_post_widget) {
+      html += `<a class="item-control item-post" title="${game.i18n.localize("UTCF.TitlePostItem")}"><i class="fas fa-comment"></i></a>`;
+    }
+    html += '</div>';
+
+    // description
+    if(show_description) {
+      html += `<div class="item-description item-openable">${item.system.description}</div>`
+    }
+
+    // close outer container
+    html += '</div>'
+    
+    return new Handlebars.SafeString(html);
+  });
 
   Handlebars.registerHelper('gt',function(x, y) {
     if(Number(x) && Number(y)) {

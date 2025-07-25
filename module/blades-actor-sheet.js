@@ -14,8 +14,8 @@ export class BladesActorSheet extends BladesSheet {
 	  return foundry.utils.mergeObject(super.defaultOptions, {
   	  classes: ["until-the-curtain-falls", "sheet", "actor", "pc"],
   	  template: "systems/until-the-curtain-falls/templates/actor-sheet.html",
-      width: 700,
-      height: 970,
+      width: 710,
+      height: 920,
       tabs: [{navSelector: ".tabs", contentSelector: ".tab-content", initial: "abilities"}]
     });
   }
@@ -109,14 +109,14 @@ export class BladesActorSheet extends BladesSheet {
 
     // Open Actor Sheet Item
     html.find('.item-openable').click(ev => {
-      const element = $(ev.currentTarget).parents(".item-block");
+      const element = $(ev.currentTarget).parents(".item-card");
       const item = this.actor.items.get(element.data("itemId"));
       item.sheet.render(true);
     });
 
     // Delete Actor Sheet Item
     html.find('.item-delete').click( async ev => {
-      const element = $(ev.currentTarget).parents(".item-block");
+      const element = $(ev.currentTarget).parents(".item-card");
 
       switch(element.data("itemType")) {
         case "class":
@@ -139,7 +139,7 @@ export class BladesActorSheet extends BladesSheet {
     html.find(".ability-add-popup").click(this._onAbilityAddClick.bind(this));
 
     html.find('.gear-equipped').change(ev => {
-      const item_id = $(ev.currentTarget).parents(".item-block").data("itemId");
+      const item_id = $(ev.currentTarget).parents(".item-card").data("itemId");
       const item = this.actor.items.get(item_id);
       const checked = $(ev.currentTarget)[0].checked;
 
@@ -173,7 +173,7 @@ export class BladesActorSheet extends BladesSheet {
     });
 
     html.find('.spell-stress-cost').click(ev => {
-      const spell_id = $(ev.currentTarget).parents(".item-block").data("itemId");
+      const spell_id = $(ev.currentTarget).parents(".item-card").data("itemId");
       const stress_cost = this.actor.items.get(spell_id).system.stress;
       const new_stress = Number(this.object.system.stress.value) + stress_cost;
       const stress_to_set = new_stress < this.object.system.stress.max ? new_stress : this.object.system.stress.max;

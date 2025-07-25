@@ -1,0 +1,156 @@
+// Colors
+$lightgray: #CCC;
+$gray: #999;
+$darkgray: #444;
+$red: red;
+$almost_black: #191813;
+$almost_white: #EEEFFF;
+$gold: #DAA520;
+$green: #008000;
+$light_green: #12a012;
+$blue: #04578f;
+
+// Transition period for sheet parts that hint what they can do
+$transition-period: 0.2s;
+$hover-opacity: 0.9;
+$hover-brightness: 0.8;
+
+// Imports
+@import 'mixin.scss';
+
+& * {
+
+  // portrait and traits
+  img.portrait{
+    max-width: 200px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+  }
+
+  .trait-section {
+    flex-grow: 1;
+  }
+
+  // Stress and trauma
+  // Stress
+  .big-teeth-container {
+    .big-teeth-wrap {
+      @include toothradio(17px, 50px, "assets/teeth/stresstooth-halfgrey.png", "assets/teeth/stresstooth-red.png");
+      flex-direction: column;
+
+      .big-teeth {
+        display: flex;
+        flex-direction: row;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  // Trauma
+  .small-teeth-container {
+    .small-teeth-wrap {
+      @include toothradio(17px, 50px, "assets/teeth/shorttooth-grey.png", "assets/teeth/shorttooth-red.png");
+      flex-direction: column;
+
+      .small-teeth {
+        display: flex;
+        flex-direction: row;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .stress-trauma-table {
+    th {
+      background-color: transparent;
+    }
+  }
+
+  .character-stress {
+    label {
+      &[for$="-0"] {
+        margin-right: 0px;
+      }
+    }
+  }
+
+  // Abilities, spells, gear
+  .tab-content {
+    flex-grow: 1;
+
+    .tabs {
+      background-color: $almost_black;
+    }
+  }
+
+  .loadout {
+    .item-add-popup {
+      margin-left: 10px;
+    }
+
+    .overmax {
+      color: $red;
+    }
+    
+    .encumbered {
+      color: $red;
+      width: 15px;
+      height: 15px;
+    }
+
+    option {
+      color: $almost_black;
+    }
+  }
+
+  // this looks a little weird but it's GM-only so meh
+  .all-character-items {  
+    border-right: 2px solid $almost_black;
+    border-bottom: 2px solid $almost_black;
+  }
+
+  // Attributes and skills
+  .attributes {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    width: 200px;
+
+    .attribute {
+      border-left: 5px solid $almost_black;
+
+      &:last-child {
+        border-bottom: 5px solid $almost_black;
+      }
+    }
+
+    .skills-container {
+      padding-left: 5px;
+    }
+
+    .skill-label {
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .skill-container {
+      display: flex;
+      margin: 3px 0px;
+      @include custom_radio(15px, 15px);
+
+      * {
+        margin-right: 5px;
+      }
+
+      // want to color generic fa-circle gray and resize for class attributes
+      .fa-circle {
+        font-size: 15px;
+        color: $darkgray;
+      }
+    }
+  }
+
+  @import "coins.scss";
+}

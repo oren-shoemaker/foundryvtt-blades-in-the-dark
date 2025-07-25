@@ -1,6 +1,6 @@
 <form class="{{cssClass}} actor-sheet" autocomplete="off">
 
-  <section id="character-{{_id}}-name-alias" class="flex-horizontal-spaced name-alias">
+  <section id="character-{{_id}}-name-alias" class="flex-horizontal-spaced">
 
     <div class="grow-two">
       <img src="{{img}}" data-edit="img" title="{{name}}" class="portrait" />
@@ -11,60 +11,42 @@
         <tbody>
           <tr>
             <td>
-              <label class="label-stripe" for="character-{{_id}}-name">{{localize "UTCF.Name"}}</label>
+              <label class="black-label-large-left" for="character-{{_id}}-name">{{localize "UTCF.Name"}}</label>
               <input type="text" id="character-{{_id}}-name" class="name" name="name" value="{{name}}">
             </td>
             <td>
-              <label class="label-stripe" for="character-{{_id}}-alias">{{localize "UTCF.Epithet"}}</label>
+              <label class="black-label-large-left" for="character-{{_id}}-alias">{{localize "UTCF.Epithet"}}</label>
               <input type="text" id="character-{{_id}}-epithet" class="epithet" name="system.epithet" value="{{system.epithet}}">
             </td>
           </tr>
           <tr>
             <td >
-              <label class="label-stripe">{{localize "UTCF.Class.Label"}}</label>
+              <label class="black-label-large-left">{{localize "UTCF.Class.Label"}}</label>
               {{#ifItemsContainsItemWithType "class"}}
-                <div class="item-block item-border flex-horizontal" data-item-id="{{this._id}}" data-item-type="class">
-                  <div class="item-header flex-horizontal-spaced label-stripe-gray">
-                    <div class="item-name item-openable">{{this.name}}</div>
-                    <a class="item-control item-delete" title="{{localize 'UTCF.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
-                    <a class="item-control item-post" title="{{localize 'UTCF.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
-                  </div>
-                </div>
+                {{item-card this show_left_widget=false show_description=false}}
               {{else}}
-                <div class="item-name label-stripe-gray"><a class="item-add-popup" data-distinct="true" data-item-type="class">{{localize "UTCF.Class.AddLabel"}}</a></div>
+                <div class="item-name gray-label-small-left"><a class="item-add-popup" data-distinct="true" data-item-type="class">{{localize "UTCF.Class.AddLabel"}}</a></div>
               {{/ifItemsContainsItemWithType}}
             </td>
             <td>
-              <label class="label-stripe">{{localize "UTCF.Homeland.Label"}}</label>
+              <label class="black-label-large-left">{{localize "UTCF.Homeland.Label"}}</label>
               {{#ifItemsContainsItemWithType "homeland"}}
-                <div class="item-block item-border flex-horizontal" data-item-id="{{this._id}}" data-item-type="homeland">
-                  <div class="item-header flex-horizontal-spaced label-stripe-gray">
-                    <div class="item-name item-openable">{{this.name}}</div>
-                    <a class="item-control item-delete" title="{{localize 'UTCF.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
-                    <a class="item-control item-post" title="{{localize 'UTCF.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
-                  </div>
-                </div>
+                {{item-card this show_left_widget=false show_description=false}}
               {{else}}
-                <div class="item-name label-stripe-gray"><a class="item-add-popup" data-distinct="true" data-item-type="homeland">{{localize "UTCF.Homeland.AddLabel"}}</a></div>
+                <div class="item-name gray-label-small-left"><a class="item-add-popup" data-distinct="true" data-item-type="homeland">{{localize "UTCF.Homeland.AddLabel"}}</a></div>
               {{/ifItemsContainsItemWithType}}
             </td>
           </tr>
           <tr>
-            <td>
+            <td class="vcenter">
               {{> "systems/until-the-curtain-falls/templates/parts/coins.html" actor=actor}}
             </td>
              <td>
-              <label class="label-stripe">{{localize "UTCF.Background.Label"}}</label>
+              <label class="black-label-large-left">{{localize "UTCF.Background.Label"}}</label>
               {{#ifItemsContainsItemWithType "background"}}
-                <div class="item-block item-border flex-horizontal" data-item-id="{{this._id}}" data-item-type="background">
-                  <div class="item-header flex-horizontal-spaced label-stripe-gray">
-                    <div class="item-name item-openable">{{this.name}}</div>
-                    <a class="item-control item-delete" title="{{localize 'UTCF.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
-                    <a class="item-control item-post" title="{{localize 'UTCF.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
-                  </div>
-                </div>
+                {{item-card this show_left_widget=false show_description=false}}
               {{else}}
-                <div class="item-name label-stripe-gray"><a class="item-add-popup" data-distinct="true" data-item-type="background">{{localize "UTCF.Background.AddLabel"}}</a></div>
+                <div class="item-name gray-label-small-left"><a class="item-add-popup" data-distinct="true" data-item-type="background">{{localize "UTCF.Background.AddLabel"}}</a></div>
               {{/ifItemsContainsItemWithType}}
             </td>
           </tr>
@@ -75,11 +57,11 @@
 
   {{!-- Stress and Trauma --}}
   <table class="stress-trauma-table">
-    <thead id="character-{{_id}}-stress-trauma" class="section big-teeth-section">
+    <thead id="character-{{_id}}-stress-trauma">
       <th colspan="10" id="character-{{_id}}-stress-container" class="big-teeth-container character-stress">
         {{#multiboxes system.stress.value}}
         <div id="character-{{_id}}-stress" class="big-teeth-wrap">
-          <label class="black-label" for="character-{{_id}}-stress-0">{{localize system.stress.name}}</label>
+          <label class="black-label-large-center" for="character-{{_id}}-stress-0">{{localize system.stress.name}}</label>
           <div id="character-{{_id}}-stress-teeth" class="big-teeth">
             <input type="radio" id="character-{{_id}}-stress-0" name="system.stress.value" value="0">
             {{#times_from_1 system.stress.max}}
@@ -94,7 +76,7 @@
       <th colspan="10" id="character-{{_id}}-trauma-container" class="small-teeth-container">
         {{#multiboxes system.trauma.value}}
         <div id="character-{{_id}}-trauma" class="small-teeth-wrap">
-          <label class="black-label" for="character-{{_id}}-trauma-counter-0">{{localize system.trauma.name}}</label>
+          <label class="black-label-large-center" for="character-{{_id}}-trauma-counter-0">{{localize system.trauma.name}}</label>
           <div id="character-{{_id}}-trauma-teeth" class="small-teeth">
             <input type="radio" id="character-{{_id}}-trauma-counter-0" name="system.trauma.value" value="0">
 
@@ -107,12 +89,12 @@
         {{/multiboxes}}
       </th>
 
-      <td class="td-fill"></th>
+      <td class="td-fill-black"></th>
 
       <th colspan="10" id="character-{{_id}}-physical-trauma-container" class="small-teeth-container">
         {{#multiboxes system.physical_trauma.value}}
         <div id="character-{{_id}}-physical-trauma" class="small-teeth-wrap">
-          <label class="black-label" for="character-{{_id}}-physical-trauma-counter-0">{{localize "UTCF.PhysicalTrauma"}}</label>
+          <label class="black-label-large-center" for="character-{{_id}}-physical-trauma-counter-0">{{localize "UTCF.PhysicalTrauma"}}</label>
           <div id="character-{{_id}}-physical-trauma-teeth" class="small-teeth">
             <input type="radio" id="character-{{_id}}-physical-trauma-counter-0" name="system.physical_trauma.value" value="0">
             <input type="radio" id="character-{{../_id}}-physical-trauma-counter-1" name="system.physical_trauma.value" value="1">
@@ -127,121 +109,110 @@
   
 
   {{!-- Harm, Healing and Armor --}}
-  <section id="character-{{_id}}-harm-armor" class="flex harm-armor">
-    <div id="character-{{_id}}-character-harm" class="character-harm">
-      <table>
-        <thead>
-          <th colspan="13">{{localize "UTCF.Harm.Label"}}</th>
-          <th colspan="4">{{localize "UTCF.Armor"}}</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td colspan="3" class="harm-text-td"><div class="harm-text">{{localize "UTCF.Harm.Deadly.Label"}}</div></td>
-            <td colspan="3" class="harm-text-td"><div class="harm-text">{{ifThen (gt system.physical_trauma.value 0) (localize "UTCF.Harm.Deadly.EffectDeath") (localize "UTCF.Harm.Deadly.EffectTrauma")}}</div></td>
-            <td colspan="6">
-              <input type="text" id="character-{{_id}}-harm-4-1" name="system.harm.deadly.one" value="{{system.harm.deadly.one}}">
-            </td>
-            <td class="td-fill"></td>
-            <td colspan="3" id="character-{{_id}}-armor-uses" class="character-armor-uses harm-text-td">
-              <div class="harm-text">
-                <label  for="character-{{_id}}-armor-uses-armor">{{localize "UTCF.Armor"}}</label>
-              </div>
-            </td>
-            <td id="character-{{_id}}-armor-uses" class="character-armor-uses">
-              <input id="character-{{_id}}-armor-uses-armor" type="checkbox" name="system.armor-uses.armor" data-item-name="Armor" class="use-armor" {{checked system.armor-uses.armor}}>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="3" class="harm-text-td"><div class="harm-text">{{localize "UTCF.Harm.Severe.Label"}}</div></td>
-            <td colspan="3" class="harm-text-td"><div class="harm-text">{{localize "UTCF.Harm.Severe.Effect"}}</div></td>
-            <td colspan="6">
-              <input type="text" id="character-{{_id}}-harm-3-1" name="system.harm.severe.one" value="{{system.harm.severe.one}}">
-            </td>
-            <td class="td-fill"></td>
-            <td colspan="3" class="harm-text-td">
-              <div class="harm-text">
-                <label for="character-{{_id}}-armor-uses-heavy">{{localize "UTCF.Load.Heavy"}}</label>
-              </div>
-            </td>
-            <td>
-              <input id="character-{{_id}}-armor-uses-heavy" type="checkbox" name="system.armor-uses.heavy" data-item-name="Heavy armor" class="use-armor" {{checked system.armor-uses.heavy}}>
-            </td>
-          </tr>
-          <tr>
-           <td colspan="3" class="harm-text-td"><div class="harm-text">{{localize "UTCF.Harm.Moderate.Label"}}</div></td>
-            <td colspan="3" class="harm-text-td"><div class="harm-text">{{localize "UTCF.Harm.Moderate.Effect"}}</div></td>
-            <td colspan="3">
-              <input type="text" id="character-{{_id}}-harm-2-1" name="system.harm.medium.one" value="{{system.harm.medium.one}}">
-            </td>
-            <td colspan="3">
-              <input type="text" id="character-{{_id}}-harm-2-2" name="system.harm.medium.two" value="{{system.harm.medium.two}}">
-            </td>
-            <td class="td-fill"></td>
-            <td colspan="3" class="harm-text-td">
-              <div class="harm-text">
-                <label for="character-{{_id}}-armor-uses-special">{{localize "UTCF.Special"}}</label>
-              </div>
-            </td>
-            <td>
-              <input id="character-{{_id}}-armor-uses-special" type="checkbox" name="system.armor-uses.special" disabled="true" {{checked system.armor-uses.special}}>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="3" class="harm-text-td"><div class="harm-text">{{localize "UTCF.Harm.Lesser.Label"}}</div></td>
-            <td colspan="3" class="harm-text-td"><div class="harm-text">{{localize "UTCF.Harm.Lesser.Effect"}}</div></td>
-            <td colspan="3">
-              <input type="text" id="character-{{_id}}-harm-1-1" name="system.harm.light.one" value="{{system.harm.light.one}}">
-            </td>
-            <td colspan="3">
-              <input type="text" id="character-{{_id}}-harm-1-2" name="system.harm.light.two" value="{{system.harm.light.two}}">
-            </td>
-            <td class="td-fill"></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+  <table class="harm-armor">
+    <thead>
+      <th colspan="13"><label class="black-label-large-center">{{localize "UTCF.Harm.Label"}}</label></th>
+      <th colspan="3"><label class="black-label-large-center">{{localize "UTCF.Armor"}}</label></th>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="3" class="vcenter"><div class="gray-label-small-left">{{localize "UTCF.Harm.Deadly.Label"}}</div></td>
+        <td colspan="3" class="vcenter"><div class="gray-label-small-center">{{ifThen (gt system.physical_trauma.value 0) (localize "UTCF.Harm.Deadly.EffectDeath") (localize "UTCF.Harm.Deadly.EffectTrauma")}}</div></td>
+        <td colspan="6">
+          <input type="text" id="character-{{_id}}-harm-4-1" name="system.harm.deadly.one" value="{{system.harm.deadly.one}}">
+        </td>
+        <td class="td-fill-black"></td>
+        <td colspan="2" id="character-{{_id}}-armor-uses" class="vcenter">
+          <div class="gray-label-small-left">
+            <label for="character-{{_id}}-armor-uses-armor">{{localize "UTCF.Armor"}}</label>
+          </div>
+        </td>
+        <td id="character-{{_id}}-armor-uses">
+          <input id="character-{{_id}}-armor-uses-armor" type="checkbox" name="system.armor-uses.armor" data-item-name="Armor" class="use-armor" {{checked system.armor-uses.armor}}>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" class="vcenter"><div class="gray-label-small-left">{{localize "UTCF.Harm.Severe.Label"}}</div></td>
+        <td colspan="3" class="vcenter"><div class="gray-label-small-center">{{localize "UTCF.Harm.Severe.Effect"}}</div></td>
+        <td colspan="6">
+          <input type="text" id="character-{{_id}}-harm-3-1" name="system.harm.severe.one" value="{{system.harm.severe.one}}">
+        </td>
+        <td class="td-fill-black"></td>
+        <td colspan="2" class="vcenter">
+          <div class="gray-label-small-left">
+            <label for="character-{{_id}}-armor-uses-heavy">{{localize "UTCF.Load.Heavy"}}</label>
+          </div>
+        </td>
+        <td>
+          <input id="character-{{_id}}-armor-uses-heavy" type="checkbox" name="system.armor-uses.heavy" data-item-name="Heavy armor" class="use-armor" {{checked system.armor-uses.heavy}}>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" class="vcenter"><div class="gray-label-small-left">{{localize "UTCF.Harm.Moderate.Label"}}</div></td>
+        <td colspan="3" class="vcenter"><div class="gray-label-small-center">{{localize "UTCF.Harm.Moderate.Effect"}}</div></td>
+        <td colspan="3">
+          <input type="text" id="character-{{_id}}-harm-2-1" name="system.harm.medium.one" value="{{system.harm.medium.one}}">
+        </td>
+        <td colspan="3">
+          <input type="text" id="character-{{_id}}-harm-2-2" name="system.harm.medium.two" value="{{system.harm.medium.two}}">
+        </td>
+        <td class="td-fill-black"></td>
+        <td colspan="2" class="vcenter">
+          <div class="gray-label-small-left">
+            <label for="character-{{_id}}-armor-uses-special">{{localize "UTCF.Special"}}</label>
+          </div>
+        </td>
+        <td>
+          <input id="character-{{_id}}-armor-uses-special" type="checkbox" name="system.armor-uses.special" disabled="true" {{checked system.armor-uses.special}}>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" class="vcenter"><div class="gray-label-small-left">{{localize "UTCF.Harm.Lesser.Label"}}</div></td>
+        <td colspan="3" class="vcenter"><div class="gray-label-small-center">{{localize "UTCF.Harm.Lesser.Effect"}}</div></td>
+        <td colspan="3">
+          <input type="text" id="character-{{_id}}-harm-1-1" name="system.harm.light.one" value="{{system.harm.light.one}}">
+        </td>
+        <td colspan="3">
+          <input type="text" id="character-{{_id}}-harm-1-2" name="system.harm.light.two" value="{{system.harm.light.two}}">
+        </td>
+        <td class="td-fill-black"></td>
+      </tr>
+    </tbody>
+  </table>
 
 
 
 
-  {{!-- Attributes --}}
-  <section class="flex-horizontal-spaced">
+  {{!-- Abilities, Spells, Loadout, Attributes --}}
+  <section class="flex-horizontal">
 
-    <div class="tab-content flex-vertical grow-two">
+    <div class="tab-content flex-vertical">
 
       {{!-- Nav menu --}}
-      <nav class="tabs flex-horizontal-spaced">
-        <a class="item label-stripe" data-tab="abilities">{{localize "UTCF.Abilities"}}</a>
-        <a class="item label-stripe" data-tab="spells">{{localize "UTCF.Spell.LabelPlural"}}</a>
-        <a class="item label-stripe" data-tab="loadout">{{localize "UTCF.Loadout"}}</a>
-        <a class="item label-stripe" data-tab="character-notes">{{localize "UTCF.Notes"}}</a>
-        {{#if isGM}}
-          <a class="item label-stripe" data-tab="effects">{{localize "UTCF.Effects"}}</a>
-        {{/if}}
-        {{!-- this is broken, don't show it --}}
+      <nav class="tabs flex-horizontal">
+        <a class="item black-label-large-center" data-tab="abilities">{{localize "UTCF.Abilities"}}</a>
+        <a class="item black-label-large-center" data-tab="spells">{{localize "UTCF.Spell.LabelPlural"}}</a>
+        <a class="item black-label-large-center" data-tab="loadout">{{localize "UTCF.Loadout"}}</a>
+        <a class="item black-label-large-center" data-tab="character-notes">{{localize "UTCF.Notes"}}</a>
+        {{!-- Effects tab is broken and may not be needed --}}
         {{#if false}}
-          <a class="item label-stripe" data-tab="all-character-items">{{localize "UTCF.AllItems"}}</a>
+          <a class="item black-label-large-center" data-tab="effects">{{localize "UTCF.Effects"}}</a>
+        {{/if}}
+        {{#if isGM}}
+          <a class="item black-label-large-center" data-tab="all-character-items">{{localize "UTCF.AllItems"}}</a>
         {{/if}}
       </nav>
 
       {{!-- Abilities --}}
       <div id="character-{{_id}}-abilities" class="tab flex-vertical abilities" data-tab="abilities">
-        <div class="label-stripe">
+        <div class="black-label-small-left">
           <a class="ability-add-popup" data-class-shortname="{{system.playbook}}">{{localize "UTCF.Ability.Add"}}  <i class="fas fa-plus-square"></i></a>
         </div>
 
         <div id="character-{{_id}}-abilities-list">
           {{#each items as |item id|}}
             {{#if (eq item.type "ability")}}
-              <div class="item-block bounding-box flex-vertical" data-item-id="{{item._id}}">
-                <div class="item-header flex-horizontal label-stripe-gray">
-                  <div class="item-name item-openable">{{item.name}}</div>
-                  <a class="item-control item-delete" title="{{localize 'UTCF.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
-                  <a class="item-control item-post" title="{{localize 'UTCF.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
-                </div>
-                <div class="item-description item-openable">{{{item.system.description}}}</div>
-              </div>
+              {{item-card item}}
             {{/if}}
           {{/each}}
         </div>
@@ -249,28 +220,14 @@
 
       {{!-- Spells --}}
       <div id="character-{{_id}}-spells" class="tab flex-vertical spells" data-tab="spells">
-        <div class="label-stripe">
+        <div class="black-label-small-left">
           <a class="item-add-popup" data-item-type="spell">{{localize "UTCF.Spell.Add"}}  <i class="fas fa-plus-square"></i></a>
         </div>
 
         <div id="character-{{_id}}-spells-list">
           {{#each items as |item id|}}
             {{#if (eq item.type "spell")}}
-              <div class="item-block bounding-box flex-vertical" data-item-id="{{item._id}}">
-                <div class="item-header flex-horizontal label-stripe-gray">
-                  <div class="spell-stress-cost-container">
-                    <a class="item-control spell-stress-cost">
-                      {{#times_from_1 item.system.stress}}
-                        <label></label>
-                      {{/times_from_1}}
-                    </a>
-                  </div>
-                  <div class="item-name item-openable">{{item.name}}</div>
-                  <a class="item-control item-delete" title="{{localize 'UTCF.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
-                  <a class="item-control item-post" title="{{localize 'UTCF.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
-                </div>
-                <div class="item-description item-openable">{{{item.system.description}}}</div>
-              </div>
+              {{item-card item}}
             {{/if}}
           {{/each}}
         </div>
@@ -278,12 +235,12 @@
 
       {{!-- Owned Items Tab --}}
       <div id="character-{{_id}}-loadout" class="tab flex-vertical loadout" data-tab="loadout">
-        <div class="label-stripe flex-horizontal-spaced">
+        <div class="black-label-small-left flex-horizontal-spaced">
            <a class="item-add-popup" data-item-type="gear">{{localize "UTCF.AddItem"}}  <i class="fas fa-plus-square"></i></a>
            <p class="{{ifThen (gt system.loadout system.max_load) 'overmax' '' }}">
             {{system.loadout}}/{{system.max_load}}
             {{#if (gte system.loadout system.encumbered_threshold)}}
-                <i class="fa-solid fa-circle-exclamation encumbered loadout-tooltip"><span class="loadout-tooltiptext">{{localize "UTCF.Load.Encumbered.Tooltip"}}</span></i>
+                <i class="fa-solid fa-circle-exclamation encumbered tooltip"><span class="tooltip-text">{{localize "UTCF.Load.Encumbered.Tooltip"}}</span></i>
             {{/if}}
           </p>
            <div class="dropdown">
@@ -297,30 +254,14 @@
           {{#each items as |item id|}}
           {{#if (eq item.type "gear")}}
             {{#if item.system.add_list_ignore}}
-              <div class="item-block bounding-box flex-vertical" data-item-id="{{item._id}}">
-                <div class="item-header flex-horizontal label-stripe-gray">
-                  {{gear-equipped-box item}}
-                  <div class="item-name item-openable">{{item.name}}</div>
-                  <a class="item-control item-delete" title="{{localize 'UTCF.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
-                  <a class="item-control item-post" title="{{localize 'UTCF.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
-                </div>
-                <div class="item-description item-openable">{{{item.system.description}}}</div>
-              </div>
+              {{item-card item}}
             {{/if}}
           {{/if}}
           {{/each}}
           {{#each items as |item id|}}
           {{#if (eq item.type "gear")}}
             {{#unless item.system.add_list_ignore}}
-              <div class="item-block bounding-box flex-vertical" data-item-id="{{item._id}}">
-                <div class="item-header flex-horizontal label-stripe-gray">
-                  {{gear-equipped-box item}}
-                  <div class="item-name item-openable">{{item.name}}</div>
-                  <a class="item-control item-delete" title="{{localize 'UTCF.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
-                  <a class="item-control item-post" title="{{localize 'UTCF.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
-                </div>
-                <div class="item-description item-openable">{{{item.system.description}}}</div>
-              </div>
+              {{item-card item}}
             {{/unless}}
           {{/if}}
           {{/each}}
@@ -328,7 +269,7 @@
       </div>
 
       <div class="tab flex-vertical" data-tab="character-notes">
-        <div class="label-stripe">
+        <div class="black-label-small-left">
           <p>{{localize "UTCF.Notes"}}</p>
         </div>
         <textarea rows="13" name="system.description">{{{system.description}}}</textarea>
@@ -336,26 +277,21 @@
 
       {{!-- Active Effects --}}
       <div id="character-{{_id}}-effects" class="tab effects flex-vertical" data-tab="effects">
-        <div class="label-stripe">
+        <div class="black-label-small-left">
           <p>{{localize "UTCF.Effects"}}</p>
         </div>
         {{> "systems/until-the-curtain-falls/templates/parts/active-effects.html"}}
       </div>
 
       {{!-- Full Item List --}}
-      <div class="tab grow-two flex-vertical" data-tab="all-character-items">
-        <div class="label-stripe">
+      <div class="tab flex-vertical" data-tab="all-character-items">
+        <div class="black-label-small-left">
           <p><label>{{localize "UTCF.AllItems"}}</label></p>
         </div>
         {{#each items as |item id|}}
-        <div class="item flex-horizontal-spaced" data-item-id="{{item._id}}">
-          <div class="item-body item-sheet-open flex-horizontal-spaced">
-            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
-            <div class="item-name">{{item.name}}</div>
+          <div class="all-character-items">
+            {{item-card item show_left_widget=false show_description=false}}
           </div>
-          <a class="item-control item-delete" title="{{localize 'UTCF.TitleDeleteItem'}}"><i class="fas fa-trash"></i></a>
-          <a class="item-control item-post" title="{{localize 'UTCF.TitlePostItem'}}"><i class="fas fa-comment"></i></a>
-        </div>
         {{/each}}
       </div>
 

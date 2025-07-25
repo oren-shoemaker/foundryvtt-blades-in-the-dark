@@ -1,6 +1,11 @@
 $coin_size: 15px;
 $coin_margin: 3px;
 
+// Transition period for sheet parts that hint what they can do
+$transition-period: 0.1s;
+$hover-opacity: 0.9;
+$hover-brightness: 0.8;
+
 .coins-wrapper {
   height: auto;
   display: flex;
@@ -8,7 +13,10 @@ $coin_margin: 3px;
 }
 
 .coins-label {
+  width: 25%;
   height: auto;
+  align-content: center;
+  @include changeable($transition-period, $hover-brightness, $hover-opacity);
 }
 
 .coins {

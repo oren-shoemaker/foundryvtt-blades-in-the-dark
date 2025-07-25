@@ -1,0 +1,121 @@
+// Colors
+$lightgray: #CCC;
+$gray: #999;
+$darkgray: #444;
+$red: red;
+$almost_black: #191813;
+$almost_white: #EEEFFF;
+$gold: #DAA520;
+$green: #008000;
+$light_green: #12a012;
+$blue: #04578f;
+
+& * {
+  .item-card {
+    .item-openable {
+      cursor: pointer;
+    }
+
+    .item-header {
+      width: 100%;
+      display: flex;
+
+      .item-control {
+        cursor: pointer;
+      }
+
+      .gear-equip-widget {
+        margin-right: 10px;
+
+        // force the widget to be full-width to keep labels aligned
+        width: 50px;
+
+        .gear-equipped {
+          // hide the input box
+          display: none;
+        }
+
+        .gear-equip {
+          color: $almost_black;
+        }
+      }
+
+      .spell-stress-widget {
+        margin-right: 10px;
+
+        // force the widget to be 4 stress boxes wide to keep labels aligned
+        // may need to adjust if higher-cost spells are created
+        width: 35px; 
+
+        .spell-stress-cost {
+          display: flex;
+          flex-direction: row;
+
+          > * {
+            margin-right: 2px;
+
+            &:last-child {
+              margin-right: 0px;
+            }
+          }
+
+          &:last-child {
+            margin-right: 0px;
+          }
+
+          label {
+            & {
+              height: 15px;
+              width: 5px;
+              background-image: url("assets/teeth/stresstooth-red.png");
+              background-repeat: no-repeat;
+              background-size: contain;
+              margin-right: 5px;
+          
+              &:last-of-type {
+                margin-right: 0px;
+              }
+              &[for$="-0"] {
+                width: auto;
+                height: auto;
+                background-image: none !important;
+                color: $almost_white;
+
+                i {
+                  margin-top: 4px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .item-name {
+        flex-grow: 1;
+        margin-right: 10px;
+      }
+
+      .item-delete {
+        margin-right: 10px;
+        width: 15px;
+      }
+
+      .item-post {
+        width: 15px;
+      }
+    }
+
+    .item-description {
+      display: inline-block;
+      width: 100%;
+      height: auto;
+      background-color: $lightgray;
+      font-style: italic;
+      font-weight: bold;
+      text-align: justify;
+      padding-top: 5px;
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+  }
+}

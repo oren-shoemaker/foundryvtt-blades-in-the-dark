@@ -1,0 +1,223 @@
+// Colors
+$lightgray: #CCC;
+$gray: #999;
+$darkgray: #444;
+$red: red;
+$almost_black: #191813;
+$almost_white: #EEEFFF;
+$gold: #DAA520;
+$green: #008000;
+$light_green: #12a012;
+$blue: #04578f;
+
+// Transition period for sheet parts that hint what they can do
+$transition-period: 0.2s;
+$hover-opacity: 0.9;
+$hover-brightness: 0.8;
+
+// containers
+form {
+  background-color: white;
+  padding: 0px;
+  border: solid 5px $almost_black;
+}
+
+.tab[data-tab]{
+  display: none;
+  &.active{
+    display: block;
+  }
+}
+
+.flex-horizontal-spaced {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex-horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-vertical {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+// labels and text
+.black-label-large-center {
+  background-color: $almost_black;
+  color: $almost_white;
+  font-size: 21px;
+  justify-content: center;
+  padding: 2px 5px;
+  min-height: 30px !important;
+  text-transform: capitalize;
+  font-family: Kirsty, serif;
+  display: flex;  
+}
+
+.black-label-large-left {
+  background-color: $almost_black;
+  color: $almost_white;
+  font-size: 21px;
+  padding: 2px 5px;
+  min-height: 30px !important;
+  text-transform: capitalize;
+  font-family: Kirsty, serif;  
+  display: flex;  
+}
+
+.gray-label-large {
+  background-color: $gray;
+  color: $almost_black;
+  font-size: 21px;
+  justify-content: center;
+  padding: 2px 5px;
+  min-height: 30px !important;
+  text-transform: capitalize;
+  font-family: Kirsty, serif;
+  display: flex;  
+}
+
+.black-label-small-center {
+  background-color: $almost_black;
+  color: $almost_white;
+  font-size: 15px;
+  justify-content: center;
+  padding: 2px 5px;
+  min-height: 21px !important;
+  text-transform: capitalize;
+  font-family: Kirsty, serif;  
+  display: flex;  
+}
+
+.black-label-small-left {
+  background-color: $almost_black;
+  color: $almost_white;
+  font-size: 15px;
+  padding: 2px 5px;
+  min-height: 21px !important;
+  text-transform: capitalize;
+  font-family: Kirsty, serif;  
+  display: flex;  
+}
+
+.gray-label-small-center {
+  background-color: $gray;
+  color: $almost_black;
+  font-size: 15px;
+  justify-content: center;
+  padding: 2px 5px;
+  min-height: 21px !important;
+  text-transform: capitalize;
+  font-family: Kirsty, serif;
+  display: flex;  
+}
+
+.gray-label-small-left {
+  background-color: $gray;
+  color: $almost_black;
+  font-size: 15px;
+  padding: 2px 5px;
+  min-height: 21px !important;
+  text-transform: capitalize;
+  font-family: Kirsty, serif;
+  display: flex;  
+}
+
+.description {
+  font-style: italic;  
+}
+
+// table
+table {
+  background-color: transparent;
+  table-layout: fixed;
+  border: none;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  thead {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+
+    th {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  td {
+    padding: 5px;
+  }
+
+  // center cell content vertically
+  td & .vcenter {
+    vertical-align: center;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  // fill a cell to create dividers within a table
+  .td-fill-black {
+    background-color: $almost_black;
+    padding: none;
+    margin: none;
+  }
+}
+
+// inputs
+input[type="text"]{
+  border: 1px solid $almost_black;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $almost_black;
+  background-color: $almost_white;
+}
+
+i {
+  &.nullifier {
+    @include changeable($transition-period, $hover-brightness, $hover-opacity, $red);
+  }
+}
+
+.rollable-text {
+  transition: color $transition-period;
+}
+
+.rollable-text:hover {
+  cursor: pointer;
+  color: $red;
+}
+
+// tooltip
+.tooltip {
+
+  .tooltip-text {
+    visibility: hidden;
+    background-color: $lightgray;
+    color: $almost_black;
+    text-align: center;
+    padding: 5px;
+    width: 200px;
+    text-transform: capitalize;
+    font-family: Kirsty, serif;
+    border: 2px solid $almost_black;
+
+    // Position
+    position: absolute;
+    z-index: 9999;
+  }
+
+  &:hover .tooltip-text {
+    visibility: visible;
+  }
+}
