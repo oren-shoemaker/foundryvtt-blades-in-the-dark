@@ -387,30 +387,6 @@ Hooks.once("init", async function() {
     return new Handlebars.SafeString(html);
   });
 
-  Handlebars.registerHelper('gear-equipped-box', function(item){
-    const checked_style = item.system.equipped ? "fa-solid" : "fa-regular";
-
-    let html = '<label><input class="gear-equipped" type="checkbox" ';
-    if(item.system.equipped) {
-      html+=' checked';
-    }
-    html+='><div class="gear-equip">'
-    // 0-load items should still render a box
-    if(item.system.load === 0) {
-      html+=`<i class="fa-square ${checked_style}"></i>`
-    } else {
-      for(let i = 0; i < item.system.load; i++) {
-        html+=`<i class="fa-square ${checked_style}"></i>`
-        if(i < item.system.load - 1) {
-          html+=`<i class="fa-solid fa-minus"></i>`
-        }
-      }
-    }
-
-    html+='</div></label>'
-    
-    return new Handlebars.SafeString(html);
-  })
 
   // helper to render an item "card"
   // left widget is type-specific (i.e. load/equip checkbox for gear, stress cost for spells)
@@ -434,18 +410,19 @@ Hooks.once("init", async function() {
       switch(item.type) {
         case 'gear':
           const checked_style = item.system.equipped ? "fa-solid" : "fa-regular";
+          const changeable_style = item.system.equipped ? "fade-out" : "fade-in";
 
-          html += '<label class="gear-equip-widget"><input class="gear-equipped" type="checkbox" ';
+          html += '<label class="gear-equip-widget"><input class="gear-equipped" type="checkbox"';
           
           if(item.system.equipped) {
             html+=' checked';
           }
 
-          html+='><div class="gear-equip item-control">'
+          html+=`><div class="gear-equip item-control ${changeable_style}">`
 
           // 0-load items should still render a box for tracking purposes
           if(item.system.load === 0) {
-            html+=`<i class="fa-square ${checked_style} fa-xs"></i>`
+            html+=`<i class="fa-circle ${checked_style} fa-xs"></i>`
           } else {
             for(let i = 0; i < item.system.load; i++) {
               html+=`<i class="fa-square ${checked_style} fa-xs"></i>`
@@ -458,13 +435,13 @@ Hooks.once("init", async function() {
           html+='</div></label>'
           break;
         case 'spell': 
-          html += '<div class="spell-stress-widget"><a class="item-control spell-stress-cost">';
+          html += '<div class="spell-stress-widget"><div class="spell-stress-container"><a class="item-control spell-stress-cost">';
           
           for(let i=0; i<Number(item.system.stress); i++) {
             html+='<label class="item-control"></label>'; // no content, just need an empty label to render the icon correctly
           }
 
-          html +='</a></div>';
+          html +='</a></div></div>';
           break;
       }
     }

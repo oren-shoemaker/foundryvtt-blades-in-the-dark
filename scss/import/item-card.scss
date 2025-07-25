@@ -37,6 +37,16 @@ $blue: #04578f;
 
         .gear-equip {
           color: $almost_black;
+
+          &.fade-in {
+            color: $almost_black;
+            opacity: .7;
+            @include changeable(0, 1, $hover-opacity, $almost_black);
+          }
+
+          &.fade-out {
+            @include changeable(0, $hover-brightness, $hover-opacity, $gray);
+          }
         }
       }
 
@@ -47,42 +57,48 @@ $blue: #04578f;
         // may need to adjust if higher-cost spells are created
         width: 35px; 
 
-        .spell-stress-cost {
-          display: flex;
-          flex-direction: row;
+        .spell-stress-container {
+          filter: brightness(.5);
+          @include changeable($transition-period, 1, $hover-opacity, $red);
+          width: auto;
 
-          > * {
-            margin-right: 2px;
+          .spell-stress-cost {
+            display: flex;
+            flex-direction: row;
+
+            > * {
+              margin-right: 2px;
+
+              &:last-child {
+                margin-right: 0px;
+              }
+            }
 
             &:last-child {
               margin-right: 0px;
             }
-          }
 
-          &:last-child {
-            margin-right: 0px;
-          }
+            label {
+              & {
+                height: 15px;
+                width: 5px;
+                background-image: url("assets/teeth/stresstooth-red.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+                margin-right: 5px;
+            
+                &:last-of-type {
+                  margin-right: 0px;
+                }
+                &[for$="-0"] {
+                  width: auto;
+                  height: auto;
+                  background-image: none !important;
+                  color: $almost_white;
 
-          label {
-            & {
-              height: 15px;
-              width: 5px;
-              background-image: url("assets/teeth/stresstooth-red.png");
-              background-repeat: no-repeat;
-              background-size: contain;
-              margin-right: 5px;
-          
-              &:last-of-type {
-                margin-right: 0px;
-              }
-              &[for$="-0"] {
-                width: auto;
-                height: auto;
-                background-image: none !important;
-                color: $almost_white;
-
-                i {
-                  margin-top: 4px;
+                  i {
+                    margin-top: 4px;
+                  }
                 }
               }
             }
