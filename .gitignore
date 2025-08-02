@@ -11,4 +11,6 @@
 /packs/company_abilities
 /packs/company_upgrades
 
+/styles/**/*.css*
+
 *.db
