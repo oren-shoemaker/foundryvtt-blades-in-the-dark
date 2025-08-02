@@ -1,0 +1,30 @@
+{
+  "name": "Walk in the Light",
+  "type": "company_ability",
+  "_id": "5ccQnkwWJQ6jpN5K",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<ul id=\"docs-internal-guid-0ba4f843-7fff-d928-1ab5-2e543dc62ba1\">\n<li dir=\"ltr\" aria-level=\"2\">\n<p dir=\"ltr\" role=\"presentation\">The Company&rsquo;s Corruption is reduced by 2 each downtime</p>\n</li>\n<li dir=\"ltr\" aria-level=\"2\">\n<p dir=\"ltr\" role=\"presentation\">Members of the Company get +1d to gather information about the Stars and their close allies</p>\n</li>\n</ul>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917344006,
+    "modifiedTime": 1753917356577,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!5ccQnkwWJQ6jpN5K"
+}

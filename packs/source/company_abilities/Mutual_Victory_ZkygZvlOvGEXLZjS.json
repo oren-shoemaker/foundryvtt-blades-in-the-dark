@@ -1,0 +1,30 @@
+{
+  "name": "Mutual Victory",
+  "type": "company_ability",
+  "_id": "ZkygZvlOvGEXLZjS",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-dcd03f10-7fff-3e5a-8a79-f6746f9790da\">When members of the Company take a group action, sixes rolled by different players may contribute to critical successes</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917310592,
+    "modifiedTime": 1753917313066,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!ZkygZvlOvGEXLZjS"
+}

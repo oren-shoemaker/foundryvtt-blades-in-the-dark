@@ -1,26 +1,23 @@
-<form class="{{cssClass}}" autocomplete="off">
-    <header class="sheet-header flexrow">
-        <img src="{{img}}" data-edit="img" title="{{name}}"/>
-        <h1 class="charname">
-          <input name="name" type="text" value="{{name}}" placeholder="{{localize 'UTCF.Name'}}"/>
-        </h1>
-        <strong class="item-shortname">{{system.shortname}}</strong>
-    </header>
+<form class="{{cssClass}} item" autocomplete="off">
+    {{item-sheet-header this}}
 
     {{!-- Sheet Body --}}
     <section class="sheet-body flex">
+      <label class="black-label-small-left">{{localize "UTCF.Description"}}</label>
       {{editor system.description target="system.description" button=true editable=editable}}
+      <div class="flex-vertical">
+        <label class="black-label-small-left">{{localize "UTCF.Ability.ClassesLabel"}}</label>
+        {{#if system.classes}}
+          {{#each system.classes as |class|}}
+            {{item-card class show_left_widget=false show_delete_widget=false show_post_widget=false show_description=false}}
+          {{/each}}
+        {{/if}}
+        {{#if isGM}}
+          <div class="black-label-small-left">{{localize "UTCF.Logic"}}</div>
+          <textarea name="system.logic">{{{system.logic}}}</textarea>
+          <div class="black-label-small-left">{{localize "UTCF.Effects"}}</div>
+          <div id="effects">{{> "systems/until-the-curtain-falls/templates/parts/active-effects.html"}}</div>
+        {{/if}}
+      </div>
     </section>
-    <div class="flex-vertical">
-      <label class="label-stripe">{{localize "UTCF.Ability.ClassesLabel"}}</label>
-      {{#if system.classes}}
-        {{list-ability-classes}}
-      {{/if}}
-      {{#if isGM}}
-        <div class="label-stripe">{{localize "UTCF.Logic"}}</div>
-        <textarea name="system.logic">{{{system.logic}}}</textarea>
-        <div class="label-stripe">{{localize "UTCF.Effects"}}</div>
-        <div id="effects">{{> "systems/until-the-curtain-falls/templates/parts/active-effects.html"}}</div>
-      {{/if}}
-    </div>
 </form>

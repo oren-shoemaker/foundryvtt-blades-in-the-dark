@@ -28,7 +28,7 @@
     & {
       height: $height;
       width: $width;
-      background-image: url($checked_background);
+      background-image: url($unchecked_background);
       background-repeat: no-repeat;
       background-size: contain;
       margin-right: 5px;
@@ -60,15 +60,9 @@
   input {
   
     display: none;
-  
-    &:checked {
-  
-      & ~ label {
-        background-image: url($unchecked_background);
-      }
-      & + label {
-        background-image: url($checked_background);
-      }
+
+    &.checked + label {
+      background-image: url($checked_background);
     }
   }
 }

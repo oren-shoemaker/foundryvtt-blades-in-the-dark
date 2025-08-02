@@ -1,0 +1,30 @@
+{
+  "name": "Brig",
+  "type": "company_upgrade",
+  "_id": "aoyn432sF9dHDbF0",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-7b61fa1b-7fff-2307-1bbb-cb318bd76877\">The Headquarters is expanded to include a jail to hold a number of prisoners appropriate to the Company&rsquo;s tier. Attempts by prisoners to escape are opposed by the Company&rsquo;s tier.</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917953711,
+    "modifiedTime": 1753917958153,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!aoyn432sF9dHDbF0"
+}

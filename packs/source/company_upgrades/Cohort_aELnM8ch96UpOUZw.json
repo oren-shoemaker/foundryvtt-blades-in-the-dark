@@ -1,0 +1,30 @@
+{
+  "name": "Cohort",
+  "type": "company_upgrade",
+  "_id": "aELnM8ch96UpOUZw",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p dir=\"ltr\" role=\"presentation\">Create a Cohort, of tier equal to the Company&rsquo;s tier</p>\n<p dir=\"ltr\" role=\"presentation\">The Headquarters is expanded to include appropriate space for the Cohort (barracks, dormitories, a room for a specialist to do their work, etc.)</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917499293,
+    "modifiedTime": 1753917515876,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!aELnM8ch96UpOUZw"
+}

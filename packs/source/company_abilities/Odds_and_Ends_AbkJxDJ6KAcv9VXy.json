@@ -1,0 +1,30 @@
+{
+  "name": "Odds and Ends",
+  "type": "company_ability",
+  "_id": "AbkJxDJ6KAcv9VXy",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-e57f8f61-7fff-9fc4-5007-1c11c8a8a9e1\">Members of the Company get +1d to acquire assets</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917396027,
+    "modifiedTime": 1753917400855,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!AbkJxDJ6KAcv9VXy"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Negotiator",
+  "type": "company_upgrade",
+  "_id": "wX8ivd4gRyqbkGCM",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-4334708c-7fff-2666-3b3f-3bb09727e3ba\">The Company attracts a negotiator, who helps to barter for better pay. The Company gains +2 Coin for any quest that rewards Coin.</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917824098,
+    "modifiedTime": 1753917827720,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!wX8ivd4gRyqbkGCM"
+}

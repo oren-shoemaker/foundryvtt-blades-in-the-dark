@@ -1,0 +1,30 @@
+{
+  "name": "Blessed Idol",
+  "type": "company_upgrade",
+  "_id": "0VwJq7W9KQDEmswi",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-96873579-7fff-dc51-1db7-0c1b53885eb5\">The Headquarters is expanded to include a blessed idol of the Stars, and a small chapel to contain it if appropriate. The Company gains -1 Corruption from each quest (minimum of 0)</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753918001205,
+    "modifiedTime": 1753918005710,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!0VwJq7W9KQDEmswi"
+}

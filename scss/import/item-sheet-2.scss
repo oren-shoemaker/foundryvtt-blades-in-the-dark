@@ -1,0 +1,62 @@
+// ITEM
+& * {
+  .sheet-header {
+    .item-name {
+      flex-grow: 1;
+
+      // because some things may key off of name matches, need to ensure
+      // we don't fuck up capitalization
+      input[type="text"] {
+        text-transform: none !important;
+      }
+
+      img {
+        aspect-ratio: 1/1;
+      }
+    }
+
+    // might need to adjust this if shortnames grow >4 chars
+    // or just yeet the shortname concept entirely and go
+    // off item IDs
+    .shortname-input {
+      width: 60px;
+      margin-right: 10px;
+    }
+  }
+
+  .class-skills {
+    table-layout: auto !important;
+    width: fit-content;
+  }
+
+  .class-abilities {
+    :not(:last-child) {
+      border-bottom: solid 2px $almost_black;
+    }
+  }
+
+  .gear-properties {
+    padding: 5px;
+    flex-wrap: wrap;
+
+    .gear-property-label {
+      width: fit-content;
+    }
+
+    .gear-property-label.checked {
+      border: solid 2px $almost_black;
+    }
+
+    input.gear-property {
+      display: none;
+    }
+  }
+
+  select {
+    border: 1px solid $almost_black;
+    border-radius: 0;
+    font-weight: bold;
+    color: $almost_black;
+    background-color: $almost_white;
+  }
+}

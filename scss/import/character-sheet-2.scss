@@ -32,35 +32,6 @@ $hover-brightness: 0.8;
     flex-grow: 1;
   }
 
-  // Stress and trauma
-  // Stress
-  .big-teeth-container {
-    .big-teeth-wrap {
-      @include toothradio(17px, 50px, "assets/teeth/stresstooth-halfgrey.png", "assets/teeth/stresstooth-red.png");
-      flex-direction: column;
-
-      .big-teeth {
-        display: flex;
-        flex-direction: row;
-        margin-left: 10px;
-      }
-    }
-  }
-
-  // Trauma
-  .small-teeth-container {
-    .small-teeth-wrap {
-      @include toothradio(17px, 50px, "assets/teeth/shorttooth-grey.png", "assets/teeth/shorttooth-red.png");
-      flex-direction: column;
-
-      .small-teeth {
-        display: flex;
-        flex-direction: row;
-        margin-left: 10px;
-      }
-    }
-  }
-
   .stress-trauma-table {
     th {
       background-color: transparent;
@@ -76,13 +47,6 @@ $hover-brightness: 0.8;
   }
 
   // Abilities, spells, gear
-  .tab-content {
-    flex-grow: 1;
-
-    .tabs {
-      background-color: $almost_black;
-    }
-  }
 
   .loadout {
     .item-add-popup {

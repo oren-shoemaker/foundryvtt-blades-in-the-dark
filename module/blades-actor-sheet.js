@@ -107,36 +107,10 @@ export class BladesActorSheet extends BladesSheet {
     // Everything below here is only needed if the sheet is editable
     if (!this.options.editable) return;
 
-    // Open Actor Sheet Item
-    html.find('.item-openable').click(ev => {
-      const element = $(ev.currentTarget).parents(".item-card");
-      const item = this.actor.items.get(element.data("itemId"));
-      item.sheet.render(true);
-    });
-
-    // Delete Actor Sheet Item
-    html.find('.item-delete').click( async ev => {
-      const element = $(ev.currentTarget).parents(".item-card");
-
-      switch(element.data("itemType")) {
-        case "class":
-          this.object.update({"system.playbook": ""});
-          break;
-        case "homeland":
-          this.object.update({"system.homeland": ""});
-          break;
-        case "background":
-          this.object.update({"system.background": ""});
-          break;
-      }
-
-      await this.actor.deleteEmbeddedDocuments("Item", [element.data("itemId")]);
-      element.slideUp(200, () => this.render(false));
-    });
-
     // manage active effects
     html.find(".effect-control").click(ev => BladesActiveEffect.onManageActiveEffect(ev, this.actor));
     html.find(".ability-add-popup").click(this._onAbilityAddClick.bind(this));
+    html.find(".company-add-popup").click(ev => this._joinCompany(this.actor));
 
     html.find('.gear-equipped').change(ev => {
       const item_id = $(ev.currentTarget).parents(".item-card").data("itemId");
@@ -190,4 +164,67 @@ export class BladesActorSheet extends BladesSheet {
     this._onItemAddClickRender(event, items, "ability");
   }
 
+  async _joinCompany(actor) {
+    let html = `<div class="until-the-curtain-falls"><div class="items-to-add">`;
+
+    let companies = game.actors.filter(a => a.type === "company");
+
+    companies.forEach(e => {
+      html += `<input id="select-item-${e._id}" type="radio" name="select_items" value="${e._id}">`;
+      html += `<label class="flex-horizontal-spaced" for="select-item-${e._id}">`;
+      html += `${e.name}`;
+      html += `</label>`;
+    });
+
+    html += `</div></div>`;
+
+    let dialog = new Dialog({
+      title: `${game.i18n.localize('UTCF.Company.Add')}`,
+      content: html,
+      buttons: {
+        one: {
+          icon: '<i class="fas fa-check"></i>',
+          label: game.i18n.localize('Join'),
+          callback: async (html) => {
+            let element = $(html).find(".items-to-add").find("input:checked");
+            let id = $(element).val();
+            actor.update({"system.company_id": id})
+          }
+        },
+        two: {
+          icon: '<i class="fas fa-times"></i>',
+          label: game.i18n.localize('Cancel'),
+          callback: () => false
+        }
+      },
+      default: "two"
+    }, {});
+
+    dialog.render(true);
+  }
+
+ /** @override */
+  handle_item_delete(element) {
+    switch(element.data("itemType")) {
+      case "class":
+        this.object.update({"system.playbook": ""});
+        break;
+      case "homeland":
+        this.object.update({"system.homeland": ""});
+        break;
+      case "background":
+        this.object.update({"system.background": ""});
+        break;
+    }
+  }
+
+  /** @override */
+  handle_actor_delete(element) {
+    switch(element.data("actorType")) {
+      case "company":
+        this.object.update({"system.company_id": ""});
+        break;
+    }
+  }
 }
+

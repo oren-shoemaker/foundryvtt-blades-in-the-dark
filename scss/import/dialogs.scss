@@ -1,6 +1,11 @@
 // Add Items modal styling.
 .items-to-add {
-
+  background-color: $almost_white;
+  padding: 5px;
+  border-bottom: none;
+  border-left: 5px solid $almost_black;
+  border-right: 5px solid $almost_black;
+  border-top: 5px solid $almost-black;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -10,30 +15,28 @@
   input[type="checkbox"] {
     display: none;
 
+    & + label {
+      padding-bottom: 2px;
+      text-transform: capitalize;
+      font-family: Kirsty, serif;
+    }
+
     &:checked + label {
       font-weight: bold;
     }
   }
+}
 
- //Tooltip.
-  .tooltip {
+.dialog-buttons {
+  background-color: $almost_white;
+  padding: 5px;
+  border-top: none;
+  border-left: 5px solid $almost_black;
+  border-right: 5px solid $almost_black;
+  border-bottom: 5px solid $almost-black;
 
-    .tooltiptext {
-      visibility: hidden;
-      width: 200px;
-      background-color: $almost_black;
-      color: $almost_white;
-      text-align: center;
-      padding: 5px;
-      border-radius: 6px;
-
-      // Position
-      position: absolute;
-      z-index: 9999;
-    }
-
-    &:hover .tooltiptext {
-      visibility: visible;
-    }
+  .dialog-button {
+    text-transform: capitalize;
+    font-family: Kirsty, serif;
   }
 }

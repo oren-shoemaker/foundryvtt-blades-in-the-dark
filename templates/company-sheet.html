@@ -1,0 +1,191 @@
+<form class="{{cssClass}} actor-sheet" autocomplete="off">
+
+  <section class="flex-horizontal-spaced">
+
+    <img src="{{img}}" data-edit="img" title="{{name}}" class="portrait"/>
+
+    <div id="company-{{_id}}-name-alias" class="company-traits">
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <label class="black-label-large-left" for="company-{{_id}}-name">{{localize "UTCF.Name"}}</label>
+              <input type="text" id="company-{{_id}}-name" name="name" value="{{name}}">
+            </td>
+            <td>
+              <label class="black-label-large-left" for="company-{{_id}}-headquarters">{{localize "UTCF.Headquarters"}}</label>
+              <input type="text" id="company-{{_id}}-headquarters" name="system.headquarters" value="{{system.headquarters}}">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="company-tier">
+                {{#multiboxes system.tier}}
+                <input id="company-{{_id}}-tier-0" type="radio" name="system.tier" value="0">
+                <label for="company-{{_id}}-tier-0" class="black-label-large-left">{{localize "UTCF.Tier"}}</label>
+                  {{#times_from_1 4}}
+                    <input id="company-{{_id}}-tier-{{this}}" type="radio" name="system.tier" value="{{this}}">
+                    <label for="company-{{_id}}-tier-{{this}}"></label>
+                  {{/times_from_1}}
+                {{/multiboxes}}
+              </div>
+            </td>
+            <td>
+              {{!-- Coins --}}
+              <div id="company-{{_id}}-coins-hands" class="flex-horizontal">
+                <div class="black-label-large-left coins-label-container">
+                  <label for="company-{{_id}}-coins-hands-0">{{localize "UTCF.Coin"}}</label>
+                </div>
+                <div class="coins coins-company-hands">
+                  {{#multiboxes system.coins.value}}
+                  <input type="radio" id="company-{{_id}}-coins-hands-0" name="system.coins.value" value="0">
+                    {{#times_from_1 8}}
+                      <input type="radio" id="company-{{_id}}-coins-hands-{{this}}" name="system.coins.value" value="{{this}}">
+                      <label for="company-{{_id}}-coins-hands-{{this}}"></label>
+                    {{/times_from_1}}
+                  {{/multiboxes}}
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td >
+              <label class="black-label-large-left">{{localize "UTCF.CompanyLifestyle"}}</label>
+              {{#ifItemsContainsItemWithType "lifestyle"}}
+                {{item-card this show_left_widget=false show_description=false}}
+              {{/ifItemsContainsItemWithType}}
+            </td>
+            <td>
+              <label class="black-label-large-left">{{localize "UTCF.Investments.Label"}}</label>
+              {{#ifItemsContainsItemWithType "investments"}}
+                {{item-card this show_left_widget=true show_description=false}}
+              {{else}}
+                <div class="item-name gray-label-small-left"><a class="item-create-popup" data-item-type="investments">{{localize "UTCF.Investments.Add"}}</a></div>
+              {{/ifItemsContainsItemWithType}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="flex-vertical company-charter">
+    <label class="black-label-large-left">{{localize "UTCF.Charter.Label"}}</label>
+    {{#ifItemsContainsItemWithType "charter"}}
+      {{item-card this show_left_widget=false}}
+    {{else}}
+      <div class="item-name gray-label-small-left"><a class="item-create-popup" data-item-type="charter">{{localize "UTCF.Charter.Add"}}</a></div>
+    {{/ifItemsContainsItemWithType}}
+  </div>
+
+  <section class="flex-horizontal">
+    <div class="tab-content flex-vertical">
+      <nav class="tabs flex-horizontal">
+        <a class="item black-label-large-center" data-tab="abilities">{{localize "UTCF.CompanyAbility.LabelPlural"}}</a>
+        <a class="item black-label-large-center" data-tab="upgrades">{{localize "UTCF.CompanyUpgrade.LabelPlural"}}</a>
+        {{!-- cohorts WIP, disable for now --}}
+        {{#if false}}
+          <a class="item black-label-large-center" data-tab="cohorts">{{localize "UTCF.Cohorts"}}</a>
+        {{/if}}
+        <a class="item black-label-large-center" data-tab="notes">{{localize "UTCF.Notes"}}</a>
+        <a class="item black-label-large-center" data-tab="all-items">{{localize "UTCF.AllItems"}}</a>
+      </nav>
+
+      {{!-- Tabs --}}
+      {{!-- Company Abilities --}}
+      <div id="company-{{_id}}-abilities" class="company-abilities tab flex-vertical" data-tab="abilities">
+        <div class="black-label-small-left">
+          <a class="item-add-popup" data-item-type="company_ability">{{localize "UTCF.CompanyAbility.Add"}}  <i class="fas fa-plus-square"></i></a>
+        </div>
+        {{#each items as |item id|}}
+          {{#if (eq item.type "company_ability")}}
+            {{item-card item}}
+          {{/if}}
+        {{/each}}
+      </div>
+
+      {{!-- Company Upgrades --}}
+      <div id="company-{{_id}}-upgrades" class="company-upgrades tab flex-vertical" data-tab="upgrades">
+        <div class="black-label-small-left">
+          <a class="item-add-popup" data-item-type="company_upgrade">{{localize "UTCF.CompanyUpgrade.Add"}}  <i class="fas fa-plus-square"></i></a>
+        </div>
+        {{#each items as |item id|}}
+          {{#if (eq item.type "company_upgrade")}}
+            {{item-card item}}
+          {{/if}}
+        {{/each}}
+      </div>
+
+      {{!-- Cohorts --}}
+      {{!-- do not show for now, cohorts are WIP --}}
+      {{#if false}}
+      <div id="company-{{_id}}-cohorts" class="company-cohorts tab grow-two flex-vertical" data-tab="cohorts">
+        <div class="label-stripe flex-horizontal-spaced">
+          <p>{{localize "UTCF.Cohorts"}}</p>
+          <p><a class="add-item" data-item-type="cohort"><i class="fas fa-plus-square"></i></a></p>
+        </div>
+        <div class="cohorts flex-horizontal-spaced">
+          {{#each items as |item id|}}
+            {{#if (eq item.type "cohort")}}
+
+              {{> "systems/until-the-curtain-falls/templates/parts/cohort-block.html" item=item}}
+
+            {{/if}}
+          {{/each}}
+        </div>
+      </div>
+      {{/if}}
+
+      {{!-- Notes --}}
+      <div id="company-{{_id}}-notes" class="notes tab flex-vertical" data-tab="notes">
+        <textarea rows="15" name="system.description">{{{system.description}}}</textarea>
+      </div>
+
+      {{!-- Full Item List --}}
+      <div class="tab flex-vertical" data-tab="all-items">
+        {{#each items as |item id|}}
+          <div class="all-company-items">
+            {{item-card item show_left_widget=false show_description=false}}
+          </div>
+        {{/each}}
+      </div>
+    </div>
+
+    {{!-- Corruption --}}
+    <div id="company-{{_id}}-corruption" class="big-teeth-container company-corruption">
+      <div class="flex-horizontal company-corruption-header">
+        <label class="black-label-large-left company-corruption-label" for="company-{{_id}}-corruption-0">{{localize "UTCF.Corruption"}}</label>
+        <label class="black-label-xl-right company-corruption-severity">{{system.corruption_severity}}</label>
+      </div>
+        {{#multiboxes system.corruption}}
+          <div class="big-teeth-wrap">
+            <input type="radio" id="company-{{_id}}-corruption-0" name="system.corruption" value="0" dtype="Radio">
+            <div id="company-{{_id}}-corruption-row-1" class="big-teeth company-corruption-row">
+              {{#times_from_n 1 6}}
+                <input type="radio" id="company-{{_id}}-corruption-{{this}}" name="system.corruption" value="{{this}}" dtype="Radio">
+                <label for="company-{{_id}}-corruption-{{this}}"></label>
+              {{/times_from_n}}
+            </div>
+            <div id="company-{{_id}}-corruption-row-2" class="big-teeth company-corruption-row">
+              {{#times_from_n 7 12}}
+                <input type="radio" id="company-{{_id}}-corruption-{{this}}" name="system.corruption" value="{{this}}" dtype="Radio">
+                <label for="company-{{_id}}-corruption-{{this}}"></label>
+              {{/times_from_n}}
+            </div>
+            <div id="company-{{_id}}-corruption-row-3" class="big-teeth company-corruption-row">
+              {{#times_from_n 13 18}}
+                <input type="radio" id="company-{{_id}}-corruption-{{this}}" name="system.corruption" value="{{this}}" dtype="Radio">
+                <label for="company-{{_id}}-corruption-{{this}}"></label>
+              {{/times_from_n}}
+            </div>
+            <div id="company-{{_id}}-corruption-row-4" class="big-teeth company-corruption-row">
+              {{#times_from_n 19 24}}
+                <input type="radio" id="company-{{_id}}-corruption-{{this}}" name="system.corruption" value="{{this}}" dtype="Radio">
+                <label for="company-{{_id}}-corruption-{{this}}"></label>
+              {{/times_from_n}}
+            </div>
+          </div>
+        {{/multiboxes}}
+    </div>
+  </section>
+</form>

@@ -1,0 +1,30 @@
+{
+  "name": "Consecrated Ground",
+  "type": "company_upgrade",
+  "_id": "SmD07Uu7geCT2bTA",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-55219a90-7fff-9999-b439-a5fd33985eb2\">The Headquarters is improved with holy and/or magical defenses against the supernatural. If the Headquarters is attacked by supernatural forces, add the Company&rsquo;s tier to any rolls made to defend it.</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917785764,
+    "modifiedTime": 1753917791758,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!SmD07Uu7geCT2bTA"
+}

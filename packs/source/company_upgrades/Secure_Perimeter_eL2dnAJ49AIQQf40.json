@@ -1,0 +1,30 @@
+{
+  "name": "Secure Perimeter",
+  "type": "company_upgrade",
+  "_id": "eL2dnAJ49AIQQf40",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-8c3fe785-7fff-6795-94dc-566612800877\">The Headquarters is improved with physical defenses (high walls, a moat, locks etc.) to thwart intruders. Noncombatants are trained to defend it. If the Headquarters is attacked by ordinary forces, add the Company&rsquo;s tier to any rolls made to defend it.</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917775460,
+    "modifiedTime": 1753917779945,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!eL2dnAJ49AIQQf40"
+}

@@ -2,8 +2,9 @@
  * Extend the basic ItemSheet
  * @extends {ItemSheet}
  */
-import {onManageActiveEffect, prepareActiveEffectCategories} from "./effects.js";
+import {prepareActiveEffectCategories} from "./effects.js";
 import { BladesActiveEffect } from "./blades-active-effect.js";
+import { open_item_from_item } from "./utcf-item-card-helpers.js";
 
 export class BladesItemSheet extends ItemSheet {
 
@@ -23,7 +24,7 @@ export class BladesItemSheet extends ItemSheet {
   /** @override */
   get template() {
     const path = "systems/until-the-curtain-falls/templates/items";
-    let simple_item_types = ["background", "homeland", "vice", "crew_reputation", "lifestyle"];
+    let simple_item_types = ["background", "homeland", "vice", "crew_reputation", "lifestyle","charter","company_ability","company_upgrade"];
     let template_name = `${this.item.type}`;
 
     if (simple_item_types.indexOf(this.item.type) >= 0) {
@@ -39,28 +40,15 @@ export class BladesItemSheet extends ItemSheet {
 	activateListeners(html) {
     super.activateListeners(html);
 
+    // Open item from item card
+    html.find('.item-openable').click(async ev => open_item_from_item(ev));
+
     // Everything below here is only needed if the sheet is editable
     if (!this.options.editable) return;
 
     html.find(".effect-control").click(ev => {
       if ( this.item.isOwned ) return ui.notifications.warn(game.i18n.localize("UTCF.EffectWarning"))
       BladesActiveEffect.onManageActiveEffect(ev, this.item)
-    });
-
-    html.find('.item-list-item').click(async ev => {
-      const id = $(ev.currentTarget).data("itemId");
-      const items = await Promise.all(game.packs
-        .filter(p => p.documentName === "Item")
-        .map(async p => p.getDocuments()))
-        .then(arr => arr
-          .flat()
-          .filter(doc => doc._id === id));
-      
-      if(items.length === 1) {
-        items[0].sheet.render(true);
-      } else {
-        throw new Error(`item ID ${id} is non-unique!`)
-      }
     });
 
     html.find('.gear-property').change(ev => {

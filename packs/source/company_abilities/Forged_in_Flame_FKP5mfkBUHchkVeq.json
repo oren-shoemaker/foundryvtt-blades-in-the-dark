@@ -1,0 +1,30 @@
+{
+  "name": "Forged in Flame",
+  "type": "company_ability",
+  "_id": "FKP5mfkBUHchkVeq",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-2a66c87c-7fff-e9f0-b168-c50e4484e69d\">Each PC gets +1d to resistance rolls</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917216785,
+    "modifiedTime": 1753917223761,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!FKP5mfkBUHchkVeq"
+}

@@ -1,23 +1,21 @@
-<form class="{{cssClass}}" autocomplete="off">
-  <header class="sheet-header flexrow">
-      <img src="{{img}}" data-edit="img" title="{{localize system.name}}"/>
-      <h1 class="charname"><input name="name" type="text" value="{{localize system.name}}" placeholder="{{localize system.name}}"/></h1>
-      <strong class="item-shortname">{{system.shortname}}</strong>
-  </header>
+<form class="{{cssClass}} item" autocomplete="off">
+  {{item-sheet-header this}}
 
   <section class="flex-vertical-spaced">
-    <label class="label-stripe">{{localize "UTCF.Description"}}</label>
+    <label class="black-label-small-left">{{localize "UTCF.Description"}}</label>
     <div class="item-editor-padded">{{editor system.description target="system.description" button=true editable=editable}}</div>
     
 
-    <label class="label-stripe">{{localize "UTCF.Attibute.LabelPlural"}}</label>
-    <table class="class-skill">
+    <label class="black-label-small-left">{{localize "UTCF.Attribute.LabelPlural"}}</label>
+    <table class="class-skills">
       {{#each system.base_skills}}
         {{#if this.value}}
         <tr>
-          <td class="class-skill-label label-stripe-gray">
-            {{localize this.label}}
-            <i class="tooltip fas fa-question-circle"><span class="tooltip-text">{{localize this.tooltip}}</span></i>
+          <td class="vcenter">
+            <div class="gray-label-small-left flex-horizontal-spaced">
+              {{localize this.label}}
+              <i class="tooltip fas fa-question-circle"><span class="tooltip-text">{{localize this.tooltip}}</span></i>
+            </div>
           </td>
           <td>
             {{#times_from_1 this.value}}
@@ -29,13 +27,19 @@
       {{/each}}
     </table>
 
-    <label class="label-stripe">{{localize "UTCF.Ability.LabelPlural"}}</label>
-    {{list-class-abilities}}
+    <label class="black-label-small-left">{{localize "UTCF.Ability.LabelPlural"}}</label>
+    {{#if system.abilities}}
+      <div class="class-abilities">
+        {{#each system.abilities as |ability|}}
+          {{item-card ability show_left_widget=false show_delete_widget=false show_post_widget=false show_description=false}}
+        {{/each}}
+      </div>
+    {{/if}}
 
     {{#if isGM}}
-      <div class="label-stripe">{{localize "UTCF.Logic"}}</div>
+      <div class="black-label-small-left">{{localize "UTCF.Logic"}}</div>
       <textarea name="system.logic">{{{system.logic}}}</textarea>
-      <div class="label-stripe">{{localize "UTCF.Effects"}}</div>
+      <div class="black-label-small-left">{{localize "UTCF.Effects"}}</div>
       <div id="effects">{{> "systems/until-the-curtain-falls/templates/parts/active-effects.html"}}</div>
     {{/if}}
   </section>

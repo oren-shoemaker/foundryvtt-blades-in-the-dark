@@ -1,0 +1,30 @@
+{
+  "name": "Diplomats",
+  "type": "company_upgrade",
+  "_id": "bSOgqVZqxEGVCgUF",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-314adecb-7fff-875b-d0fa-39719a3108f3\">The Company attracts one or more diplomats, who may negotiate with other factions on the Company&rsquo;s behalf. Once per downtime, the Company may roll its Tier to attempt to improve its Bond with another faction. A poor roll may cause this to backfire, and improving a Bond may incur additional obligations.</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917914437,
+    "modifiedTime": 1753917919100,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!bSOgqVZqxEGVCgUF"
+}

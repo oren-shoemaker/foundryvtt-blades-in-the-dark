@@ -1,0 +1,30 @@
+{
+  "name": "Infirmary",
+  "type": "company_upgrade",
+  "_id": "vCI7XBDvFhlUlkgv",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-b4e1d050-7fff-5463-503b-f14c7775c358\">The Headquarters is expanded to include an infirmary, and the Company attracts a trained physicker. When a member of the Company takes the healing downtime action, they automatically reduce harms by two levels and may spend 1 Coin to reduce harms by a third level.</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917901847,
+    "modifiedTime": 1753917905184,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!vCI7XBDvFhlUlkgv"
+}

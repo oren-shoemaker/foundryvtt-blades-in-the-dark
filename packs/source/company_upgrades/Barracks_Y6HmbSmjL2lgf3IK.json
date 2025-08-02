@@ -1,0 +1,30 @@
+{
+  "name": "Barracks",
+  "type": "company_upgrade",
+  "_id": "Y6HmbSmjL2lgf3IK",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-1011c543-7fff-3a5a-df7c-eeb6579b1f67\">Choose a Squad type. Cohorts with that Squad type get +1 scale.</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917566983,
+    "modifiedTime": 1753917570963,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!Y6HmbSmjL2lgf3IK"
+}

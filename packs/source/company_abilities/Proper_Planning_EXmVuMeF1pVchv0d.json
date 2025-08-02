@@ -1,0 +1,30 @@
+{
+  "name": "Proper Planning",
+  "type": "company_ability",
+  "_id": "EXmVuMeF1pVchv0d",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-6ad26ac6-7fff-3864-22a2-99fc50c36449\">Choose one plan type. The Company gets +1d to engagement rolls when using that type of plan. This ability may be taken more than once, choosing a different plan type each time.</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917238514,
+    "modifiedTime": 1753917243092,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!EXmVuMeF1pVchv0d"
+}

@@ -12,11 +12,16 @@ $hover-brightness: 0.8;
   align-content: center;
 }
 
-.coins-label {
+.coins-label-container {
   width: 25%;
   height: auto;
   align-content: center;
   @include changeable($transition-period, $hover-brightness, $hover-opacity);
+
+  label {
+    width: 100%;
+    cursor: pointer;
+  }
 }
 
 .coins {
@@ -40,8 +45,8 @@ $hover-brightness: 0.8;
     width: 36px;
   }
 
-  &.coins-stashed {
-    width: 190px;
+  &.coins-company-hands {
+    width: 72px;
   }
 
 }

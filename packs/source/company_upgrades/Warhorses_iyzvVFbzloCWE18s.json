@@ -1,0 +1,30 @@
+{
+  "name": "Warhorses",
+  "type": "company_upgrade",
+  "_id": "iyzvVFbzloCWE18s",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p>Requires Stables.</p>\n<p><span id=\"docs-internal-guid-710a4ef8-7fff-c929-fd55-0ebe85e19732\">Warhorses will fight in battle, and are trained to stay calm in the presence of Hateful Things (although may still spook as a consequence of a poor action roll)</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917471842,
+    "modifiedTime": 1753917485238,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!iyzvVFbzloCWE18s"
+}

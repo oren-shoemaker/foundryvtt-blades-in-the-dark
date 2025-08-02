@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["character", "npc", "crew", "\uD83D\uDD5B clock", "factions"],
+    "types": ["character", "npc", "crew", "\uD83D\uDD5B clock", "factions","company"],
     "character": {
       "epithet": "",
       "look": "",
@@ -11,6 +11,7 @@
       "vice-purveyor": "",
       "playbook": "",
       "acquaintances": [],
+      "company_id": "",
       "acquaintances_label": "UTCF.Acquaintances",
       "stress": {
         "value": 0,
@@ -189,6 +190,19 @@
       "heat": [0],
       "wanted": [0]
     },
+    "company": {
+      "name": "",
+      "headquarters": "",
+      "tier": "",
+      "coins": {
+        "max": 8,
+        "value": [0],
+        "invested": 0
+      },
+      "features": [],
+      "corruption": 0,
+      "corruption_severity": "-"
+    },
     "\uD83D\uDD5B clock": {
       "name": "",
       "type": 4,
@@ -209,7 +223,7 @@
     }
   },
   "Item": {
-    "types": ["faction", "item", "class", "ability", "background", "homeland", "vice", "crew_upgrade", "cohort", "crew_type", "crew_reputation", "crew_upgrade", "crew_ability", "lifestyle", "gear", "spell"],
+    "types": ["faction", "item", "class", "ability", "background", "homeland", "vice", "crew_upgrade", "cohort", "crew_type", "crew_reputation", "crew_upgrade", "crew_ability", "lifestyle", "gear", "spell", "charter","investments","company_ability","company_upgrade"],
     "templates": {
       "default": {
         "description": ""
@@ -502,6 +516,13 @@
       }
     },
     "armor": false
+  },
+  "charter": {
+    "templates": ["default"]
+  },
+  "investments": {
+    "templates": ["default"],
+    "invested_coin": 0
   },
   "crew_reputation": {
     "templates": ["default"]

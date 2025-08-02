@@ -1,0 +1,30 @@
+{
+  "name": "Trophy Hall",
+  "type": "company_upgrade",
+  "_id": "y9Wtwuw5Hy32CkQD",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-e12c07f0-7fff-d3be-2aa7-3f03571c5041\">The Headquarters is expanded to include a trophy hall to store and display trophies gathered from quests. Each quest from which a trophy is taken grants +1 Coin.</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917934673,
+    "modifiedTime": 1753917938370,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!y9Wtwuw5Hy32CkQD"
+}

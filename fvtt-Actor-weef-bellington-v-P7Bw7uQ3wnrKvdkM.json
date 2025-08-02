@@ -1,0 +1,670 @@
+{
+  "name": "Weef Bellington V",
+  "type": "character",
+  "prototypeToken": {
+    "actorLink": true,
+    "name": "Weef Bellington V",
+    "displayName": 0,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "assets/gay%20frog.png",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "offsetX": 0,
+      "offsetY": 0,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": null
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false
+  },
+  "img": "assets/gay%20frog.png",
+  "system": {
+    "epithet": "Fifth beefster beneath the retrograde moon",
+    "look": "",
+    "homeland": "The Harrowed Harbor",
+    "background": "Labor",
+    "background-details": "",
+    "vice": "",
+    "vice-purveyor": "",
+    "playbook": "SEN",
+    "acquaintances": [],
+    "company_id": "",
+    "acquaintances_label": "UTCF.Acquaintances",
+    "stress": {
+      "value": "0",
+      "max": 9,
+      "max_default": 9,
+      "name_default": "UTCF.Stress",
+      "name": "UTCF.Stress"
+    },
+    "trauma": {
+      "max": 4,
+      "max_default": 4,
+      "value": "1",
+      "name": "UTCF.MentalTrauma",
+      "name_default": "UTCF.MentalTrauma",
+      "traumas": {
+        "one": "quiet",
+        "two": "",
+        "three": "",
+        "four": "",
+        "five": ""
+      }
+    },
+    "physical_trauma": {
+      "max": 1,
+      "max_default": 1,
+      "value": "1",
+      "traumas": {
+        "one": "took my freakin' kidney"
+      }
+    },
+    "healing-clock": [
+      0
+    ],
+    "experience": [
+      0
+    ],
+    "experience_max": 8,
+    "experience_clues": [
+      "UTCF.ClassExpClue3",
+      "UTCF.ClassExpClue2"
+    ],
+    "coins": "0",
+    "coins_stashed": [
+      0
+    ],
+    "special_abilities": [],
+    "loadout": 0,
+    "max_load": 0,
+    "encumbered_threshold": 9,
+    "selected_load_level": "UTCF.Load.Heavy",
+    "harm": {
+      "light": {
+        "one": "",
+        "two": ""
+      },
+      "medium": {
+        "one": "",
+        "two": ""
+      },
+      "heavy": {
+        "one": ""
+      },
+      "deadly": {
+        "one": "",
+        "two": ""
+      },
+      "severe": {
+        "one": ""
+      }
+    },
+    "armor-uses": {
+      "armor": false,
+      "heavy": false,
+      "special": 1
+    },
+    "attributes": {
+      "mind": {
+        "exp": 0,
+        "exp_max": 6,
+        "label": "UTCF.Attribute.Mind.Short",
+        "skills": {
+          "forge": {
+            "label": "UTCF.Skills.Forge.Label",
+            "tooltip": "UTCF.Skills.Forge.Tooltip",
+            "base_value": 0,
+            "assigned_value": "0",
+            "value": 0,
+            "max": 4,
+            "value_from_class": 0
+          },
+          "seek": {
+            "label": "UTCF.Skills.Seek.Label",
+            "tooltip": "UTCF.Skills.Seek.Tooltip",
+            "base_value": 0,
+            "assigned_value": "0",
+            "value": 0,
+            "max": 4,
+            "value_from_class": 0
+          },
+          "study": {
+            "label": "UTCF.Skills.Study.Label",
+            "tooltip": "UTCF.Skills.Study.Tooltip",
+            "base_value": 0,
+            "assigned_value": "0",
+            "value": 0,
+            "max": 4,
+            "value_from_class": 0
+          }
+        }
+      },
+      "body": {
+        "exp": 0,
+        "exp_max": 6,
+        "label": "UTCF.Attribute.Body.Short",
+        "skills": {
+          "finesse": {
+            "label": "UTCF.Skills.Finesse.Label",
+            "tooltip": "UTCF.Skills.Finesse.Tooltip",
+            "base_value": 0,
+            "assigned_value": "0",
+            "value": 0,
+            "max": 4,
+            "value_from_class": 0
+          },
+          "force": {
+            "label": "UTCF.Skills.Force.Label",
+            "tooltip": "UTCF.Skills.Force.Tooltip",
+            "base_value": 2,
+            "assigned_value": "0",
+            "value": 4,
+            "max": 4,
+            "value_from_class": 0
+          },
+          "traverse": {
+            "label": "UTCF.Skills.Traverse.Label",
+            "tooltip": "UTCF.Skills.Traverse.Tooltip",
+            "base_value": 0,
+            "assigned_value": "0",
+            "value": 0,
+            "max": 4,
+            "value_from_class": 0
+          }
+        }
+      },
+      "will": {
+        "exp": 0,
+        "exp_max": 6,
+        "label": "UTCF.Attribute.Will.Short",
+        "skills": {
+          "attune": {
+            "label": "UTCF.Skills.Attune.Label",
+            "tooltip": "UTCF.Skills.Attune.Tooltip",
+            "base_value": 0,
+            "value": 0,
+            "max": 4,
+            "value_from_class": 0,
+            "assigned_value": "0"
+          },
+          "command": {
+            "label": "UTCF.Skills.Command.Label",
+            "tooltip": "UTCF.Skills.Command.Tooltip",
+            "base_value": 1,
+            "value": 4,
+            "max": 4,
+            "value_from_class": 0,
+            "assigned_value": "0"
+          },
+          "consort": {
+            "label": "UTCF.Skills.Consort.Label",
+            "tooltip": "UTCF.Skills.Consort.Tooltip",
+            "base_value": 0,
+            "value": 0,
+            "max": 4,
+            "value_from_class": 0,
+            "assigned_value": "0"
+          }
+        }
+      }
+    },
+    "special_armor_ids": [],
+    "load_level": "",
+    "base_max_load": 0,
+    "description": ""
+  },
+  "items": [
+    {
+      "name": "My Shield Unwavering",
+      "type": "ability",
+      "_id": "008j1phNiXkJyuvI",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "description": "<p dir=\"ltr\" role=\"presentation\">You have access to special armor. Track this as a 0-load item. You may expend it to:</p>\n<ul>\n<li style=\"list-style-type: none;\">\n<ul>\n<li dir=\"ltr\" aria-level=\"3\">\n<p dir=\"ltr\" role=\"presentation\">Reduce a harm taken in combat by one level (only when the harm is first taken)</p>\n</li>\n<li dir=\"ltr\" aria-level=\"3\">\n<p dir=\"ltr\" role=\"presentation\">Push yourself in combat at no stress cost</p>\n</li>\n</ul>\n</li>\n</ul>",
+        "class": "",
+        "price": "1",
+        "purchased": false,
+        "class_default": false,
+        "logic": "",
+        "classes": [
+          "SEN"
+        ],
+        "shortname": "MSUN"
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.346",
+        "systemId": "until-the-curtain-falls",
+        "systemVersion": "0.0.0",
+        "createdTime": 1753045255804,
+        "modifiedTime": 1753045255804,
+        "lastModifiedBy": "nRGCPtyorF07NYQP"
+      }
+    },
+    {
+      "name": "Labor",
+      "type": "background",
+      "_id": "GywlgownvTNBDhhe",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "description": "<p><span id=\"docs-internal-guid-13bafd41-7fff-fbc0-54f2-e1ceefe8d9a7\">A miner, a farmer, a servant, a cart-driver, etc.</span></p>",
+        "logic": ""
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.346",
+        "systemId": "until-the-curtain-falls",
+        "systemVersion": "0.0.0",
+        "createdTime": 1753144142995,
+        "modifiedTime": 1753144142995,
+        "lastModifiedBy": "nRGCPtyorF07NYQP"
+      }
+    },
+    {
+      "name": "Special armor - My Shield Unwavering",
+      "type": "gear",
+      "_id": "RaOoJKrP2qNhx2pg",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "description": "<p dir=\"ltr\" role=\"presentation\">You may expend this to:</p>\n<ul>\n<li dir=\"ltr\" role=\"presentation\">Reduce a harm taken in combat by one level (only when the harm is first taken)</li>\n<li dir=\"ltr\" role=\"presentation\">Push yourself in combat at no stress cost</li>\n</ul>",
+        "logic": "",
+        "class": "",
+        "load": 0,
+        "uses": 0,
+        "max_uses": 0,
+        "equipped": true,
+        "add_list_ignore": false,
+        "rarity": "common",
+        "rarity_options": {
+          "common": "UTCF.Gear.Rarity.Common",
+          "uncommon": "UTCF.Gear.Rarity.Uncommon",
+          "rare": "UTCF.Gear.Rarity.Rare",
+          "legendary": "UTCF.Gear.Rarity.Legendary"
+        },
+        "quality": 0,
+        "properties": [
+          "special_armor"
+        ],
+        "linked_ability": "MSUN",
+        "special_armor": true
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.346",
+        "systemId": "until-the-curtain-falls",
+        "systemVersion": "0.0.0",
+        "createdTime": 1753389143556,
+        "modifiedTime": 1753562950894,
+        "lastModifiedBy": "nRGCPtyorF07NYQP"
+      }
+    },
+    {
+      "name": "Large ornithopter",
+      "type": "gear",
+      "_id": "Ilo4pOFWBYdXu37o",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "description": "<p>Large collapsible flying machine, pedal-powered. Can carry a single person.</p>",
+        "logic": "",
+        "class": "",
+        "load": 3,
+        "uses": 0,
+        "max_uses": 0,
+        "equipped": true,
+        "add_list_ignore": false,
+        "rarity": "rare",
+        "rarity_options": {
+          "common": "UTCF.Gear.Rarity.Common",
+          "uncommon": "UTCF.Gear.Rarity.Uncommon",
+          "rare": "UTCF.Gear.Rarity.Rare",
+          "legendary": "UTCF.Gear.Rarity.Legendary"
+        },
+        "quality": 0,
+        "properties": [
+          "mechanical"
+        ],
+        "linked_ability": "",
+        "special_armor": false
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.346",
+        "systemId": "until-the-curtain-falls",
+        "systemVersion": "0.0.0",
+        "createdTime": 1753389221912,
+        "modifiedTime": 1753562949962,
+        "lastModifiedBy": "nRGCPtyorF07NYQP"
+      }
+    },
+    {
+      "name": "Unusual tome",
+      "type": "gear",
+      "_id": "jV3w8nbH7fr13kMQ",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "description": "<p><span id=\"docs-internal-guid-d6a8c5d0-7fff-ca2f-3ef0-82c2244be527\">A hard-to-come-by book or other writing, containing useful information on a specific subject</span></p>",
+        "logic": "",
+        "class": "SCH",
+        "load": 1,
+        "uses": 0,
+        "max_uses": 0,
+        "equipped": true,
+        "add_list_ignore": false,
+        "rarity": "uncommon",
+        "rarity_options": {
+          "common": "UTCF.Gear.Rarity.Common",
+          "uncommon": "UTCF.Gear.Rarity.Uncommon",
+          "rare": "UTCF.Gear.Rarity.Rare",
+          "legendary": "UTCF.Gear.Rarity.Legendary"
+        },
+        "quality": 0,
+        "properties": [],
+        "linked_ability": "",
+        "special_armor": false
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.346",
+        "systemId": "until-the-curtain-falls",
+        "systemVersion": "0.0.0",
+        "createdTime": 1753389221912,
+        "modifiedTime": 1753562940548,
+        "lastModifiedBy": "nRGCPtyorF07NYQP"
+      }
+    },
+    {
+      "name": "Beckoning Flame",
+      "type": "spell",
+      "_id": "QFUPwnJVupRojsLK",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "description": "<p><span id=\"docs-internal-guid-1f1416c5-7fff-42ad-e15d-1c12513f923c\">Conjure a flash of fire in a sphere, cone, or cylinder whose dimensions are no less than ten feet and no more than fifty. A cone conjured this way emanates from your body. A sphere or cylinder conjured this way may emanate from any point that you can see within one hundred feet of your location. Flammable objects in the area are ignited and flesh is badly burned.</span></p>",
+        "stress": 4
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.346",
+        "systemId": "until-the-curtain-falls",
+        "systemVersion": "0.0.0",
+        "createdTime": 1753403768865,
+        "modifiedTime": 1753403768865,
+        "lastModifiedBy": "nRGCPtyorF07NYQP"
+      }
+    },
+    {
+      "name": "Visions of a Phantom Realm",
+      "type": "spell",
+      "_id": "VzB9rSR354e8aQfs",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "description": "<p><span id=\"docs-internal-guid-3d50400c-7fff-d341-9995-44360ff06785\">Bring forth a visual and/or auditory illusion that can occupy a space up to twenty feet in any dimension, centered on a location that you can see within two hundred feet. It stands up to close inspection, but not to physical touch. It disappears after ten minutes, or if you dismiss it.</span></p>",
+        "stress": 4
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.346",
+        "systemId": "until-the-curtain-falls",
+        "systemVersion": "0.0.0",
+        "createdTime": 1753403768865,
+        "modifiedTime": 1753403768865,
+        "lastModifiedBy": "nRGCPtyorF07NYQP"
+      }
+    },
+    {
+      "name": "Unseemly Passage",
+      "type": "spell",
+      "_id": "WJG5hcZVn1wX0sok",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "description": "<p><span id=\"docs-internal-guid-39d702bf-7fff-e73b-0009-6400388851c5\">You create a stable passage through solid, nonliving matter. It can be up to fifty feet long and ten feet wide. It is stable for an hour or so, after which it may collapse under its own weight (depending on the material).</span></p>",
+        "stress": 4
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.346",
+        "systemId": "until-the-curtain-falls",
+        "systemVersion": "0.0.0",
+        "createdTime": 1753403768865,
+        "modifiedTime": 1753403768865,
+        "lastModifiedBy": "nRGCPtyorF07NYQP"
+      }
+    },
+    {
+      "name": "Yeet",
+      "type": "spell",
+      "_id": "q5sUGMgFTEy41lHo",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "description": "<p><span id=\"docs-internal-guid-dca02e6e-7fff-1d5e-ecd3-f9af5b33f796\">You move an object that you can see from anywhere within fifty feet of yourself to any other point within that area, or fling an object within fifty feet of yourself in a direction of your choosing (it travels at a distance and speed appropriate to its mass). You can move or fling objects one scale above what you could ordinarily move or throw by hand. Has reduced effect against entities that are capable of physically resisting (e.g. by grabbing onto a handhold).</span></p>",
+        "stress": 3
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.346",
+        "systemId": "until-the-curtain-falls",
+        "systemVersion": "0.0.0",
+        "createdTime": 1753403768865,
+        "modifiedTime": 1753403768865,
+        "lastModifiedBy": "nRGCPtyorF07NYQP"
+      }
+    },
+    {
+      "name": "The Harrowed Harbor",
+      "type": "homeland",
+      "_id": "c4MolspGlXCQKlSF",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "description": "<p><span id=\"docs-internal-guid-1afcf62a-7fff-1fee-58f9-59eef23befad\">A narrow stretch of sea lies beneath the Curtain to Yrdalun&rsquo;s east. A bay drinks in the river Findalos, and a harbor clings to the shore where the river meets the sea. It yet bears the scars of Vaith&rsquo;s great failure, its marble buildings stained and its cobblestones cracked. Brave souls venture out to fish in the waters, though the catch is not always wholesome.</span></p>",
+        "logic": ""
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.346",
+        "systemId": "until-the-curtain-falls",
+        "systemVersion": "0.0.0",
+        "createdTime": 1753407049675,
+        "modifiedTime": 1753407049675,
+        "lastModifiedBy": "nRGCPtyorF07NYQP"
+      }
+    },
+    {
+      "name": "Sentinel of the Curtain",
+      "type": "class",
+      "_id": "UBbBsgjF5OCrRLLV",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "description": "<p><span id=\"docs-internal-guid-232baaf5-7fff-d359-f597-3c579a56931d\">The Sentinel of the Curtain is trained to take part in direct combat, to lead a squad or militia against a foe, and to endure great hardships. Play a Sentinel if you want to spit in the eye of corruption as you fight a horde of vile monstrosities from dawn to dusk with your comrades at your back.</span></p>",
+        "logic": "",
+        "name": "UTCF.Class.SEN.Name",
+        "shortname": "SEN",
+        "experience_clues": "",
+        "base_skills": {
+          "forge": {
+            "label": "UTCF.Skills.Forge.Label",
+            "tooltip": "UTCF.Skills.Forge.Tooltip",
+            "value": 0
+          },
+          "study": {
+            "label": "UTCF.Skills.Study.Label",
+            "tooltip": "UTCF.Skills.Study.Tooltip",
+            "value": 0
+          },
+          "seek": {
+            "label": "UTCF.Skills.Seek.Label",
+            "tooltip": "UTCF.Skills.Seek.Tooltip",
+            "value": 0
+          },
+          "force": {
+            "label": "UTCF.Skills.Force.Label",
+            "tooltip": "UTCF.Skills.Force.Tooltip",
+            "value": 2
+          },
+          "finesse": {
+            "label": "UTCF.Skills.Finesse.Label",
+            "tooltip": "UTCF.Skills.Finesse.Tooltip",
+            "value": 0
+          },
+          "traverse": {
+            "label": "UTCF.Skills.Traverse.Label",
+            "tooltip": "UTCF.Skills.Traverse.Tooltip",
+            "value": 0
+          },
+          "attune": {
+            "label": "UTCF.Skills.Attune.Label",
+            "tooltip": "UTCF.Skills.Attune.Tooltip",
+            "value": 0
+          },
+          "command": {
+            "label": "UTCF.Skills.Command.Label",
+            "tooltip": "UTCF.Skills.Command.Tooltip",
+            "value": 1
+          },
+          "consort": {
+            "label": "UTCF.Skills.Consort.Label",
+            "tooltip": "UTCF.Skills.Consort.Tooltip",
+            "value": 0
+          }
+        },
+        "abilities": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.346",
+        "systemId": "until-the-curtain-falls",
+        "systemVersion": "0.0.0",
+        "createdTime": 1753545068217,
+        "modifiedTime": 1753545068217,
+        "lastModifiedBy": "nRGCPtyorF07NYQP"
+      }
+    }
+  ],
+  "effects": [],
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1752603835555,
+    "modifiedTime": 1753924508061,
+    "lastModifiedBy": "nRGCPtyorF07NYQP",
+    "exportSource": {
+      "worldId": "utcf-testing",
+      "uuid": "Actor.P7Bw7uQ3wnrKvdkM",
+      "coreVersion": "13.346",
+      "systemId": "until-the-curtain-falls",
+      "systemVersion": "0.0.0"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Burn From the World",
+  "type": "company_ability",
+  "_id": "sBAf7LbmtgPhNgtl",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p dir=\"ltr\" role=\"presentation\">Members of the Company may take 2 stress to utterly destroy a dead or incapacitated enemy, body and soul</p>\n<ul>\n<li dir=\"ltr\" aria-level=\"3\">\n<p dir=\"ltr\" role=\"presentation\">If used on a Hateful Thing, reduce the Company&rsquo;s Corruption by 1</p>\n</li>\n<li dir=\"ltr\" aria-level=\"3\">\n<p dir=\"ltr\" role=\"presentation\">If used on a human being, increase the Company&rsquo;s Corruption by 1</p>\n</li>\n</ul>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917378258,
+    "modifiedTime": 1753917389757,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!sBAf7LbmtgPhNgtl"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "On the Blade’s Edge",
+  "type": "company_ability",
+  "_id": "l3IDHxuXA0tEvfcq",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-57ad6073-7fff-f7ba-da86-3c6adce95cc2\">Rolls made by members of the Company from a desperate position have +1 effect</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917419109,
+    "modifiedTime": 1753917422893,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!l3IDHxuXA0tEvfcq"
+}

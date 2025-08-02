@@ -11,7 +11,9 @@ $light_green: #12a012;
 $blue: #04578f;
 
 & * {
+  .actor-card,
   .item-card {
+    .actor-openable,
     .item-openable {
       cursor: pointer;
     }
@@ -111,6 +113,7 @@ $blue: #04578f;
         margin-right: 10px;
       }
 
+      .actor-delete,
       .item-delete {
         margin-right: 10px;
         width: 15px;

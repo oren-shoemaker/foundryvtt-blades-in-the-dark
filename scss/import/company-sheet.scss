@@ -1,0 +1,162 @@
+$coin_size: 15px;
+$coin_margin: 3px;
+
+@import 'coins.scss';
+
+& * {
+
+  img.portrait{
+    max-width: 200px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+  }
+
+  nav{
+    padding-bottom: 10px;
+  }
+
+  .company-tier {
+
+    background-color: $gray;
+    height: 33px;
+    width: 145px;
+    display: flex;
+    align-items: center;
+    border-top: 3px solid $almost_black;
+
+    @include custom_radio_round(18px, gray, $almost_white, $almost_black);
+
+    > * {
+      margin-right: 5px;
+    }
+
+  }
+
+  // Cohorts styling
+  .edgeflaw {
+
+    input {
+      display: none;
+
+      &:checked {
+
+        & + label {
+          color: $red;
+        }
+
+      }
+    }
+
+  }
+
+  .gang-expert-type-selector {
+
+    .gang-type-boxes {
+      flex-wrap: wrap;
+    }
+  }
+
+  .cohorts {
+    flex-wrap: wrap;
+
+    .cohort-block-wrapper {
+      width: 400px;
+    }
+
+    .label-stripe {
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: 0px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
+
+    .item-control {
+      flex-grow: 0;
+    }
+
+    .cohort-body {
+      img {
+        border: 2px solid $almost_black;
+        width: 1.75rem;
+        height: 1.75rem;
+        border-top: none;
+      }
+
+      > div {
+        margin-bottom: 10px;
+      }
+    }
+
+    .cohort-block-harm {
+      justify-content: space-around;
+
+      input[type="radio"] {
+        display: none;
+
+        &:checked + label {
+          color: $almost_white;
+          font-weight: bold;
+          background-color: $almost_black;
+        }
+      }
+
+      label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex: 1 0 0;
+        border: 2px solid $almost_black;
+        border-top: none;
+        border-left: none;
+        padding: 0 5px;
+        text-align: center;
+      }
+    }
+  }
+
+  .company-corruption {
+    border-left: 2px solid $almost_black;
+    border-bottom: 2px solid $almost_black;
+    width: 160px;
+    height: auto;
+
+    .company-corruption-header {
+      width: 100%;
+      align-items: center;
+
+      .company-corruption-label {
+        flex-grow: 1;
+        height: 60px; // have to force this, for some reason...
+        align-items: center;
+        @include changeable($transition-period, $hover-brightness, $hover-opacity);
+      }
+
+      .company-corruption-severity {
+        min-width: 48px;
+      }
+    }
+
+    .big-teeth-wrap {
+      margin-right: 10px;
+
+      .company-corruption-row:not(:first-of-type) {
+        border-top: 3px solid $almost_black;
+      }
+    }
+
+  }
+
+  .all-company-items {
+    border-bottom: solid 2px $almost_black;
+  }
+
+  .company-charter {
+    width: 100%;
+    min-height: 150px;
+  }
+
+}
+

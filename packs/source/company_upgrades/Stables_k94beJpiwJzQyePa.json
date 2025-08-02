@@ -1,0 +1,30 @@
+{
+  "name": "Stables",
+  "type": "company_upgrade",
+  "_id": "k94beJpiwJzQyePa",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-9756c46b-7fff-86ce-27b0-494981539c1a\">The Company&rsquo;s Headquarters gains a stable, granting the Company access to horses for use in transport. Horses will spook if taken into combat or if they encounter Hateful Things.</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917454675,
+    "modifiedTime": 1753917462962,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!k94beJpiwJzQyePa"
+}

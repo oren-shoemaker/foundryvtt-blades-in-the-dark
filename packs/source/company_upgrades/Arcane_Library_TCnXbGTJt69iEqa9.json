@@ -1,0 +1,30 @@
+{
+  "name": "Arcane Library",
+  "type": "company_upgrade",
+  "_id": "TCnXbGTJt69iEqa9",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-273106d7-7fff-1857-b78c-b51ae611d573\">The Headquarters is expanded to include a library stocked with arcane tomes. Members of the Company get +1d when learning or developing a new spell during downtime.</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917755253,
+    "modifiedTime": 1753917759087,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!TCnXbGTJt69iEqa9"
+}

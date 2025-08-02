@@ -1,0 +1,30 @@
+{
+  "name": "Watchtower",
+  "type": "company_upgrade",
+  "_id": "AFirX5VLo6VCXhpC",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-a254747f-7fff-6d98-6fd1-0d987f89d547\">The Headquarters is expanded with a tall watchtower or other location suitable for observation. Members of the Company gain +1d when Seeking or Studying the area around the Headquarters.</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753918039475,
+    "modifiedTime": 1753918069800,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!AFirX5VLo6VCXhpC"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Sanctuary",
+  "type": "company_upgrade",
+  "_id": "wJzBpfBYaLVql2yh",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-1e4ef6e2-7fff-d2df-3ec5-afad36b25622\">The Headquarters is expanded to include a calming sanctuary, a balm for the soul, and attracts a priest of the Stars to tend to it. Members of the Company gain +1 mental trauma box. This may bring characters back out of retirement.</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917801836,
+    "modifiedTime": 1753917807401,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!wJzBpfBYaLVql2yh"
+}

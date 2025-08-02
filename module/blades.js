@@ -20,6 +20,7 @@ import { BladesNPCSheet } from "./blades-npc-sheet.js";
 import { BladesFactionSheet } from "./blades-faction-sheet.js";
 import * as migrations from "./migration.js";
 import { GEAR_PROPERTIES } from "./base-system-data.js";
+import { UTCFCompanySheet } from "./utcf-company-sheet.js";
 
 window.BladesHelpers = BladesHelpers;
 
@@ -50,6 +51,7 @@ Hooks.once("init", async function() {
   Actors.registerSheet("blades", BladesFactionSheet, { types: ["factions"], makeDefault: true });
   Actors.registerSheet("blades", BladesClockSheet, { types: ["\uD83D\uDD5B clock"], makeDefault: true });
   Actors.registerSheet("blades", BladesNPCSheet, { types: ["npc"], makeDefault: true });
+  Actors.registerSheet("blades", UTCFCompanySheet, {types: ["company"],makeDefault: true});
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("blades", BladesItemSheet, {makeDefault: true});
   await preloadHandlebarsTemplates();
@@ -66,33 +68,31 @@ Hooks.once("init", async function() {
     }
   });
 
-  // Multiboxes.
+  // Multiboxes
   Handlebars.registerHelper('multiboxes', function(selected, options) {
 
     let html = options.fn(this);
 
-    // Fix for single non-array values.
-    if ( !Array.isArray(selected) ) {
-      selected = [selected];
+    // Cast to number
+    selected = Number(selected);
+
+    // first, clear all checked boxes
+    html = html.replace(' checked', '');
+    html = html.replace('class=\"checked\"','');
+
+    // then add checked class to selected box + all previous boxes
+    // need to handle this with a class, :checked selector doesn't play nice
+    // with multiple radio buttons
+    for(let i=0;i<=selected;i++) {
+      let rgx = new RegExp('value=\"' + i + '\"');
+      html = html.replace(rgx, "$& class=\"checked\"");
+      // add checked state to selected box
+      if(i === selected) {
+        html = html.replace(rgx, "$& checked");
+      }
     }
 
-    if (typeof selected !== 'undefined') {
-      selected.forEach(selected_value => {
-        if (selected_value !== false) {
-          let escapedValue = RegExp.escape(Handlebars.escapeExpression(selected_value));
-          let rgx = new RegExp(' value=\"' + escapedValue + '\"');
-          let oldHtml = html;
-          html = html.replace(rgx, "$& checked");
-          while( ( oldHtml === html ) && ( escapedValue >= 0 ) ){
-            escapedValue--;
-            rgx = new RegExp(' value=\"' + escapedValue + '\"');
-            html = html.replace(rgx, "$& checked");
-          }
-        }
-      });
-    }
-
-    return html;
+    return new Handlebars.SafeString(html);
   });
   
   // Trauma Counter
@@ -193,6 +193,22 @@ Hooks.once("init", async function() {
 
     var accum = '';
     for (var i = 0; i <= n; ++i) {
+      accum += block.fn(i);
+    }
+    return accum;
+  });
+
+  // "N Times" loop for handlebars.
+  //  Block is executed N times starting from n=m.
+  //
+  // Usage:
+  // {{#times_from_n 5 10}}
+  //   <span>{{this}}</span>
+  // {{/times_from_n}}
+  Handlebars.registerHelper('times_from_n', function(m,n, block) {
+
+    var accum = '';
+    for (var i = m; i <= n; ++i) {
       accum += block.fn(i);
     }
     return accum;
@@ -344,18 +360,6 @@ Hooks.once("init", async function() {
     return new Handlebars.SafeString(html);
   });
 
-  Handlebars.registerHelper('list-ability-classes', function() {
-    const context = this;
-    let html = '<ul class="item-list-padded-bounded">'
-    context.system.classes.forEach(c => {
-      html += `<li class="item-list-item" data-item-id=${c._id}>`;
-      html += `<b class="label-stripe-gray">${c.name}</b>`;
-      html += '</li>';
-    });
-    html += '</ul>';
-    return new Handlebars.SafeString(html);
-  });
-
   Handlebars.registerHelper('ifItemsContainsItemWithType', function(type, options) {
     const items = this.items;
     if (items && items.length > 0) {
@@ -377,12 +381,16 @@ Hooks.once("init", async function() {
   Handlebars.registerHelper('gear-property-checkboxes', function(gear_properties) {
     let html = '';
     for(const [propname, prop] of Object.entries(GEAR_PROPERTIES)) {
-      html+=`<label><input class="gear-property" name="${propname}" type="checkbox" data-property="${propname}"`
+      let checked = '';
       if(gear_properties.includes(propname)) {
-        html+=' checked';
+        checked = ' checked';
       }
-      html+=`>${game.i18n.localize(prop.label)}</label>`;
+      html += `<label class="gray-label-small-center gear-property-label${checked}">`
+      html += `<input class="gear-property" name="${propname}" type="checkbox" data-property="${propname}"${checked} />`;
+      html += `${game.i18n.localize(prop.label)}</label>`;
     }
+
+    console.log(html);
 
     return new Handlebars.SafeString(html);
   });
@@ -398,8 +406,6 @@ Hooks.once("init", async function() {
     const show_delete_widget = opt_keys.includes("show_delete_widget") ? opt_hash.show_delete_widget : true;
     const show_post_widget = opt_keys.includes("show_post_widget") ? opt_hash.show_post_widget : true;
     const show_description = opt_keys.includes("show_description") ? opt_hash.show_description : true;
-
-    
 
     // outer container
     let html = `<div class="item-card flex-vertical" data-item-id="${item._id}" data-item-type="${item.type}">`;
@@ -462,6 +468,47 @@ Hooks.once("init", async function() {
     // close outer container
     html += '</div>'
     
+    return new Handlebars.SafeString(html);
+  });
+
+  Handlebars.registerHelper('actor-card',function(actor_id,options){
+    const opt_hash = options.hash;
+    const opt_keys = Object.keys(opt_hash);
+
+    const show_delete_widget = opt_keys.includes("show_delete_widget") ? opt_hash.show_delete_widget : true;
+
+    const actor = BladesHelpers.getActorById(actor_id, game);
+
+    // outer container
+    let html = `<div class="actor-card flex-vertical" data-actor-id="${actor_id}" data-actor-type="${actor.type}">`;
+
+    // header
+    html += '<div class="item-header gray-label-small-left">';
+    html+=`<label class="item-name actor-openable">${actor.name}</label>`
+    if(show_delete_widget) {
+      html += `<a class="item-control actor-delete" title="${game.i18n.localize("UTCF.TitleDeleteItem")}"><i class="fas fa-trash"></i></a>`;
+    }
+
+    html += '</div>';
+
+    // close outer container
+    html += '</div>'
+    
+    return new Handlebars.SafeString(html);
+  });
+
+  Handlebars.registerHelper('item-sheet-header',function(item) {
+    let html = '<header class="sheet-header flex-horizontal-spaced">';
+
+    html += `<img src="${item.img}" data-edit="img" title="${item.name}" />`;
+    html +=`<h1 class="item-name"><input name="name" type="text" value="${item.name}" placeholder="${game.i18n.localize("UTCF.Name")}" /></h1>`;
+    
+    if(Object.hasOwn(item.system,'shortname')) {
+      html += `<input class="shortname-input" name="shortname" type="text" value="${item.system.shortname}" />`
+    }
+
+    html += '</header>'
+
     return new Handlebars.SafeString(html);
   });
 

@@ -15,43 +15,40 @@ $transition-period: 0.2s;
 $hover-opacity: 0.9;
 $hover-brightness: 0.8;
 
-
-
-
 // Utility imports
 @import 'import/mixin';
 @import 'fonts.scss';
 
 //top-level styles
 @import 'import/chat.scss';
-@import 'import/dialogs.scss';
 
 //namespacing to avoid conflicts with other modules
-.until-the-curtain-falls{
+.dialog,
+.until-the-curtain-falls {
   font-family: "Crimson Text", serif;
   
   @import 'import/general-styles-2.scss';
   @import 'import/item-card.scss';
+  @import 'import/dialogs.scss';
 
   &.actor.pc {
     @import 'import/character-sheet-2.scss';
   }
 
-  // @import 'import/general-styles.scss';
+  &.item.sheet {
+    @import 'import/item-sheet-2.scss';
+  }
+
   // @import 'import/clocks.scss';
 
-  // &.crew.sheet{
-  //   @import 'import/crew-sheet.scss';
-  // }
+  &.crew.sheet{
+    @import 'import/crew-sheet.scss';
+  }
 
-  // &.actor.pc{
-  //   @import 'import/character-sheet.scss';
-  // }
+  &.company.sheet{
+    @import 'import/company-sheet.scss';
+  }
 
   // &.actor.clock{
-  // }
-
-  // &.item.sheet{
-  //   @import 'import/item-sheet.scss';
   // }
 }

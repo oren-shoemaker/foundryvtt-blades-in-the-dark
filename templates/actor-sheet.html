@@ -2,7 +2,7 @@
 
   <section id="character-{{_id}}-name-alias" class="flex-horizontal-spaced">
 
-    <div class="grow-two">
+    <div>
       <img src="{{img}}" data-edit="img" title="{{name}}" class="portrait" />
     </div>
 
@@ -39,7 +39,12 @@
           </tr>
           <tr>
             <td class="vcenter">
-              {{> "systems/until-the-curtain-falls/templates/parts/coins.html" actor=actor}}
+              <label class="black-label-large-left">{{localize "UTCF.Company.Label"}}</label>
+              {{#if system.company_id}}
+                {{actor-card system.company_id}}
+              {{else}}
+                <div class="item-name gray-label-small-left"><a class="company-add-popup">{{localize "UTCF.Company.Add"}}</a></div>
+              {{/if}}
             </td>
              <td>
               <label class="black-label-large-left">{{localize "UTCF.Background.Label"}}</label>
@@ -48,6 +53,11 @@
               {{else}}
                 <div class="item-name gray-label-small-left"><a class="item-add-popup" data-distinct="true" data-item-type="background">{{localize "UTCF.Background.AddLabel"}}</a></div>
               {{/ifItemsContainsItemWithType}}
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="vcenter">
+              {{> "systems/until-the-curtain-falls/templates/parts/coins.html" actor=actor}}
             </td>
           </tr>
         </tbody>

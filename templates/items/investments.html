@@ -1,0 +1,18 @@
+<form class="{{cssClass}}" autocomplete="off">
+  {{item-sheet-header this}}
+  {{!-- Sheet Body --}}
+  <section class="sheet-body flex-vertical">
+    <label class="black-label-small-left">{{localize "UTCF.Description"}}</label>
+    {{editor system.description target="system.description" button=true editable=editable}}
+    <div class="flex-vertical">
+        <label class="gray-label-small-left">{{localize "UTCF.Investments.InvestedCoin"}}</label>
+        <input type="number" name="system.invested_coin" value="{{system.invested_coin}}">
+    </div>
+    {{#if isGM}}
+      <div class="black-label-small-left">{{localize "UTCF.Logic"}}</div>
+      <textarea name="system.logic">{{{system.logic}}}</textarea>
+      <div class="black-label-small-left">{{localize "UTCF.Effects"}}</div>
+      <div id="effects">{{> "systems/until-the-curtain-falls/templates/parts/active-effects.html"}}</div>
+    {{/if}}
+  </section>
+</form>

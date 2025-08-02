@@ -1,0 +1,30 @@
+{
+  "name": "At Home in the Darkness",
+  "type": "company_ability",
+  "_id": "Aa5Vu4ZNnxcB139Q",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<ul id=\"docs-internal-guid-c5cc94ff-7fff-a653-5b14-17a37380b8c5\">\n<li dir=\"ltr\" aria-level=\"2\">\n<p dir=\"ltr\" role=\"presentation\">The Company gains effective tier equal to its Corruption divided by 6 (rounded down)</p>\n</li>\n<li dir=\"ltr\" aria-level=\"2\">\n<p dir=\"ltr\" role=\"presentation\">Members of the Company get +1d to gather information about the Hateful Things</p>\n</li>\n</ul>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917332647,
+    "modifiedTime": 1753917337199,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!Aa5Vu4ZNnxcB139Q"
+}

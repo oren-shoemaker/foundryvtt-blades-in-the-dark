@@ -1,0 +1,30 @@
+{
+  "name": "Public House",
+  "type": "company_upgrade",
+  "_id": "Q3AJtTNkbgFkgPVL",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-e557615f-7fff-4f1d-7b43-e51d2463f437\">The Headquarters is expanded to include a public house, offering food and drink to locals and weary travelers alike. The Company gains +2 Coin during downtime. A Company with high Corruption may attract less savory patrons.</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917834111,
+    "modifiedTime": 1753917839136,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!Q3AJtTNkbgFkgPVL"
+}

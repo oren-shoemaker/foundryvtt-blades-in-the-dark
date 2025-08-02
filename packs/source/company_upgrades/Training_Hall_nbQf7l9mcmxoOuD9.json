@@ -1,0 +1,30 @@
+{
+  "name": "Training Hall",
+  "type": "company_upgrade",
+  "_id": "nbQf7l9mcmxoOuD9",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p dir=\"ltr\" role=\"presentation\">Choose The Mind, The Body, The Will, or playbook. The Headquarters is expanded to include a suitable training space for the chosen attribute. When a member of the Company takes a downtime action to train the chosen attribute, they mark one additional training clock segment.</p>\n<p dir=\"ltr\" role=\"presentation\">This upgrade may be taken more than once, with a new attribute chosen each time.</p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917582664,
+    "modifiedTime": 1753917678375,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!nbQf7l9mcmxoOuD9"
+}

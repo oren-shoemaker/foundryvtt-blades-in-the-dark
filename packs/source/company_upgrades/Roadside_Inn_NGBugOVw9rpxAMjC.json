@@ -1,0 +1,30 @@
+{
+  "name": "Roadside Inn",
+  "type": "company_upgrade",
+  "_id": "NGBugOVw9rpxAMjC",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p>Requires Public House.</p>\n<p><span id=\"docs-internal-guid-1a1a3ec1-7fff-e34f-6ca6-af76820a245c\">Improves the public house to make it more welcoming to a broader swathe of folk. Once per downtime, the Company may roll its Tier to gather information that might be reasonably known to the patrons.</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917856891,
+    "modifiedTime": 1753917886274,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!NGBugOVw9rpxAMjC"
+}

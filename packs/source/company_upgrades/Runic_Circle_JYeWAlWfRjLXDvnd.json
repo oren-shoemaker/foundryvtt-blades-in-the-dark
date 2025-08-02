@@ -1,0 +1,30 @@
+{
+  "name": "Runic Circle",
+  "type": "company_upgrade",
+  "_id": "JYeWAlWfRjLXDvnd",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-ca885ed5-7fff-4bc5-4179-0b4d4e9063df\">The Headquarters is expanded to include a chamber with a runic circle inscribed on the floor, suitable to help in the channeling of magical energies. Members of the Company gain +1d when Attuning within the circle.</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753918030589,
+    "modifiedTime": 1753918034652,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!JYeWAlWfRjLXDvnd"
+}

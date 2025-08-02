@@ -1,0 +1,30 @@
+{
+  "name": "Vault",
+  "type": "company_upgrade",
+  "_id": "OJ4nomOJmrMOqmHi",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-7f1e355d-7fff-f954-8e8c-40591e35a52b\">The Headquarters is expanded to include a vault designed to store and contain dangerous objects. If a roll is called for to contain an object, add the Company&rsquo;s tier to that roll.</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917943843,
+    "modifiedTime": 1753917947589,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!OJ4nomOJmrMOqmHi"
+}

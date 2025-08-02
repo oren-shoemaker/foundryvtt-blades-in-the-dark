@@ -1,19 +1,13 @@
 <form class="{{cssClass}} item-sheet" autocomplete="off">
-    <header class="sheet-header">
-        <img src="{{img}}" data-edit="img" title="{{name}}"/>
-        <div class="header-fields">
-            <h1 class="charname"><input name="name" type="text" value="{{name}}" placeholder="{{localize 'UTCF.Name'}}"/></h1>
-        </div>
-    </header>
+    {{item-sheet-header this}}
 
-    <section class="sheet-body flex-vertical-padded">
-        <!-- load, rarity, quality, uses/max uses (if consumable in properties) -->
-        <label class="label-stripe">{{localize "UTCF.Description"}}</label>
+    <section class="sheet-body flex-vertical-spaced">
+        <label class="black-label-small-left">{{localize "UTCF.Description"}}</label>
         <div>
             {{editor system.description target="system.description" button=true editable=editable}}
         </div>
 
-        <label class="label-stripe">{{localize "UTCF.Spell.Cost"}}</label>
+        <label class="black-label-small-left">{{localize "UTCF.Spell.Cost"}}</label>
         <input type="number" name="system.stress" value="{{system.stress}}">
     </section>
 

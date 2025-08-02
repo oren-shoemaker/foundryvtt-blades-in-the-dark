@@ -1,58 +1,49 @@
-<form class="{{cssClass}} item-sheet" autocomplete="off">
-    <header class="sheet-header">
-        <img src="{{img}}" data-edit="img" title="{{name}}"/>
-        <div class="header-fields">
-            <h1 class="charname"><input name="name" type="text" value="{{name}}" placeholder="{{localize 'UTCF.Name'}}"/></h1>
-        </div>
-    </header>
+<form class="{{cssClass}} item" autocomplete="off">
+  {{item-sheet-header this}}
 
-    <section class="sheet-body flex-vertical-padded">
+    <section class="sheet-body flex-vertical-spaced">
         <!-- load, rarity, quality, uses/max uses (if consumable in properties) -->
-        <label class="label-stripe">{{localize "UTCF.Description"}}</label>
+        <label class="black-label-small-left">{{localize "UTCF.Description"}}</label>
         <div>
             {{editor system.description target="system.description" button=true editable=editable}}
         </div>
 
-        <label class="label-stripe">{{localize "UTCF.Gear.Properties.Label"}}</label>
-        <div class="flex-horizontal-padded">
+        <label class="black-label-small-left">{{localize "UTCF.Gear.Properties.Label"}}</label>
+        <div class="flex-horizontal-spaced gear-properties">
             {{gear-property-checkboxes system.properties}}
         </div>
-
-        <div class="flex-horizontal-padded">
-            <div class="flex-vertical">
-                <label class="label-stripe-gray">{{localize "UTCF.Gear.Rarity.Label"}}</label>
-                <select name="system.rarity">
-                    {{selectOptions system.rarity_options selected=system.rarity localize=true}}
-                </select>
-            </div>
-            <div class="flex-vertical">
-                <label class="label-stripe-gray">{{localize "UTCF.Gear.Load"}}</label>
-                <input type="number" name="system.load" value="{{system.load}}">
-            </div>
-            <div class="flex-vertical">
-                <label class="label-stripe-gray">{{localize "UTCF.Gear.Quality"}}</label>
-                <input type="number" name="system.quality" value="{{system.quality}}">
-            </div>
-            {{#if (contains system.properties "consumable")}}
-                <div class="flex-vertical">
-                    <label class="label-stripe-gray">{{localize "UTCF.Gear.Uses"}}</label>
-                    <input type="number" name="system.uses" value="{{system.uses}}">
-                </div>
-                <div class="flex-vertical">
-                    <label class="label-stripe-gray">{{localize "UTCF.Gear.MaxUses"}}</label>
-                    <input type="number" name="system.max_uses" value="{{system.max_uses}}">
-                </div>
-            {{/if}}
-            {{log this.system}}
-            {{#if (contains system.properties "special_armor")}}
-                <div class="flex-vertical">
-                    <label class="label-stripe-gray">{{localize "UTCF.Gear.LinkedAbility"}}</label>
-                    <input type="textbox" name="system.linked_ability" value="{{system.linked_ability}}">
-                </div>
-            {{/if}}
+        <div class="flex-vertical">
+            <label class="gray-label-small-left">{{localize "UTCF.Gear.Rarity.Label"}}</label>
+            <select name="system.rarity">
+                {{selectOptions system.rarity_options selected=system.rarity localize=true}}
+            </select>
         </div>
+        <div class="flex-vertical">
+            <label class="gray-label-small-left">{{localize "UTCF.Gear.Load"}}</label>
+            <input type="number" name="system.load" value="{{system.load}}">
+        </div>
+        <div class="flex-vertical">
+            <label class="gray-label-small-left">{{localize "UTCF.Gear.Quality"}}</label>
+            <input type="number" name="system.quality" value="{{system.quality}}">
+        </div>
+        {{#if (contains system.properties "consumable")}}
+            <div class="flex-vertical">
+                <label class="gray-label-small-left">{{localize "UTCF.Gear.Uses"}}</label>
+                <input type="number" name="system.uses" value="{{system.uses}}">
+            </div>
+            <div class="flex-vertical">
+                <label class="gray-label-small-left">{{localize "UTCF.Gear.MaxUses"}}</label>
+                <input type="number" name="system.max_uses" value="{{system.max_uses}}">
+            </div>
+        {{/if}}
+        {{#if (contains system.properties "special_armor")}}
+            <div class="flex-vertical">
+                <label class="gray-label-small-left">{{localize "UTCF.Gear.LinkedAbility"}}</label>
+                <input type="text" name="system.linked_ability" value="{{system.linked_ability}}">
+            </div>
+        {{/if}}
 
-        <label class="label-stripe">{{localize "UTCF.Gear.Class"}}</label>
+        <label class="black-label-small-left">{{localize "UTCF.Gear.Class"}}</label>
         <input type="text" name="system.class" value="{{system.class}}">
 
     </section>

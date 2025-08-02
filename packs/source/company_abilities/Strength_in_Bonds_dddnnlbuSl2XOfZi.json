@@ -1,0 +1,30 @@
+{
+  "name": "Strength in Bonds",
+  "type": "company_ability",
+  "_id": "dddnnlbuSl2XOfZi",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-47eb9cbd-7fff-27c2-07c0-a15462c0b08d\">The Company gains +1 effective tier per two allied (+3 bond) factions</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917365163,
+    "modifiedTime": 1753917369627,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!dddnnlbuSl2XOfZi"
+}

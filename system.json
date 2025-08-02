@@ -53,6 +53,20 @@
       "type": "Item"
     },
     {
+      "name": "company_upgrade",
+      "label": "Company Upgrades",
+      "system": "until-the-curtain-falls",
+      "path": "./packs/company_upgrades",
+      "type": "Item"
+    },
+    {
+      "name": "company_ability",
+      "label": "Company Abilities",
+      "system": "until-the-curtain-falls",
+      "path": "./packs/company_abilities",
+      "type": "Item"
+    },
+    {
       "name": "spell",
       "label": "Spells",
       "system": "until-the-curtain-falls",
@@ -78,13 +92,6 @@
       "label": "Lifestyles",
       "system": "until-the-curtain-falls",
       "path": "./packs/lifestyles",
-      "type": "Item"
-    },
-    {
-      "name": "item",
-      "label": "Items",
-      "system": "until-the-curtain-falls",
-      "path": "./packs/items.db",
       "type": "Item"
     },
     {

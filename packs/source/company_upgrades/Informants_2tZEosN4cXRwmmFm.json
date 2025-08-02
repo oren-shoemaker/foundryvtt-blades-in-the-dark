@@ -1,0 +1,30 @@
+{
+  "name": "Informants",
+  "type": "company_upgrade",
+  "_id": "2tZEosN4cXRwmmFm",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-8f327365-7fff-ad8e-bf12-7e3819feac6b\">The Company attracts a network of informants, and gains +1d to gather information about upcoming quests.</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917989919,
+    "modifiedTime": 1753917994420,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!2tZEosN4cXRwmmFm"
+}

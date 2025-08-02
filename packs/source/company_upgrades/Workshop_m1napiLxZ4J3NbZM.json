@@ -1,0 +1,30 @@
+{
+  "name": "Workshop",
+  "type": "company_upgrade",
+  "_id": "m1napiLxZ4J3NbZM",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-d9e0633d-7fff-e56a-2695-eaa2432bba1f\">The Headquarters is expanded to include a workshop for the creation of alchemical and mechanical items. Members of the Company get +1d when crafting alchemical or mechanical items, and no longer need to expend a downtime action to acquire components to craft uncommon alchemical or mechanical items.</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917741888,
+    "modifiedTime": 1753917747291,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!m1napiLxZ4J3NbZM"
+}

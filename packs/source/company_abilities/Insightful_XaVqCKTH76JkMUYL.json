@@ -1,0 +1,30 @@
+{
+  "name": "Insightful",
+  "type": "company_ability",
+  "_id": "XaVqCKTH76JkMUYL",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-e92fecef-7fff-7618-0d3e-9c341ae2df2b\">Each PC may add one action rating to Forge, Seek or Study</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917118414,
+    "modifiedTime": 1753917197028,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!XaVqCKTH76JkMUYL"
+}

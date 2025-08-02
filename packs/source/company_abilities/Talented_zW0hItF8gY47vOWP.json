@@ -1,0 +1,30 @@
+{
+  "name": "Talented",
+  "type": "company_ability",
+  "_id": "zW0hItF8gY47vOWP",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-df602695-7fff-b2da-b90e-2fc110359f02\">Each PC may add one action rating to Finesse, Force, or Traverse</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917136370,
+    "modifiedTime": 1753917201079,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!zW0hItF8gY47vOWP"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Armory",
+  "type": "company_upgrade",
+  "_id": "3oh5tbE3HNklcMs9",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-52b0ec81-7fff-38e5-041a-72b14680b9ff\">The Headquarters is expanded to include rooms and tool chests to store and care for high-quality tools. All tools gain +1 quality.</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917763790,
+    "modifiedTime": 1753917767150,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!3oh5tbE3HNklcMs9"
+}

@@ -8,4 +8,7 @@
 /packs/backgrounds
 /packs/gear
 /packs/spells
+/packs/company_abilities
+/packs/company_upgrades
+
 *.db

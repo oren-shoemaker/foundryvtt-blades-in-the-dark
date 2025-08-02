@@ -1,0 +1,30 @@
+{
+  "name": "Veterans of Psychic Wars",
+  "type": "company_ability",
+  "_id": "oGUbQg35zyCINyxD",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-dc690ea5-7fff-3a52-d790-0528f0245198\">Each PC gains an additional stress box</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917182048,
+    "modifiedTime": 1753917186908,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!oGUbQg35zyCINyxD"
+}

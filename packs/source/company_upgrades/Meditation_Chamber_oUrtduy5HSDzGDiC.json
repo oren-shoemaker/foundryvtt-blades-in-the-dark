@@ -1,0 +1,30 @@
+{
+  "name": "Meditation Chamber",
+  "type": "company_upgrade",
+  "_id": "oUrtduy5HSDzGDiC",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-55001039-7fff-2c71-60b0-f103cda89943\">The Headquarters is expanded to include a space for its members to relieve their stress, and attracts an appropriate attendant. When Members of the Company take a downtime action to relieve stress, they relieve 1 additional stress.</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753918022343,
+    "modifiedTime": 1753918025920,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!oUrtduy5HSDzGDiC"
+}

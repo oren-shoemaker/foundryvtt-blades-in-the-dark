@@ -1,0 +1,30 @@
+{
+  "name": "Guest House",
+  "type": "company_upgrade",
+  "_id": "V1BqGFWszUQNKkDq",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-e676648a-7fff-0792-6d13-4b45e11d0f44\">The Headquarters is expanded to include a well-appointed guest house, suitable for hosting a small number of people. Members of the Company gain +1d to Command, Consort with, or Study its guests.</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753918013231,
+    "modifiedTime": 1753918016960,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!V1BqGFWszUQNKkDq"
+}

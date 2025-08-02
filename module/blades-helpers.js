@@ -201,4 +201,8 @@ export class BladesHelpers {
 
   }
 
+  static getActorById(actor_id, game) {
+    return game.actors.get(actor_id);
+  }
+
 }

@@ -1,0 +1,30 @@
+{
+  "name": "Zealots",
+  "type": "company_ability",
+  "_id": "hY8RjxQEyuAdFfZS",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<ul id=\"docs-internal-guid-13ac616b-7fff-741c-1a54-40cfbd05fa27\">\n<li dir=\"ltr\" aria-level=\"2\">\n<p dir=\"ltr\" role=\"presentation\">Cohorts will undertake any task, no matter how dangerous</p>\n</li>\n<li dir=\"ltr\" aria-level=\"2\">\n<p dir=\"ltr\" role=\"presentation\">Cohorts get +1d when acting against Hateful Things or their cultists</p>\n</li>\n</ul>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917319660,
+    "modifiedTime": 1753917325239,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!hY8RjxQEyuAdFfZS"
+}

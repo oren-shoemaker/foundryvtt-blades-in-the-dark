@@ -1,0 +1,30 @@
+{
+  "name": "Shield Wall",
+  "type": "company_ability",
+  "_id": "3nmdYtBqvEEOU8jv",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<p><span id=\"docs-internal-guid-0968bdc7-7fff-98ae-4a70-6453d7be3d41\">When members of the Company fight alongside a Cohort in combat, they get +1d for set up and group actions</span></p>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917263514,
+    "modifiedTime": 1753917268694,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!3nmdYtBqvEEOU8jv"
+}

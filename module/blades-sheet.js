@@ -3,6 +3,8 @@
  * @extends {ActorSheet}
  */
 
+import { delete_item, open_item,open_actor, delete_actor } from "./utcf-item-card-helpers.js";
+
 export class BladesSheet extends ActorSheet {
 
   /* -------------------------------------------- */
@@ -13,12 +15,34 @@ export class BladesSheet extends ActorSheet {
     html.find(".item-add-popup").click(this._onItemAddClick.bind(this));
     html.find(".update-box").click(this._onUpdateBoxClick.bind(this));
 
-    // Post item to chat
-    html.find(".item-post").click((ev) => {
-      const element = $(ev.currentTarget).parents(".item");
-      const item = this.actor.items.get(element.data("itemId"));
+    // Open item from item card
+    html.find('.item-openable').click(ev => {
+      open_item(ev,this);
+    });
+
+    // delete item from item card
+    html.find('.item-delete').click( async ev => {
+      delete_item(ev,this);
+    });
+
+    // Open actor from actor card
+    html.find('.actor-openable').click(ev => {
+      open_actor(ev);
+    })
+
+    // delete actor from actor card
+    html.find('.actor-delete').click( async ev => {
+      delete_actor(ev, this);
+    });
+
+    // Post item to chat from item card
+    html.find(".item-post").click(ev => {
+      const element = $(ev.currentTarget).parents(".item-card");
+      const item = this.object.items.get(element.data("itemId"));
       item.sendToChat();
     });
+
+    html.find(".item-create-popup").click(this._onItemCreateClick.bind(this));
 
     // This is a workaround until is being fixed in FoundryVTT.
     if ( this.options.submitOnChange ) {
@@ -32,9 +56,7 @@ export class BladesSheet extends ActorSheet {
   async _onItemAddClick(event) {
     event.preventDefault();
     const item_type = $(event.currentTarget).data("itemType");
-    console.log(item_type);
     let items = await BladesHelpers.getAllItemsByType(item_type, game);
-    console.log(items);
     this._onItemAddClickRender(event,items, item_type);
   }
 
@@ -47,22 +69,18 @@ export class BladesSheet extends ActorSheet {
       input_type = "radio";
     }
 
-    let html = `<div class="items-to-add">`;
+    let html = `<div class="until-the-curtain-falls"><div class="items-to-add">`;
 
     items.forEach(e => {
       if(!e.system.add_list_ignore) {
         html += `<input id="select-item-${e._id}" type="${input_type}" name="select_items" value="${e._id}">`;
         html += `<label class="flex-horizontal-spaced" for="select-item-${e._id}">`;
-        html += `${game.i18n.localize(e.name)} <i class="tooltip fas fa-question-circle"><span class="tooltiptext">${game.i18n.localize(e.system.description)}</span></i>`;
+        html += `${game.i18n.localize(e.name)} <i class="tooltip fas fa-question-circle"><span class="tooltip-text">${game.i18n.localize(e.system.description)}</span></i>`;
         html += `</label>`;
       }
     });
 
-    html += `</div>`;
-
-    let options = {
-      // width: "500"
-    }
+    html += `</div></div>`;
 
     let dialog = new Dialog({
       title: `${game.i18n.localize('Add')} ${item_type}`,
@@ -80,11 +98,20 @@ export class BladesSheet extends ActorSheet {
         }
       },
       default: "two"
-    }, options);
+    }, {});
 
     dialog.render(true);
   }
 
+
+  async _onItemCreateClick(event) {
+    event.preventDefault();
+    const item_type = $(event.currentTarget).data("itemType");
+
+    let item = await Item.create({name: `New ${item_type}`, type: item_type}, {parent: this.document});
+
+    item.render();
+  }
   /* -------------------------------------------- */
 
   async addItemsToSheet(item_type, el) {
@@ -155,5 +182,13 @@ export class BladesSheet extends ActorSheet {
     }
 
   /* -------------------------------------------- */
+
+  handle_item_delete(element) {
+    // no-op
+  }
+
+  handle_actor_delete(element) {
+    // no-op
+  }
 
 }

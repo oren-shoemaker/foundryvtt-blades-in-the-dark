@@ -31,6 +31,12 @@
       "Name": "Speaker of the Stars"
     }
   },
+  "UTCF.Charter": {
+    "Label": "Company Charter",
+    "Add": "Create Charter"
+  },
+  "UTCF.Headquarters": "Headquarters",
+  "UTCF.Corruption": "Corruption",
   "UTCF.Stress": "Stress",
   "UTCF.Alias": "Alias",
   "UTCF.Epithet": "Epithet",
@@ -159,10 +165,24 @@
   "UTCF.Coins": "Coins",
   "UTCF.Stash": "Stash",
   "UTCF.CrewReputation": "Crew Reputation",
-  "UTCF.CrewUpgrades": "Crew Upgrades",
-  "UTCF.Hold": "Hold",
-  "UTCF.Weak": "Weak",
-  "UTCF.Strong": "Strong",
+  "UTCF.Company": {
+    "Label": "Company",
+    "Add": "Join Company"
+  },
+  "UTCF.CompanyAbility":{
+    "LabelPlural": "Company Abilities",
+    "Add": "Add Company Ability"
+  },
+  "UTCF.CompanyUpgrade": {
+    "LabelPlural": "Company Upgrades",
+    "Add": "Add Company Upgrade"
+  },
+  "UTCF.Investments": {
+    "Label": "Investments",
+    "Add": "Add Investments",
+    "InvestedCoin": "Invested Coin"
+  },
+  "UTCF.CompanyLifestyle": "Lifestyle",
   "UTCF.Tier": "Tier",
   "UTCF.Rep": "Rep",
   "UTCF.Vault": "Vault",

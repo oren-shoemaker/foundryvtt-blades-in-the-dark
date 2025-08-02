@@ -16,18 +16,31 @@ $hover-opacity: 0.9;
 $hover-brightness: 0.8;
 
 // containers
+.window-content {
+  background-color: $almost_white;
+  background-image: none;
+}
+
 form {
   background-color: white;
   padding: 0px;
   border: solid 5px $almost_black;
 }
 
-.tab[data-tab]{
-  display: none;
-  &.active{
-    display: block;
+.tab-content {
+    flex-grow: 1;
+
+    .tabs {
+      background-color: $almost_black;
+    }
+
+    .tab[data-tab]{
+      display: none;
+      &.active{
+        display: block;
+      }
+    }
   }
-}
 
 .flex-horizontal-spaced {
   display: flex;
@@ -67,6 +80,18 @@ form {
   min-height: 30px !important;
   text-transform: capitalize;
   font-family: Kirsty, serif;  
+  display: flex;  
+}
+
+.black-label-xl-right {
+  background-color: $almost_black;
+  color: $almost_white;
+  font-size: 41px;
+  padding: 2px 5px;
+  min-height: 60px !important;
+  text-transform: capitalize;
+  font-family: Kirsty, serif;
+  justify-content: right;  
   display: flex;  
 }
 
@@ -173,11 +198,19 @@ table {
   }
 }
 
-// inputs
+// inputs and clickables
 input[type="text"]{
   border: 1px solid $almost_black;
   border-radius: 0;
   text-transform: uppercase;
+  font-weight: bold;
+  color: $almost_black;
+  background-color: $almost_white;
+}
+
+input[type="number"]{
+  border: 1px solid $almost_black;
+  border-radius: 0;
   font-weight: bold;
   color: $almost_black;
   background-color: $almost_white;
@@ -196,6 +229,12 @@ i {
 .rollable-text:hover {
   cursor: pointer;
   color: $red;
+}
+
+.editor,
+.editor-content {
+  padding: 5px;
+  min-height: 150px;
 }
 
 // tooltip
@@ -219,5 +258,32 @@ i {
 
   &:hover .tooltip-text {
     visibility: visible;
+  }
+}
+
+// tooth containers
+.big-teeth-container {
+  .big-teeth-wrap {
+    @include toothradio(17px, 50px, "assets/teeth/stresstooth-halfgrey.png", "assets/teeth/stresstooth-red.png");
+    flex-direction: column;
+
+    .big-teeth {
+      display: flex;
+      flex-direction: row;
+      margin-left: 10px;
+    }
+  }
+}
+
+.small-teeth-container {
+  .small-teeth-wrap {
+    @include toothradio(17px, 50px, "assets/teeth/shorttooth-grey.png", "assets/teeth/shorttooth-red.png");
+    flex-direction: column;
+
+    .small-teeth {
+      display: flex;
+      flex-direction: row;
+      margin-left: 10px;
+    }
   }
 }

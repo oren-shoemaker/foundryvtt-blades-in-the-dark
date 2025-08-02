@@ -1,0 +1,30 @@
+{
+  "name": "Our Wills as One",
+  "type": "company_ability",
+  "_id": "rvZFFJBptTIKW6W2",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "logic": "",
+    "description": "<ul id=\"docs-internal-guid-f1feb8c9-7fff-0eb8-25d3-1e4ab4e2a5f7\">\n<li dir=\"ltr\" aria-level=\"2\">\n<p dir=\"ltr\" role=\"presentation\">Members of the Company may use teamwork actions no matter the distance between them</p>\n</li>\n<li dir=\"ltr\" aria-level=\"2\">\n<p dir=\"ltr\" role=\"presentation\">Members of the Company may take 1 stress to whisper a message heard by all members of the Company (including Cohorts)</p>\n</li>\n</ul>"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1753917281464,
+    "modifiedTime": 1753917300173,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_key": "!items!rvZFFJBptTIKW6W2"
+}

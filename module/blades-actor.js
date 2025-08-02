@@ -1,11 +1,13 @@
 import { bladesRoll } from "./blades-roll.js";
 import { BladesHelpers } from "./blades-helpers.js";
+import { Mutex } from "./mutex.js";
 
 /**
  * Extend the basic Actor
  * @extends {Actor}
  */
 export class BladesActor extends Actor {
+  mutex = new Mutex();
 
   /** @override */
   static async create(data, options={}) {
@@ -36,55 +38,124 @@ export class BladesActor extends Actor {
   //** @override */
   async prepareData(){
 
-    // set total attribute values
-    let actor_attributes = this.system.attributes;
-    const classes = await BladesHelpers.getAllItemsByType("class", game);
-    const class_base_attributes = classes.find(cls => cls.system.shortname === this.system.playbook)?.system?.base_skills;
+    switch(this.type) {
+      case 'character': {
+        // set total attribute values
+        let actor_attributes = this.system.attributes;
+        const classes = await BladesHelpers.getAllItemsByType("class", game);
+        const class_base_attributes = classes.find(cls => cls.system.shortname === this.system.playbook)?.system?.base_skills;
 
-    if(actor_attributes) {
-      for(const a in actor_attributes) {
-        for(const s in actor_attributes[a].skills) {
-          let base_value = 0;
-          if(class_base_attributes) {
-            base_value = class_base_attributes[s]?.value;
+        if(actor_attributes) {
+          for(const a in actor_attributes) {
+            for(const s in actor_attributes[a].skills) {
+              let base_value = 0;
+              if(class_base_attributes) {
+                base_value = class_base_attributes[s]?.value;
+              }
+              actor_attributes[a].skills[s].base_value = base_value;
+              actor_attributes[a].skills[s].value = Math.min(actor_attributes[a].skills[s].max, base_value + actor_attributes[a].skills[s].assigned_value);
+            }
           }
-          actor_attributes[a].skills[s].base_value = base_value;
-          actor_attributes[a].skills[s].value = Math.min(actor_attributes[a].skills[s].max, base_value + actor_attributes[a].skills[s].assigned_value);
         }
-      }
+
+        this.update({"system.attributes": actor_attributes});
+
+        // update overencumbrance threshold for My Back Unbroken
+        let encumbered_threshold = 7;
+
+        if(this.items.some(i => i.type === 'ability' && i.system.shortname === 'MBUB')) {
+          encumbered_threshold += 2;
+        }
+
+        if(encumbered_threshold != this.system.encumbered_threshold) {
+          this.update({"system.encumbered_threshold": encumbered_threshold});
+        }
+
+        // update max stress for Veterans of Psychic Wars
+        let max_stress = this.system.stress.max_default;
+        if(this.system.company_id) {
+          const company = BladesHelpers.getActorById(this.system.company_id, game);
+          const has_vopw = company.items.filter(i => i.type === "company_ability").some(i => i.name === 'Veterans of Psychic Wars');
+          if(has_vopw) max_stress++;
+        }
+
+        if(max_stress != this.system.stress.max) {
+          this.update({"system.stress.max": max_stress});
+        }
+      
+        // sync gear linked to abilities
+        const actor_ability_shortnames = this.items.filter(i => i.type === "ability").map(i => i.system.shortname);
+        const linked_actor_gear = this.items.filter(i => i.type === "gear" && i.system.linked_ability);
+        const linked_actor_gear_names = linked_actor_gear.map(i => i.name);
+
+        const linked_gear_to_add = (await BladesHelpers.getAllItemsByType("gear", game)).filter(g => 
+          g.system.linked_ability && 
+          actor_ability_shortnames && 
+          actor_ability_shortnames.includes(g.system.linked_ability) &&
+          !linked_actor_gear_names.includes(g.name)
+        );
+
+
+        const linked_gear_to_remove = linked_actor_gear.filter(g => !actor_ability_shortnames.includes(g.system.linked_ability)).map(g => g._id);
+
+        if(linked_gear_to_add) {
+          await Item.create(linked_gear_to_add, {parent: this})
+        }
+
+        if(linked_gear_to_remove) {
+          await this.deleteEmbeddedDocuments("Item", linked_gear_to_remove);
+        }
+        
+        break;
+      };
+      case 'company': {
+        // set invested coin based on investments item
+        const invested_coin = this.items.find(i => i.type === "investments")?.system.invested_coin;
+        if(this.system.invested_coin !== invested_coin){
+          this.update({"system.coins.invested": invested_coin});
+        }
+        
+        // set lifestyle based on invested coin
+        // need to wrap this in a mutex, otherwise repeated re-rendering causes race conditions
+        // ...which probably means this should be re-architected...
+        const unlock = await this.mutex.lock();
+
+        try {
+          const current_lifestyles = this.items.filter(i => i.type === "lifestyle");
+          let lifestyle_name = '';
+
+          if(invested_coin <=10) {
+            lifestyle_name = 'Threadbare';
+          } else if (invested_coin > 10 && invested_coin <= 30) {
+            lifestyle_name = 'Comfortable';
+          } else if (invested_coin > 30 && invested_coin <= 60) {
+            lifestyle_name = 'Fancy';
+          } else if (invested_coin > 60) {
+            lifestyle_name = 'Lavish';
+          }
+
+          if(!current_lifestyles.some(item => item.name === lifestyle_name)) {
+            const lifestyles_to_add = (await BladesHelpers.getAllItemsByType("lifestyle", game)).filter(i => i.name === lifestyle_name);
+
+            if(lifestyles_to_add) {
+              await Item.create(lifestyles_to_add, {parent: this});
+            }
+          }
+          
+          let lifestyles_to_remove = current_lifestyles.filter(item => item.name !== lifestyle_name).map(i => i._id);  
+
+          if(lifestyles_to_remove) {
+            await this.deleteEmbeddedDocuments("Item", lifestyles_to_remove);
+          }
+        } finally {
+          await unlock();
+        }
+
+        break;
+      };
     }
 
-    this.update({"system.attributes": actor_attributes});
 
-    // update overencumbrance threshold for My Back Unbroken
-    this.items.forEach(i => {
-      if (i.type === "ability" && i.system.shortname === "MBUB") {
-        this.update({"system.encumbered_threshold": 9})
-      }
-    });
-
-    // sync gear linked to abilities
-    const actor_ability_shortnames = this.items.filter(i => i.type === "ability").map(i => i.system.shortname);
-    const linked_actor_gear = this.items.filter(i => i.type === "gear" && i.system.linked_ability);
-    const linked_actor_gear_names = linked_actor_gear.map(i => i.name);
-
-    const linked_gear_to_add = (await BladesHelpers.getAllItemsByType("gear", game)).filter(g => 
-      g.system.linked_ability && 
-      actor_ability_shortnames && 
-      actor_ability_shortnames.includes(g.system.linked_ability) &&
-      !linked_actor_gear_names.includes(g.name)
-    );
-
-
-    const linked_gear_to_remove = linked_actor_gear.filter(g => !actor_ability_shortnames.includes(g.system.linked_ability)).map(g => g._id);
-
-    if(linked_gear_to_add) {
-      await Item.create(linked_gear_to_add, {parent: this})
-    }
-
-    if(linked_gear_to_remove) {
-      await this.deleteEmbeddedDocuments("Item", linked_gear_to_remove);
-    }
   }
 
   /* -------------------------------------------- */
