@@ -19,6 +19,7 @@ $hover-brightness: 0.8;
 .window-content {
   background-color: $almost_white;
   background-image: none;
+  overflow-x: visible;
 }
 
 form {
@@ -235,30 +236,6 @@ i {
 .editor-content {
   padding: 5px;
   min-height: 150px;
-}
-
-// tooltip
-.tooltip {
-
-  .tooltip-text {
-    visibility: hidden;
-    background-color: $lightgray;
-    color: $almost_black;
-    text-align: center;
-    padding: 5px;
-    width: 200px;
-    text-transform: capitalize;
-    font-family: Kirsty, serif;
-    border: 2px solid $almost_black;
-
-    // Position
-    position: absolute;
-    z-index: 9999;
-  }
-
-  &:hover .tooltip-text {
-    visibility: visible;
-  }
 }
 
 // tooth containers

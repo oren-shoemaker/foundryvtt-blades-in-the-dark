@@ -1,3 +1,5 @@
+import { ACTION_POSITIONS } from "./base-system-data.js";
+
 /**
  * Roll Dice.
  * @param {int} dice_amount
@@ -16,8 +18,126 @@ export async function bladesRoll(dice_amount, attribute_name = "", position = "r
   let r = new Roll( `${dice_amount}d6`, {} );
 
   // show 3d Dice so Nice if enabled
-  r.evaluate({async:true});
+  r.evaluate();
   await showChatRollMessage(r, zeromode, attribute_name, position, effect, note, current_stress, current_crew_tier);
+}
+
+export async function actionRoll(num_dice, position, effect) {
+  let roll = await utcfRoll(num_dice);
+  let roll_result = getRollResult(roll, num_dice);
+  let position_label = getLabelForPosition(position);
+  let action_result = getActionResult(position,roll_result);
+
+  if(roll_result === 7)
+    effect++;
+  if(effect > 4)
+    effect = 4;
+  if(effect < 0)
+    effect = 0;
+
+  let effect_label = getLabelForEffect(effect);
+
+  let html = `<div class="until-the-curtain-falls flex-vertical">
+                <span><strong>${game.i18n.localize("UTCF.Action.Position.Label")}:</strong> ${game.i18n.localize(position_label)}</span>
+                <span><strong>${game.i18n.localize("UTCF.Action.Effect.Label")}:</strong> ${game.i18n.localize(effect_label)}</span>
+                <span>${game.i18n.localize(action_result)}</span>
+              </div>`;
+
+  let speaker = ChatMessage.getSpeaker();
+
+  let messageData = {
+    speaker: speaker,
+    content: html, // TODO: use a template for this, dipshit
+    type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+    roll: roll
+  };
+
+  CONFIG.ChatMessage.documentClass.create(messageData, {});
+}
+
+function getLabelForEffect(effect) {
+  switch (effect) {
+    case 0:
+      return "UTCF.Action.Effect.Zero";
+    case 1:
+      return "UTCF.Action.Effect.Limited";
+    case 3:
+      return "UTCF.Action.Effect.Great";
+    case 4:
+      return "UTCF.Action.Effect.Extreme";
+    case 2:
+    default:
+      return "UTCF.Action.Effect.Standard";
+  }
+}
+
+function getLabelForPosition(position) {
+  switch (position) {
+    case 'controlled':
+      return "UTCF.Action.Position.Controlled.Label";
+    case 'desperate':
+      return "UTCF.Action.Position.Desperate.Label";
+    case 'risky':
+    default:
+      return "UTCF.Action.Position.Risky.Label";
+  }
+}
+
+function getActionResult(position, roll_result) {
+  let result_type = '';
+  switch(roll_result) {
+    case 4:
+    case 5:
+      result_type = 'partial_success';
+      break;
+    case 6:
+      result_type = 'success';
+      break;
+    case 7:
+      result_type = 'crit';
+      break;
+    case 1:
+    case 2:
+    case 3:
+    default:
+      result_type = 'fail';
+      break;
+  }
+
+  return ACTION_POSITIONS[position].result[result_type];
+}
+
+async function utcfRoll(num_dice) {
+  let zeromode = false;
+
+  if ( num_dice < 0 ) { num_dice = 0; }
+  if ( num_dice === 0 ) { zeromode = true; num_dice = 2; }
+
+  let r = new Roll( `${num_dice}d6`, {} );
+
+  return await r.evaluate();
+}
+
+function getRollResult(roll, num_dice) {
+  let results = (roll.terms)[0].results.map(a => a.result).sort();
+
+  // not sure how this would happen, but just in case...
+  if(results.length === 0) {
+    return 1;
+  }
+  
+  // use 7 as the return value for a crit
+  if(results.filter(i => i === 6).length > 1) {
+    return 7; 
+  }
+
+  // return lowest value if initial dice pool is 0
+  if(num_dice <= 0) {
+    return results[0];
+  }
+
+  // otherwise return highest value
+  return results.reverse()[0];
 }
 
 /**
@@ -261,102 +381,108 @@ export function getBladesRollVice(rolls, zeromode = false) {
  * Call a Roll popup.
  */
 export async function simpleRollPopup() {
+  let dialog = new foundry.applications.api.DialogV2({
+      window: {
+        contentClasses: ["until-the-curtain-falls", "dialog-window"],
+        title: `Simple Roll`
+      },
+      content: `
+        <h2>${game.i18n.localize("UTCF.RollSomeDice")}</h2>
+        <p>${game.i18n.localize("UTCF.RollTokenDescription")}</p>
+        <form>
+          <div class="form-group">
+            <label>${game.i18n.localize("UTCF.RollNumberOfDice")}:</label>
+            <select id="qty" name="qty">
+              ${Array(11).fill().map((item, i) => `<option value="${i}">${i}d</option>`).join('')}
+            </select>
+          </div>
+          <fieldset class="form-group" style="display:block;justify-content:space-between;">
+            <legend>Roll Types</legend>
+            <div class="radio-group" >
+              <label>
+                <input type="radio" id="fortune" name="rollSelection" checked=true> ${game.i18n.localize("UTCF.Fortune")}
+              </label>
+            </div>
+            <div class="radio-group">
+              <label>
+                <input type="radio" id="gatherInfo" name="rollSelection"> ${game.i18n.localize("UTCF.GatherInformation")}
+              </label>
+            </div>
+            <div class="radio-group">
+              <label>
+                <input type="radio" id="engagement" name="rollSelection"> ${game.i18n.localize("UTCF.Engagement")}
+              </label>
+            </div>
+            <div class="radio-group" style="display:flex;flex-direction:row;justify-content:space-between;">
+              <label><input type="radio" id="indulgeVice" name="rollSelection"> ${game.i18n.localize("UTCF.IndulgeVice")}</label>
+              <span style="width:200px">
+                <label>${game.i18n.localize('UTCF.Stress')}:</label>
+                <select style="width:100px;float:right" id="stress" name="stress">
+                  ${Array(11).fill().map((item, i) => `<option value="${i}">${i}</option>`).join('')}
+                </select>
+              </span>
+            </div>
+            <div class="radio-group" style="display:flex;flex-direction:row;justify-content:space-between;">
+              <label><input type="radio" id="acqurieAsset" name="rollSelection"> ${game.i18n.localize("UTCF.AcquireAsset")}</label>
+              <span style="width:200px">
+                <label>${game.i18n.localize('UTCF.CrewTier')}:</label>
+                <select style="width:100px;float:right" id="tier" name="tier">
+                  ${Array(5).fill().map((item, i) => `<option value="${i}">${i}</option>`).join('')}
+                </select>
+              </span>
+            </div>
+          </fieldset>
+          <div className="form-group">
+            <label>${game.i18n.localize('UTCF.Notes')}:</label>
+            <input id="note" name="note" type="text" value="">
+          </div><br/>
+        </form>
+      `,
+      buttons: [
+        {
+          icon: '<i class="fas fa-check"></i>',
+          label: game.i18n.localize('UTCF.Roll'),
+          action: 'roll',
+          callback: async (html) => {
+            let diceQty = Number(html.find('[name="qty"]')[0].value);
+            let stress = html.find('[name="stress"]')[0].value;
+            let tier = html.find('[name="tier"]')[0].value;
+            let note = html.find('[name="note"]')[0].value;
 
-  new Dialog({
-    title: `Simple Roll`,
-    content: `
-      <h2>${game.i18n.localize("UTCF.RollSomeDice")}</h2>
-      <p>${game.i18n.localize("UTCF.RollTokenDescription")}</p>
-      <form>
-        <div class="form-group">
-          <label>${game.i18n.localize("UTCF.RollNumberOfDice")}:</label>
-          <select id="qty" name="qty">
-            ${Array(11).fill().map((item, i) => `<option value="${i}">${i}d</option>`).join('')}
-          </select>
-        </div>
-        <fieldset class="form-group" style="display:block;justify-content:space-between;">
-          <legend>Roll Types</legend>
-          <div class="radio-group" >
-            <label>
-              <input type="radio" id="fortune" name="rollSelection" checked=true> ${game.i18n.localize("UTCF.Fortune")}
-            </label>
-          </div>
-          <div class="radio-group">
-            <label>
-              <input type="radio" id="gatherInfo" name="rollSelection"> ${game.i18n.localize("UTCF.GatherInformation")}
-            </label>
-          </div>
-          <div class="radio-group">
-            <label>
-              <input type="radio" id="engagement" name="rollSelection"> ${game.i18n.localize("UTCF.Engagement")}
-            </label>
-          </div>
-          <div class="radio-group" style="display:flex;flex-direction:row;justify-content:space-between;">
-            <label><input type="radio" id="indulgeVice" name="rollSelection"> ${game.i18n.localize("UTCF.IndulgeVice")}</label>
-            <span style="width:200px">
-              <label>${game.i18n.localize('UTCF.Stress')}:</label>
-              <select style="width:100px;float:right" id="stress" name="stress">
-                ${Array(11).fill().map((item, i) => `<option value="${i}">${i}</option>`).join('')}
-              </select>
-            </span>
-          </div>
-          <div class="radio-group" style="display:flex;flex-direction:row;justify-content:space-between;">
-            <label><input type="radio" id="acqurieAsset" name="rollSelection"> ${game.i18n.localize("UTCF.AcquireAsset")}</label>
-            <span style="width:200px">
-              <label>${game.i18n.localize('UTCF.CrewTier')}:</label>
-              <select style="width:100px;float:right" id="tier" name="tier">
-                ${Array(5).fill().map((item, i) => `<option value="${i}">${i}</option>`).join('')}
-              </select>
-            </span>
-          </div>
-        </fieldset>
-        <div className="form-group">
-          <label>${game.i18n.localize('UTCF.Notes')}:</label>
-          <input id="note" name="note" type="text" value="">
-        </div><br/>
-      </form>
-    `,
-    buttons: {
-      yes: {
-        icon: "<i class='fas fa-check'></i>",
-        label: `Roll`,
-        callback: async (html) => {
-          let diceQty = Number(html.find('[name="qty"]')[0].value);
-          let stress = html.find('[name="stress"]')[0].value;
-          let tier = html.find('[name="tier"]')[0].value;
-          let note = html.find('[name="note"]')[0].value;
+            let input = html.find("input");
+            for (let i = 0; i < input.length; i++){
+              if (input[i].checked) {
+                switch (input[i].id) {
+                  case 'gatherInfo':
+                    await bladesRoll(diceQty,"UTCF.GatherInformation","","",note,"");
+                    break;
+                  case 'engagement':
+                    await bladesRoll(diceQty,"UTCF.Engagement","","",note,"");
+                    break;
+                  case 'indulgeVice':
+                    await bladesRoll(diceQty,"UTCF.Vice","","",note,stress);
+                    break;
+                  case 'acqurieAsset':
+                    await bladesRoll(diceQty,"UTCF.AcquireAsset","","",note,"",tier);
+                    break;
 
-          let input = html.find("input");
-          for (let i = 0; i < input.length; i++){
-            if (input[i].checked) {
-              switch (input[i].id) {
-                case 'gatherInfo':
-                  await bladesRoll(diceQty,"UTCF.GatherInformation","","",note,"");
-                  break;
-                case 'engagement':
-                  await bladesRoll(diceQty,"UTCF.Engagement","","",note,"");
-                  break;
-                case 'indulgeVice':
-                  await bladesRoll(diceQty,"UTCF.Vice","","",note,stress);
-                  break;
-                case 'acqurieAsset':
-                  await bladesRoll(diceQty,"UTCF.AcquireAsset","","",note,"",tier);
-                  break;
-
-                default:
-                  await bladesRoll(diceQty,"","","",note,"");
-                  break;
+                  default:
+                    await bladesRoll(diceQty,"","","",note,"");
+                    break;
+                }
+                break;
               }
-              break;
             }
-          }
+          },
         },
-      },
-      no: {
-        icon: "<i class='fas fa-times'></i>",
-        label: game.i18n.localize('Cancel'),
-      },
-    },
-    default: "yes"
-  }).render(true);
+        {
+          icon: '<i class="fas fa-times"></i>',
+          label: game.i18n.localize('Cancel'),
+          action: 'cancel',
+          callback: () => false
+        }
+      ]
+    }, {});
+
+    dialog.render(true);
 }

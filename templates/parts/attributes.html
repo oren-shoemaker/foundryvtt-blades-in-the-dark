@@ -29,8 +29,8 @@
                 <label for="attributes-{{../../../_id}}-{{skill_name}}-{{this}}"></label>
               {{/times_from_1}}
 
-              <div class="skill-label roll-die-attribute rollable-text" data-roll-attribute="{{skill_name}}">{{localize skill.label}}</div>
-              <i class="tooltip fas fa-question-circle"><span class="tooltip-text">{{localize skill.tooltip}}</span></i>
+              <div class="skill-label roll-die-action rollable-text" data-roll-action="{{skill_name}}">{{localize skill.label}}</div>
+              <i class="fas fa-question-circle" data-tooltip-direction="RIGHT" data-tooltip="{{localize skill.tooltip}}"></i>
             {{/multiboxes}}
           </div>
         </div>

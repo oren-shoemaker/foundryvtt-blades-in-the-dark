@@ -74,13 +74,6 @@
       "type": "Item"
     },
     {
-      "name": "vice",
-      "label": "Vices",
-      "system": "until-the-curtain-falls",
-      "path": "./packs/vices.db",
-      "type": "Item"
-    },
-    {
       "name": "background",
       "label": "Backgrounds",
       "system": "until-the-curtain-falls",
@@ -101,35 +94,7 @@
       "path": "./packs/abilities",
       "type": "Item"
     },
-    {
-      "name": "crew_reputation",
-      "label": "Crew Reputation",
-      "system": "until-the-curtain-falls",
-      "path": "./packs/crew_reputation.db",
-      "type": "Item"
-    },
-    {
-      "name": "crew_type",
-      "label": "Crew Types",
-      "system": "until-the-curtain-falls",
-      "path": "./packs/crew_types.db",
-      "type": "Item"
-    },
-    {
-      "name": "crew_upgrade",
-      "label": "Crew Upgrades",
-      "system": "until-the-curtain-falls",
-      "path": "./packs/crew_upgrades.db",
-      "type": "Item"
-    },
-    {
-      "name": "crew_ability",
-      "label": "Crew Abilities",
-      "system": "until-the-curtain-falls",
-      "path": "./packs/crew_abilities.db",
-      "type": "Item"
-    },
-	{
+	  {
       "name": "faction",
       "label": "Factions",
       "system": "until-the-curtain-falls",
@@ -142,27 +107,6 @@
       "system": "until-the-curtain-falls",
       "path": "./packs/npcs.db",
       "type": "Actor"
-    },
-	{
-      "name": "entanglements",
-      "label": "Entanglements",
-      "system": "until-the-curtain-falls",
-      "path": "./packs/entanglements.db",
-      "type": "RollTable"
-    },
-	{
-      "name": "entanglements-journals",
-      "label": "Entanglements Journals",
-      "system": "until-the-curtain-falls",
-      "path": "./packs/entanglements-journals.db",
-      "type": "JournalEntry"
-    },
-	{
-      "name": "entanglements-macro",
-      "label": "Entanglements Macro",
-      "system": "until-the-curtain-falls",
-      "path": "./packs/entanglements-macro.db",
-      "type": "Macro"
     }
   ]
 }

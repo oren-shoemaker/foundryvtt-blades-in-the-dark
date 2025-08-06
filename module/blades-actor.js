@@ -1,6 +1,7 @@
-import { bladesRoll } from "./blades-roll.js";
+import { actionRoll, bladesRoll } from "./blades-roll.js";
 import { BladesHelpers } from "./blades-helpers.js";
 import { Mutex } from "./mutex.js";
+import { ACTION_EFFECTS, ACTION_POSITIONS } from "./base-system-data.js";
 
 /**
  * Extend the basic Actor
@@ -30,7 +31,7 @@ export class BladesActor extends Actor {
   getRollData() {
     const rollData = super.getRollData();
 
-    rollData.dice_amount = this.getAttributeDiceToThrow();
+    rollData.dice_amount = this.getDiePools();
 
     return rollData;
   }
@@ -48,12 +49,13 @@ export class BladesActor extends Actor {
         if(actor_attributes) {
           for(const a in actor_attributes) {
             for(const s in actor_attributes[a].skills) {
+              let assigned_value = Number(actor_attributes[a].skills[s].assigned_value);
               let base_value = 0;
               if(class_base_attributes) {
-                base_value = class_base_attributes[s]?.value;
+                base_value = Number(class_base_attributes[s]?.value);
               }
               actor_attributes[a].skills[s].base_value = base_value;
-              actor_attributes[a].skills[s].value = Math.min(actor_attributes[a].skills[s].max, base_value + actor_attributes[a].skills[s].assigned_value);
+              actor_attributes[a].skills[s].value = Math.min(actor_attributes[a].skills[s].max, base_value + assigned_value);
             }
           }
         }
@@ -162,39 +164,114 @@ export class BladesActor extends Actor {
   /**
    * Calculate Attribute Dice to throw.
    */
-  getAttributeDiceToThrow() {
-
+  getDiePools() {
     // Calculate Dice to throw.
-    let dice_amount = {};
-    dice_amount['UTCF.Vice'] = 4;
+    let die_pools = {};
+    die_pools['UTCF.Vice'] = 4;
 
     for (var attribute_name in this.system.attributes) {
-      dice_amount[attribute_name] = 0;
+      die_pools[attribute_name] = 0;
       for (var skill_name in this.system.attributes[attribute_name].skills) {
-        dice_amount[skill_name] = parseInt(this.system.attributes[attribute_name].skills[skill_name]['value'][0])
+        die_pools[skill_name] = Number(this.system.attributes[attribute_name].skills[skill_name].value)
 
         // We add a +1d for every skill higher than 0.
-        if (dice_amount[skill_name] > 0) {
-          dice_amount[attribute_name]++;
+        if (die_pools[skill_name] > 0) {
+          die_pools[attribute_name]++;
         }
       }
       // Vice dice roll uses lowest attribute dice amount
-      if (dice_amount[attribute_name] < dice_amount['UTCF.Vice'] ) {
-        dice_amount['UTCF.Vice'] = dice_amount[attribute_name];
+      if (die_pools[attribute_name] < die_pools['UTCF.Vice'] ) {
+        die_pools['UTCF.Vice'] = die_pools[attribute_name];
       }
     }
 
-    return dice_amount;
+    return die_pools;
+  }
+
+  /* -------------------------------------------- */
+
+  rollActionDialog(action_name) {
+    let action_label = BladesHelpers.getRollLabel(action_name);
+
+    let html = `
+      <h2>${game.i18n.localize('UTCF.Roll')} ${game.i18n.localize(action_label)}</h2>
+      <form>`;
+
+    // position
+    html += `
+            <div class="form-group">
+              <label>${game.i18n.localize('UTCF.Action.Position.Label')}:</label>
+              <select id="pos" name="pos">`
+
+    for(const [position, value] of Object.entries(ACTION_POSITIONS)) {
+      html += `
+                <option value="${position}">${game.i18n.localize(value.label)}</option>`
+    }
+    
+    html+=`
+                </select>
+            </div>`
+    
+    // effect
+    html += `
+            <div class="form-group">
+              <label>${game.i18n.localize('UTCF.Action.Effect.BaseLabel')}:</label>
+              <select id="fx" name="fx">`
+
+    ACTION_EFFECTS.filter(e => !['zero','extreme'].includes(e.effect) ).forEach(effect => {
+      html += `
+                <option value="${effect.ordinal}">${game.i18n.localize(effect.label)}</option>`
+    })
+    
+    html+=`
+                </select>
+            </div>`
+
+    
+
+    // show total dice to be rolled
+    html += `
+            <label>Dice to roll: ${this.getDiePools()[action_name]}d6</label>`;
+
+    html += `
+      </form>`;
+
+    new foundry.applications.api.DialogV2({
+      window: {
+        contentClasses: ["until-the-curtain-falls", "roll-dialog-window"],
+        title: `${game.i18n.localize('UTCF.Roll')} ${game.i18n.localize(action_label)}`
+      },
+      content: html,
+      buttons: [
+        {
+          icon: '<i class="fas fa-check"></i>',
+          label: game.i18n.localize('UTCF.Roll'),
+          action: 'roll',
+          callback: async (event, button, dialog) => {
+            let position = button.form.elements.pos.value;
+            let effect = button.form.elements.fx.value;
+            let dice = this.getDiePools()[action_name];
+            await actionRoll(dice,position,effect);
+          }
+        },
+        {
+          icon: '<i class="fas fa-times"></i>',
+          label: game.i18n.localize('Close'),
+          action: 'close',
+          default: true,
+          callback: () => false
+        }
+      ]
+    }).render({force: true});
   }
 
   /* -------------------------------------------- */
 
   rollAttributePopup(attribute_name) {
 
-    // const roll = new Roll("1d20 + @abilities.wis.mod", actor.getRollData());
     let attribute_label = BladesHelpers.getRollLabel(attribute_name);
 
-    let content = `
+    let html = `
         <h2>${game.i18n.localize('UTCF.Roll')} ${game.i18n.localize(attribute_label)}</h2>
         <form>
           <div class="form-group">
@@ -204,9 +281,9 @@ export class BladesActor extends Actor {
             </select>
           </div>`;
     if (BladesHelpers.isAttributeAction(attribute_name)) {
-      content += `
+      html += `
             <div class="form-group">
-              <label>${game.i18n.localize('UTCF.Position')}:</label>
+              <label>${game.i18n.localize('UTCF.Action.Position.Label')}:</label>
               <select id="pos" name="pos">
                 <option value="controlled">${game.i18n.localize('UTCF.PositionControlled')}</option>
                 <option value="risky" selected>${game.i18n.localize('UTCF.PositionRisky')}</option>
@@ -222,11 +299,11 @@ export class BladesActor extends Actor {
               </select>
             </div>`;
     } else {
-        content += `
+        html += `
             <input  id="pos" name="pos" type="hidden" value="">
             <input id="fx" name="fx" type="hidden" value="">`;
     }
-    content += `
+    html += `
         <div className="form-group">
           <label>${game.i18n.localize('UTCF.Notes')}:</label>
           <input id="note" name="note" type="text" value="">
@@ -234,28 +311,36 @@ export class BladesActor extends Actor {
         </form>
       `;
 
-    new Dialog({
-      title: `${game.i18n.localize('UTCF.Roll')} ${game.i18n.localize(attribute_label)}`,
-      content: content,
-      buttons: {
-        yes: {
-          icon: "<i class='fas fa-check'></i>",
+    let dialog = new foundry.applications.api.DialogV2({
+      window: {
+        contentClasses: ["until-the-curtain-falls", "dialog-window"],
+        title: `${game.i18n.localize('UTCF.Roll')} ${game.i18n.localize(attribute_label)}`
+      },
+      content: html,
+      buttons: [
+        {
+          icon: '<i class="fas fa-check"></i>',
           label: game.i18n.localize('UTCF.Roll'),
-          callback: async (html) => {
-            let modifier = parseInt(html.find('[name="mod"]')[0].value);
-            let position = html.find('[name="pos"]')[0].value;
-            let effect = html.find('[name="fx"]')[0].value;
-            let note = html.find('[name="note"]')[0].value;
+          action: 'roll',
+          callback: async (event, button, dialog) => {
+            let modifier = parseInt(button.form.elements.mod.value);
+            let position = button.form.elements.pos.value;
+            let effect = button.form.elements.fx.value;
+            let note = button.form.elements.note.value;
+
             await this.rollAttribute(attribute_name, modifier, position, effect, note);
           }
         },
-        no: {
-          icon: "<i class='fas fa-times'></i>",
+        {
+          icon: '<i class="fas fa-times"></i>',
           label: game.i18n.localize('Close'),
-        },
-      },
-      default: "yes",
-    }).render(true);
+          action: 'close',
+          callback: () => false
+        }
+      ]
+    }, {});
+
+    dialog.render(true);
 
   }
 

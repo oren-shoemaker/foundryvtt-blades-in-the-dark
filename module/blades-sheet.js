@@ -50,6 +50,11 @@ export class BladesSheet extends ActorSheet {
     }
 
     html.find(".roll-die-attribute").click(this._onRollAttributeDieClick.bind(this));
+
+    html.find(".roll-die-action").click(ev => {
+      const action_name = $(ev.currentTarget).data("rollAction");
+      this.actor.rollActionDialog(action_name);
+    })
   }
 
   /* -------------------------------------------- */
@@ -69,35 +74,39 @@ export class BladesSheet extends ActorSheet {
       input_type = "radio";
     }
 
-    let html = `<div class="until-the-curtain-falls"><div class="items-to-add">`;
+    let html = `<div class="items-to-add flex-vertical">`;
 
     items.forEach(e => {
       if(!e.system.add_list_ignore) {
         html += `<input id="select-item-${e._id}" type="${input_type}" name="select_items" value="${e._id}">`;
         html += `<label class="flex-horizontal-spaced" for="select-item-${e._id}">`;
-        html += `${game.i18n.localize(e.name)} <i class="tooltip fas fa-question-circle"><span class="tooltip-text">${game.i18n.localize(e.system.description)}</span></i>`;
+        html += `${game.i18n.localize(e.name)} <i class="fas fa-question-circle" data-tooltip-direction="RIGHT" data-tooltip="${foundry.utils.escapeHTML(e.system.description)}"></i>`;
         html += `</label>`;
       }
     });
 
-    html += `</div></div>`;
+    html += `</div>`;
 
-    let dialog = new Dialog({
-      title: `${game.i18n.localize('Add')} ${item_type}`,
+    let dialog = new foundry.applications.api.DialogV2({
+      window: {
+        contentClasses: ["until-the-curtain-falls", "dialog-window"],
+        title: `${game.i18n.localize('Add')} ${item_type}`
+      },
       content: html,
-      buttons: {
-        one: {
+      buttons: [
+        {
           icon: '<i class="fas fa-check"></i>',
           label: game.i18n.localize('Add'),
+          action: 'add',
           callback: async (html) => await this.addItemsToSheet(item_type, $(html).find('.items-to-add'))
         },
-        two: {
+        {
           icon: '<i class="fas fa-times"></i>',
           label: game.i18n.localize('Cancel'),
+          action: 'cancel',
           callback: () => false
         }
-      },
-      default: "two"
+      ]
     }, {});
 
     dialog.render(true);

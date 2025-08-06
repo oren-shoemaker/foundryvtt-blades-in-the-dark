@@ -39,8 +39,6 @@ $hover-brightness: 0.8;
     @import 'import/item-sheet-2.scss';
   }
 
-  // @import 'import/clocks.scss';
-
   &.crew.sheet{
     @import 'import/crew-sheet.scss';
   }
@@ -49,6 +47,7 @@ $hover-brightness: 0.8;
     @import 'import/company-sheet.scss';
   }
 
-  // &.actor.clock{
-  // }
+  &.actor.clock{
+    @import 'import/clocks.scss';
+  }
 }

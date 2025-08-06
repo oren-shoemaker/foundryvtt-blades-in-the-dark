@@ -1,426 +1,461 @@
 {
-  "UTCF.HelloThere": "General Kenobi",
-  "UTCF.Heritage": "Heritage",
-  "UTCF.Homeland": {
-    "Label": "Homeland",
-    "AddLabel": "Choose a Homeland"
-  },
-  "UTCF.Background": {
-    "Label": "Background",
-    "AddLabel": "Choose a Background"
-  },
-  "UTCF.TitleDeleteItem": "Delete item",
-  "UTCF.TitlePostItem": "Post item",
-  "UTCF.Vice": "Vice",
-  "UTCF.Class": {
-    "Label": "Class",
-    "AddLabel": "Choose a Class",
-    "SEN": {
-      "Name": "Sentinel of the Curtain"
+  "UTCF": {
+    "HelloThere": "General Kenobi",
+    "Heritage": "Heritage",
+    "Homeland": {
+      "Label": "Homeland",
+      "AddLabel": "Choose a Homeland"
     },
-    "HUN": {
-      "Name": "Hunter of Corruption"
+    "Background": {
+      "Label": "Background",
+      "AddLabel": "Choose a Background"
     },
-    "SCH": {
-      "Name": "Scholar of Horizons"
-    },
-    "ENG": {
-      "Name": "Engineer of Marvels"
-    },
-    "SPK": {
-      "Name": "Speaker of the Stars"
-    }
-  },
-  "UTCF.Charter": {
-    "Label": "Company Charter",
-    "Add": "Create Charter"
-  },
-  "UTCF.Headquarters": "Headquarters",
-  "UTCF.Corruption": "Corruption",
-  "UTCF.Stress": "Stress",
-  "UTCF.Alias": "Alias",
-  "UTCF.Epithet": "Epithet",
-  "UTCF.Designation": "Designation",
-  "UTCF.Look": "Colors/Look",
-  "UTCF.System": "System",
-  "UTCF.Systems": "Systems",
-  "UTCF.Planet": "Planet",
-  "UTCF.Planets": "Planets",
-  "UTCF.Faction": "Faction",
-  "UTCF.Factions": "Active Factions",
-  "UTCF.Notables": "Notable Locations",
-  "UTCF.NotableNPCs": "Notable People",
-  "UTCF.Scene": "Scene",
-  "UTCF.Rule": "Rule",
-  "UTCF.Stats": "Stats",
-  "UTCF.Goal": "Goal",
-  "UTCF.Assets": "Assets",
-  "UTCF.Quirks": "Quirks",
-  "UTCF.Situation": "Situation",
-  "UTCF.Update": "Update",
-  "UTCF.Warning": "Be aware, this will clear all Heat/Wanted",
-  "UTCF.Status": "Status",
-  "UTCF.Jobs": "Jobs",
-  "UTCF.Allies": "Allies",
-  "UTCF.Friends": "Friends",
-  "UTCF.Associates": "Associates",
-  "UTCF.Neutral": "Neutral",
-  "UTCF.Adversaries": "Adversaries",
-  "UTCF.Enemies": "Enemies",
-  "UTCF.AtWar": "At War!",
-  "UTCF.Trauma": "Trauma",
-  "UTCF.MentalTrauma": "Mental Trauma",
-  "UTCF.PhysicalTrauma": "Physical Trauma",
-
-  "UTCF.Harm": {
-    "Label": "Harm",
-    "Lesser": {
-      "Label": "Lesser",
-      "Effect": "Reduced effect"
-    },
-    "Moderate": {
-      "Label": "Moderate",
-      "Effect": "-1D"
-    },
-    "Severe": {
-      "Label": "Severe",
-      "Effect": "Need help"
-    },
-    "Deadly": {
-      "Label": "Deadly",
-      "EffectTrauma": "Physical trauma",
-      "EffectDeath": "Death"
-    }
-  },
-
-  "UTCF.Healing": "Healing",
-  "UTCF.Armor": "Armor",
-  "UTCF.NeedHelp": "Need Help",
-  "UTCF.Load": {
-    "Label": "Load",
-    "Light": "Light",
-    "Normal": "Normal",
-    "Heavy": "Heavy",
-    "Encumbered": {
-      "Tooltip": "Why did you try to carry this much?! Require help when attempting to move at more than a snail's pace or take any nontrivial action."
-    }
-  },
-  "UTCF.Special": "Special",
-  "UTCF.LessEffect": "Less Effect",
-  "UTCF.Description": "Description",
-  "UTCF.Loadout": "Loadout",
-  "UTCF.CrewType": "Crew Type",
-  "UTCF.CrewTypeBox": "Click to choose a Crew Type",
-  "UTCF.FactionType": "Faction Type",
-  "UTCF.Price": "Price",
-  "UTCF.Logic": "Logic",
-  "UTCF.ExpClues": "Exp Clues",
-
-  "UTCF.AbilityPrice": "Ability Price",
-  "UTCF.AbilityClass": "Ability Class",
-
-  "UTCF.Ability": {
-    "Label": "Ability",
-    "LabelPlural": "Abilities",
-    "ClassesLabel": "Classes",
-    "Add": "Add Ability"
-  },
-
-  "UTCF.Attribute": {
-    "LabelPlural": "Attributes",
-    "LabelStarting": "Starting Attributes",
-    "Mind": {
-      "Label": "The Mind",
-      "Short": "Mind"
-    },
-    "Body": {
-      "Label": "The Body",
-      "Short": "Body"
-    },
-    "Will": {
-      "Label": "The Will",
-      "Short": "Will"
-    }
-  },
-
-  "UTCF.Information": "Information",
-  "UTCF.CohortType": "Cohort Type",
-  "UTCF.GangType": "Gang Type",
-  "UTCF.ExpertType": "Expert Type",
-  "UTCF.ScaleAndQuality": "Scale and Quality",
-  "UTCF.ChooseOneOrTwoEdges": "Choose one or two edges and an equal number of flaws",
-  "UTCF.Edges": "Edges",
-  "UTCF.Flaws": "Flaws",
-  "UTCF.Scale": "Scale",
-  "UTCF.Quality": "Quality",
-  "UTCF.AddAdditionalTypeOfGangText": "You can add an additional type to a gang or expert by spending two crew upgrades.<br>When a cohort performs actions for which its types apply, it uses its full quality rating. Otherwise, its quality is zero. A given cohort can have up to two types. Some crew upgrades will add the “Elite” feature to a gang, which gives them +1d when they roll for a given Type.",
-  "UTCF.ClassExpClue1": "Every time you roll a desperate action, mark xp in that action's attribute.",
-  "UTCF.ClassExpClue2": "You expressed your beliefs, drives, heritage, or background.",
-  "UTCF.ClassExpClue3": "You struggled with issues from your vice or traumas during the session.",
-  "UTCF.ClassExpClueDescription": "At the end of each session, for each item below, mark 1 xp (in your playbook or an attribute) or 2 xp if that item occurred multiple times.",
-  "UTCF.Turf": "Turf",
-  "UTCF.Turfs": "Turfs",
-  "UTCF.Lair": "Lair",
-  "UTCF.Coin": "Coin",
-  "UTCF.Coins": "Coins",
-  "UTCF.Stash": "Stash",
-  "UTCF.CrewReputation": "Crew Reputation",
-  "UTCF.Company": {
-    "Label": "Company",
-    "Add": "Join Company"
-  },
-  "UTCF.CompanyAbility":{
-    "LabelPlural": "Company Abilities",
-    "Add": "Add Company Ability"
-  },
-  "UTCF.CompanyUpgrade": {
-    "LabelPlural": "Company Upgrades",
-    "Add": "Add Company Upgrade"
-  },
-  "UTCF.Investments": {
-    "Label": "Investments",
-    "Add": "Add Investments",
-    "InvestedCoin": "Invested Coin"
-  },
-  "UTCF.CompanyLifestyle": "Lifestyle",
-  "UTCF.Tier": "Tier",
-  "UTCF.Rep": "Rep",
-  "UTCF.Vault": "Vault",
-  "UTCF.Heat": "Heat",
-  "UTCF.Wanted": "Wanted",
-  "UTCF.Abilities": "Abilities",
-  "UTCF.Upgrades": "Upgrades",
-  "UTCF.Cohorts": "Cohorts",
-  "UTCF.Notes": "Notes",
-  "UTCF.AllItems": "All Items",
-  "UTCF.CrewXP": "Crew XP",
-  "UTCF.CrewExpClue1": "At the end of each session, for each item below, mark 1 xp (or instead mark 2xp if that item occurred multiple times).",
-  "UTCF.SpecialAbilities": "Special Abilities",
-
-  "UTCF.Gang": "Gang",
-  "UTCF.Expert": "Expert",
-  "UTCF.GangTypeAdepts": "Adepts",
-  "UTCF.GangTypeAdeptsDescription": "Scholars, tinkerers, occultists, and chemists.",
-  "UTCF.GangTypeRooks": "Rooks",
-  "UTCF.GangTypeRooksDescription": "Con artists, spies, and socialites.",
-  "UTCF.GangTypeRovers": "Rovers",
-  "UTCF.GangTypeRoversDescription": "Sailors, carriage drivers, and deathlands scavengers.",
-  "UTCF.GangTypeSkulks": "Skulks",
-  "UTCF.GangTypeSkulksDescription": "Scouts, infiltrators, and thieves.",
-  "UTCF.GangTypeThugs": "Thugs",
-  "UTCF.GangTypeThugsDescription": "Killers, brawlers, and roustabouts.",
-
-  "UTCF.EdgesFearsome": "Fearsome",
-  "UTCF.EdgesFearsomeDescription": "The cohort is terrifying in aspect and reputation.",
-  "UTCF.EdgesIndependent": "Independent",
-  "UTCF.EdgesIndependentDescription": "The cohort can be trusted to make good decisions and act on their own initiative in the absence of direct orders.",
-  "UTCF.EdgesLoyal": "Loyal",
-  "UTCF.EdgesLoyalDescription": "The cohort can't be bribed or turned against you.",
-  "UTCF.EdgesTenacious": "Tenacious",
-  "UTCF.EdgesTenaciousDescription": "The cohort won't be deterred from a task.",
-
-  "UTCF.FlawsPrincipled": "Principled",
-  "UTCF.FlawsPrincipledDescription": "The cohort has an ethic or values that it won't betray.",
-  "UTCF.FlawsSavage": "Savage",
-  "UTCF.FlawsSavageDescription": "The cohort is excessively violent and cruel.",
-  "UTCF.FlawsUnreliable": "Unreliable",
-  "UTCF.FlawsUnreliableDescription": "The cohort isn't always available, due to other obligations, stupefaction from their vices, etc.",
-  "UTCF.FlawsWild": "Wild",
-  "UTCF.FlawsWildDescription": "The cohort is drunken, debauched, and loud-mouthed.",
-
-  "UTCF.HarmNoHarm": "No Harm",
-  "UTCF.HarmNoHarmDescription": "The cohort is healthy.",
-  "UTCF.HarmWeakened": "Weakened",
-  "UTCF.HarmWeakenedDescription": "The cohort has reduced effect.",
-  "UTCF.HarmImpaired": "Impaired",
-  "UTCF.HarmImpairedDescription": "The cohort operates with reduced quality (-1d).",
-  "UTCF.HarmBroken": "Broken",
-  "UTCF.HarmBrokenDescription": "The cohort can't do anything until they recover.",
-  "UTCF.HarmDead": "Dead",
-  "UTCF.HarmDeadDescription": "The cohort is destroyed. You can spend coin equal to your Tier +2 to restore it, plus two downtime activities to recruit new gang members, or hire a new expert.",
-
-  "UTCF.Roll": "Roll",
-  "UTCF.RollFailure": "Failure",
-  "UTCF.RollCriticalSuccess": "Critical Success!",
-  "UTCF.RollSuccess": "Success",
-  "UTCF.RollPartialSuccess": "Partial Success",
-  "UTCF.RollSomeDice": "Roll Some Dice!",
-  "UTCF.RollTokenDescription": "If you want to pull the numbers from a character, select their Token first.",
-  "UTCF.RollNumberOfDice": "Number of Dice",
-  "UTCF.RollDoWithIncreasedEffect": "You do it with <strong>increased effect</strong>.",
-  "UTCF.RollDo": "You do it.",
-  "UTCF.RollPartialSuccessPositionControlled": "You hesitate. Withdraw and try a different approach, or else do it with a minor consequence: a <strong>minor complication</strong> occurs, you have <strong>reduced effect</strong>, you suffer <strong>lesser harm</strong>, you end up in a <strong>risky</strong> position.",
-  "UTCF.RollPartialSuccessPositionRisky": "You do it, but there's a consequence: you suffer <strong>harm</strong>, a <strong>complication</strong> occurs, you have <strong>reduced effect</strong>, you end up in a <strong>desperate</strong> position.",
-  "UTCF.RollPartialSuccessPosition": "You do it, but there's a consequence: you suffer <strong>severe harm</strong>, a <strong>serious complication</strong> occurs, you have <strong>reduced effect</strong>.",
-  "UTCF.RollFailurePositionControlled": "You falter. Press on by seizing a <strong>risky</strong> opportunity, or withdraw and try a different approach.",
-  "UTCF.RollFailurePositionRisky": "Things go badly. You suffer <strong>harm</strong>, a <strong>complication</strong> occurs, you end up in a <strong>desperate</strong> position, you <strong>lose this opportunity</strong>.",
-  "UTCF.RollFailurePositionDesperate": "It's the worst outcome. You suffer <strong>severe harm</strong>, a <strong>serious complication occurs</strong>, you <strong>lose this opportunity for action</strong>.",
-  "UTCF.RollResistance": "You <strong>reduce</strong> or <strong>avoid</strong> the effects of the consequence (GM chooses).<br/>Suffer <strong>{stress} stress</strong>.",
-  "UTCF.RollResistanceCritical": "You <strong>reduce</strong> or <strong>avoid</strong> the effects of the consequence (GM chooses).<br/>Clear <strong>1 stress</strong>.",
-
-  "UTCF.PositionControlled": "Controlled",
-  "UTCF.PositionRisky": "Risky",
-  "UTCF.PositionDesperate": "Desperate",
-  "UTCF.EffectLimited": "Limited",
-  "UTCF.EffectStandard": "Standard",
-  "UTCF.EffectGreat": "Great",
-  "UTCF.Skills": {
-    "Forge": {
-      "Label": "Forge",
-      "Tooltip": "Create, enhance, or use objects or structures"
-    },
-    "Study": {
-      "Label": "Study",
-      "Tooltip": "Examine, research, and draw conclusions and connections"
-    },
-    "Seek": {
-      "Label": "Seek",
-      "Tooltip": "Search for a person, place, or object"
-    },
-    "Finesse": {
-      "Label": "Finesse",
-      "Tooltip": "Manipulate the physical world with dexterity, accuracy, and precision"
-    },
-    "Traverse": {
-      "Label": "Traverse",
-      "Tooltip": "Move through the world with speed, stealth, or stamina"
-    },
-    "Force": {
-      "Label": "Force",
-      "Tooltip": "Use raw, physical strength to accomplish a goal"
-    },
-    "Attune": {
-      "Label": "Attune",
-      "Tooltip": "Control the magical currents that flow through the world"
-    },
-    "Command": {
-      "Label": "Command",
-      "Tooltip": "Lead a group, take control of a situation, or compel another"
-    },
-    "Consort": {
-      "Label": "Consort",
-      "Tooltip": "Convince, beguile, or parlay with another intelligent creature"
-    }
-  },
-
-  "UTCF.Gear": {
-    "Class": "Class",
-    "Load": "Load",
-    "Uses": "Uses",
-    "MaxUses": "Maximum Uses",
-    "LinkedAbility": "Linked Ability (for special armor)",
-    "Rarity": {
-      "Label": "Rarity",
-      "Common": "Common",
-      "Uncommon": "Uncommon",
-      "Rare": "Rare",
-      "Legendary": "Legendary"
-    },
-    "Quality": "Quality Bonus",
-    "Properties": {
-      "Label": "Properties",
-      "Alchemical": {
-        "Label": "Alchemical",
-        "Tooltip": "Gear created from strange materials through an alchemical process"
+    "TitleDeleteItem": "Delete item",
+    "TitlePostItem": "Post item",
+    "Vice": "Vice",
+    "Class": {
+      "Label": "Class",
+      "AddLabel": "Choose a Class",
+      "SEN": {
+        "Name": "Sentinel of the Curtain"
       },
-      "Consumable" :{
-        "Label": "Consumable",
-        "Tooltip": "Can only be used a limited number of times"
+      "HUN": {
+        "Name": "Hunter of Corruption"
       },
-      "Corrupted": {
-        "Label": "Corrupted",
-        "Tooltip": "Touched by Hateful Things; use increases the Company's corruption"
+      "SCH": {
+        "Name": "Scholar of Horizons"
       },
-      "Magical": {
-        "Label": "Magical",
-        "Tooltip": "Gear created through a ritual or other arcane process"
+      "ENG": {
+        "Name": "Engineer of Marvels"
       },
-      "Mechanical": {
-        "Label": "Mechanical",
-        "Tooltip": "Gear created by forging, tinkering, and fine-tuning"
-      },
-      "SpecialArmor": {
-        "Label": "Special Armor",
-        "Tooltip": "Indicates that this is special armor granted by an ability"
+      "SPK": {
+        "Name": "Speaker of the Stars"
       }
-    }
-  },
+    },
+    "Charter": {
+      "Label": "Company Charter",
+      "Add": "Create Charter"
+    },
+    "Headquarters": "Headquarters",
+    "Corruption": "Corruption",
+    "Stress": "Stress",
+    "Alias": "Alias",
+    "Epithet": "Epithet",
+    "Designation": "Designation",
+    "Look": "Colors/Look",
+    "System": "System",
+    "Systems": "Systems",
+    "Planet": "Planet",
+    "Planets": "Planets",
+    "Faction": "Faction",
+    "Factions": "Active Factions",
+    "Notables": "Notable Locations",
+    "NotableNPCs": "Notable People",
+    "Scene": "Scene",
+    "Rule": "Rule",
+    "Stats": "Stats",
+    "Goal": "Goal",
+    "Assets": "Assets",
+    "Quirks": "Quirks",
+    "Situation": "Situation",
+    "Update": "Update",
+    "Warning": "Be aware, this will clear all Heat/Wanted",
+    "Status": "Status",
+    "Jobs": "Jobs",
+    "Allies": "Allies",
+    "Friends": "Friends",
+    "Associates": "Associates",
+    "Neutral": "Neutral",
+    "Adversaries": "Adversaries",
+    "Enemies": "Enemies",
+    "AtWar": "At War!",
+    "Trauma": "Trauma",
+    "MentalTrauma": "Mental Trauma",
+    "PhysicalTrauma": "Physical Trauma",
 
-  "UTCF.Spell": {
-    "LabelPlural": "Spells",
-    "Cost": "Stress Cost",
-    "Add": "Add spell"
-  },
+    "Harm": {
+      "Label": "Harm",
+      "Lesser": {
+        "Label": "Lesser",
+        "Effect": "Reduced effect"
+      },
+      "Moderate": {
+        "Label": "Moderate",
+        "Effect": "-1D"
+      },
+      "Severe": {
+        "Label": "Severe",
+        "Effect": "Need help"
+      },
+      "Deadly": {
+        "Label": "Deadly",
+        "EffectTrauma": "Physical trauma",
+        "EffectDeath": "Death"
+      }
+    },
 
-  "UTCF.AddItem": "Add Item",
-  "UTCF.Uses": "No. of Uses",
-  "UTCF.NumberAvailable": "Number Available",
-  "UTCF.AdditionalInfo": "Additional Information",
+    "Healing": "Healing",
+    "Armor": "Armor",
+    "NeedHelp": "Need Help",
+    "Load": {
+      "Label": "Load",
+      "Light": "Light",
+      "Normal": "Normal",
+      "Heavy": "Heavy",
+      "Encumbered": {
+        "Tooltip": "Why did you try to carry this much?! Require help when attempting to move at more than a snail's pace or take any nontrivial action."
+      }
+    },
+    "Special": "Special",
+    "LessEffect": "Less Effect",
+    "Description": "Description",
+    "Loadout": "Loadout",
+    "CrewType": "Crew Type",
+    "CrewTypeBox": "Click to choose a Crew Type",
+    "FactionType": "Faction Type",
+    "Price": "Price",
+    "Logic": "Logic",
+    "ExpClues": "Exp Clues",
 
-  "UTCF.Position": "Position",
-  "UTCF.Effect": "Effect",
-  "UTCF.Modifier": "Modifier",
+    "AbilityPrice": "Ability Price",
+    "AbilityClass": "Ability Class",
 
-  "UTCF.Drain": "Drain",
-  "UTCF.Wear": "Wear",
-  "UTCF.Gloom": "Gloom",
+    "Ability": {
+      "Label": "Ability",
+      "LabelPlural": "Abilities",
+      "ClassesLabel": "Classes",
+      "Add": "Add Ability"
+    },
 
-  "UTCF.Add": "Add",
-  "UTCF.Effects": "Effects",
-  "UTCF.EffectCreate": "Create Effect",
-  "UTCF.EffectToggle": "Toggle Effect",
-  "UTCF.EffectEdit": "Edit Effect",
-  "UTCF.EffectDelete": "Delete Effect",
-  "UTCF.EffectWarning": "Managing Active Effects within an Owned Item is not currently supported by FoundryVTT and will be added in a subsequent update.",
+    "Attribute": {
+      "LabelPlural": "Attributes",
+      "LabelStarting": "Starting Attributes",
+      "Mind": {
+        "Label": "The Mind",
+        "Short": "Mind"
+      },
+      "Body": {
+        "Label": "The Body",
+        "Short": "Body"
+      },
+      "Will": {
+        "Label": "The Will",
+        "Short": "Will"
+      }
+    },
 
-  "UTCF.Name": "Name",
-  "UTCF.CampaignName": "Campaign Name",
+    "Information": "Information",
+    "CohortType": "Cohort Type",
+    "GangType": "Gang Type",
+    "ExpertType": "Expert Type",
+    "ScaleAndQuality": "Scale and Quality",
+    "ChooseOneOrTwoEdges": "Choose one or two edges and an equal number of flaws",
+    "Edges": "Edges",
+    "Flaws": "Flaws",
+    "Scale": "Scale",
+    "Quality": "Quality",
+    "AddAdditionalTypeOfGangText": "You can add an additional type to a gang or expert by spending two crew upgrades.<br>When a cohort performs actions for which its types apply, it uses its full quality rating. Otherwise, its quality is zero. A given cohort can have up to two types. Some crew upgrades will add the “Elite” feature to a gang, which gives them +1d when they roll for a given Type.",
+    "ClassExpClue1": "Every time you roll a desperate action, mark xp in that action's attribute.",
+    "ClassExpClue2": "You expressed your beliefs, drives, heritage, or background.",
+    "ClassExpClue3": "You struggled with issues from your vice or traumas during the session.",
+    "ClassExpClueDescription": "At the end of each session, for each item below, mark 1 xp (in your playbook or an attribute) or 2 xp if that item occurred multiple times.",
+    "Turf": "Turf",
+    "Turfs": "Turfs",
+    "Lair": "Lair",
+    "Coin": "Coin",
+    "Coins": "Coins",
+    "Stash": "Stash",
+    "CrewReputation": "Crew Reputation",
+    "Company": {
+      "Label": "Company",
+      "Add": "Join Company"
+    },
+    "CompanyAbility":{
+      "LabelPlural": "Company Abilities",
+      "Add": "Add Company Ability"
+    },
+    "CompanyUpgrade": {
+      "LabelPlural": "Company Upgrades",
+      "Add": "Add Company Upgrade"
+    },
+    "Investments": {
+      "Label": "Investments",
+      "Add": "Add Investments",
+      "InvestedCoin": "Invested Coin"
+    },
+    "CompanyLifestyle": "Lifestyle",
+    "Tier": "Tier",
+    "Rep": "Rep",
+    "Vault": "Vault",
+    "Heat": "Heat",
+    "Wanted": "Wanted",
+    "Abilities": "Abilities",
+    "Upgrades": "Upgrades",
+    "Cohorts": "Cohorts",
+    "Notes": "Notes",
+    "AllItems": "All Items",
+    "CrewXP": "Crew XP",
+    "CrewExpClue1": "At the end of each session, for each item below, mark 1 xp (or instead mark 2xp if that item occurred multiple times).",
+    "SpecialAbilities": "Special Abilities",
 
-  "UTCF.DangerousFriends": "Dangerous Friends",
-  "UTCF.EnemiesRivals": "Enemies and Rivals",
-  "UTCF.DeadlyFriends": "Deadly Friends",
-  "UTCF.Blank": "",
-  "UTCF.CleverFriends": "Clever Friends",
-  "UTCF.ShadyFriends": "Shady Friends",
-  "UTCF.SlyFriends": "Sly Friends",
-  "UTCF.ShrewdFriends": "Shrewd Friends",
-  "UTCF.DarkServants": "Dark Servants",
-  "UTCF.StrangeFriends": "Strange Friends",
-  "UTCF.Acquaintances": "Acquaintances",
+    "Gang": "Gang",
+    "Expert": "Expert",
+    "GangTypeAdepts": "Adepts",
+    "GangTypeAdeptsDescription": "Scholars, tinkerers, occultists, and chemists.",
+    "GangTypeRooks": "Rooks",
+    "GangTypeRooksDescription": "Con artists, spies, and socialites.",
+    "GangTypeRovers": "Rovers",
+    "GangTypeRoversDescription": "Sailors, carriage drivers, and deathlands scavengers.",
+    "GangTypeSkulks": "Skulks",
+    "GangTypeSkulksDescription": "Scouts, infiltrators, and thieves.",
+    "GangTypeThugs": "Thugs",
+    "GangTypeThugsDescription": "Killers, brawlers, and roustabouts.",
 
-  "UTCF.IndulgeVice": "Indulge Vice",
-  "UTCF.GatherInformation": "Gather Information",
-  "UTCF.Fortune": "Fortune",
-  "UTCF.Engagement": "Engagement",
-  "UTCF.AcquireAsset": "Acquire Asset",
-  "UTCF.AcquireAssetExtra": "To raise the result beyond critical, you may spend <strong>2 coin</strong> per +1 Tier bonus.",
-  "UTCF.CrewTier": "Crew Tier",
+    "EdgesFearsome": "Fearsome",
+    "EdgesFearsomeDescription": "The cohort is terrifying in aspect and reputation.",
+    "EdgesIndependent": "Independent",
+    "EdgesIndependentDescription": "The cohort can be trusted to make good decisions and act on their own initiative in the absence of direct orders.",
+    "EdgesLoyal": "Loyal",
+    "EdgesLoyalDescription": "The cohort can't be bribed or turned against you.",
+    "EdgesTenacious": "Tenacious",
+    "EdgesTenaciousDescription": "The cohort won't be deterred from a task.",
 
-  "UTCF.RollVice": "You indulge your vice.<br/>Clear <strong>{clear_stress} stress</strong>.",
-  "UTCF.RollViceFailure": "You <strong>overindulge</strong>. Clear <strong>{clear_stress} stress</strong> and choose <strong>one</strong> of the following consequences:",
-  "UTCF.RollViceFailureAttactTrouble": "<strong>Attract Trouble.</strong> Select or roll an additional <strong>entanglement.</strong>",
-  "UTCF.RollViceFailureBrag": "<strong>Brag</strong> about your exploits. <strong>+2 Heat</strong>",
-  "UTCF.RollViceFailureLost": "<strong>Lost.</strong> Your character vanishes for a few weeks. Play a different character until this one returns from their bender. When your character returns, they've also healed any harm they had.",
-  "UTCF.RollViceFailureTapped": "<strong>Tapped.</strong> Your current purveyor cuts you off. Find a new source for your vice.",
+    "FlawsPrincipled": "Principled",
+    "FlawsPrincipledDescription": "The cohort has an ethic or values that it won't betray.",
+    "FlawsSavage": "Savage",
+    "FlawsSavageDescription": "The cohort is excessively violent and cruel.",
+    "FlawsUnreliable": "Unreliable",
+    "FlawsUnreliableDescription": "The cohort isn't always available, due to other obligations, stupefaction from their vices, etc.",
+    "FlawsWild": "Wild",
+    "FlawsWildDescription": "The cohort is drunken, debauched, and loud-mouthed.",
 
-  "UTCF.RollFortuneCritical": "The result is <strong>exceptional</strong>. You have <strong>great</strong> or <strong>extreme effect</strong>.",
-  "UTCF.RollFortuneSuccess": "The result is <strong>good</strong>. You have <strong>standard</strong> or <strong>full effect</strong>.",
-  "UTCF.RollFortunePartialSuccess": "The result is <strong>mixed</strong>. You have <strong>limited</strong> or <strong>partial effect</strong>.",
-  "UTCF.RollFortuneFailure": "The result is <strong>bad</strong>. You have <strong>poor</strong> or <strong>little effect</strong>.",
+    "HarmNoHarm": "No Harm",
+    "HarmNoHarmDescription": "The cohort is healthy.",
+    "HarmWeakened": "Weakened",
+    "HarmWeakenedDescription": "The cohort has reduced effect.",
+    "HarmImpaired": "Impaired",
+    "HarmImpairedDescription": "The cohort operates with reduced quality (-1d).",
+    "HarmBroken": "Broken",
+    "HarmBrokenDescription": "The cohort can't do anything until they recover.",
+    "HarmDead": "Dead",
+    "HarmDeadDescription": "The cohort is destroyed. You can spend coin equal to your Tier +2 to restore it, plus two downtime activities to recruit new gang members, or hire a new expert.",
 
-  "UTCF.RollGatherInformationSuccess": "<strong>Great</strong>: You get exceptional details. The information is complete and follow-up questions may expand into related areas or reveal more than you hoped for.",
-  "UTCF.RollGatherInformationPartialSuccess": "<strong>Standard</strong>: You get good details. Clarifying and follow-up questions are possible.",
-  "UTCF.RollGatherInformationFailure": "<strong>Limited</strong>: You get incomplete or partial information. More information gathering will be needed to get all the answers.",
+    "Roll": "Roll",
+    "RollFailure": "Failure",
+    "RollCriticalSuccess": "Critical Success!",
+    "RollSuccess": "Success",
+    "RollPartialSuccess": "Partial Success",
+    "RollSomeDice": "Roll Some Dice!",
+    "RollTokenDescription": "If you want to pull the numbers from a character, select their Token first.",
+    "RollNumberOfDice": "Number of Dice",
+    "RollDoWithIncreasedEffect": "You do it with <strong>increased effect</strong>.",
+    "RollDo": "You do it.",
+    "RollPartialSuccessPositionControlled": "You hesitate. Withdraw and try a different approach, or else do it with a minor consequence: a <strong>minor complication</strong> occurs, you have <strong>reduced effect</strong>, you suffer <strong>lesser harm</strong>, you end up in a <strong>risky</strong> position.",
+    "RollPartialSuccessPositionRisky": "You do it, but there's a consequence: you suffer <strong>harm</strong>, a <strong>complication</strong> occurs, you have <strong>reduced effect</strong>, you end up in a <strong>desperate</strong> position.",
+    "RollPartialSuccessPosition": "You do it, but there's a consequence: you suffer <strong>severe harm</strong>, a <strong>serious complication</strong> occurs, you have <strong>reduced effect</strong>.",
+    "RollFailurePositionControlled": "You falter. Press on by seizing a <strong>risky</strong> opportunity, or withdraw and try a different approach.",
+    "RollFailurePositionRisky": "Things go badly. You suffer <strong>harm</strong>, a <strong>complication</strong> occurs, you end up in a <strong>desperate</strong> position, you <strong>lose this opportunity</strong>.",
+    "RollFailurePositionDesperate": "It's the worst outcome. You suffer <strong>severe harm</strong>, a <strong>serious complication occurs</strong>, you <strong>lose this opportunity for action</strong>.",
+    "RollResistance": "You <strong>reduce</strong> or <strong>avoid</strong> the effects of the consequence (GM chooses).<br/>Suffer <strong>{stress} stress</strong>.",
+    "RollResistanceCritical": "You <strong>reduce</strong> or <strong>avoid</strong> the effects of the consequence (GM chooses).<br/>Clear <strong>1 stress</strong>.",
 
-  "UTCF.RollEngagementCritical": "Exceptional result. You've already <strong>overcome the first obstacle</strong> and you're in a <strong>controlled</strong> position for what's next.",
-  "UTCF.RollEngagementSuccess": "Good result. You're in a <strong>controlled</strong> position when the action starts.",
-  "UTCF.RollEngagementPartialSuccess": "Mixed result. You're in a <strong>risky</strong> position when the action starts.",
-  "UTCF.RollEngagementFailure": "Bad result. You're in a <strong>desperate</strong> position when the action starts.",
+    "Action": {
+      "Position": {
+        "Label": "Position",
+        "BaseLabel": "Base position",
+        "Controlled": {
+          "Label": "Controlled",
+          "Result": {
+            "Fail": "You hesitate; you may try again from a <strong>risky position</strong> or may try a different approach.",
+            "PartialSuccess": "You succeed with a <strong>minor consequence</strong> or may try a different approach."
+          }
+        },
+        "Risky": {
+          "Label": "Risky",
+          "Result": {
+            "Fail": "Your endeavor fails; you must suffer a <strong>standard consequence</strong> or lose this opportunity.",
+            "PartialSuccess": "You succeed at a cost: you suffer a <strong>standard consequence</strong>."
+          }
+        },
+        "Desperate": {
+          "Label": "Desperate",
+          "Result": {
+            "Fail": "Your endeavor comes to ruin; you suffer a <strong>serious consequence</strong> and lose this opportunity.",
+            "PartialSuccess": "You succeed, but a price must be paid: you suffer a <strong>serious consequence</strong>."
+          }
+        },
+        "Result": {
+          "Success": "You succeed in your endeavor.",
+          "Crit": "You succeed with style and <strong>increased effect</strong>."
+        }
+      },
+      "Effect": {
+        "Label": "Effect",
+        "BaseLabel": "Base effect",
+        "Zero": "Zero",
+        "Limited": "Limited",
+        "Standard": "Standard",
+        "Great": "Great",
+        "Extreme": "Extreme"
+      }
+    },
+    "Skills": {
+      "Forge": {
+        "Label": "Forge",
+        "Tooltip": "Create, enhance, or use objects or structures"
+      },
+      "Study": {
+        "Label": "Study",
+        "Tooltip": "Examine, research, and draw conclusions and connections"
+      },
+      "Seek": {
+        "Label": "Seek",
+        "Tooltip": "Search for a person, place, or object"
+      },
+      "Finesse": {
+        "Label": "Finesse",
+        "Tooltip": "Manipulate the physical world with dexterity, accuracy, and precision"
+      },
+      "Traverse": {
+        "Label": "Traverse",
+        "Tooltip": "Move through the world with speed, stealth, or stamina"
+      },
+      "Force": {
+        "Label": "Force",
+        "Tooltip": "Use raw, physical strength to accomplish a goal"
+      },
+      "Attune": {
+        "Label": "Attune",
+        "Tooltip": "Control the magical currents that flow through the world"
+      },
+      "Command": {
+        "Label": "Command",
+        "Tooltip": "Lead a group, take control of a situation, or compel another"
+      },
+      "Consort": {
+        "Label": "Consort",
+        "Tooltip": "Convince, beguile, or parlay with another intelligent creature"
+      }
+    },
 
-  "UTCF.RollAcquireAssetResult": "You gain an asset of <strong>Tier {tier_quality}</strong> quality.",
-  "UTCF.RollAcquireAssetCritical": "Exceptional result.",
-  "UTCF.RollAcquireAssetSuccess": "Good result.",
-  "UTCF.RollAcquireAssetPartialSuccess": "Mixed result.",
-  "UTCF.RollAcquireAssetFailure": "Bad result."
+    "Gear": {
+      "Class": "Class",
+      "Load": "Load",
+      "Uses": "Uses",
+      "MaxUses": "Maximum Uses",
+      "LinkedAbility": "Linked Ability (for special armor)",
+      "Rarity": {
+        "Label": "Rarity",
+        "Common": "Common",
+        "Uncommon": "Uncommon",
+        "Rare": "Rare",
+        "Legendary": "Legendary"
+      },
+      "Quality": "Quality Bonus",
+      "Properties": {
+        "Label": "Properties",
+        "Alchemical": {
+          "Label": "Alchemical",
+          "Tooltip": "Gear created from strange materials through an alchemical process"
+        },
+        "Consumable" :{
+          "Label": "Consumable",
+          "Tooltip": "Can only be used a limited number of times"
+        },
+        "Corrupted": {
+          "Label": "Corrupted",
+          "Tooltip": "Touched by Hateful Things; use increases the Company's corruption"
+        },
+        "Magical": {
+          "Label": "Magical",
+          "Tooltip": "Gear created through a ritual or other arcane process"
+        },
+        "Mechanical": {
+          "Label": "Mechanical",
+          "Tooltip": "Gear created by forging, tinkering, and fine-tuning"
+        },
+        "SpecialArmor": {
+          "Label": "Special Armor",
+          "Tooltip": "Indicates that this is special armor granted by an ability"
+        }
+      }
+    },
+
+    "Spell": {
+      "LabelPlural": "Spells",
+      "Cost": "Stress Cost",
+      "Add": "Add spell"
+    },
+
+    "AddItem": "Add Item",
+    "Uses": "No. of Uses",
+    "NumberAvailable": "Number Available",
+    "AdditionalInfo": "Additional Information",
+    "Effect": "Effect",
+    "Modifier": "Modifier",
+
+    "Drain": "Drain",
+    "Wear": "Wear",
+    "Gloom": "Gloom",
+
+    "Add": "Add",
+    "Effects": "Effects",
+    "EffectCreate": "Create Effect",
+    "EffectToggle": "Toggle Effect",
+    "EffectEdit": "Edit Effect",
+    "EffectDelete": "Delete Effect",
+    "EffectWarning": "Managing Active Effects within an Owned Item is not currently supported by FoundryVTT and will be added in a subsequent update.",
+
+    "Name": "Name",
+    "CampaignName": "Campaign Name",
+
+    "DangerousFriends": "Dangerous Friends",
+    "EnemiesRivals": "Enemies and Rivals",
+    "DeadlyFriends": "Deadly Friends",
+    "Blank": "",
+    "CleverFriends": "Clever Friends",
+    "ShadyFriends": "Shady Friends",
+    "SlyFriends": "Sly Friends",
+    "ShrewdFriends": "Shrewd Friends",
+    "DarkServants": "Dark Servants",
+    "StrangeFriends": "Strange Friends",
+    "Acquaintances": "Acquaintances",
+
+    "IndulgeVice": "Indulge Vice",
+    "GatherInformation": "Gather Information",
+    "Fortune": "Fortune",
+    "Engagement": "Engagement",
+    "AcquireAsset": "Acquire Asset",
+    "AcquireAssetExtra": "To raise the result beyond critical, you may spend <strong>2 coin</strong> per +1 Tier bonus.",
+    "CrewTier": "Crew Tier",
+
+    "RollVice": "You indulge your vice.<br/>Clear <strong>{clear_stress} stress</strong>.",
+    "RollViceFailure": "You <strong>overindulge</strong>. Clear <strong>{clear_stress} stress</strong> and choose <strong>one</strong> of the following consequences:",
+    "RollViceFailureAttactTrouble": "<strong>Attract Trouble.</strong> Select or roll an additional <strong>entanglement.</strong>",
+    "RollViceFailureBrag": "<strong>Brag</strong> about your exploits. <strong>+2 Heat</strong>",
+    "RollViceFailureLost": "<strong>Lost.</strong> Your character vanishes for a few weeks. Play a different character until this one returns from their bender. When your character returns, they've also healed any harm they had.",
+    "RollViceFailureTapped": "<strong>Tapped.</strong> Your current purveyor cuts you off. Find a new source for your vice.",
+
+    "RollFortuneCritical": "The result is <strong>exceptional</strong>. You have <strong>great</strong> or <strong>extreme effect</strong>.",
+    "RollFortuneSuccess": "The result is <strong>good</strong>. You have <strong>standard</strong> or <strong>full effect</strong>.",
+    "RollFortunePartialSuccess": "The result is <strong>mixed</strong>. You have <strong>limited</strong> or <strong>partial effect</strong>.",
+    "RollFortuneFailure": "The result is <strong>bad</strong>. You have <strong>poor</strong> or <strong>little effect</strong>.",
+
+    "RollGatherInformationSuccess": "<strong>Great</strong>: You get exceptional details. The information is complete and follow-up questions may expand into related areas or reveal more than you hoped for.",
+    "RollGatherInformationPartialSuccess": "<strong>Standard</strong>: You get good details. Clarifying and follow-up questions are possible.",
+    "RollGatherInformationFailure": "<strong>Limited</strong>: You get incomplete or partial information. More information gathering will be needed to get all the answers.",
+
+    "RollEngagementCritical": "Exceptional result. You've already <strong>overcome the first obstacle</strong> and you're in a <strong>controlled</strong> position for what's next.",
+    "RollEngagementSuccess": "Good result. You're in a <strong>controlled</strong> position when the action starts.",
+    "RollEngagementPartialSuccess": "Mixed result. You're in a <strong>risky</strong> position when the action starts.",
+    "RollEngagementFailure": "Bad result. You're in a <strong>desperate</strong> position when the action starts.",
+
+    "RollAcquireAssetResult": "You gain an asset of <strong>Tier {tier_quality}</strong> quality.",
+    "RollAcquireAssetCritical": "Exceptional result.",
+    "RollAcquireAssetSuccess": "Good result.",
+    "RollAcquireAssetPartialSuccess": "Mixed result.",
+    "RollAcquireAssetFailure": "Bad result."
+    
+  }
 
 }

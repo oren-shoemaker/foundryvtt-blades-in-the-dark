@@ -250,7 +250,7 @@
            <p class="{{ifThen (gt system.loadout system.max_load) 'overmax' '' }}">
             {{system.loadout}}/{{system.max_load}}
             {{#if (gte system.loadout system.encumbered_threshold)}}
-                <i class="fa-solid fa-circle-exclamation encumbered tooltip"><span class="tooltip-text">{{localize "UTCF.Load.Encumbered.Tooltip"}}</span></i>
+                <i class="fa-solid fa-circle-exclamation encumbered" data-tooltip-direction="RIGHT" data-tooltip="{{localize UTCF.Load.Encumbered.Tooltip}}"></i>
             {{/if}}
           </p>
            <div class="dropdown">

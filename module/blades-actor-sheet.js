@@ -153,6 +153,8 @@ export class BladesActorSheet extends BladesSheet {
       const stress_to_set = new_stress < this.object.system.stress.max ? new_stress : this.object.system.stress.max;
       this.object.update({"system.stress.value": [stress_to_set]})
     });
+
+    html.find('.action-dots-input').change(ev => this._onActionDotsChange(ev, this.actor));
   }
 
   /* -------------------------------------------- */
@@ -165,7 +167,7 @@ export class BladesActorSheet extends BladesSheet {
   }
 
   async _joinCompany(actor) {
-    let html = `<div class="until-the-curtain-falls"><div class="items-to-add">`;
+    let html = `<div class="items-to-add until-the-curtain-falls flex-vertical">`;
 
     let companies = game.actors.filter(a => a.type === "company");
 
@@ -176,28 +178,32 @@ export class BladesActorSheet extends BladesSheet {
       html += `</label>`;
     });
 
-    html += `</div></div>`;
+    html += `</div>`;
 
-    let dialog = new Dialog({
-      title: `${game.i18n.localize('UTCF.Company.Add')}`,
+    let dialog = new foundry.applications.api.DialogV2({
+      window: {
+        contentClasses: ["until-the-curtain-falls", "dialog-window"],
+        title: `${game.i18n.localize('Join')} company`
+      },
       content: html,
-      buttons: {
-        one: {
+      buttons: [
+        {
           icon: '<i class="fas fa-check"></i>',
-          label: game.i18n.localize('Join'),
+          label: game.i18n.localize('Add'),
+          action: 'add',
           callback: async (html) => {
             let element = $(html).find(".items-to-add").find("input:checked");
             let id = $(element).val();
             actor.update({"system.company_id": id})
           }
         },
-        two: {
+        {
           icon: '<i class="fas fa-times"></i>',
           label: game.i18n.localize('Cancel'),
+          action: 'cancel',
           callback: () => false
         }
-      },
-      default: "two"
+      ]
     }, {});
 
     dialog.render(true);
@@ -226,5 +232,7 @@ export class BladesActorSheet extends BladesSheet {
         break;
     }
   }
+
+  
 }
 

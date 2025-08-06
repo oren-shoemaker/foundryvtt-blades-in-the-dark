@@ -1,15 +1,7 @@
 // Add Items modal styling.
 .items-to-add {
-  background-color: $almost_white;
-  padding: 5px;
-  border-bottom: none;
-  border-left: 5px solid $almost_black;
-  border-right: 5px solid $almost_black;
-  border-top: 5px solid $almost-black;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  background-color: white;
+  overflow-y: scroll;
 
   input[type="radio"],
   input[type="checkbox"] {
@@ -27,16 +19,62 @@
   }
 }
 
+.dialog-window {
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.roll-dialog-window {
+  min-width: 400px;
+}
+
+.dialog-content {
+  background-color: white;
+  height: 100%;
+  overflow: hidden;
+
+  h2 {
+    text-transform: capitalize;
+    font-family: Kirsty, serif;
+    color: $almost-black;
+  }
+}
+
 .dialog-buttons {
-  background-color: $almost_white;
-  padding: 5px;
-  border-top: none;
-  border-left: 5px solid $almost_black;
-  border-right: 5px solid $almost_black;
-  border-bottom: 5px solid $almost-black;
+  background-color: white;
 
   .dialog-button {
     text-transform: capitalize;
     font-family: Kirsty, serif;
+  }
+}
+
+.dialog-form {
+  text-transform: capitalize;
+  font-family: Kirsty, serif;
+  padding: 5px;
+  color: $almost-black;
+  overflow: hidden;
+
+  label {
+    color: $almost-black;
+  }
+
+  button {
+    text-transform: capitalize;
+    font-family: Kirsty, serif;
+    color: $almost-white;
+    background-color: $darkgray;
+  }
+
+  input[type="text"] {
+
+    &::placeholder {
+      color: $lightgray;
+    }
+  }
+
+  select {
+    color: $almost-white;
   }
 }
