@@ -58,6 +58,10 @@
 
   label {
     color: $almost-black;
+
+    &.label-red {
+      color: $red;
+    }
   }
 
   button {

@@ -98,7 +98,10 @@ export class BladesSheet extends ActorSheet {
           icon: '<i class="fas fa-check"></i>',
           label: game.i18n.localize('Add'),
           action: 'add',
-          callback: async (html) => await this.addItemsToSheet(item_type, $(html).find('.items-to-add'))
+          callback: async (event, button, dialog) => {
+            var items = button.form.elements.select_items;
+            await this.addItemsToSheet(item_type, items);
+          }
         },
         {
           icon: '<i class="fas fa-times"></i>',
@@ -123,13 +126,13 @@ export class BladesSheet extends ActorSheet {
   }
   /* -------------------------------------------- */
 
-  async addItemsToSheet(item_type, el) {
-
+  async addItemsToSheet(item_type, select_items) {
     let items = await BladesHelpers.getAllItemsByType(item_type, game);
     let items_to_add = [];
 
-    el.find("input:checked").each(function() {
-      items_to_add.push(items.find(e => e._id === $(this).val()));
+    select_items.forEach(item =>{
+      if(item.checked)
+        items_to_add.push(items.find(e => e._id === item.value));
     });
 
     if (items_to_add) {

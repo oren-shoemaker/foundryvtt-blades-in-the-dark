@@ -82,7 +82,6 @@ export class BladesHelpers {
   }
 
   static async getAllAbilitiesByClass(class_shortname,game) {
-    console.log(class_shortname);
     if (!class_shortname) return [];
     let list_of_items = await BladesHelpers.getAllItemsByType("ability", game);
     let abilities = list_of_items.filter(e => e.system.classes.includes(class_shortname));

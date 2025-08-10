@@ -40,8 +40,8 @@ export const ACTION_POSITIONS = {
         "result": {
             "fail": "UTCF.Action.Position.Desperate.Result.Fail",
             "partial_success": "UTCF.Action.Position.Desperate.Result.PartialSuccess",
-            "success": "UTCF.Action.Position.Result.Success",
-            "crit": "UTCF.Action.Position.Result.Crit"
+            "success": "UTCF.Action.Position.Result.Success.Description",
+            "crit": "UTCF.Action.Position.Result.Crit.Description"
         }
     },
     "risky": {
@@ -50,8 +50,8 @@ export const ACTION_POSITIONS = {
         "result": {
             "fail": "UTCF.Action.Position.Risky.Result.Fail",
             "partial_success": "UTCF.Action.Position.Risky.Result.PartialSuccess",
-            "success": "UTCF.Action.Position.Result.Success",
-            "crit": "UTCF.Action.Position.Result.Crit"
+            "success": "UTCF.Action.Position.Result.Success.Description",
+            "crit": "UTCF.Action.Position.Result.Crit.Description"
         }
     },
     "controlled": {
@@ -60,8 +60,8 @@ export const ACTION_POSITIONS = {
         "result": {
             "fail": "UTCF.Action.Position.Controlled.Result.Fail",
             "partial_success": "UTCF.Action.Position.Controlled.Result.PartialSuccess",
-            "success": "UTCF.Action.Position.Result.Success",
-            "crit": "UTCF.Action.Position.Result.Crit"
+            "success": "UTCF.Action.Position.Result.Success.Description",
+            "crit": "UTCF.Action.Position.Result.Crit.Description"
         }
     }
 };

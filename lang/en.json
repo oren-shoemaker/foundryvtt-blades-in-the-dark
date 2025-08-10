@@ -240,7 +240,6 @@
     "HarmDead": "Dead",
     "HarmDeadDescription": "The cohort is destroyed. You can spend coin equal to your Tier +2 to restore it, plus two downtime activities to recruit new gang members, or hire a new expert.",
 
-    "Roll": "Roll",
     "RollFailure": "Failure",
     "RollCriticalSuccess": "Critical Success!",
     "RollSuccess": "Success",
@@ -285,8 +284,20 @@
           }
         },
         "Result": {
-          "Success": "You succeed in your endeavor.",
-          "Crit": "You succeed with style and <strong>increased effect</strong>."
+          "Success":{
+            "Label": "Success",
+            "Description": "You succeed in your endeavor."
+          } ,
+          "Crit": {
+            "Label": "Critical success!",
+            "Description": "You succeed with style and <strong>increased effect</strong>."
+          },
+          "Fail": {
+            "Label": "Failure"
+          },
+          "PartialSuccess": {
+            "Label": "Partial success"
+          }
         }
       },
       "Effect": {
@@ -296,8 +307,22 @@
         "Limited": "Limited",
         "Standard": "Standard",
         "Great": "Great",
-        "Extreme": "Extreme"
-      }
+        "Extreme": "Extreme",
+        "ReducedFromHarm": "Reduced effect from lesser harm"
+      },
+      "Assisted": "Assisted? (+1d)",
+      "DarkBargain": "Dark bargain? (+1d)",
+      "PushYourself": "Push yourself? (+1d, +2 stress)",
+      "PushYourselfSpecialArmor": "Push yourself? (+1d, uses special armor)"
+    },
+    "Roll": {
+      "Label": "Roll",
+      "DicePool": {
+        "Label": "Base dice pool",
+        "ReducedFromHarm": "-1d6 (from moderate harm)",
+        "ActionDots": "d6 (from action dots)"
+      },
+      "ExtraDiceMod": "Extra dice modifier"
     },
     "Skills": {
       "Forge": {

@@ -390,8 +390,6 @@ Hooks.once("init", async function() {
       html += `${game.i18n.localize(prop.label)}</label>`;
     }
 
-    console.log(html);
-
     return new Handlebars.SafeString(html);
   });
 
@@ -508,6 +506,60 @@ Hooks.once("init", async function() {
     }
 
     html += '</header>'
+
+    return new Handlebars.SafeString(html);
+  });
+
+  Handlebars.registerHelper('action-roll-result',function(result){
+    let html = '<label class="roll-result ';
+
+    switch(result) {
+      case 'partial_success':
+        html += 'partial-success">';
+        html += game.i18n.localize("UTCF.Action.Position.Result.PartialSuccess.Label");
+        break;
+      case 'success':
+        html += 'success">';
+        html += game.i18n.localize("UTCF.Action.Position.Result.Success.Label");
+        break;
+      case 'crit':
+        html += 'crit">';
+        html += game.i18n.localize("UTCF.Action.Position.Result.Crit.Label");
+        break;
+      case 'fail':
+      default:
+        html += 'fail">';
+        html += game.i18n.localize("UTCF.Action.Position.Result.Fail.Label");
+        break;
+    }
+
+    html += '</label>';
+
+    return new Handlebars.SafeString(html);
+  });
+
+  Handlebars.registerHelper('roll-result-dice',function(rolls,roll_result,zero_mode) {
+    let color_class = roll_result.replace('_', '-');
+    let html = '<div class="roll-result-dice-container">';
+    for(let i=0;i<rolls.length;i++) {
+      html += '<label class="roll-result die ';
+      if(zero_mode) {
+        if(i === 0) {
+          html += color_class;
+        } else {
+          html += 'extra';
+        }
+      } else {
+        if(i === rolls.length-1 || (i === rolls.length-2 && roll_result === 'crit')) {
+          html += color_class; 
+        } else {
+          html += 'extra';
+        }
+      }
+      html += `">${rolls[i]}</label>`;
+    }
+
+    html += "</div>"
 
     return new Handlebars.SafeString(html);
   });

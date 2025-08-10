@@ -19,9 +19,6 @@ $hover-brightness: 0.8;
 @import 'import/mixin';
 @import 'fonts.scss';
 
-//top-level styles
-@import 'import/chat.scss';
-
 //namespacing to avoid conflicts with other modules
 .dialog,
 .until-the-curtain-falls {
@@ -30,6 +27,7 @@ $hover-brightness: 0.8;
   @import 'import/general-styles-2.scss';
   @import 'import/item-card.scss';
   @import 'import/dialogs.scss';
+  @import 'import/chat-2.scss';
 
   &.actor.pc {
     @import 'import/character-sheet-2.scss';

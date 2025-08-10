@@ -1,0 +1,71 @@
+.chat-container {
+  background-color: $almost_white;
+  background-image: none;
+  border: solid 5px $almost_black;
+
+  .roll-result-label-container { 
+    display: flex;
+    justify-content: center;
+  }
+
+  .roll-result-description {
+    padding: 5px;
+  }
+
+  .roll-result-dice-container {
+    padding-bottom: 2px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .roll-result {
+      font-weight: bold;
+      text-transform: capitalize;
+      font-size: large;
+      font-family: Kirsty, serif;
+
+      &.die {
+        min-width: 24px;
+        min-height: 24px;
+        max-width: 24px;
+        max-height: 24px;
+        width: 24px;
+        height: 24px;
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        &:not(:first-child) {
+          margin-left: 5px;
+        }
+      }
+
+      &.crit {
+        color: $light_green;
+        border-color: $light_green;
+      }
+
+      &.success {
+        color: $green;
+        border-color: $green;
+      }
+
+      &.partial-success {
+        color: $blue;
+        border-color: $blue;
+      }
+
+      &.fail {
+        color: $red;
+        border-color: $red;
+      }
+
+      &.extra {
+        color: $gray;
+        border-color: $gray;
+      }
+  }
+}

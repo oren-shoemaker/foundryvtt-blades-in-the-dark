@@ -22,32 +22,29 @@ export async function bladesRoll(dice_amount, attribute_name = "", position = "r
   await showChatRollMessage(r, zeromode, attribute_name, position, effect, note, current_stress, current_crew_tier);
 }
 
-export async function actionRoll(num_dice, position, effect) {
+export async function actionRoll(action_label,num_dice, position, effect) {
+  let zero_mode = (num_dice <= 0);
   let roll = await utcfRoll(num_dice);
-  let roll_result = getRollResult(roll, num_dice);
+  let roll_result = zero_mode ? getLowRollResult(roll) : getHighRollResult(roll);
+
   let position_label = getLabelForPosition(position);
-  let action_result = getActionResult(position,roll_result);
-
-  if(roll_result === 7)
-    effect++;
-  if(effect > 4)
-    effect = 4;
-  if(effect < 0)
-    effect = 0;
-
-  let effect_label = getLabelForEffect(effect);
-
-  let html = `<div class="until-the-curtain-falls flex-vertical">
-                <span><strong>${game.i18n.localize("UTCF.Action.Position.Label")}:</strong> ${game.i18n.localize(position_label)}</span>
-                <span><strong>${game.i18n.localize("UTCF.Action.Effect.Label")}:</strong> ${game.i18n.localize(effect_label)}</span>
-                <span>${game.i18n.localize(action_result)}</span>
-              </div>`;
-
-  let speaker = ChatMessage.getSpeaker();
+  let action_result = getActionResult(roll_result);
+  let action_result_description = ACTION_POSITIONS[position].result[action_result];
+  let effect_label = getLabelForEffect(computeFinalEffect(effect, roll_result));
 
   let messageData = {
-    speaker: speaker,
-    content: html, // TODO: use a template for this, dipshit
+    speaker: ChatMessage.getSpeaker(),
+    content: await renderTemplate(
+      "systems/until-the-curtain-falls/templates/chat/action-roll-2.html",
+      {
+        action_label: action_label, 
+        position_label: position_label, 
+        effect_label: effect_label, 
+        action_result: action_result,
+        action_result_description: action_result_description, 
+        rolls: (roll.terms)[0].results.map(a => a.result).sort(),
+        zero_mode: zero_mode
+      }),
     type: CONST.CHAT_MESSAGE_TYPES.ROLL,
     roll: roll
   };
@@ -83,7 +80,7 @@ function getLabelForPosition(position) {
   }
 }
 
-function getActionResult(position, roll_result) {
+function getActionResult(roll_result) {
   let result_type = '';
   switch(roll_result) {
     case 4:
@@ -104,21 +101,26 @@ function getActionResult(position, roll_result) {
       break;
   }
 
-  return ACTION_POSITIONS[position].result[result_type];
+  return result_type;
 }
 
 async function utcfRoll(num_dice) {
-  let zeromode = false;
 
   if ( num_dice < 0 ) { num_dice = 0; }
-  if ( num_dice === 0 ) { zeromode = true; num_dice = 2; }
+  if ( num_dice === 0 ) { num_dice = 2; }
 
   let r = new Roll( `${num_dice}d6`, {} );
 
   return await r.evaluate();
 }
 
-function getRollResult(roll, num_dice) {
+function getLowRollResult(roll) {
+  let results = (roll.terms)[0].results.map(a => a.result).sort();
+
+  return results[0];
+}
+
+function getHighRollResult(roll) {
   let results = (roll.terms)[0].results.map(a => a.result).sort();
 
   // not sure how this would happen, but just in case...
@@ -131,13 +133,19 @@ function getRollResult(roll, num_dice) {
     return 7; 
   }
 
-  // return lowest value if initial dice pool is 0
-  if(num_dice <= 0) {
-    return results[0];
-  }
-
   // otherwise return highest value
   return results.reverse()[0];
+}
+
+function computeFinalEffect(effect, roll_result) {
+  let final_effect = effect;
+
+  if(roll_result === 7)
+    final_effect++;
+
+  final_effect = Math.max(0, Math.min(4, final_effect));
+
+  return final_effect;
 }
 
 /**
@@ -441,7 +449,7 @@ export async function simpleRollPopup() {
       buttons: [
         {
           icon: '<i class="fas fa-check"></i>',
-          label: game.i18n.localize('UTCF.Roll'),
+          label: game.i18n.localize('UTCF.Roll.Label'),
           action: 'roll',
           callback: async (html) => {
             let diceQty = Number(html.find('[name="qty"]')[0].value);

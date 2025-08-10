@@ -31,7 +31,7 @@ export class BladesActor extends Actor {
   getRollData() {
     const rollData = super.getRollData();
 
-    rollData.dice_amount = this.getDiePools();
+    rollData.dice_amount = this.getDicePool();
 
     return rollData;
   }
@@ -164,7 +164,7 @@ export class BladesActor extends Actor {
   /**
    * Calculate Attribute Dice to throw.
    */
-  getDiePools() {
+  getDicePool() {
     // Calculate Dice to throw.
     let die_pools = {};
     die_pools['UTCF.Vice'] = 4;
@@ -194,7 +194,7 @@ export class BladesActor extends Actor {
     let action_label = BladesHelpers.getRollLabel(action_name);
 
     let html = `
-      <h2>${game.i18n.localize('UTCF.Roll')} ${game.i18n.localize(action_label)}</h2>
+      <h2>${game.i18n.localize('UTCF.Roll.Label')} ${game.i18n.localize(action_label)}</h2>
       <form>`;
 
     // position
@@ -227,11 +227,51 @@ export class BladesActor extends Actor {
                 </select>
             </div>`
 
-    
 
-    // show total dice to be rolled
+    if(this.reducedEffectFromHarm()) {
+      html += `
+            <label class="label-red">${game.i18n.localize("UTCF.Action.Effect.ReducedFromHarm")}</label>`
+    }
+
+    // base die pool
     html += `
-            <label>Dice to roll: ${this.getDiePools()[action_name]}d6</label>`;
+            <label>${game.i18n.localize("UTCF.Roll.DicePool.Label")}: ${this.getDicePool()[action_name]}${game.i18n.localize("UTCF.Roll.DicePool.ActionDots")}`
+            
+    if(this.reducedDiceFromHarm()) {
+      html += ` ${game.i18n.localize("UTCF.Roll.DicePool.ReducedFromHarm")}`;
+    }
+    
+    html += `
+            </label>`;
+
+    // bonus dice
+    html += `<div class="form-group">
+              <label>${game.i18n.localize("UTCF.Action.Assisted")}</label>
+              <input type="checkbox" id="assisted" name="assisted" value="assisted">
+            </div>`
+
+    html += `<div class="form-group">
+               <label>${game.i18n.localize("UTCF.Action.PushYourself")}</label>
+               <input type="checkbox" id="push" name="push" value="push">
+             </div>`
+    
+    if(this.hasPushSpecialArmor()) {
+      html += `
+             <div class="form-group">
+               <label>${game.i18n.localize("UTCF.Action.PushYourselfSpecialArmor")}</label>
+               <input type="checkbox" id="push_armor" name="push_armor" value="push_armor">
+             </div>`
+    }
+
+    html += `<div class="form-group">
+               <label>${game.i18n.localize("UTCF.Action.DarkBargain")}</label>
+               <input type="checkbox" id="bargain" name="bargain" value="bargain">
+             </div>`
+
+    html += `<div class="form-group">
+               <label>${game.i18n.localize("UTCF.Roll.ExtraDiceMod")}</label>
+               <input type="number" id="extradice" name="extradice" value=0>
+             </div>`
 
     html += `
       </form>`;
@@ -239,19 +279,43 @@ export class BladesActor extends Actor {
     new foundry.applications.api.DialogV2({
       window: {
         contentClasses: ["until-the-curtain-falls", "roll-dialog-window"],
-        title: `${game.i18n.localize('UTCF.Roll')} ${game.i18n.localize(action_label)}`
+        title: `${game.i18n.localize('UTCF.Roll.Label')} ${game.i18n.localize(action_label)}`
       },
       content: html,
       buttons: [
         {
           icon: '<i class="fas fa-check"></i>',
-          label: game.i18n.localize('UTCF.Roll'),
+          label: game.i18n.localize('UTCF.Roll.Label'),
           action: 'roll',
           callback: async (event, button, dialog) => {
             let position = button.form.elements.pos.value;
-            let effect = button.form.elements.fx.value;
-            let dice = this.getDiePools()[action_name];
-            await actionRoll(dice,position,effect);
+
+            let effect = Number(button.form.elements.fx.value);
+            if(this.reducedEffectFromHarm()) effect--;
+            effect = effect < 0 ? 0 : effect;
+
+            let dice = this.getDicePool()[action_name];
+            let assisted = button.form.elements.assisted.checked;
+            if(assisted) dice++;
+            let push = button.form.elements.push.checked;
+            let bargain = button.form.elements.bargain.checked;
+            let push_armor = button.form.elements.push_armor.checked;
+            if(push || bargain || push_armor) dice++;
+            if(this.reducedDiceFromHarm()) dice--;
+            let extra_dice_mod = Number(button.form.elements.extradice.value);
+            dice += extra_dice_mod;
+            dice = dice < 0 ? 0 : dice;
+
+            if(push) {
+              let stress = Number(this.system.stress.value)+2;
+              await this.update({"system.stress.value": stress});
+            }
+
+            if(push_armor) {
+              await this.consumeSpecialArmor();
+            }
+
+            await actionRoll(action_label,dice,position,effect);
           }
         },
         {
@@ -265,6 +329,29 @@ export class BladesActor extends Actor {
     }).render({force: true});
   }
 
+  reducedEffectFromHarm(){
+    return this.system.harm.light.one || this.system.harm.light.two;
+  }
+
+  reducedDiceFromHarm(){
+    return this.system.harm.medium.one || this.system.harm.medium.two;
+  }
+
+  hasPushSpecialArmor(){
+    const ability_shortnames = ['CSPL','IMCR','MSUN','NCCM','TAAB'];
+    return this.items.some(item => ability_shortnames.includes(item.system.shortname)) && !this.system['armor-uses'].special;
+  }
+
+  async consumeSpecialArmor(){
+    const ability_shortnames = ['CSPL','IMCR','MSUN','NCCM','TAAB'];
+    this.items
+      .filter(item => item.system.linked_ability && ability_shortnames.includes(item.system.linked_ability))
+      .forEach(async item => {
+        await item.update({"system.equipped": true});
+  });
+    await this.update({"system.armor-uses.special": 1});
+  }
+
   /* -------------------------------------------- */
 
   rollAttributePopup(attribute_name) {
@@ -272,7 +359,7 @@ export class BladesActor extends Actor {
     let attribute_label = BladesHelpers.getRollLabel(attribute_name);
 
     let html = `
-        <h2>${game.i18n.localize('UTCF.Roll')} ${game.i18n.localize(attribute_label)}</h2>
+        <h2>${game.i18n.localize('UTCF.Roll.Label')} ${game.i18n.localize(attribute_label)}</h2>
         <form>
           <div class="form-group">
             <label>${game.i18n.localize('UTCF.Modifier')}:</label>
@@ -314,13 +401,13 @@ export class BladesActor extends Actor {
     let dialog = new foundry.applications.api.DialogV2({
       window: {
         contentClasses: ["until-the-curtain-falls", "dialog-window"],
-        title: `${game.i18n.localize('UTCF.Roll')} ${game.i18n.localize(attribute_label)}`
+        title: `${game.i18n.localize('UTCF.Roll.Label')} ${game.i18n.localize(attribute_label)}`
       },
       content: html,
       buttons: [
         {
           icon: '<i class="fas fa-check"></i>',
-          label: game.i18n.localize('UTCF.Roll'),
+          label: game.i18n.localize('UTCF.Roll.Label'),
           action: 'roll',
           callback: async (event, button, dialog) => {
             let modifier = parseInt(button.form.elements.mod.value);

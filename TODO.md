@@ -1,9 +1,11 @@
 ### Need for first playtest
 * Get rolls working
-    * add checkboxes for increased dice pools
-    * add number boxes for increased/decreased effect
-    * compute outcome based on roll
+    * automate modifiers for character/crew abilities
+    * resistance rolls
+    * acquire asset rolls
+    * fortune rolls
     * compute/apply stress change for resistance rolls
+* fix creating new character
 * Set up NPCs
 * Get item/actor -> chat link working
 * Quest view for character sheet
