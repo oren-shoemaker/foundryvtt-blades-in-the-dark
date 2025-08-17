@@ -75,21 +75,54 @@ export const ACTION_EFFECTS = [
     {
         "effect": "limited",
         "label": "UTCF.Action.Effect.Limited",
-        "ordinal": 1
+        "ordinal": 2
     },
     {
         "effect": "standard",
         "label": "UTCF.Action.Effect.Standard",
-        "ordinal": 2
+        "ordinal": 3
     },
     {
         "effect": "great",
         "label": "UTCF.Action.Effect.Great",
-        "ordinal": 3
+        "ordinal": 4
     },
     {
         "effect": "extreme",
         "label": "UTCF.Action.Effect.Extreme",
-        "ordinal": 4
+        "ordinal": 6
     }
 ];
+
+export const ENGAGMENT_MODIFIERS = [
+    {
+        "label": "UTCF.Engagement.Modifier.BoldDaring",
+        "checkbox_name": "bold_daring",
+        "value": 1
+    },
+    {
+        "label": "UTCF.Engagement.Modifier.Complex",
+        "checkbox_name": "complex",
+        "value": -1
+    },
+    {
+        "label": "UTCF.Engagement.Modifier.Weakness",
+        "checkbox_name": "weakness",
+        "value": 1
+    },
+    {
+        "label": "UTCF.Engagement.Modifier.Strength",
+        "checkbox_name": "strength",
+        "value": -1
+    },
+    {
+        "label": "UTCF.Engagement.Modifier.Aid",
+        "checkbox_name": "aid",
+        "value": 1
+    },
+    {
+        "label": "UTCF.Engagement.Modifier.Interference",
+        "checkbox_name": "interference",
+        "value": -1
+    }
+]

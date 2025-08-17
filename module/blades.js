@@ -7,7 +7,6 @@
 // Import Modules
 import { registerSystemSettings } from "./settings.js";
 import { preloadHandlebarsTemplates } from "./blades-templates.js";
-import { bladesRoll, simpleRollPopup } from "./blades-roll.js";
 import { BladesHelpers } from "./blades-helpers.js";
 import { BladesActor } from "./blades-actor.js";
 import { BladesItem } from "./blades-item.js";
@@ -30,9 +29,6 @@ window.BladesHelpers = BladesHelpers;
 Hooks.once("init", async function() {
   console.log(`Initializing Until the Curtain Falls system`);
 
-  game.blades = {
-    dice: bladesRoll
-  };
   game.system.bladesClocks = {
     sizes: [ 4, 6, 8 ]
   };
@@ -584,36 +580,5 @@ Hooks.once("init", async function() {
     }
     return x < y;
   });
-
-});
-
-/**
- * Once the entire VTT framework is initialized, check to see if we should perform a data migration
- */
-Hooks.once("ready", function() {
-
-  // Determine whether a system migration is required
-  const currentVersion = game.settings.get("bitd", "systemMigrationVersion");
-  const NEEDS_MIGRATION_VERSION = 2.15;
-
-  let needMigration = (currentVersion < NEEDS_MIGRATION_VERSION) || (currentVersion === null);
-
-  // Perform the migration
-  if ( needMigration && game.user.isGM ) {
-    migrations.migrateWorld();
-  }
-});
-
-/*
- * Hooks
- */
-
-// getSceneControlButtons
-Hooks.on("renderSceneControls", async (app, html) => {
-  let dice_roller = $('<li class="scene-control" title="Dice Roll"><i class="fas fa-dice"></i></li>');
-  dice_roller.click( async function() {
-    await simpleRollPopup();
-  });
-  html.children().first().append( dice_roller );
 
 });

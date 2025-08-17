@@ -1,7 +1,7 @@
-import { actionRoll, bladesRoll } from "./blades-roll.js";
+import { actionRoll, engagementRoll, resistanceRoll, fortuneRoll } from "./utcf-roll.js";
 import { BladesHelpers } from "./blades-helpers.js";
 import { Mutex } from "./mutex.js";
-import { ACTION_EFFECTS, ACTION_POSITIONS } from "./base-system-data.js";
+import { ACTION_EFFECTS, ACTION_POSITIONS, ENGAGMENT_MODIFIERS } from "./base-system-data.js";
 
 /**
  * Extend the basic Actor
@@ -75,12 +75,8 @@ export class BladesActor extends Actor {
 
         // update max stress for Veterans of Psychic Wars
         let max_stress = this.system.stress.max_default;
-        if(this.system.company_id) {
-          const company = BladesHelpers.getActorById(this.system.company_id, game);
-          const has_vopw = company.items.filter(i => i.type === "company_ability").some(i => i.name === 'Veterans of Psychic Wars');
-          if(has_vopw) max_stress++;
-        }
-
+        if(this.hasCompanyAbility("Veterans of Psychic Wars"))
+          max_stress++;
         if(max_stress != this.system.stress.max) {
           this.update({"system.stress.max": max_stress});
         }
@@ -233,10 +229,16 @@ export class BladesActor extends Actor {
             <label class="label-red">${game.i18n.localize("UTCF.Action.Effect.ReducedFromHarm")}</label>`
     }
 
+    if(this.hasCompanyAbility("On the Blade’s Edge")) {
+      html += `
+            <label>${game.i18n.localize("UTCF.Action.Effect.IncreasedOTBE")}</label>`
+    }
+
     // base die pool
     html += `
             <label>${game.i18n.localize("UTCF.Roll.DicePool.Label")}: ${this.getDicePool()[action_name]}${game.i18n.localize("UTCF.Roll.DicePool.ActionDots")}`
-            
+    
+    
     if(this.reducedDiceFromHarm()) {
       html += ` ${game.i18n.localize("UTCF.Roll.DicePool.ReducedFromHarm")}`;
     }
@@ -292,6 +294,7 @@ export class BladesActor extends Actor {
 
             let effect = Number(button.form.elements.fx.value);
             if(this.reducedEffectFromHarm()) effect--;
+            if(this.hasCompanyAbility("On the Blade’s Edge") && position === 'desperate') effect++;
             effect = effect < 0 ? 0 : effect;
 
             let dice = this.getDicePool()[action_name];
@@ -299,7 +302,7 @@ export class BladesActor extends Actor {
             if(assisted) dice++;
             let push = button.form.elements.push.checked;
             let bargain = button.form.elements.bargain.checked;
-            let push_armor = button.form.elements.push_armor.checked;
+            let push_armor = button.form.elements.push_armor?.checked;
             if(push || bargain || push_armor) dice++;
             if(this.reducedDiceFromHarm()) dice--;
             let extra_dice_mod = Number(button.form.elements.extradice.value);
@@ -342,6 +345,15 @@ export class BladesActor extends Actor {
     return this.items.some(item => ability_shortnames.includes(item.system.shortname)) && !this.system['armor-uses'].special;
   }
 
+  hasCompanyAbility(company_ability_name) {
+    let company_id = this.system.company_id;
+    
+    if(!company_id) return false;
+
+    const company = BladesHelpers.getActorById(company_id, game);
+    return company.items.filter(i => i.type === "company_ability").some(i => i.name === company_ability_name);
+  }
+
   async consumeSpecialArmor(){
     const ability_shortnames = ['CSPL','IMCR','MSUN','NCCM','TAAB'];
     this.items
@@ -352,55 +364,41 @@ export class BladesActor extends Actor {
     await this.update({"system.armor-uses.special": 1});
   }
 
-  /* -------------------------------------------- */
-
-  rollAttributePopup(attribute_name) {
-
+  rollResistanceDialog(attribute_name) {
     let attribute_label = BladesHelpers.getRollLabel(attribute_name);
 
     let html = `
-        <h2>${game.i18n.localize('UTCF.Roll.Label')} ${game.i18n.localize(attribute_label)}</h2>
-        <form>
-          <div class="form-group">
-            <label>${game.i18n.localize('UTCF.Modifier')}:</label>
-            <select id="mod" name="mod">
-              ${this.createListOfDiceMods(-3,+3,0)}
-            </select>
-          </div>`;
-    if (BladesHelpers.isAttributeAction(attribute_name)) {
-      html += `
-            <div class="form-group">
-              <label>${game.i18n.localize('UTCF.Action.Position.Label')}:</label>
-              <select id="pos" name="pos">
-                <option value="controlled">${game.i18n.localize('UTCF.PositionControlled')}</option>
-                <option value="risky" selected>${game.i18n.localize('UTCF.PositionRisky')}</option>
-                <option value="desperate">${game.i18n.localize('UTCF.PositionDesperate')}</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>${game.i18n.localize('UTCF.Effect')}:</label>
-              <select id="fx" name="fx">
-                <option value="limited">${game.i18n.localize('UTCF.EffectLimited')}</option>
-                <option value="standard" selected>${game.i18n.localize('UTCF.EffectStandard')}</option>
-                <option value="great">${game.i18n.localize('UTCF.EffectGreat')}</option>
-              </select>
-            </div>`;
-    } else {
-        html += `
-            <input  id="pos" name="pos" type="hidden" value="">
-            <input id="fx" name="fx" type="hidden" value="">`;
-    }
-    html += `
-        <div className="form-group">
-          <label>${game.i18n.localize('UTCF.Notes')}:</label>
-          <input id="note" name="note" type="text" value="">
-        </div><br/>
-        </form>
-      `;
+      <h2>${game.i18n.localize('UTCF.Roll.Label')} ${game.i18n.localize(attribute_label)}</h2>
+      <form>`;
 
-    let dialog = new foundry.applications.api.DialogV2({
+    // base die pool
+    html += `
+            <label>${game.i18n.localize("UTCF.Roll.DicePool.Label")}: ${this.getDicePool()[attribute_name]}${game.i18n.localize("UTCF.Roll.DicePool.ActionDots")}`
+    
+    if(this.hasCompanyAbility("Forged in Flame")) {
+      html += ` ${game.i18n.localize("UTCF.Resistance.IncreasedFromForgedInFlame")}`
+    }
+    
+    if(this.reducedDiceFromHarm()) {
+      html += ` ${game.i18n.localize("UTCF.Roll.DicePool.ReducedFromHarm")}`;
+    }
+    
+    html += `
+            </label>`;
+
+    // bonus dice
+
+    html += `<div class="form-group">
+               <label>${game.i18n.localize("UTCF.Roll.ExtraDiceMod")}</label>
+               <input type="number" id="extradice" name="extradice" value=0>
+             </div>`
+
+    html += `
+      </form>`;
+
+    new foundry.applications.api.DialogV2({
       window: {
-        contentClasses: ["until-the-curtain-falls", "dialog-window"],
+        contentClasses: ["until-the-curtain-falls", "roll-dialog-window"],
         title: `${game.i18n.localize('UTCF.Roll.Label')} ${game.i18n.localize(attribute_label)}`
       },
       content: html,
@@ -410,110 +408,126 @@ export class BladesActor extends Actor {
           label: game.i18n.localize('UTCF.Roll.Label'),
           action: 'roll',
           callback: async (event, button, dialog) => {
-            let modifier = parseInt(button.form.elements.mod.value);
-            let position = button.form.elements.pos.value;
-            let effect = button.form.elements.fx.value;
-            let note = button.form.elements.note.value;
+            let dice = this.getDicePool()[attribute_name];
+            if(this.hasCompanyAbility("Forged in Flame")) dice++;
+            if(this.reducedDiceFromHarm()) dice--;
+            let extra_dice_mod = Number(button.form.elements.extradice.value);
+            dice += extra_dice_mod;
+            dice = dice < 0 ? 0 : dice;
 
-            await this.rollAttribute(attribute_name, modifier, position, effect, note);
+            let stress_change = Number(await resistanceRoll(attribute_label,dice));
+
+            let current_stress = Number(this.system.stress.value);
+            let max_stress = Number(this.system.stress.max);
+            let stress_to_update = Math.min(max_stress,Math.max(0,current_stress+stress_change));
+            console.log(stress_to_update);
+            await this.update({"system.stress.value": stress_to_update});
           }
         },
         {
           icon: '<i class="fas fa-times"></i>',
           label: game.i18n.localize('Close'),
           action: 'close',
+          default: true,
           callback: () => false
         }
       ]
-    }, {});
-
-    dialog.render(true);
-
+    }).render({force: true});
   }
 
-  /* -------------------------------------------- */
+  rollEngagementDialog() {
+    let html = `
+      <h2>${game.i18n.localize("UTCF.Roll.Label")} ${game.i18n.localize("UTCF.Engagement.Label")}</h2>
+      <form>`
 
-  async rollAttribute(attribute_name = "", additional_dice_amount = 0, position, effect, note) {
+    html += `
+            <label>${game.i18n.localize("UTCF.Roll.DicePool.Label")}: 1d6</label>`
 
-    let dice_amount = 0;
-    if (attribute_name !== "") {
-      let roll_data = this.getRollData();
-      dice_amount += roll_data.dice_amount[attribute_name];
-    }
-    else {
-      dice_amount = 1;
-    }
-    dice_amount += additional_dice_amount;
+    ENGAGMENT_MODIFIERS.forEach(modifier => {
+      html += `
+            <div class="form-group">
+              <label>${game.i18n.localize(modifier.label)}</label>
+              <input type="checkbox" id="${modifier.checkbox_name}" name="${modifier.checkbox_name}" value="${modifier.checkbox_name}">
+            </div>`
+    })
 
-    await bladesRoll(dice_amount, attribute_name, position, effect, note, this.system.stress.value);
+    html += `<div class="form-group">
+               <label>${game.i18n.localize("UTCF.Roll.ExtraDiceMod")}</label>
+               <input type="number" id="extradice" name="extradice" value=0>
+             </div>`
+
+    new foundry.applications.api.DialogV2({
+      window: {
+        contentClasses: ["until-the-curtain-falls", "roll-dialog-window"],
+        title: `${game.i18n.localize('UTCF.Roll.Label')} ${game.i18n.localize("UTCF.Engagement.Label")}`
+      },
+      content: html,
+      buttons: [
+        {
+          icon: '<i class="fas fa-check"></i>',
+          label: game.i18n.localize('UTCF.Roll.Label'),
+          action: 'roll',
+          callback: async (event, button, dialog) => {
+            let dice = 1 + Number(button.form.elements.extradice.value);
+
+            ENGAGMENT_MODIFIERS.forEach(modifier => {
+              if(button.form.elements[modifier.checkbox_name].checked) dice += Number(modifier.value);
+            })
+
+            dice = dice < 0 ? 0 : dice;
+
+            await engagementRoll(dice);
+          }
+        },
+        {
+          icon: '<i class="fas fa-times"></i>',
+          label: game.i18n.localize('Close'),
+          action: 'close',
+          default: true,
+          callback: () => false
+        }
+      ]
+    }).render({force: true});
   }
 
-  /* -------------------------------------------- */
+  rollFortuneDialog() {
+    let html = `
+      <h2>${game.i18n.localize("UTCF.Roll.Label")} ${game.i18n.localize("UTCF.Fortune.Label")}</h2>
+      <form>`
 
-  /**
-   * Create <options> for available actions
-   *  which can be performed.
-   */
-  createListOfActions() {
+    html += `<div class="form-group">
+               <label>${game.i18n.localize("UTCF.Roll.DicePool.Label")}</label>
+               <input type="number" id="dice_pool" name="dice_pool" value=0>
+             </div>`
 
-    let text, attribute, skill;
-    let attributes = this.system.attributes;
+    new foundry.applications.api.DialogV2({
+      window: {
+        contentClasses: ["until-the-curtain-falls", "roll-dialog-window"],
+        title: `${game.i18n.localize('UTCF.Roll.Label')} ${game.i18n.localize("UTCF.Fortune.Label")}`
+      },
+      content: html,
+      buttons: [
+        {
+          icon: '<i class="fas fa-check"></i>',
+          label: game.i18n.localize('UTCF.Roll.Label'),
+          action: 'roll',
+          callback: async (event, button, dialog) => {
+            let dice = 1 + Number(button.form.elements.dice_pool.value);
 
-    for ( attribute in attributes ) {
+            dice = dice < 0 ? 0 : dice;
 
-      const skills = attributes[attribute].skills;
-
-      text += `<optgroup label="${attribute} Actions">`;
-      text += `<option value="${attribute}">${attribute} (Resist)</option>`;
-
-      for ( skill in skills ) {
-        text += `<option value="${skill}">${skill}</option>`;
-      }
-
-      text += `</optgroup>`;
-
-    }
-
-    return text;
-
+            await fortuneRoll(dice);
+          }
+        },
+        {
+          icon: '<i class="fas fa-times"></i>',
+          label: game.i18n.localize('Close'),
+          action: 'close',
+          default: true,
+          callback: () => false
+        }
+      ]
+    }).render({force: true});
   }
-
-  /* -------------------------------------------- */
-
-  /**
-   * Creates <options> modifiers for dice roll.
-   *
-   * @param {int} rs
-   *  Min die modifier
-   * @param {int} re
-   *  Max die modifier
-   * @param {int} s
-   *  Selected die
-   */
-  createListOfDiceMods(rs, re, s) {
-
-    var text = ``;
-    var i = 0;
-
-    if ( s == "" ) {
-      s = 0;
-    }
-
-    for ( i  = rs; i <= re; i++ ) {
-      var plus = "";
-      if ( i >= 0 ) { plus = "+" };
-      text += `<option value="${i}"`;
-      if ( i == s ) {
-        text += ` selected`;
-      }
-
-      text += `>${plus}${i}d</option>`;
-    }
-
-    return text;
-
-  }
-
-  /* -------------------------------------------- */
 
 }

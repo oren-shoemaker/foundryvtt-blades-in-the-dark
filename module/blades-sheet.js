@@ -49,9 +49,14 @@ export class BladesSheet extends ActorSheet {
       html.on("change", "textarea", this._onChangeInput.bind(this));  // Use delegated listener on the form
     }
 
-    html.find(".roll-die-attribute").click(this._onRollAttributeDieClick.bind(this));
+    html.find(".roll-die-attribute").click(ev => {
+      ev.preventDefault();
+      const attribute_name = $(ev.currentTarget).data("rollAttribute");
+      this.actor.rollResistanceDialog(attribute_name);
+    });
 
     html.find(".roll-die-action").click(ev => {
+      ev.preventDefault();
       const action_name = $(ev.currentTarget).data("rollAction");
       this.actor.rollActionDialog(action_name);
     })

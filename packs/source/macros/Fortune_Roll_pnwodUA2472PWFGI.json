@@ -1,0 +1,28 @@
+{
+  "name": "Fortune Roll",
+  "type": "script",
+  "author": "nRGCPtyorF07NYQP",
+  "img": "icons/svg/dice-target.svg",
+  "scope": "global",
+  "command": "let actors = game.actors;\n\nlet html = `<h2>${game.i18n.localize(\"UTCF.Roll.Label\")} ${game.i18n.localize(\"UTCF.Fortune.Label\")}</h2><form><div class=\"form-field\"><label>Actor</label><select name=\"actor_id\">`;\n\nactors.forEach(actor => {\n  html += `<option value=\"${actor.id}\">${actor.name}</option>`\n});\n\nhtml += `</select></div></form>`;\n\nnew foundry.applications.api.DialogV2({\n      window: {\n        contentClasses: [\"until-the-curtain-falls\", \"dialog-window\"],\n        title: `${game.i18n.localize(\"UTCF.Roll.Label\")} ${game.i18n.localize(\"UTCF.Fortune.Label\")}`\n      },\n      content: html,\n      buttons: [\n        {\n          icon: '<i class=\"fas fa-check\"></i>',\n          label: game.i18n.localize('Roll'),\n          action: 'add',\n          callback: async (event, button, dialog) => {\n            let actor_id = button.form.elements.actor_id.value;\n            let actor = game.actors.get(actor_id);\n            actor.rollFortuneDialog();\n          }\n        },\n        {\n          icon: '<i class=\"fas fa-times\"></i>',\n          label: game.i18n.localize('Cancel'),\n          action: 'cancel',\n          callback: () => false\n        }\n      ]\n    }, {}).render({force: true});",
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1755436727896,
+    "modifiedTime": 1755436727896,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_id": "pnwodUA2472PWFGI",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "_key": "!macros!pnwodUA2472PWFGI"
+}

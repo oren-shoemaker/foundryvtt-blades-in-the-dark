@@ -1,0 +1,28 @@
+{
+  "name": "Engagement Roll",
+  "type": "script",
+  "author": "nRGCPtyorF07NYQP",
+  "img": "icons/svg/dice-target.svg",
+  "scope": "global",
+  "command": "let companies = game.actors.filter(a => a.type === \"company\");\n\nlet html = `<h2>${game.i18n.localize(\"UTCF.Roll.Label\")} ${game.i18n.localize(\"UTCF.Engagement.Label\")}</h2><form><div class=\"form-field\"><label>${game.i18n.localize(\"UTCF.Company.Label\")}</label><select name=\"company_id\">`;\n\ncompanies.forEach(company => {\n  html += `<option value=\"${company.id}\">${company.name}</option>`\n});\n\nhtml += `</select></div></form>`;\n\nnew foundry.applications.api.DialogV2({\n      window: {\n        contentClasses: [\"until-the-curtain-falls\", \"dialog-window\"],\n        title: `${game.i18n.localize(\"UTCF.Roll.Label\")} ${game.i18n.localize(\"UTCF.Engagement.Label\")}`\n      },\n      content: html,\n      buttons: [\n        {\n          icon: '<i class=\"fas fa-check\"></i>',\n          label: game.i18n.localize('Roll'),\n          action: 'add',\n          callback: async (event, button, dialog) => {\n            let company_id = button.form.elements.company_id.value;\n            let company = game.actors.get(company_id);\n            company.rollEngagementDialog();\n          }\n        },\n        {\n          icon: '<i class=\"fas fa-times\"></i>',\n          label: game.i18n.localize('Cancel'),\n          action: 'cancel',\n          callback: () => false\n        }\n      ]\n    }, {}).render({force: true});",
+  "folder": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null,
+    "coreVersion": "13.346",
+    "systemId": "until-the-curtain-falls",
+    "systemVersion": "0.0.0",
+    "createdTime": 1755436726408,
+    "modifiedTime": 1755436726408,
+    "lastModifiedBy": "nRGCPtyorF07NYQP"
+  },
+  "_id": "v6d8vWhkVREz06F2",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "nRGCPtyorF07NYQP": 3
+  },
+  "_key": "!macros!v6d8vWhkVREz06F2"
+}

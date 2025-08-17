@@ -50,17 +50,17 @@
           </tr>
           <tr>
             <td >
-              <label class="black-label-large-left">{{localize "UTCF.CompanyLifestyle"}}</label>
+              <label class="black-label-large-left">{{localize "UTCF.Company.Lifestyle"}}</label>
               {{#ifItemsContainsItemWithType "lifestyle"}}
                 {{item-card this show_left_widget=false show_description=false}}
               {{/ifItemsContainsItemWithType}}
             </td>
             <td>
-              <label class="black-label-large-left">{{localize "UTCF.Investments.Label"}}</label>
+              <label class="black-label-large-left">{{localize "UTCF.Company.Investments.Label"}}</label>
               {{#ifItemsContainsItemWithType "investments"}}
                 {{item-card this show_left_widget=true show_description=false}}
               {{else}}
-                <div class="item-name gray-label-small-left"><a class="item-create-popup" data-item-type="investments">{{localize "UTCF.Investments.Add"}}</a></div>
+                <div class="item-name gray-label-small-left"><a class="item-create-popup" data-item-type="investments">{{localize "UTCF.Company.Investments.Add"}}</a></div>
               {{/ifItemsContainsItemWithType}}
             </td>
           </tr>
@@ -81,8 +81,8 @@
   <section class="flex-horizontal">
     <div class="tab-content flex-vertical">
       <nav class="tabs flex-horizontal">
-        <a class="item black-label-large-center" data-tab="abilities">{{localize "UTCF.CompanyAbility.LabelPlural"}}</a>
-        <a class="item black-label-large-center" data-tab="upgrades">{{localize "UTCF.CompanyUpgrade.LabelPlural"}}</a>
+        <a class="item black-label-large-center" data-tab="abilities">{{localize "UTCF.Company.Ability.LabelPlural"}}</a>
+        <a class="item black-label-large-center" data-tab="upgrades">{{localize "UTCF.Company.Upgrade.LabelPlural"}}</a>
         {{!-- cohorts WIP, disable for now --}}
         {{#if false}}
           <a class="item black-label-large-center" data-tab="cohorts">{{localize "UTCF.Cohorts"}}</a>
@@ -95,7 +95,7 @@
       {{!-- Company Abilities --}}
       <div id="company-{{_id}}-abilities" class="company-abilities tab flex-vertical" data-tab="abilities">
         <div class="black-label-small-left">
-          <a class="item-add-popup" data-item-type="company_ability">{{localize "UTCF.CompanyAbility.Add"}}  <i class="fas fa-plus-square"></i></a>
+          <a class="item-add-popup" data-item-type="company_ability">{{localize "UTCF.Company.Ability.Add"}}  <i class="fas fa-plus-square"></i></a>
         </div>
         {{#each items as |item id|}}
           {{#if (eq item.type "company_ability")}}
@@ -107,7 +107,7 @@
       {{!-- Company Upgrades --}}
       <div id="company-{{_id}}-upgrades" class="company-upgrades tab flex-vertical" data-tab="upgrades">
         <div class="black-label-small-left">
-          <a class="item-add-popup" data-item-type="company_upgrade">{{localize "UTCF.CompanyUpgrade.Add"}}  <i class="fas fa-plus-square"></i></a>
+          <a class="item-add-popup" data-item-type="company_upgrade">{{localize "UTCF.Company.Upgrade.Add"}}  <i class="fas fa-plus-square"></i></a>
         </div>
         {{#each items as |item id|}}
           {{#if (eq item.type "company_upgrade")}}

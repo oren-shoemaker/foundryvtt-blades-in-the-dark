@@ -107,6 +107,13 @@
       "system": "until-the-curtain-falls",
       "path": "./packs/npcs.db",
       "type": "Actor"
+    },
+    {
+      "name": "macros",
+      "label": "Macros",
+      "system": "until-the-curtain-falls",
+      "path": "./packs/macros",
+      "type": "Macro"
     }
   ]
 }

@@ -155,47 +155,38 @@
     "Scale": "Scale",
     "Quality": "Quality",
     "AddAdditionalTypeOfGangText": "You can add an additional type to a gang or expert by spending two crew upgrades.<br>When a cohort performs actions for which its types apply, it uses its full quality rating. Otherwise, its quality is zero. A given cohort can have up to two types. Some crew upgrades will add the “Elite” feature to a gang, which gives them +1d when they roll for a given Type.",
-    "ClassExpClue1": "Every time you roll a desperate action, mark xp in that action's attribute.",
-    "ClassExpClue2": "You expressed your beliefs, drives, heritage, or background.",
-    "ClassExpClue3": "You struggled with issues from your vice or traumas during the session.",
-    "ClassExpClueDescription": "At the end of each session, for each item below, mark 1 xp (in your playbook or an attribute) or 2 xp if that item occurred multiple times.",
     "Turf": "Turf",
     "Turfs": "Turfs",
     "Lair": "Lair",
     "Coin": "Coin",
     "Coins": "Coins",
     "Stash": "Stash",
-    "CrewReputation": "Crew Reputation",
     "Company": {
       "Label": "Company",
-      "Add": "Join Company"
+      "Add": "Join Company",
+      "Lifestyle": "Lifestyle",
+      "Ability":{
+        "LabelPlural": "Company Abilities",
+        "Add": "Add Company Ability"
+      },
+      "Upgrade": {
+        "LabelPlural": "Company Upgrades",
+        "Add": "Add Company Upgrade"
+      },
+      "Investments": {
+        "Label": "Investments",
+        "Add": "Add Investments",
+        "InvestedCoin": "Invested Coin"
+      }
     },
-    "CompanyAbility":{
-      "LabelPlural": "Company Abilities",
-      "Add": "Add Company Ability"
-    },
-    "CompanyUpgrade": {
-      "LabelPlural": "Company Upgrades",
-      "Add": "Add Company Upgrade"
-    },
-    "Investments": {
-      "Label": "Investments",
-      "Add": "Add Investments",
-      "InvestedCoin": "Invested Coin"
-    },
-    "CompanyLifestyle": "Lifestyle",
     "Tier": "Tier",
     "Rep": "Rep",
     "Vault": "Vault",
     "Heat": "Heat",
     "Wanted": "Wanted",
-    "Abilities": "Abilities",
-    "Upgrades": "Upgrades",
     "Cohorts": "Cohorts",
     "Notes": "Notes",
     "AllItems": "All Items",
-    "CrewXP": "Crew XP",
-    "CrewExpClue1": "At the end of each session, for each item below, mark 1 xp (or instead mark 2xp if that item occurred multiple times).",
     "SpecialAbilities": "Special Abilities",
 
     "Gang": "Gang",
@@ -240,23 +231,9 @@
     "HarmDead": "Dead",
     "HarmDeadDescription": "The cohort is destroyed. You can spend coin equal to your Tier +2 to restore it, plus two downtime activities to recruit new gang members, or hire a new expert.",
 
-    "RollFailure": "Failure",
-    "RollCriticalSuccess": "Critical Success!",
-    "RollSuccess": "Success",
-    "RollPartialSuccess": "Partial Success",
     "RollSomeDice": "Roll Some Dice!",
     "RollTokenDescription": "If you want to pull the numbers from a character, select their Token first.",
-    "RollNumberOfDice": "Number of Dice",
-    "RollDoWithIncreasedEffect": "You do it with <strong>increased effect</strong>.",
-    "RollDo": "You do it.",
-    "RollPartialSuccessPositionControlled": "You hesitate. Withdraw and try a different approach, or else do it with a minor consequence: a <strong>minor complication</strong> occurs, you have <strong>reduced effect</strong>, you suffer <strong>lesser harm</strong>, you end up in a <strong>risky</strong> position.",
-    "RollPartialSuccessPositionRisky": "You do it, but there's a consequence: you suffer <strong>harm</strong>, a <strong>complication</strong> occurs, you have <strong>reduced effect</strong>, you end up in a <strong>desperate</strong> position.",
-    "RollPartialSuccessPosition": "You do it, but there's a consequence: you suffer <strong>severe harm</strong>, a <strong>serious complication</strong> occurs, you have <strong>reduced effect</strong>.",
-    "RollFailurePositionControlled": "You falter. Press on by seizing a <strong>risky</strong> opportunity, or withdraw and try a different approach.",
-    "RollFailurePositionRisky": "Things go badly. You suffer <strong>harm</strong>, a <strong>complication</strong> occurs, you end up in a <strong>desperate</strong> position, you <strong>lose this opportunity</strong>.",
-    "RollFailurePositionDesperate": "It's the worst outcome. You suffer <strong>severe harm</strong>, a <strong>serious complication occurs</strong>, you <strong>lose this opportunity for action</strong>.",
-    "RollResistance": "You <strong>reduce</strong> or <strong>avoid</strong> the effects of the consequence (GM chooses).<br/>Suffer <strong>{stress} stress</strong>.",
-    "RollResistanceCritical": "You <strong>reduce</strong> or <strong>avoid</strong> the effects of the consequence (GM chooses).<br/>Clear <strong>1 stress</strong>.",
+
 
     "Action": {
       "Position": {
@@ -308,7 +285,8 @@
         "Standard": "Standard",
         "Great": "Great",
         "Extreme": "Extreme",
-        "ReducedFromHarm": "Reduced effect from lesser harm"
+        "ReducedFromHarm": "Reduced effect from lesser harm",
+        "IncreasedOTBE": "Increased effect from desperate position (On the Blade's Edge)"
       },
       "Assisted": "Assisted? (+1d)",
       "DarkBargain": "Dark bargain? (+1d)",
@@ -319,10 +297,42 @@
       "Label": "Roll",
       "DicePool": {
         "Label": "Base dice pool",
-        "ReducedFromHarm": "-1d6 (from moderate harm)",
-        "ActionDots": "d6 (from action dots)"
+        "ReducedFromHarm": "-1d6 (moderate harm)",
+        "ActionDots": "d6 (action dots)"
       },
       "ExtraDiceMod": "Extra dice modifier"
+    },
+    "Resistance": {
+      "Label": "Resistance",
+      "Result": {
+        "Normal": "You <strong>reduce</strong> or <strong>avoid</strong> the effects of the consequence (GM chooses).<br/>Suffer <strong>{stress} stress</strong>.",
+        "Crit": "You <strong>reduce</strong> or <strong>avoid</strong> the effects of the consequence (GM chooses).<br/>Clear <strong>1 stress</strong>."
+      },
+      "IncreasedFromForgedInFlame": "+1d6 (Forged in Flame)"
+    },
+    "Engagement": {
+      "Label": "Engagement",
+      "Modifier": {
+        "BoldDaring": "Is this plan bold or daring? (+1d6)",
+        "Complex": "Is this plan overly complex? (-1d6)",
+        "Weakness": "Does the plan's detail exploit the enemy's weaknesses? (+1d6)",
+        "Strength": "Does the plan's detail play into to the enemy's strengths? (-1d6)",
+        "Aid": "Can any allies provide aid? (+1d6)",
+        "Interference": "Will any enemies interfere? (-1d6)"
+      },
+      "Result": {
+        "Fail": "You begin in a desperate position",
+        "PartialSuccess": "You begin in a risky position",
+        "Success": "You begin in a controlled position",
+        "Crit": "You overcome the first obstacle!"
+      }
+    },
+    "Fortune": {
+      "Label": "Fortune",
+      "Success": "Success",
+      "Crit": "Critical success!",
+      "Fail": "Failure",
+      "PartialSuccess": "Partial success"
     },
     "Skills": {
       "Forge": {
@@ -448,8 +458,6 @@
 
     "IndulgeVice": "Indulge Vice",
     "GatherInformation": "Gather Information",
-    "Fortune": "Fortune",
-    "Engagement": "Engagement",
     "AcquireAsset": "Acquire Asset",
     "AcquireAssetExtra": "To raise the result beyond critical, you may spend <strong>2 coin</strong> per +1 Tier bonus.",
     "CrewTier": "Crew Tier",
