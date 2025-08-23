@@ -82,15 +82,16 @@ export class BladesItem extends Item {
   }
 
   async sendToChat() {
-    const itemData = this.data.toObject();
-    if (itemData.img.includes("/mystery-man")) {
-      itemData.img = null;
-    }
-    const html = await renderTemplate("systems/until-the-curtain-falls/templates/chat/chat-item.html", itemData);
-    const chatData = {
-      user: game.userId,
-      content: html,
+    console.log(this);
+    let img = this.img.includes("/mystery-man") ? null : this.img;
+    const messageData = {
+      speaker: ChatMessage.getSpeaker(),
+      content: await renderTemplate("systems/until-the-curtain-falls/templates/chat/chat-item.html", {
+        name: this.name,
+        img: img,
+        description: this.system.description
+      })
     };
-    const message = await ChatMessage.create(chatData);
+    CONFIG.ChatMessage.documentClass.create(messageData, {});
   }
 }

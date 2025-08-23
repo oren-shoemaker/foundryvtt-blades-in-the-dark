@@ -60,6 +60,10 @@ form {
   align-content: space-between;
 }
 
+.flex-one {
+  flex-grow: 1;
+}
+
 // labels and text
 .black-label-large-center {
   background-color: $almost_black;
@@ -156,6 +160,14 @@ form {
 
 .description {
   font-style: italic;  
+}
+
+// portraits
+img.portrait{
+  max-width: 200px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
 }
 
 // table

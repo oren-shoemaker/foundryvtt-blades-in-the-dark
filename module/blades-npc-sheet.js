@@ -11,7 +11,7 @@ export class BladesNPCSheet extends BladesSheet {
 	  return foundry.utils.mergeObject(super.defaultOptions, {
   	  classes: ["until-the-curtain-falls", "sheet", "actor"],
   	  template: "systems/until-the-curtain-falls/templates/npc-sheet.html",
-      width: 900,
+      width: 400,
       height: 'auto',
       tabs: [{navSelector: ".tabs", contentSelector: ".tab-content"}]
     });
@@ -29,32 +29,8 @@ export class BladesNPCSheet extends BladesSheet {
     sheetData.editable = superData.editable;
 
     sheetData.system.description = await foundry.applications.ux.TextEditor.implementation.enrichHTML(sheetData.system.description, {secrets: sheetData.owner, async: true});
+    sheetData.system.notes = await foundry.applications.ux.TextEditor.implementation.enrichHTML(sheetData.system.notes, {secrets: sheetData.owner, async: true});
 
     return sheetData;
   }
-
-  /* -------------------------------------------- */
-
-    /** @override */
-	activateListeners(html) {
-    super.activateListeners(html);
-
-    // Everything below here is only needed if the sheet is editable
-    if (!this.options.editable) return;
-
-    // Update Inventory Item
-    // html.find('.item-body').click(ev => {
-    //   const element = $(ev.currentTarget).parents(".item");
-    //   const item = this.actor.items.get(element.data("itemId"));
-    //   item.sheet.render(true);
-    // });
-
-    // // Delete Inventory Item
-    // html.find('.item-delete').click(ev => {
-    //   const element = $(ev.currentTarget).parents(".item");
-    //   this.actor.deleteEmbeddedDocuments("Item", [element.data("itemId")]);
-    //   element.slideUp(200, () => this.render(false));
-    // });
-
-	}
 }

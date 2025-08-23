@@ -1,17 +1,17 @@
 <form class="{{cssClass}} actor-sheet" autocomplete="off">
-    <img src="{{img}}" data-edit="img" title="{{name}}" height="100" width="100"/>
-	<input type="text" id="character-{{_id}}-name" name="name" value="{{name}} ">
-	<label for="character-{{_id}}-name">Name</label>
+	<div class="flex-horizontal-spaced">
+		<div>
+			<img src="{{img}}" data-edit="img" title="{{name}}" class="portrait"/>
+		</div>
+		<div class="flex-vertical flex-one">
+			<label class="black-label-large-left" for="character-{{_id}}-name">{{localize "UTCF.Name"}}</label>
+			<input type="text" id="character-{{_id}}-name" class="name" name="name" value="{{name}}">
+		</div>
+	</div>
+	<label for="character-{{_id}}-short-description" class="black-label-large-center">Short description</label>
 	<input type="text" id="character-{{_id}}-short-description" name="system.description_short" value="{{system.description_short}} ">
-	<label for="character-{{_id}}-short-description">Short description</label>
-	<input type="text" id="character-{{_id}}-associated-class" name="system.associated_class" value="{{system.associated_class}} ">
-	<label for="character-{{_id}}-associated-class">Associated Class</label>
-	<input type="text" id="character-{{_id}}-description" name="system.description" value="{{system.description}} ">
-	<label for="character-{{_id}}-description">Description</label>
-	<input type="text" id="character-{{_id}}-associated-crew-type" name="system.associated_crew_type" value="{{system.associated_crew_type}} ">
-	<label for="character-{{_id}}-associated-crew-type">Associated Crew Type</label>
-	<input type="text" id="character-{{_id}}-notes" name="system.notes" value="{{system.notes}} ">
-	<label for="character-{{_id}}-notes">Notes</label>
-	<input type="text" id="character-{{_id}}-associated-faction" name="system.associated_faction" value="{{system.associated_faction}}" >
-	<label for="character-{{_id}}-associated-faction">Associated Faction</label>
+	<label for="character-{{_id}}-description" class="black-label-large-center">{{localize "UTCF.Description"}}</label>
+	{{editor system.description target="system.description" button=true editable=editable}}
+	<label for="character-{{_id}}-notes" class="black-label-large-center">Notes</label>
+	{{editor system.notes target="system.notes" button=true editable=editable}}
 </form>

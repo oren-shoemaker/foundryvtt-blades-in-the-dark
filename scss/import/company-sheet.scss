@@ -4,14 +4,6 @@ $coin_margin: 3px;
 @import 'coins.scss';
 
 & * {
-
-  img.portrait{
-    max-width: 200px;
-    max-height: 200px;
-    width: auto;
-    height: auto;
-  }
-
   nav{
     padding-bottom: 10px;
   }

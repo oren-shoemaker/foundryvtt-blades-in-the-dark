@@ -18,7 +18,7 @@ export class BladesActor extends Actor {
     // For Crew and Character set the Token to sync with charsheet.
     switch (data.type) {
       case 'character':
-      case 'crew':
+      case 'company':
       case '\uD83D\uDD5B clock':
         data.prototypeToken.actorLink = true;
         break;
@@ -38,7 +38,6 @@ export class BladesActor extends Actor {
 
   //** @override */
   async prepareData(){
-
     switch(this.type) {
       case 'character': {
         // set total attribute values

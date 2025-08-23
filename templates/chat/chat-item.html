@@ -1,18 +1,16 @@
-<div class="blades chat-item">
-  <div>
+<div class="until-the-curtain-falls">
+  <div class="flex-vertical chat-container">
     <div>
-      <h3>
+      <label class="black-label-large-center">
         {{name}}
-      </h3>
+      </label>
     </div>
 
-    {{#if img}}
-      <img src="{{img}}" title="{{name}}" />
-    {{/if}}
-
-    {{#if system.description}}
-        {{{system.description}}}
-    {{/if}}
+    <div class="roll-result-description">
+      {{#if description}}
+        {{{description}}}
+      {{/if}}
+    </div>
 
   </div>
 </div>

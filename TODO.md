@@ -1,7 +1,4 @@
 ### Need for first playtest
-* fix creating new character
-* Set up NPCs
-* Get item/actor -> chat link working
 * Quest view for character sheet
 
 ### Later

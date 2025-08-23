@@ -147,6 +147,7 @@
                 "label": "UTCF.Skills.Attune.Label",
                 "tooltip": "UTCF.Skills.Attune.Tooltip",
                 "base_value": 0,
+                "assigned_value": 0,
                 "value": 0,
                 "max": 4
               },
@@ -154,6 +155,7 @@
                 "label": "UTCF.Skills.Command.Label",
                 "tooltip": "UTCF.Skills.Command.Tooltip",
                 "base_value": 0,
+                "assigned_value": 0,
                 "value": 0,
                 "max": 4
               },
@@ -161,6 +163,7 @@
                 "label": "UTCF.Skills.Consort.Label",
                 "tooltip": "UTCF.Skills.Consort.Tooltip",
                 "base_value": 0,
+                "assigned_value": 0,
                 "value": 0,
                 "max": 4
               }
@@ -216,9 +219,6 @@
       "name": "",
       "description_short": "",
       "description": "",
-      "associated_class": "",
-      "associated_faction": "",
-      "associated_crew_type": "",
       "notes": ""
     }
   },
